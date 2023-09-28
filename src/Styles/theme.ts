@@ -1,17 +1,18 @@
-const theme = {
+ const theme = {
   colors: {
     blue_main: {
       primary_normal: "#1B6CE7",
-    primary_dark: "#155ECD",
-    primary_light: "#4589F0",
-    secondary_normal: "#0055D6",
-    secondary_dark: "#004ABF",
-    secondary_light: "#3376E3",
+      primary_dark: "#155ECD",
+      primary_light: "#4589F0",
+      secondary_normal: "#0055D6",
+      secondary_dark: "#003FA6",
+      secondary_light: "#3376E3",
     },
     white_auxiliary: {
-      white_normal: "#F6FAFF",
-      white_dark: "#F1F7FF",
-      white_light: "#F8FBFF"
+      white_normal: "#F1F7FF",
+      white_dark: "#E1EBF9",
+      white_light: "#F6FAFF"
+      
     },
     black_auxiliary: {
       black_normal: "#242526",
@@ -38,13 +39,11 @@ const theme = {
       green_light: '#50e170'
     },
     yellow_auxiliary: {
-        yellow_normal: '#ffce52',
-        yellow_dark: '#d9b043',
-        yellow_light: '#ffd76b'
+      yellow_normal: '#ffce52',
+      yellow_dark: '#d9b043',
+      yellow_light: '#ffd76b'
     }
-    
   },
   
 };
-
 export default theme;
