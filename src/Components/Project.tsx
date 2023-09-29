@@ -1,6 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import App from './Container';
+import Container from './Container';
 import theme from '../Styles/theme'
 
 const Project = () => {
@@ -9,7 +9,7 @@ const Project = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <App />
+      <Container />
     </ThemeProvider>
   )
 }
