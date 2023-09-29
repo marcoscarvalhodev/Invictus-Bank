@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
+
 *, *::after, *::before {
   padding: 0rem;
   margin: 0rem;
@@ -16,7 +17,7 @@ body {
   height: 100vh;
   position: relative;
   scroll-behavior: smooth;
-  background: #F4F9FF;
+  background: #F1F7FF;
 }
 
 
