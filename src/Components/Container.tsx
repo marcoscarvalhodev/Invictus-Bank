@@ -20,9 +20,9 @@ const App = () => {
 
   return (
     <StyledContainer>
-      {large && <StyledHeadings as="h1" $device="desktop">
+      <StyledHeadings as="h5" $device={xsmall ? 'mobile' : 'desktop'}>
         Heading
-      </StyledHeadings>}
+      </StyledHeadings>
       <StyledParagraphs $size="p2" $device="desktop">
         Hi we are a bank that want to help you.
       </StyledParagraphs>

@@ -20,13 +20,15 @@
       black_light: "#303133"
     },
     gray_auxiliary: {
-      gray_1: "#E6E6E7",
-      gray_2: "#CDCDCE",
-      gray_3: "#B5B5B6",
+      gray_1: "#626264",
+      gray_2: "#737374",
+      gray_3: "#838385",
       gray_4: "#9C9C9D",
-      gray_5: "#838385",
-      gray_6: "#737374",
-      gray_7: "#626264",
+      gray_5: "#B5B5B6",
+      gray_6: "#CDCDCE",
+      gray_7: "#E6E6E7",
+      
+      
     },
     red_auxiliary: {
       red_normal: '#eb3d3d',
