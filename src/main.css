@@ -6,6 +6,7 @@
   margin: 0rem;
   box-sizing: border-box;
   font-size: 10px;
+  list-style: none;
 }
 
 html {
@@ -18,6 +19,11 @@ body {
   position: relative;
   scroll-behavior: smooth;
   background: #F1F7FF;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Sora';
 }
 
 
