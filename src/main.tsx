@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
-import Project from "./Components/Project";
+import App from "./App";
 
 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-    <Project />
+    <App />
   </>
 );
