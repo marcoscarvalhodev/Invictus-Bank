@@ -4,8 +4,26 @@ import Button from "./Button";
 import Login from "./Login";
 
 const Header = () => {
+  const [scroll, setScroll] = React.useState(0);
+  const [scrolled, setScrolled] = React.useState(false);
+  const [headerState, setHeaderState] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+
+      scroll > 50 ? setScrolled(true) : setScrolled(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
   return (
-    <StyledHeader>
+    <StyledHeader className={scrolled ? "active-header" : ""}>
       <nav className="navbar-mobile">
         <div className="bx" id="bx"></div>
         <div className="logo"></div>
@@ -93,16 +111,35 @@ const Header = () => {
         </div>
       </nav>
 
-    <nav className="menu-mobile">
-      <ul className="nav-list-mobile">
-        <li><a href="" className="nav-link-mobile">Supreme Bank</a></li>
-        <li><a href="" className="nav-link-mobile">Digital Account</a></li>
-        <li><a href="" className="nav-link-mobile">For you</a></li>
-        <li><a href="" className="nav-link-mobile">Join Nubank</a></li>
-        <li><a href="" className="nav-link-mobile">Social Media</a></li>
-      </ul>
-    </nav>
-
+      <nav className="menu-mobile">
+        <ul className="nav-list-mobile">
+          <li>
+            <a href="" className="nav-link-mobile">
+              Supreme Bank
+            </a>
+          </li>
+          <li>
+            <a href="" className="nav-link-mobile">
+              Digital Account
+            </a>
+          </li>
+          <li>
+            <a href="" className="nav-link-mobile">
+              For you
+            </a>
+          </li>
+          <li>
+            <a href="" className="nav-link-mobile">
+              Join Nubank
+            </a>
+          </li>
+          <li>
+            <a href="" className="nav-link-mobile">
+              Social Media
+            </a>
+          </li>
+        </ul>
+      </nav>
     </StyledHeader>
   );
 };

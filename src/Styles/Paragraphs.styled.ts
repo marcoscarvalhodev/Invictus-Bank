@@ -6,7 +6,7 @@ interface ParagraphsProps {
 }
 
 export const StyledParagraphs = styled.p<ParagraphsProps>`
-  ${({theme, $size, $device }) => css`
+  ${({ theme, $size, $device }) => css`
     font-family: "Source Sans 3", sans-serif;
     color: ${theme.colors.gray_auxiliary.gray_1};
     //P1
