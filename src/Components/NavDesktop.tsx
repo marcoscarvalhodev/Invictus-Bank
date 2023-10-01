@@ -1,93 +1,111 @@
-import React from 'react';
-import { StyledNavDesktop } from '../Styles/NavDesktop';
+import React from "react";
+import { StyledNavDesktop } from "../Styles/NavDesktop";
 import Button from "./Button";
 import Login from "./Login";
-
+import { ContentMenuDesktop } from "../Contents";
 
 const NavDesktop = () => {
+  const [dropdownMenu, setDropdownMenu] = React.useState(false);
+  const linkRef1 = React.useRef<HTMLLIElement>(null);
+  const linkRef2 = React.useRef<HTMLLIElement>(null);
+  const linkRef3 = React.useRef<HTMLLIElement>(null);
+  const [dropdownState, setDropdownState] = React.useState(0);
+  
+  
+  const handleClick : React.MouseEventHandler<HTMLLIElement> = (event) => {
+    event.preventDefault();
+    setDropdownState(Number(event.currentTarget.id));
+    
+  }
+
+  const mouseLeft : React.MouseEventHandler<HTMLLIElement> = (event) => {
+    setDropdownState(0);
+  }
+
+  console.log(dropdownState)
+
   return (
-    <StyledNavDesktop className="navbar-desktop">
+    <StyledNavDesktop className="navbar-desktop" $dropdown={dropdownMenu}>
       <div className="navbar-desktop-item-1">
-          <div className="logo"></div>
-          <ul className="menu-desktop">
-            <li className="menu-item">
-              <a href="" className="nav-link-desktop">
-                Supreme Bank
-              </a>
-              <ul className="dropdown-menu" >
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Us
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Careers
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Press
-                  </a>
-                </li>
-              </ul>
-            </li>
+        <div className="logo"></div>
+        <ul className="menu-desktop">
+        <li className="menu-item" id="1" onClick={handleClick} ref={linkRef1} onMouseLeave={mouseLeft}>
+            <a href="" className="nav-link-desktop" >
+              Supreme Bank
+            </a>
+            <ul className={`dropdown-menu ${Number(linkRef1.current?.id) === dropdownState ? 'active-dropdown' : '' }`}>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Us
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Careers
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Press
+                </a>
+              </li>
+            </ul>
+          </li>
 
-            <li className="menu-item">
-              <a href="" className="nav-link-desktop">
-                Digital Account
-              </a>
-              <ul className="dropdown-menu">
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Create your account
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Transfers
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Income
-                  </a>
-                </li>
-              </ul>
-            </li>
+          <li className="menu-item" id="2" onClick={handleClick} ref={linkRef2} onMouseLeave={mouseLeft}>
+            <a href="" className="nav-link-desktop" >
+              Digital Account
+            </a>
+            <ul className={`dropdown-menu ${Number(linkRef2.current?.id) === dropdownState ? 'active-dropdown' : '' }`} >
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Create your account
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Transfers
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Income
+                </a>
+              </li>
+            </ul>
+          </li>
 
-            <li className="menu-item">
-              <a href="" className="nav-link-desktop">
-                For you
-              </a>
-              <ul className="dropdown-menu">
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Community
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    Rewards
-                  </a>
-                </li>
-                <li className="dropdown-item">
-                  <a href="" className="nav-link-dropdown">
-                    News
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+          <li className="menu-item" id="3" onClick={handleClick} ref={linkRef3} onMouseLeave={mouseLeft}>
+            <a href="" className="nav-link-desktop" >
+              For you
+            </a>
+            <ul className={`dropdown-menu ${Number(linkRef3.current?.id) === dropdownState ? 'active-dropdown' : '' }`}>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Community
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Rewards
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  News
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-        <div className="navbar-desktop-item-2">
-          <Button />
-          <Login />
-        </div>
-
+      <div className="navbar-desktop-item-2">
+        <Button />
+        <Login />
+      </div>
     </StyledNavDesktop>
-  )
-}
+  );
+};
 
-export default NavDesktop
+export default NavDesktop;

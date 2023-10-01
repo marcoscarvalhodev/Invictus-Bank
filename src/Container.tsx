@@ -15,9 +15,12 @@ const App = () => {
   const small = useMedia(`(max-width: ${theme.containerSizes.container_m})`);
   const xsmall = useMedia(`(max-width: ${theme.containerSizes.container_s})`);
 
+ 
+
   return (
     <StyledContainer>
       <Header small={small} />
+      
     </StyledContainer>
   );
 };
