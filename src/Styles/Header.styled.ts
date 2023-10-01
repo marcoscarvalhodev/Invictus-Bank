@@ -30,5 +30,8 @@ export const StyledHeader = styled.header`
       }
 
     }
+
+    
+    
   `}
 `;
