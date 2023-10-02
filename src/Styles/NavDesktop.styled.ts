@@ -27,14 +27,6 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       justify-content: flex-end;
     }
 
-    .logo {
-      width: 48px;
-      height: 48px;
-      background: blue;
-      justify-content: center;
-      align-items: center;
-    }
-
     .menu-desktop {
       display: flex;
       justify-content: flex-start;
@@ -129,5 +121,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
         }
       }
     }
+
+
   `}
 `;

@@ -1,37 +1,46 @@
 import React from 'react';
-import { StyledMenuMobile } from '../Styles/MenuMobile';
+import { StyledMenuMobile } from '../Styles/MenuMobile.styled';
+import { StyledHeadings } from '../Styles/Headings.styled';
 
-const MenuMobile = () => {
+interface MenuProps {
+  menuIcon: boolean;
+}
+
+const MenuMobile = ({menuIcon} : MenuProps) => {
+  
   return (
-    <StyledMenuMobile className='menu-mobile'>
+    <>
+   <StyledMenuMobile className={`menu-mobile ${menuIcon ? 'active-menu-mobile' : ''}`}>
       <ul className="nav-list-mobile">
           <li>
             <a href="" className="nav-link-mobile">
-              Supreme Bank
+             <StyledHeadings as="h3" $device='desktop'>Supreme Bank</StyledHeadings>
             </a>
           </li>
           <li>
             <a href="" className="nav-link-mobile">
-              Digital Account
+              <StyledHeadings as="h3" $device='desktop'>Digital Account</StyledHeadings>
             </a>
           </li>
           <li>
             <a href="" className="nav-link-mobile">
-              For you
+            <StyledHeadings as="h3" $device='desktop'>For you</StyledHeadings>
             </a>
           </li>
           <li>
             <a href="" className="nav-link-mobile">
-              Join Supreme Bank
+            <StyledHeadings as="h3" $device='desktop'>Join Supreme Bank</StyledHeadings>
             </a>
           </li>
           <li>
             <a href="" className="nav-link-mobile">
-              Social Media
+            <StyledHeadings as="h3" $device='desktop'>Social Media</StyledHeadings>
             </a>
           </li>
         </ul>
     </StyledMenuMobile>
+
+    </>
   )
 }
 

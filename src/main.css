@@ -14,16 +14,14 @@ html {
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+  
   scroll-behavior: smooth;
-  background: #F1F7FF;
+  
 }
 
 a {
   text-decoration: none;
-  font-family: 'Sora';
+  font-family: 'Source Sans 3';
 }
 
 
