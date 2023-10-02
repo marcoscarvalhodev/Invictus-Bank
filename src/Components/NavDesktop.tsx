@@ -1,8 +1,9 @@
 import React from "react";
-import { StyledNavDesktop } from "../Styles/NavDesktop";
+import { StyledNavDesktop } from "../Styles/NavDesktop.styled";
 import Button from "./Button";
 import Login from "./Login";
 import { ContentMenuDesktop } from "../Contents";
+import Logo from "./Logo";
 
 const NavDesktop = () => {
   const [dropdownMenu, setDropdownMenu] = React.useState(false);
@@ -22,12 +23,11 @@ const NavDesktop = () => {
     setDropdownState(0);
   }
 
-  console.log(dropdownState)
 
   return (
     <StyledNavDesktop className="navbar-desktop" $dropdown={dropdownMenu}>
       <div className="navbar-desktop-item-1">
-        <div className="logo"></div>
+        <Logo />
         <ul className="menu-desktop">
         <li className="menu-item" id="1" onClick={handleClick} ref={linkRef1} onMouseLeave={mouseLeft}>
             <a href="" className="nav-link-desktop" >

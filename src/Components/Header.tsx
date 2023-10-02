@@ -4,6 +4,7 @@ import { StyledHeader } from "../Styles/Header.styled";
 import NavMobile from "./NavMobile";
 import MenuMobile from "./MenuMobile";
 import NavDesktop from "./NavDesktop";
+import Logo from "./Logo";
 
 interface windowSizes {
   small: null | boolean;
@@ -14,6 +15,8 @@ const Header = ({small} : windowSizes) => {
   const [scrolled, setScrolled] = React.useState(false);
   const [headerState, setHeaderState] = React.useState(false);
   const [mobileDesktop, setMobileDesktop] = React.useState(false);
+  const [menuIcon, setMenuIcon] = React.useState(false);
+
 
   React.useEffect(() => {
     small ? setMobileDesktop(true) : setMobileDesktop(false);
@@ -37,9 +40,10 @@ const Header = ({small} : windowSizes) => {
 
   return (
     <StyledHeader className={scrolled ? "active-header" : ""}>
-      {mobileDesktop && <NavMobile />}
+      
+      {mobileDesktop && <NavMobile setMenuIcon={setMenuIcon}/>}
       {!mobileDesktop && <NavDesktop />}
-      {mobileDesktop && <MenuMobile />}
+      {mobileDesktop && <MenuMobile menuIcon={menuIcon}/>}
     </StyledHeader>
   );
 };
