@@ -39,7 +39,7 @@ const Header = ({small} : windowSizes) => {
   });
 
   return (
-    <StyledHeader className={scrolled ? "active-header" : ""}>
+    <StyledHeader className={`${scrolled ? "active-header" : ""} ${menuIcon ? 'click-header' : ''}`} >
       
       {mobileDesktop && <NavMobile setMenuIcon={setMenuIcon}/>}
       {!mobileDesktop && <NavDesktop />}

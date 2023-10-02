@@ -1,10 +1,13 @@
-import React from 'react'
-import { StyledLogo } from '../Styles/Logo.styled'
+import React from "react";
+import { StyledLogo } from "../Styles/Logo.styled";
+import SupremeLogo from '../assets/svg/logosb.svg?react';
 
 const Logo = () => {
   return (
-    <StyledLogo></StyledLogo>
-  )
-}
+    <StyledLogo>
+      <a href=""><SupremeLogo /></a>
+    </StyledLogo>
+  );
+};
 
-export default Logo
+export default Logo;
