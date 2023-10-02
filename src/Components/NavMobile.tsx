@@ -7,7 +7,7 @@ interface NavMenuProps {
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MenuMobile = ({setMenuIcon} : NavMenuProps) => {
+const NavMenuMobile = ({setMenuIcon} : NavMenuProps) => {
   const [activeBx, setActiveBx] = React.useState(false);
 
   React.useEffect(() => {
@@ -26,4 +26,4 @@ const MenuMobile = ({setMenuIcon} : NavMenuProps) => {
   );
 };
 
-export default MenuMobile;
+export default NavMenuMobile;
