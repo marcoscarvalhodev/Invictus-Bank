@@ -1,9 +1,8 @@
 import React from "react";
-import { StyledNavDesktop } from "../Styles/NavDesktop.styled";
-import Button from "./Button";
-import Login from "./Login";
-import { ContentMenuDesktop } from "../Contents";
-import Logo from "./Logo";
+import { StyledNavDesktop } from "../../Styles/Header/NavDesktop.styled";
+import Button from "../Reusable/Button";
+import Login from "../Reusable/Login";
+import Logo from "../Reusable/Logo";
 
 const NavDesktop = () => {
   const [dropdownMenu, setDropdownMenu] = React.useState(false);
@@ -11,29 +10,38 @@ const NavDesktop = () => {
   const linkRef2 = React.useRef<HTMLLIElement>(null);
   const linkRef3 = React.useRef<HTMLLIElement>(null);
   const [dropdownState, setDropdownState] = React.useState(0);
-  
-  
-  const handleClick : React.MouseEventHandler<HTMLLIElement> = (event) => {
+
+  const handleClick: React.MouseEventHandler<HTMLLIElement> = (event) => {
     event.preventDefault();
     setDropdownState(Number(event.currentTarget.id));
-    
-  }
+  };
 
-  const mouseLeft : React.MouseEventHandler<HTMLLIElement> = (event) => {
+  const mouseLeft: React.MouseEventHandler<HTMLLIElement> = (event) => {
     setDropdownState(0);
-  }
-
+  };
 
   return (
     <StyledNavDesktop className="navbar-desktop" $dropdown={dropdownMenu}>
       <div className="navbar-desktop-item-1">
         <Logo />
         <ul className="menu-desktop">
-        <li className="menu-item" id="1" onClick={handleClick} ref={linkRef1} onMouseLeave={mouseLeft}>
-            <a href="" className="nav-link-desktop" >
+          <li
+            className="menu-item"
+            id="1"
+            onClick={handleClick}
+            ref={linkRef1}
+            onMouseLeave={mouseLeft}
+          >
+            <a href="" className="nav-link-desktop">
               Supreme Bank
             </a>
-            <ul className={`dropdown-menu ${Number(linkRef1.current?.id) === dropdownState ? 'active-dropdown' : '' }`}>
+            <ul
+              className={`dropdown-menu ${
+                Number(linkRef1.current?.id) === dropdownState
+                  ? "active-dropdown"
+                  : ""
+              }`}
+            >
               <li className="dropdown-item">
                 <a href="" className="nav-link-dropdown">
                   Us
@@ -52,11 +60,23 @@ const NavDesktop = () => {
             </ul>
           </li>
 
-          <li className="menu-item" id="2" onClick={handleClick} ref={linkRef2} onMouseLeave={mouseLeft}>
-            <a href="" className="nav-link-desktop" >
+          <li
+            className="menu-item"
+            id="2"
+            onClick={handleClick}
+            ref={linkRef2}
+            onMouseLeave={mouseLeft}
+          >
+            <a href="" className="nav-link-desktop">
               Digital Account
             </a>
-            <ul className={`dropdown-menu ${Number(linkRef2.current?.id) === dropdownState ? 'active-dropdown' : '' }`} >
+            <ul
+              className={`dropdown-menu ${
+                Number(linkRef2.current?.id) === dropdownState
+                  ? "active-dropdown"
+                  : ""
+              }`}
+            >
               <li className="dropdown-item">
                 <a href="" className="nav-link-dropdown">
                   Create your account
@@ -75,11 +95,23 @@ const NavDesktop = () => {
             </ul>
           </li>
 
-          <li className="menu-item" id="3" onClick={handleClick} ref={linkRef3} onMouseLeave={mouseLeft}>
-            <a href="" className="nav-link-desktop" >
+          <li
+            className="menu-item"
+            id="3"
+            onClick={handleClick}
+            ref={linkRef3}
+            onMouseLeave={mouseLeft}
+          >
+            <a href="" className="nav-link-desktop">
               For you
             </a>
-            <ul className={`dropdown-menu ${Number(linkRef3.current?.id) === dropdownState ? 'active-dropdown' : '' }`}>
+            <ul
+              className={`dropdown-menu ${
+                Number(linkRef3.current?.id) === dropdownState
+                  ? "active-dropdown"
+                  : ""
+              }`}
+            >
               <li className="dropdown-item">
                 <a href="" className="nav-link-dropdown">
                   Community

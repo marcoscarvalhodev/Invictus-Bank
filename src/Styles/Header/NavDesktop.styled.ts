@@ -8,7 +8,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
   ${({ theme, $dropdown }) => css`
     max-width: ${theme.containerSizes.container_xl};
     margin: 0 auto;
-    padding: 1rem 2.4rem;
+    padding: 1.6rem 2.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      gap: 2.4rem;
     }
 
     .menu-desktop {
@@ -33,7 +34,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       align-items: center;
 
       .menu-item {
-        margin-left: ${theme.spacing.gap_2};
+        margin-left: ${theme.spacing.gap_1};
         position: relative;
         
       }
@@ -75,7 +76,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
         0px 6px 10px rgba(27, 108, 231, 0.04),
         0px 2.3px 3.6px rgba(27, 108, 231, 0.02);
       position: absolute;
-      top: 4.2rem;
+      top: 4.6rem;
       left: 2.4rem;
       
       display: flex;

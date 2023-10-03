@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
 
-interface ParagraphsProps {
+interface TextsProps {
   $device: "mobile" | "desktop";
   $size: "p1" | "p2" | "p3";
 }
 
-export const StyledParagraphs = styled.p<ParagraphsProps>`
+export const StyledTexts = styled.p<TextsProps>`
   ${({ theme, $size, $device }) => css`
     font-family: "Source Sans 3", sans-serif;
     color: ${theme.colors.gray_auxiliary.gray_1};
@@ -13,7 +13,6 @@ export const StyledParagraphs = styled.p<ParagraphsProps>`
 
     ${$size === "p1" &&
     `
-    
     ${
       ($device === "desktop" &&
         `

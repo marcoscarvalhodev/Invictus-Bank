@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const StyledMenuMobile = styled.nav`
   ${({ theme }) => css`
     width: 100vw;
-    height: calc(100vh - 6.8rem);
+    height: calc(100vh - 7.4rem);
     position: absolute;
     opacity: 0;
     pointer-events: none;

@@ -1,12 +1,10 @@
 import React from "react";
-import { StyledMenuMobile } from "../Styles/MenuMobile.styled";
-import { StyledHeadings } from "../Styles/Headings.styled";
-import Facebook from "../assets/svg/icon-facebook.svg?react";
-import Twitter from "../assets/svg/icon-twitter.svg?react";
-import Instagram from "../assets/svg/icon-instagram.svg?react";
-import Youtube from "../assets/svg/icon-youtube.svg?react";
-
-
+import { StyledMenuMobile } from "../../Styles/Header/MenuMobile.styled";
+import { StyledHeadings } from "../../Styles/Reusable/Headings.styled";
+import Facebook from "../../assets/svg/icon-facebook.svg?react";
+import Twitter from "../../assets/svg/icon-twitter.svg?react";
+import Instagram from "../../assets/svg/icon-instagram.svg?react";
+import Youtube from "../../assets/svg/icon-youtube.svg?react";
 
 interface MenuProps {
   menuIcon: boolean;
