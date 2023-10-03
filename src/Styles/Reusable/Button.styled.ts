@@ -14,7 +14,7 @@ export const StyledButton = styled.a`
       );
 
       color: ${theme.colors.white_auxiliary.white_light};
-
+      caret-color:transparent ;
       border-radius: 1.6rem;
       padding: 1.2rem 3.2rem;
       transition: 0.3s ease;
