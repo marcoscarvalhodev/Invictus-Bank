@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "../Styles/Button.styled";
+import { StyledButton } from "../../Styles/Reusable/Button.styled";
 
 const Button = () => {
   return <StyledButton>Join Supreme Bank</StyledButton>;

@@ -23,9 +23,10 @@ export const StyledHeader = styled.header`
     }
 
     a {
-      font-size: 1.6rem;
+      font-size: ${theme.spacing.gap_2};
       line-height: 140%;
       color: ${theme.colors.black_auxiliary.black_normal};
+      
       transition: .5s ease;
       &:hover {
         opacity: .9;
