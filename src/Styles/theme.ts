@@ -52,7 +52,17 @@
   container_l : "1140px",
   container_m : "960px",
   container_s : "540px",
+  },
+
+  spacing: {
+    gap_1 : '0.8rem',
+    gap_2 : '1.6rem',
+    gap_3 : '4.8rem',
+    gap_4 : '7.2rem',
+    gap_5 : '12.8rem',
   }
+
+  
 
 };
 export default theme;

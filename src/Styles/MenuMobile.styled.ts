@@ -34,7 +34,7 @@ export const StyledMenuMobile = styled.nav`
         content: "";
         position: absolute;
         top: 90%;
-        left: 1.6rem;
+        left: ${theme.spacing.gap_2};
         width: 0%;
         height: 0.2rem;
         transition: 1s ease;
@@ -50,11 +50,18 @@ export const StyledMenuMobile = styled.nav`
     }
 
     .social-icons {
-      margin-top: 4.8rem;
+      margin-top: ${theme.spacing.gap_3};
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
+    .social-icons a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
     .social-icons svg * {
       stroke: ${theme.colors.gray_auxiliary.gray_2};
     }

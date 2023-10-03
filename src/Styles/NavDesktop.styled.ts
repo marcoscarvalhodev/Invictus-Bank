@@ -33,8 +33,9 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       align-items: center;
 
       .menu-item {
-        margin-left: 1.6rem;
+        margin-left: ${theme.spacing.gap_2};
         position: relative;
+        
       }
     }
 
@@ -74,7 +75,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
         0px 6px 10px rgba(27, 108, 231, 0.04),
         0px 2.3px 3.6px rgba(27, 108, 231, 0.02);
       position: absolute;
-      top: 4.8rem;
+      top: 4.2rem;
       left: 2.4rem;
       
       display: flex;
