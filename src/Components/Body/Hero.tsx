@@ -18,11 +18,10 @@ const Hero = ({ small } : HeroProps) => {
           Welcome to Supreme Bank: Your financial future starts here.
         </StyledHeadings>
         <StyledTexts $size="p1" $device="desktop">
-          High-yield savings account, credit card with no annual fee and no
-          joining fee, and the best: set up everything in the App.
+          High-yield savings account, credit card with no annual or joining fee, and the best: set up everything from the App.
         </StyledTexts>
 
-        <div>
+        <div className="flex-interact">
           <Button />
           <a href="">
             <AppStore />

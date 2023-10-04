@@ -51,24 +51,42 @@ const theme = {
     container_s: "540px",
   },
 
+  containerHero : {
+    container_xl: `
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 96px 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      overflow-x: hidden;
+    `,
+    container_s: `
+    flex-direction: column;
+    padding: 32px 18px;
+    `
+  },
+
   spacing: {
     gap_1: "0.8rem",
     gap_2: "1.6rem",
     gap_3: "4.8rem",
     gap_4: "7.2rem",
     gap_5: "12.8rem",
+    
   },
 
   boxProps: {
     flex: {
       flex_start: `
       display: flex;
-      justify_content: flex-start;
+      justify-content: start;
       align-items: center;
     `,
       flex_center: `
       display: flex;
-      justify_content: flex-center;
+      justify-content: center;
       align-items: center;
     `,
       flex_column: `
@@ -128,3 +146,4 @@ const theme = {
   },
 };
 export default theme;
+

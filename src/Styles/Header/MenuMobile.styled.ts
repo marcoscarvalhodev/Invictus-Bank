@@ -24,6 +24,10 @@ export const StyledMenuMobile = styled.nav`
       flex-direction: column;
     }
 
+    .nav-list-mobile li {
+      margin-bottom: ${theme.spacing.gap_1};
+    }
+
     .nav-link-mobile {
       display: inline-block;
       color: ${theme.colors.gray_auxiliary.gray_2};
@@ -51,19 +55,31 @@ export const StyledMenuMobile = styled.nav`
 
     .social-icons {
       margin-top: ${theme.spacing.gap_3};
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      ${theme.boxProps.flex.flex_center};
     }
 
     .social-icons a {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    
-    .social-icons svg * {
-      stroke: ${theme.colors.gray_auxiliary.gray_2};
+      margin: 0 ${theme.spacing.gap_1};
+      
+
+      svg {
+        width: 3.6rem;
+        height: 3.6rem;
+
+        path {
+          stroke: ${theme.colors.gray_auxiliary.gray_3};
+          transition: .7s ease;
+        }
+
+        &:hover {
+          path {
+            stroke: ${theme.colors.blue_main.primary_normal};
+          }
+        }
+      }
     }
   `}
 `;
