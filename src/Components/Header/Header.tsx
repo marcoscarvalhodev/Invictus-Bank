@@ -1,25 +1,22 @@
-import React from "react";
-import { StyledHeader } from "../../Styles/Header/Header.styled";
+import React from 'react';
+import { StyledHeader } from '../../Styles/Header/Header.styled';
 
-import NavMobile from "./NavMobile";
-import MenuMobile from "./MenuMobile";
-import NavDesktop from "./NavDesktop";
+import NavMobile from './NavMobile';
+import MenuMobile from './MenuMobile';
+import NavDesktop from './NavDesktop';
+import ContainerSizes from '../../ContainerSizes';
 
-
-interface windowSizes {
-  small: null | boolean;
-}
-
-const Header = ({ small }: windowSizes) => {
+const Header = () => {
   const [scroll, setScroll] = React.useState(0);
   const [scrolled, setScrolled] = React.useState(false);
   const [headerState, setHeaderState] = React.useState(false);
   const [mobileDesktop, setMobileDesktop] = React.useState(false);
   const [menuIcon, setMenuIcon] = React.useState(false);
+  const { small } = ContainerSizes();
 
   React.useEffect(() => {
     small ? setMobileDesktop(true) : setMobileDesktop(false);
-  }, [small]);
+  }, [setMobileDesktop, small]);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -28,17 +25,17 @@ const Header = ({ small }: windowSizes) => {
       scroll > 50 ? setScrolled(true) : setScrolled(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   });
 
   return (
     <StyledHeader
-      className={`${scrolled ? "active-header" : ""} ${
-        menuIcon ? "click-header" : ""
+      className={`${scrolled ? 'active-header' : ''} ${
+        menuIcon ? 'click-header' : ''
       }`}
     >
       {mobileDesktop && <NavMobile setMenuIcon={setMenuIcon} />}

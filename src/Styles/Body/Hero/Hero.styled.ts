@@ -29,6 +29,12 @@ export const StyledHero = styled.main<HeroProps>`
     .flex-interact {
       ${theme.boxProps.flex.flex_start};
       gap: ${theme.spacing.gap_2};
+
+      .playstore-icon {
+        margin-top: 5px;
+        
+      }
+      
     }
 
     .flex-item-3 {
@@ -101,6 +107,7 @@ export const StyledHero = styled.main<HeroProps>`
       top: 300px;
     }
 
+
     `};
 
     
@@ -122,6 +129,19 @@ export const StyledHero = styled.main<HeroProps>`
       left: 0px;
       top: 270px;
     }
+
+    .flex-interact {
+      .appstore-icon, .playstore-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    
+
+    
+
+    
 
     `};
 

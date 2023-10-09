@@ -9,40 +9,56 @@ import IconCard from '../../../assets/svg/icon-card.svg?react';
 import IconMobile from '../../../assets/svg/icon-mobile.svg?react';
 import IconContactless from '../../../assets/svg/icon-contactless.svg?react';
 import Card from './Card';
+import { ContentHero } from '../../../Contents';
+import ContainerSizes from '../../../ContainerSizes';
 
-interface HeroProps {
-  small: boolean | null;
-  xsmall: boolean | null;
-}
-
-const Hero = ({ small, xsmall }: HeroProps) => {
+const Hero = () => {
+  const { small, xsmall } = ContainerSizes();
   return (
-    <StyledHero $small={small} $xsmall={xsmall} className={`container ${small ? 'container-small' : ''}`}>
+    <StyledHero
+      $small={small}
+      $xsmall={xsmall}
+      className={`container ${small ? 'container-small' : ''}`}
+    >
       <div className='flex-item-1'>
-        <StyledHeadings as='h1' $device='desktop'>
-          Welcome to Supreme Bank: Your financial future starts here.
-        </StyledHeadings>
-        <StyledTexts $size='p1' $device='desktop'>
-          High-yield savings account, credit card with no annual or joining fee,
-          and the best: set up everything from the App.
-        </StyledTexts>
+        {(xsmall && (
+          <>
+            <StyledHeadings as='h1' $device='mobile'>
+              {ContentHero.title}
+            </StyledHeadings>
+            <StyledTexts $size='p1' $device='mobile'>
+              {ContentHero.paragraph}
+            </StyledTexts>
+          </>
+        )) || (
+          <>
+            <StyledHeadings as='h1' $device='desktop'>
+              {ContentHero.title}
+            </StyledHeadings>
+            <StyledTexts $size='p1' $device='desktop'>
+              {ContentHero.paragraph}
+            </StyledTexts>
+          </>
+        )}
 
-        <div className='flex-interact'>
+        <div
+          className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
+        >
           <Button />
           <a href=''>
-            <AppStore />
+            <AppStore className='appstore-icon'/>
           </a>
           <a href=''>
-            <PlayStore />
+            <PlayStore className='playstore-icon'/>
           </a>
         </div>
       </div>
 
       <div className='flex-item-3 div-card'>
-        <IconCard className='icon-card-hero dropshadow'/>
-        <IconMobile className='icon-mobile-hero dropshadow'/>
-        <IconContactless className='icon-contactless-hero dropshadow'/>
-        <Card xsmall={xsmall}/>
+        <IconCard className='icon-card-hero dropshadow' />
+        <IconMobile className='icon-mobile-hero dropshadow' />
+        <IconContactless className='icon-contactless-hero dropshadow' />
+        <Card xsmall={xsmall} />
       </div>
     </StyledHero>
   );

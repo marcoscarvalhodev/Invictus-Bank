@@ -11,11 +11,10 @@ export const StyledCard = styled.div<CardProps>`
     
     width: ${theme.animations.card.width_card};
     height: ${theme.animations.card.height_card};
-    background-image: ${$supreme};
     border-radius: 12px;
     transform-origin: center center;
     transform-style: preserve-3d;
-    
+
     animation: flip-card 12s linear infinite alternate,
     change-bg-card 12s linear infinite alternate;
 
@@ -23,7 +22,7 @@ export const StyledCard = styled.div<CardProps>`
       0% {
         transform: rotateX(-10deg) rotateY(10deg) rotateY(-15deg);
       }
-      40% {
+      ${$xsmall ? '40%' : '42%'} {
         transform: rotateX(0deg) rotateY(20deg);
       }
       ${$xsmall ? '60%' : '58%'} {
