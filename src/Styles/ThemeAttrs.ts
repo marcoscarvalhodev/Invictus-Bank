@@ -9,6 +9,4 @@ export const themeAttrs = {
   container_m: "960px",
   container_s: "540px",
   }
-  
-  
 };
