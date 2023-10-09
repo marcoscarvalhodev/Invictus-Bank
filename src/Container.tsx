@@ -1,9 +1,9 @@
-import React from "react";
-import { StyledContainer } from "./Styles/Container.styled.ts";
-import theme from "./Styles/theme.ts";
-import useMedia from "./Hooks/useMedia.tsx";
-import Header from "./Components/Header/Header.tsx";
-import Hero from "./Components/Body/Hero.tsx";
+import React from 'react';
+import { StyledContainer } from './Styles/Container.styled.ts';
+import theme from './Styles/theme.ts';
+import useMedia from './Hooks/useMedia.tsx';
+import Header from './Components/Header/Header.tsx';
+import Hero from './Components/Body/Hero/Hero.tsx';
 
 const App = () => {
   const xlarge = useMedia(`(min-width: ${theme.containerSizes.container_xl})`);
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <StyledContainer>
       <Header small={small} />
-      <Hero small={small}/>
+      <Hero xsmall={xsmall} small={small} />
     </StyledContainer>
   );
 };

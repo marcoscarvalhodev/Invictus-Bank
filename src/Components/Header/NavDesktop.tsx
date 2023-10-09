@@ -10,10 +10,13 @@ const NavDesktop = () => {
   const linkRef2 = React.useRef<HTMLLIElement>(null);
   const linkRef3 = React.useRef<HTMLLIElement>(null);
   const [dropdownState, setDropdownState] = React.useState(0);
+  const [menuState, setMenuState] = React.useState(false);
 
   const handleClick: React.MouseEventHandler<HTMLLIElement> = (event) => {
+   
     event.preventDefault();
     setDropdownState(Number(event.currentTarget.id));
+    
   };
 
   const mouseLeft: React.MouseEventHandler<HTMLLIElement> = (event) => {
@@ -29,6 +32,7 @@ const NavDesktop = () => {
             className="menu-item"
             id="1"
             onClick={handleClick}
+            onMouseOver={handleClick}
             ref={linkRef1}
             onMouseLeave={mouseLeft}
           >
@@ -64,6 +68,7 @@ const NavDesktop = () => {
             className="menu-item"
             id="2"
             onClick={handleClick}
+            onMouseOver={handleClick}
             ref={linkRef2}
             onMouseLeave={mouseLeft}
           >
@@ -99,6 +104,7 @@ const NavDesktop = () => {
             className="menu-item"
             id="3"
             onClick={handleClick}
+            onMouseOver={handleClick}
             ref={linkRef3}
             onMouseLeave={mouseLeft}
           >

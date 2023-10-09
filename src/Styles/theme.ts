@@ -1,59 +1,64 @@
+import { themeAttrs } from './ThemeAttrs';
+
 const theme = {
   colors: {
     blue_main: {
-      primary_normal: "#1B6CE7",
-      primary_dark: "#155ECD",
-      primary_light: "#4589F0",
-      secondary_normal: "#0055D6",
-      secondary_dark: "#003FA6",
-      secondary_light: "#3376E3",
+      primary_normal: '#1B6CE7',
+      primary_dark: '#155ECD',
+      primary_light: '#4589F0',
+      secondary_normal: '#0055D6',
+      secondary_dark: '#003FA6',
+      secondary_light: '#3376E3',
     },
     white_auxiliary: {
-      white_normal: "#F1F7FF",
-      white_dark: "#E1EBF9",
-      white_light: "#F6FAFF",
+      white_normal: '#F1F7FF',
+      white_dark: '#E1EBF9',
+      white_light: '#F6FAFF',
     },
     black_auxiliary: {
-      black_normal: "#242526",
-      black_dark: "#18191A",
-      black_light: "#303133",
+      black_normal: '#242526',
+      black_dark: '#18191A',
+      black_light: '#303133',
     },
     gray_auxiliary: {
-      gray_1: "#626264",
-      gray_2: "#737374",
-      gray_3: "#838385",
-      gray_4: "#9C9C9D",
-      gray_5: "#B5B5B6",
-      gray_6: "#CDCDCE",
-      gray_7: "#E6E6E7",
+      gray_1: '#626264',
+      gray_2: '#737374',
+      gray_3: '#838385',
+      gray_4: '#9C9C9D',
+      gray_5: '#B5B5B6',
+      gray_6: '#CDCDCE',
+      gray_7: '#E6E6E7',
     },
     red_auxiliary: {
-      red_normal: "#eb3d3d",
-      red_dark: "#D03333",
-      red_light: "#F05454",
+      red_normal: '#eb3d3d',
+      red_dark: '#D03333',
+      red_light: '#F05454',
     },
     green_auxiliary: {
-      green_normal: "#32d957",
-      green_dark: "#28bb49",
-      green_light: "#50e170",
+      green_normal: '#32d957',
+      green_dark: '#28bb49',
+      green_light: '#50e170',
     },
     yellow_auxiliary: {
-      yellow_normal: "#ffce52",
-      yellow_dark: "#d9b043",
-      yellow_light: "#ffd76b",
+      yellow_normal: '#ffce52',
+      yellow_dark: '#d9b043',
+      yellow_light: '#ffd76b',
     },
+    drop_shadow: `
+      filter: drop-shadow(-20px 16px 20px rgba(27, 108, 231, 0.2));
+    `
   },
 
   containerSizes: {
-    container_xl: "1440px",
-    container_l: "1140px",
-    container_m: "960px",
-    container_s: "540px",
+    container_xl: `${themeAttrs.container.container_xl}`,
+    container_l: `${themeAttrs.container.container_l}`,
+    container_m: `${themeAttrs.container.container_m}`,
+    container_s: `${themeAttrs.container.container_s}`,
   },
 
-  containerHero : {
+  containerHero: {
     container_xl: `
-      max-width: 1440px;
+      max-width: ${themeAttrs.container.container_xl};
       margin: 0 auto;
       padding: 96px 24px;
       display: flex;
@@ -62,19 +67,14 @@ const theme = {
       flex-direction: row;
       overflow-x: hidden;
     `,
-    container_s: `
-    flex-direction: column;
-    padding: 32px 18px;
-    `
   },
 
   spacing: {
-    gap_1: "0.8rem",
-    gap_2: "1.6rem",
-    gap_3: "4.8rem",
-    gap_4: "7.2rem",
-    gap_5: "12.8rem",
-    
+    gap_1: '0.8rem',
+    gap_2: '1.6rem',
+    gap_3: '4.8rem',
+    gap_4: '7.2rem',
+    gap_5: '12.8rem',
   },
 
   boxProps: {
@@ -144,6 +144,18 @@ const theme = {
       `,
     },
   },
+  animations: {
+    card: {
+      width_card: `${themeAttrs.card.widthCard}px`,
+      height_card: `${0.64 * themeAttrs.card.widthCard}px`,
+      width_card_responsive: `${themeAttrs.card.widthCardResponsive}px`,
+      height_card_responsive: `${0.64 * themeAttrs.card.widthCardResponsive}px`,
+      div_card: `
+    perspective: 500px;
+    position: relative;
+    
+    `,
+    },
+  },
 };
 export default theme;
-
