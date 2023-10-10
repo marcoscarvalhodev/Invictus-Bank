@@ -48,17 +48,17 @@ const NavDesktop = () => {
             >
               <li className="dropdown-item">
                 <a href="" className="nav-link-dropdown">
-                  Us
+                  Savings
+                </a>
+              </li>
+              <li className="dropdown-item">
+                <a href="" className="nav-link-dropdown">
+                  Who we are
                 </a>
               </li>
               <li className="dropdown-item">
                 <a href="" className="nav-link-dropdown">
                   Careers
-                </a>
-              </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
-                  Press
                 </a>
               </li>
             </ul>

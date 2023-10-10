@@ -15,8 +15,8 @@ export const StyledCard = styled.div<CardProps>`
     transform-origin: center center;
     transform-style: preserve-3d;
 
-    animation: flip-card 12s linear infinite alternate,
-    change-bg-card 12s linear infinite alternate;
+    animation: flip-card 6s linear infinite alternate,
+    change-bg-card 6s linear infinite alternate;
 
     @keyframes flip-card {
       0% {

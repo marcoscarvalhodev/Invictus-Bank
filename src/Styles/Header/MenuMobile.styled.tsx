@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 
 export const StyledMenuMobile = styled.nav`
   ${({ theme }) => css`
-    width: 100vw;
+    
+   &&{ width: 100vw;
     height: calc(100vh - 7.4rem);
     position: absolute;
     opacity: 0;
@@ -10,12 +11,14 @@ export const StyledMenuMobile = styled.nav`
     background-color: ${theme.colors.white_auxiliary.white_light};
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     transition: 0.7s ease;
+    overflow-y: scroll;
 
     &.active-menu-mobile {
       opacity: 1;
       pointer-events: all;
+      
     }
 
     .nav-list-mobile {
@@ -33,7 +36,7 @@ export const StyledMenuMobile = styled.nav`
       color: ${theme.colors.gray_auxiliary.gray_2};
       padding: 1.6rem 2.4rem;
       position: relative;
-
+      
       &::after {
         content: "";
         position: absolute;
@@ -81,5 +84,12 @@ export const StyledMenuMobile = styled.nav`
         }
       }
     }
+
+    .dropdown-menu-mobile {
+      position: relative;
+      
+    }
+  }
+    
   `}
 `;

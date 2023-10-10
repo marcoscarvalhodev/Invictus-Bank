@@ -5,6 +5,7 @@ import Logo from "../Reusable/Logo";
 
 interface NavMenuProps {
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
+  
 }
 
 const NavMenuMobile = ({ setMenuIcon }: NavMenuProps) => {

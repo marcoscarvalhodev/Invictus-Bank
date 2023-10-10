@@ -12,13 +12,17 @@ import Card from './Card';
 import { ContentHero } from '../../../Contents';
 import ContainerSizes from '../../../ContainerSizes';
 
-const Hero = () => {
+interface HeroProps {
+  activeBx: boolean;
+}
+
+const Hero = ({activeBx}: HeroProps) => {
   const { small, xsmall } = ContainerSizes();
   return (
     <StyledHero
       $small={small}
       $xsmall={xsmall}
-      className={`container ${small ? 'container-small' : ''}`}
+      className={`container ${small ? 'container-small' : ''} ${activeBx ? 'hero-active-bx' : ''}`}
     >
       <div className='flex-item-1'>
         {(xsmall && (
@@ -60,6 +64,8 @@ const Hero = () => {
         <IconContactless className='icon-contactless-hero dropshadow' />
         <Card xsmall={xsmall} />
       </div>
+
+      
     </StyledHero>
   );
 };

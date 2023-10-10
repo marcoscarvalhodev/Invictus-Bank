@@ -6,13 +6,20 @@ import MenuMobile from './MenuMobile';
 import NavDesktop from './NavDesktop';
 import ContainerSizes from '../../ContainerSizes';
 
-const Header = () => {
+interface HeaderProps {
+  setActiveBx: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header = ({setActiveBx}: HeaderProps) => {
   const [scroll, setScroll] = React.useState(0);
   const [scrolled, setScrolled] = React.useState(false);
-  const [headerState, setHeaderState] = React.useState(false);
   const [mobileDesktop, setMobileDesktop] = React.useState(false);
   const [menuIcon, setMenuIcon] = React.useState(false);
   const { small } = ContainerSizes();
+
+  React.useEffect(() => {
+    setActiveBx(menuIcon);
+  }, [menuIcon, setActiveBx])
 
   React.useEffect(() => {
     small ? setMobileDesktop(true) : setMobileDesktop(false);
@@ -38,7 +45,7 @@ const Header = () => {
         menuIcon ? 'click-header' : ''
       }`}
     >
-      {mobileDesktop && <NavMobile setMenuIcon={setMenuIcon} />}
+      {mobileDesktop && <NavMobile setMenuIcon={setMenuIcon}/>}
       {!mobileDesktop && <NavDesktop />}
       {mobileDesktop && <MenuMobile menuIcon={menuIcon} />}
     </StyledHeader>
