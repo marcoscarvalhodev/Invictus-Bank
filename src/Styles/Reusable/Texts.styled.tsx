@@ -6,8 +6,9 @@ interface TextsProps {
 }
 
 export const StyledTexts = styled.p<TextsProps>`
-  ${({ theme, $size, $device }) => css`
-    font-family: "Source Sans 3", sans-serif;
+  ${({theme, $size, $device }) => css`
+  && {  
+  font-family: "Source Sans 3", sans-serif;
     color: ${theme.colors.gray_auxiliary.gray_1};
     //P1
 
@@ -65,5 +66,8 @@ ${$size === "p3" &&
     `)
     }
   `}
+
+} 
+
   `}
 `;

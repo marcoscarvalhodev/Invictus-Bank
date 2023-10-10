@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledDropdownItem } from '../../Styles/Reusable/DropdownItem.styled';
+import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
 type DropdownProps = React.ComponentProps<'a'> & {
   xsmall?: string;
@@ -8,9 +9,9 @@ type DropdownProps = React.ComponentProps<'a'> & {
 const DropdownItem = ({children, xsmall}: DropdownProps) => {
   return (
     <StyledDropdownItem className='dropdown-item'>
-      <a href='' className='nav-link-dropdown'>
-        {children}
-      </a>
+
+      <StyledTexts href='' as="a" className='nav-link-dropdown' $size="p1" $device="desktop">{children}</StyledTexts>
+      
     </StyledDropdownItem>
   );
 };
