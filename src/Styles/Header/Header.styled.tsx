@@ -20,6 +20,8 @@ export const StyledHeader = styled.header`
 
     &.click-header {
       background-color: ${theme.colors.white_auxiliary.white_light};
+      position: relative;
+      
     }
 
     a {

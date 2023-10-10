@@ -3,17 +3,18 @@ import styled, { css } from "styled-components";
 interface headingProps {
   $device: "desktop" | "mobile";
   as: "h1" | "h2" | "h3" | "h4" | "h5";
+
 }
 
 export const StyledHeadings = styled.h1<headingProps>`
-  ${({ theme, as, $device }) => css`
+  ${({ theme, as, $device}) => css`
     font-family: "Sora", sans-serif;
-
+    
     //H1
 
     ${as === "h1" &&
     `
-    color: ${theme.colors.black_auxiliary.black_dark};
+    color: ${theme.colors.black_auxiliary.black_normal};
 
     ${
       ($device === "desktop" &&

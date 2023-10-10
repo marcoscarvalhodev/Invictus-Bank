@@ -137,17 +137,13 @@ export const StyledHero = styled.main<HeroProps>`
       }
     }
 
-    
-
-    
-
-    
-
     `};
 
     
     
-
+    &.hero-active-bx {
+      overflow-y: hidden;
+    }
 
   `}
 `;
