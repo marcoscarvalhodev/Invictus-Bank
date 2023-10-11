@@ -61,7 +61,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='desktop'>
+            <StyledHeadings as='h3' $device='mobile'>
               Supreme Bank
             </StyledHeadings>
           </a>
@@ -93,7 +93,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='desktop'>
+            <StyledHeadings as='h3' $device='mobile'>
               Digital Account
             </StyledHeadings>
           </a>
@@ -123,7 +123,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='desktop'>
+            <StyledHeadings as='h3' $device='mobile'>
               For you
             </StyledHeadings>
           </a>
@@ -143,23 +143,23 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
 
         <li>
           <a href='' className='nav-link-mobile'>
-            <StyledHeadings as='h3' $device='desktop'>
+            <StyledHeadings as='h3' $device='mobile'>
               Join Supreme Bank
             </StyledHeadings>
           </a>
         </li>
 
         <li className='social-icons'>
-          <a href=''>
+          <a href='https://facebook.com' target='_blank'>
             <Facebook />
           </a>
-          <a href=''>
+          <a href='https://youtube.com' target='_blank'>
             <Youtube />
           </a>
-          <a href=''>
+          <a href='https://www.instagram.com' target='_blank'>
             <Instagram />
           </a>
-          <a href=''>
+          <a href='https://twitter.com' target='_blank'>
             <Twitter />
           </a>
         </li>

@@ -20,6 +20,11 @@ export const StyledHeader = styled.header`
 
     &.click-header {
       background-color: ${theme.colors.white_auxiliary.white_normal};
+      position: relative;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      
     }
 
     a {

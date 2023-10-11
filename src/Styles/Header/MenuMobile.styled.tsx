@@ -4,17 +4,16 @@ export const StyledMenuMobile = styled.nav`
   ${({ theme }) => css`
     && {
       width: 100vw;
-      height: calc(100vh - 7.4rem);
+      height: 100vh;
       position: absolute;
       opacity: 0;
       pointer-events: none;
       background-color: ${theme.colors.white_auxiliary.white_normal};
       display: flex;
       justify-content: center;
-      align-items: start;
+      align-items: center;
       transition: 0.7s ease;
-      overflow-x: hidden;
-      overflow-y: scroll;
+      
 
       &.active-menu-mobile {
         opacity: 1;
@@ -25,13 +24,16 @@ export const StyledMenuMobile = styled.nav`
         display: flex;
         max-width: ${theme.containerSizes.container_xl};
         flex-direction: column;
+        
+        justify-content: center;
         width: 100%;
+        height: 100%;
         padding: 2.4rem;
       }
 
       .nav-link-mobile {
         color: ${theme.colors.gray_auxiliary.gray_2};
-        padding: 1.6rem 0rem;
+        
         transition: 0.5s ease;
 
         width: 100%;
@@ -77,7 +79,7 @@ export const StyledMenuMobile = styled.nav`
       }
 
       .social-icons {
-        margin-top: ${theme.spacing.gap_3};
+        padding: ${theme.spacing.gap_3} 0rem;
         ${theme.boxProps.flex.flex_center};
       }
 
@@ -110,7 +112,7 @@ export const StyledMenuMobile = styled.nav`
         border-radius: 0px;
         margin-bottom: 2.4rem;
         .nav-link-dropdown {
-          padding: 2.4rem;
+          padding: 1.6rem;
 
           display: inline-block;
           position: relative;
@@ -136,11 +138,12 @@ export const StyledMenuMobile = styled.nav`
       }
 
       .dropdown-title {
-        width: 100%;
+        
+        
       }
 
       .dropdown-wrapper-active {
-        margin-top: 1rem;
+        margin-top: 1.6rem;
         height: max-content;
         width: 100%;
         opacity: 1;

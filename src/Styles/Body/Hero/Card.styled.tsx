@@ -22,7 +22,7 @@ export const StyledCard = styled.div<CardProps>`
       0% {
         transform: rotateX(-10deg) rotateY(10deg) rotateY(-15deg);
       }
-      ${$xsmall ? '40%' : '42%'} {
+      42%{
         transform: rotateX(0deg) rotateY(20deg);
       }
       ${$xsmall ? '60%' : '58%'} {
