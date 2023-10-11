@@ -11,7 +11,7 @@ export const StyledMenuMobile = styled.nav`
       background-color: ${theme.colors.white_auxiliary.white_normal};
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       transition: 0.7s ease;
       overflow-x: hidden;
       overflow-y: scroll;
@@ -29,13 +29,11 @@ export const StyledMenuMobile = styled.nav`
         padding: 2.4rem;
       }
 
-
       .nav-link-mobile {
-        
         color: ${theme.colors.gray_auxiliary.gray_2};
         padding: 1.6rem 0rem;
-        transition: 1s ease;
-        
+        transition: 0.5s ease;
+
         width: 100%;
         &:hover {
           color: ${theme.colors.blue_main.primary_normal};
@@ -44,30 +42,38 @@ export const StyledMenuMobile = styled.nav`
 
       .nav-link-mobile:not(:last-child) {
         position: relative;
-        margin: 0px;
+
         display: inline-block;
 
         &::after {
-        content: "";
-        position: absolute;
-        top: 42%;
-        right: 2rem;
-        width: 0.7rem;
-        height: 0.7rem;
-        border-radius: 0.1rem;
+          content: '';
+          position: absolute;
+          top: 42%;
+          right: 0rem;
+          width: 0.7rem;
+          height: 0.7rem;
+          border-radius: 0.1rem;
+          margin-left: 3rem;
+          border-bottom: 0.2rem solid ${theme.colors.blue_main.primary_normal};
+          border-right: 0.2rem solid ${theme.colors.blue_main.primary_normal};
 
-        border-bottom: 0.2rem solid ${theme.colors.blue_main.primary_normal};
-        border-right: 0.2rem solid ${theme.colors.blue_main.primary_normal};
+          transform: rotate(45deg);
+          transition: 0.2s linear infinite alternate;
+        }
 
-        transform: rotate(45deg);
-        transition: 0.2s linear;
-      }
-
-      &:hover {
-        &::after {
-          top: 45%;
+        &:hover {
+          &::after {
+            ${theme.animations.arrow_up_down};
+          }
         }
       }
+
+      .nav-link-mobile-active {
+        color: ${theme.colors.blue_main.primary_normal};
+      }
+
+      .nav-link-mobile-active::after {
+        ${theme.animations.arrow_up_down};
       }
 
       .social-icons {
@@ -98,7 +104,6 @@ export const StyledMenuMobile = styled.nav`
         }
       }
 
-
       .dropdown-wrapper {
         ${theme.animations.dropdown_wrapper};
         transition: 0.3s ease;
@@ -106,7 +111,7 @@ export const StyledMenuMobile = styled.nav`
         margin-bottom: 2.4rem;
         .nav-link-dropdown {
           padding: 2.4rem;
-          
+
           display: inline-block;
           position: relative;
           &:hover {

@@ -18,23 +18,29 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
   const menuRef2 = React.useRef<HTMLAnchorElement>(null);
   const menuRef3 = React.useRef<HTMLAnchorElement>(null);
 
+  function verifyMenuState(menuRef: React.MutableRefObject<HTMLAnchorElement>) {
+    if (menuState === Number(menuRef.current?.id)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   React.useEffect(() => {
-    if(!menuIcon) {
+    if (!menuIcon) {
       setMenuState(0);
     }
-    
-  }, [menuIcon])
+  }, [menuIcon]);
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     const linkId = Number(event.currentTarget.id);
-    
+
     event.preventDefault();
     setMenuState(linkId);
 
-    if(menuState === linkId) {
+    if (menuState === linkId) {
       setMenuState(0);
     }
-    
   };
 
   return (
@@ -48,7 +54,12 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
             onClick={handleClick}
             id='1'
             href=''
-            className='nav-link-mobile'
+            
+            className={`nav-link-mobile ${
+              verifyMenuState(menuRef1)
+                ? 'nav-link-mobile-active'
+                : ''
+            }`}
           >
             <StyledHeadings as='h3' $device='desktop'>
               Supreme Bank
@@ -57,7 +68,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
 
           <ul
             className={`dropdown-wrapper ${
-              menuState === Number(menuRef1.current?.id)
+              verifyMenuState(menuRef1)
                 ? 'dropdown-wrapper-active'
                 : ''
             }`}
@@ -76,7 +87,11 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
             onClick={handleClick}
             id='2'
             href=''
-            className='nav-link-mobile'
+            className={`nav-link-mobile ${
+              verifyMenuState(menuRef2)
+                ? 'nav-link-mobile-active'
+                : ''
+            }`}
           >
             <StyledHeadings as='h3' $device='desktop'>
               Digital Account
@@ -85,7 +100,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
 
           <ul
             className={`dropdown-wrapper ${
-              menuState === Number(menuRef2.current?.id)
+              verifyMenuState(menuRef2)
                 ? 'dropdown-wrapper-active'
                 : ''
             }`}
@@ -102,7 +117,11 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
             id='3'
             onClick={handleClick}
             href=''
-            className={`nav-link-mobile`}
+            className={`nav-link-mobile ${
+              verifyMenuState(menuRef3)
+                ? 'nav-link-mobile-active'
+                : ''
+            }`}
           >
             <StyledHeadings as='h3' $device='desktop'>
               For you
@@ -111,7 +130,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
 
           <ul
             className={`dropdown-wrapper ${
-              menuState === Number(menuRef3.current?.id)
+              verifyMenuState(menuRef3)
                 ? 'dropdown-wrapper-active'
                 : ''
             }`}

@@ -55,6 +55,7 @@ export const StyledCard = styled.div<CardProps>`
 ${$xsmall && `
         width: ${theme.animations.card.width_card_responsive};
         height: ${theme.animations.card.height_card_responsive};
+        
       `};
 
       

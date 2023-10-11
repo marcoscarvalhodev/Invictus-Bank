@@ -177,6 +177,17 @@ const theme = {
       
       opacity: 0;
       pointer-events: none;
+    `, 
+    arrow_up_down : `
+    animation: arrow-y .3s ease infinite alternate;
+    @keyframes arrow-y {
+      0% {
+           transform: translate3d(0,4px,0) rotate(45deg);
+         }
+      100% {
+           transform: translate3d(0, 4px, 0) rotate(45deg);
+          }
+        };
     `
   },
 };
