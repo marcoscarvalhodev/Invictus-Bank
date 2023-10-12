@@ -61,7 +61,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='mobile'>
+            <StyledHeadings as='h3' $device='desktop'>
               Supreme Bank
             </StyledHeadings>
           </a>
@@ -93,7 +93,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='mobile'>
+            <StyledHeadings as='h3' $device='desktop'>
               Digital Account
             </StyledHeadings>
           </a>
@@ -123,7 +123,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
                 : ''
             }`}
           >
-            <StyledHeadings as='h3' $device='mobile'>
+            <StyledHeadings as='h3' $device='desktop'>
               For you
             </StyledHeadings>
           </a>
@@ -143,7 +143,7 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
 
         <li>
           <a href='' className='nav-link-mobile'>
-            <StyledHeadings as='h3' $device='mobile'>
+            <StyledHeadings as='h3' $device='desktop'>
               Join Supreme Bank
             </StyledHeadings>
           </a>

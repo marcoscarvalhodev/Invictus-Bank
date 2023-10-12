@@ -24,8 +24,7 @@ export const StyledMenuMobile = styled.nav`
         display: flex;
         max-width: ${theme.containerSizes.container_xl};
         flex-direction: column;
-        
-        justify-content: center;
+        justify-content: start;
         width: 100%;
         height: 100%;
         padding: 2.4rem;
