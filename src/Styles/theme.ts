@@ -75,6 +75,7 @@ const theme = {
     gap_3: '4.8rem',
     gap_4: '7.2rem',
     gap_5: '12.8rem',
+    gap_6: '9.6rem'
   },
 
   boxProps: {
@@ -115,6 +116,9 @@ const theme = {
       flex_item_3: `
       flex: 3 1 360px;
       `,
+      flex_item_3_mobile: `
+      flex: 3 1 250px;
+      ` ,
       flex_item_4: `
       flex: 4 1 360px;
       `,

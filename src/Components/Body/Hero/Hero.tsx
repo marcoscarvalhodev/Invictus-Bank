@@ -24,7 +24,7 @@ const Hero = ({activeBx}: HeroProps) => {
       $xsmall={xsmall}
       className={`container ${small ? 'container-small' : ''} ${activeBx ? 'hero-active-bx' : ''}`}
     >
-      <div className='flex-item-1'>
+      <div className='flex-item-1-hero'>
         {(xsmall && (
           <>
             <StyledHeadings as='h1' $device='mobile'>
@@ -49,16 +49,16 @@ const Hero = ({activeBx}: HeroProps) => {
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
           <Button />
-          <a href=''>
+          <a href='https://www.apple.com/br/app-store' target='_blank'>
             <AppStore className='appstore-icon'/>
           </a>
-          <a href=''>
+          <a href='https://play.google.com/' target='_blank'>
             <PlayStore className='playstore-icon'/>
           </a>
         </div>
       </div>
 
-      <div className='flex-item-3 div-card'>
+      <div className='flex-item-3-hero div-card'>
         <IconCard className='icon-card-hero dropshadow' />
         <IconMobile className='icon-mobile-hero dropshadow' />
         <IconContactless className='icon-contactless-hero dropshadow' />

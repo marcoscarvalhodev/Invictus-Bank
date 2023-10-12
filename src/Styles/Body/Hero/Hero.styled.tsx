@@ -7,13 +7,13 @@ interface HeroProps {
 
 export const StyledHero = styled.main<HeroProps>`
   ${({ theme, $xsmall, $small }) => css`
-    ${theme.containerHero.container_xl};
+    
 
-    &.container {
+   /* &.container {
       padding: ${theme.spacing.gap_5} 2.4rem;
-    }
+    }*/
 
-    .flex-item-1 {
+    .flex-item-1-hero {
       ${theme.boxProps.flex_items.flex_item_1};
 
       padding: ${theme.spacing.gap_3} 0;
@@ -31,7 +31,7 @@ export const StyledHero = styled.main<HeroProps>`
       }
     }
 
-    .flex-item-3 {
+    .flex-item-3-hero {
       ${theme.boxProps.flex_items.flex_item_3};
       ${theme.boxProps.flex.flex_center};
 
@@ -140,7 +140,7 @@ export const StyledHero = styled.main<HeroProps>`
       padding: ${theme.spacing.gap_3} 2.4rem;
     }
 
-    .flex-item-3 {
+    .flex-item-3-hero {
       padding: 0px;
       align-items: start;
       margin-top: 3rem;
