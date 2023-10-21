@@ -15,12 +15,12 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     };
   `};
 
-  body {
-  overflow-x: hidden;
-  background: ${theme.colors.white_auxiliary.white_normal};
-  }
-  
-  .container {
+    body {
+      overflow-x: hidden;
+      background: ${theme.colors.white_auxiliary.white_normal};
+    }
+
+    .container {
       ${theme.containerHero.container_xl};
     }
 
@@ -28,7 +28,8 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
       padding-top: 0px;
     }
 
-  ${$xsmall && `
+    ${$xsmall &&
+    `
   .container {
     padding-bottom: 0px;
 
@@ -46,7 +47,5 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
   `};
-
-    
   `}
 `;
