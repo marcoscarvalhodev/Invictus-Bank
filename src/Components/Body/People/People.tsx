@@ -13,6 +13,7 @@ import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
 import People6 from '../../../assets/img/woman-looking-laptop.jpg';
 
 const People = () => {
+  
   return (
     <StyledPeople className='container container-people'>
       <div className='flex-item-4-people'>
@@ -23,16 +24,14 @@ const People = () => {
           {ContentPeople.h2_title}
         </StyledHeadings>
         <StyledTexts as='p' $size='p1' $device='desktop'>
-          Your trusted financial partner, delivering creative solutions with a
-          personal touch. We prioritize security, efficiency, and customer
-          satisfaction.
+          {ContentPeople.p_description}
         </StyledTexts>
 
         <ul className='people-list'>
           {ContentPeople.list_bulets.map(
             ({ bullet_id, bullet_title, bullet_description }) => {
               return (
-                <li className='people-list-item' key={bullet_id}>
+                <li className={`people-list-item bg-icon-check`} key={bullet_id}>
                   <strong>{bullet_title}</strong>
                   <StyledTexts as='p' $size='p1' $device='mobile'>
                     {bullet_description}
@@ -49,9 +48,30 @@ const People = () => {
       </div>
 
       <div className='flex-item-3-people'>
-        <SVGPeople class1='people-1' class2='people-2' width='456' height='660' svg1={People1} svg2={People2}/>
-        <SVGPeople class1='people-3' class2='people-4' width='328' height='475' svg1={People3} svg2={People4}/>
-        <SVGPeople class1='people-5' class2='people-6' width='324' height='324' svg1={People5} svg2={People6}/>
+        <SVGPeople
+          class1='people-1'
+          class2='people-2'
+          width='456'
+          height='660'
+          svg1={People1}
+          svg2={People2}
+        />
+        <SVGPeople
+          class1='people-3'
+          class2='people-4'
+          width='328'
+          height='475'
+          svg1={People3}
+          svg2={People4}
+        />
+        <SVGPeople
+          class1='people-5'
+          class2='people-6'
+          width='324'
+          height='324'
+          svg1={People6}
+          svg2={People5}
+        />
       </div>
       <div className='flex-item-1-people'></div>
     </StyledPeople>

@@ -6,6 +6,7 @@ export const ContentHero = {
 export const ContentPeople = {
   h5_subtitle: 'GLOBAL TRUST' ,
   h2_title: 'Innovative.',
+  p_description: 'Your trusted financial partner, delivering creative solutions with a personal touch. We prioritize security, efficiency, and customer satisfaction.',
   list_bulets: [{
       bullet_id: '1',
       bullet_title: 'Security First.',
