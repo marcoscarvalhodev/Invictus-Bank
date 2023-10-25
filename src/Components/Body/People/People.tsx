@@ -32,7 +32,8 @@ const People = () => {
             ({ bullet_id, bullet_title, bullet_description }) => {
               return (
                 <li className={`people-list-item bg-icon-check`} key={bullet_id}>
-                  <strong>{bullet_title}</strong>
+                  <StyledHeadings className='bullet-title' as="h5" $device='desktop'>{bullet_title}</StyledHeadings>
+                  
                   <StyledTexts as='p' $size='p1' $device='mobile'>
                     {bullet_description}
                   </StyledTexts>
@@ -56,7 +57,10 @@ const People = () => {
           svg1={People1}
           svg2={People2}
         />
-        <SVGPeople
+        
+      </div>
+      <div className='flex-item-1-people'>
+      <SVGPeople
           class1='people-3'
           class2='people-4'
           width='328'
@@ -73,7 +77,6 @@ const People = () => {
           svg2={People5}
         />
       </div>
-      <div className='flex-item-1-people'></div>
     </StyledPeople>
   );
 };
