@@ -1,10 +1,14 @@
 import styled, { css } from 'styled-components';
 import iconCheck from '../../../assets/svg/icon-check.svg?url';
 
-export const StyledPeople = styled.section`
-  ${({ theme }) => css`
+interface PeopleProps {
+  $icon: string;
+}
+
+export const StyledPeople = styled.section<PeopleProps>`
+  ${({ theme, $icon }) => css`
     && {
-      
+      ${theme.boxProps.flex.flex_column};
       .flex-item-4-people {
         ${theme.boxProps.flex_items.flex_item_4};
         flex-direction: column;
@@ -40,17 +44,18 @@ export const StyledPeople = styled.section`
       }
 
       .title {
-        
         color: ${theme.colors.black_auxiliary.black_normal};
       }
 
       .people-list-item {
         position: relative;
-        border: 1px solid red;
-        padding: 0.8rem 0.8rem 0.8rem 7.2rem;
-        margin-bottom: 4.8rem;
+        
 
-        &:after {
+        margin-bottom: 4.8rem;
+      }
+
+      /*.people-list-item:after {
+        
           content: '';
           position: absolute;
           top: 0;
@@ -58,32 +63,32 @@ export const StyledPeople = styled.section`
           display: block;
           width: 4rem;
           height: 4rem;
+        
+      }*/
+
+      .list-wrapper {
+        display: flex;
+        gap: 16px;
+      }
+
+      .check-icon {
+        width: 40px;
+        height: 40px;
+        ${$icon};
+        margin-top: 5px;
+
+        &:hover {
+          transform: scale(1.15);
         }
       }
 
-      .bg-icon-check {
-        &:after {
-          background-image: url(${iconCheck});
-          background-size: cover;
-          transition: 0.5s ease;
-          cursor: pointer;
-          filter: drop-shadow(0px 16px 24px rgba(27, 108, 231, 0.3));
-          top: 16px;
-          left: 8px;
-        }
-
-        &:hover {
-          &:after {
-            transform: scale(1.05);
-          }
-        }
+      .bg-icon-check:hover::after {
+        transform: scale(1.5);
       }
 
       .people-list {
         margin-top: ${theme.spacing.gap_3};
       }
-
-      
     }
   `}
 `;
