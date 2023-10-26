@@ -11,11 +11,17 @@ import People3 from '../../../assets/img/man-holding-bank-pig.jpg';
 import People4 from '../../../assets/img/woman-holding-card.jpg';
 import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
 import People6 from '../../../assets/img/woman-looking-laptop.jpg';
+import IconCheck from '../../../assets/svg/icon-check.svg';
+
+import { Icons } from '../../Reusable/Icons';
 
 const People = () => {
-  
+  console.log(Icons(IconCheck));
   return (
-    <StyledPeople className='container container-people'>
+    <StyledPeople
+      $icon={Icons(IconCheck)}
+      className='container container-people'
+    >
       <div className='flex-item-4-people'>
         <StyledHeadings className='subtitle' as='h5' $device='desktop'>
           {ContentPeople.h5_subtitle}
@@ -31,19 +37,28 @@ const People = () => {
           {ContentPeople.list_bulets.map(
             ({ bullet_id, bullet_title, bullet_description }) => {
               return (
-                <li className={`people-list-item bg-icon-check`} key={bullet_id}>
-                  <StyledHeadings className='bullet-title' as="h5" $device='desktop'>{bullet_title}</StyledHeadings>
-                  
-                  <StyledTexts as='p' $size='p1' $device='mobile'>
-                    {bullet_description}
-                  </StyledTexts>
-                </li>
+                <div key={bullet_id} className='list-wrapper'>
+                  <div className='check-icon'></div>
+                  <li className={`people-list-item bg-icon-check`}>
+                    <StyledHeadings
+                      className='bullet-title'
+                      as='h5'
+                      $device='desktop'
+                    >
+                      {bullet_title}
+                    </StyledHeadings>
+
+                    <StyledTexts as='p' $size='p1' $device='mobile'>
+                      {bullet_description}
+                    </StyledTexts>
+                  </li>
+                </div>
               );
             }
           )}
         </ul>
 
-        <StyledTexts as='a' href='' $size='p1' $device='desktop'>
+        <StyledTexts as='a' href='' $size='p1' $device='desktop' $link={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
       </div>
@@ -57,10 +72,9 @@ const People = () => {
           svg1={People1}
           svg2={People2}
         />
-        
       </div>
       <div className='flex-item-1-people'>
-      <SVGPeople
+        <SVGPeople
           class1='people-3'
           class2='people-4'
           width='328'
