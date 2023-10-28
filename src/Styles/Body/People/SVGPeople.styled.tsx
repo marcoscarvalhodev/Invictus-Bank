@@ -1,0 +1,64 @@
+import styled, { css } from 'styled-components';
+
+interface SVGPeopleProps {
+  $small: boolean;
+  $xsmall: boolean;
+}
+
+export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
+  ${({ theme, $small, $xsmall }) => css`
+  width: 300px;
+  height: max-content;
+  
+
+  .people-1, .people-2 {
+    width: 300px;
+    height: 500px;
+  }
+    
+    
+    .people-1 {
+      
+      opacity: 0;
+      animation: people 10s ease 0s infinite;
+    }
+    .people-2 {
+      opacity: 0;
+      animation: people 10s ease 5s infinite;
+    }
+    .people-3 {
+      opacity: 0;
+      animation: people 10s ease 2s infinite;
+    }
+    .people-4 {
+      opacity: 0;
+      animation: people 10s ease 7s infinite;
+    }
+    .people-5 {
+      opacity: 0;
+      animation: people 10s ease 3s infinite;
+    }
+    .people-6 {
+      opacity: 0;
+      animation: people 10s ease 8s infinite;
+    }
+
+    @keyframes people {
+      0% {
+        opacity: 0;
+      }
+      20%,
+      50% {
+        opacity: 1;
+      }
+      70%,
+      100% {
+        opacity: 0;
+      }
+    }
+
+    ${$xsmall && css`
+      width: 250px;
+    `}
+  `}
+`;
