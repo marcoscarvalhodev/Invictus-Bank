@@ -1,23 +1,26 @@
 import styled, { css } from 'styled-components';
-import iconCheck from '../../../assets/svg/icon-check.svg?url';
 
 interface PeopleProps {
   $icon: string;
+  $small: boolean;
+  $xsmall: boolean;
 }
 
 export const StyledPeople = styled.section<PeopleProps>`
-  ${({ theme, $icon }) => css`
+  ${({ theme, $icon, $small, $xsmall }) => css`
     && {
       ${theme.boxProps.flex.flex_column};
+      flex-direction: row;
       .flex-item-4-people {
-        ${theme.boxProps.flex_items.flex_item_4};
+        display: flex;
         flex-direction: column;
         margin-right: 30px;
       }
 
       .flex-item-3-people {
-        ${theme.boxProps.flex_items.flex_item_3};
+        display: flex;
         flex-direction: column;
+        height: max-content;
       }
 
       .flex-item-1-people {
@@ -49,33 +52,21 @@ export const StyledPeople = styled.section<PeopleProps>`
 
       .people-list-item {
         position: relative;
-        
+        margin-left: 24px;
 
         margin-bottom: 4.8rem;
       }
 
-      /*.people-list-item:after {
-        
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: block;
-          width: 4rem;
-          height: 4rem;
-        
-      }*/
-
       .list-wrapper {
         display: flex;
-        gap: 16px;
       }
 
       .check-icon {
         width: 40px;
         height: 40px;
         ${$icon};
-        margin-top: 5px;
+        margin-top: -10px;
+        padding: 20px;
 
         &:hover {
           transform: scale(1.15);
@@ -89,6 +80,10 @@ export const StyledPeople = styled.section<PeopleProps>`
       .people-list {
         margin-top: ${theme.spacing.gap_3};
       }
+
+      ${$small && css`
+      flex-direction: column;
+      `}
     }
   `}
 `;

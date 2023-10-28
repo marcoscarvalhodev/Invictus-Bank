@@ -12,14 +12,17 @@ import People4 from '../../../assets/img/woman-holding-card.jpg';
 import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
 import People6 from '../../../assets/img/woman-looking-laptop.jpg';
 import IconCheck from '../../../assets/svg/icon-check.svg';
-
 import { Icons } from '../../Reusable/Icons';
 
+import ContainerSizes from '../../../ContainerSizes';
+
 const People = () => {
-  console.log(Icons(IconCheck));
+  const {small, xsmall, xlarge, large, medium} = ContainerSizes()
   return (
     <StyledPeople
       $icon={Icons(IconCheck)}
+      $small={small}
+      $xsmall={xsmall}
       className='container container-people'
     >
       <div className='flex-item-4-people'>

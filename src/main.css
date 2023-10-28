@@ -8,7 +8,7 @@
   font-size: 10px;
   list-style: none;
   caret-color: transparent;
-  
+  -webkit-tap-highlight-color: transparent;
 }
 
 

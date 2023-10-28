@@ -1,4 +1,6 @@
 import React from 'react';
+import { StyledSVGPeople } from '../../../Styles/Body/People/SVGPeople.styled';
+import ContainerSizes from '../../../ContainerSizes';
 
 interface SVGPeopleProps {
   width: string;
@@ -17,20 +19,21 @@ const SVGPeople = ({
   svg1,
   svg2,
 }: SVGPeopleProps) => {
+  const { xsmall, small, medium, large, xlarge } = ContainerSizes();
+
   return (
-    <svg
+    <StyledSVGPeople
       className='people-svg'
-      width={width}
-      height={height}
+      
       viewBox={`0 0 ${width} ${height}`}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
+      $small={small}
+      $xsmall={xsmall}
     >
-      <rect width={width} height={height} fill='transparent' />
-      <rect width={width} height={height} rx='63' fill='transparent' />
       <image className={class1} href={svg1} width={width} height={height} />
       <image className={class2} href={svg2} width={width} height={height} />
-    </svg>
+    </StyledSVGPeople>
   );
 };
 
