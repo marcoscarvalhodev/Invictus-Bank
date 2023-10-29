@@ -40,7 +40,7 @@ export const StyledTexts = styled.p<TextsProps>`
           padding-left: 64px;
           background-position: 8px 50%;
           &:after {
-            width: 40%;
+            width: 100%;
           }
         }
         

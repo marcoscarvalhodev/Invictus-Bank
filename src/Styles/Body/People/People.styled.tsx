@@ -10,22 +10,28 @@ export const StyledPeople = styled.section<PeopleProps>`
   ${({ theme, $icon, $small, $xsmall }) => css`
     && {
       ${theme.boxProps.flex.flex_column};
+      gap: 24px;
       flex-direction: row;
       .flex-item-4-people {
         display: flex;
         flex-direction: column;
-        margin-right: 30px;
+        
       }
 
+    
       .flex-item-3-people {
-        display: flex;
+        ${theme.boxProps.flex_items.flex_item_3};
+        
         flex-direction: column;
-        height: max-content;
+        
+        
       }
 
       .flex-item-1-people {
         ${theme.boxProps.flex_items.flex_item_1};
         flex-direction: column;
+        display: flex;
+        gap: 24px;
       }
 
       .subtitle {
