@@ -66,6 +66,7 @@ const People = () => {
         </StyledTexts>
       </div>
 
+      
       <div className='flex-item-3-people'>
         <SVGPeople
           class1='people-1'
@@ -94,6 +95,7 @@ const People = () => {
           svg2={People5}
         />
       </div>
+      
     </StyledPeople>
   );
 };

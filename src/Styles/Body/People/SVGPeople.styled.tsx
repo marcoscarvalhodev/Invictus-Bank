@@ -7,15 +7,16 @@ interface SVGPeopleProps {
 
 export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
   ${({ theme, $small, $xsmall }) => css`
+
+  
+    
+
   width: 300px;
-  height: max-content;
+  
+  
   
 
-  .people-1, .people-2 {
-    width: 300px;
-    height: 500px;
-  }
-    
+  
     
     .people-1 {
       
