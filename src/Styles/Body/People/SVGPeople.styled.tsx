@@ -3,23 +3,17 @@ import styled, { css } from 'styled-components';
 interface SVGPeopleProps {
   $small: boolean;
   $xsmall: boolean;
+  $width: string;
+  $height: string;
 }
 
 export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
-  ${({ theme, $small, $xsmall }) => css`
-
-  
-    
-
-  width: 300px;
-  
-  
-  
-
-  
-    
-    .people-1 {
+  ${({ theme, $small, $xsmall, $width, $height }) => css`
+    ${css`
+      width: ${$width}px;
       
+    `};
+    .people-1 {
       opacity: 0;
       animation: people 10s ease 0s infinite;
     }
@@ -58,8 +52,6 @@ export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
       }
     }
 
-    ${$xsmall && css`
-      width: 250px;
-    `}
+    
   `}
 `;
