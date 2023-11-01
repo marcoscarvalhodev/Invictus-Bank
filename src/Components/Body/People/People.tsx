@@ -71,8 +71,8 @@ const People = () => {
         <SVGPeople
           class1='people-1'
           class2='people-2'
-          width='456'
-          height='660'
+          width='345'
+          height='500'
           svg1={People1}
           svg2={People2}
         />
@@ -81,16 +81,16 @@ const People = () => {
         <SVGPeople
           class1='people-3'
           class2='people-4'
-          width='328'
-          height='475'
+          width='235'
+          height='340'
           svg1={People3}
           svg2={People4}
         />
         <SVGPeople
           class1='people-5'
           class2='people-6'
-          width='324'
-          height='324'
+          width='235'
+          height='235'
           svg1={People6}
           svg2={People5}
         />

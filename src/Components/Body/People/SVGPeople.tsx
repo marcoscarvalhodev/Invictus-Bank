@@ -30,6 +30,8 @@ const SVGPeople = ({
       xmlns='http://www.w3.org/2000/svg'
       $small={small}
       $xsmall={xsmall}
+      $width={width}
+      $height={height}
     >
       <image className={class1} href={svg1} width={width} height={height} />
       <image className={class2} href={svg2} width={width} height={height} />
