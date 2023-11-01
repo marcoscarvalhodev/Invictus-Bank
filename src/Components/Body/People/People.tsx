@@ -60,23 +60,23 @@ const People = () => {
             }
           )}
         </ul>
-
         <StyledTexts as='a' href='' $size='p1' $device='desktop' $link={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
+        
       </div>
-
       
-      <div className='flex-item-3-people'>
+      
+      {!xsmall ? <div className='flex-item-3-people'>
         <SVGPeople
           class1='people-1'
           class2='people-2'
-          width='345'
-          height='500'
+          width={`${small ? '276' : '345'}`}
+          height={`${small ? '400' : '500'}`}
           svg1={People1}
           svg2={People2}
         />
-      </div>
+      </div> : <></>}
       <div className='flex-item-1-people'>
         <SVGPeople
           class1='people-3'

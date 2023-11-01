@@ -23,19 +23,19 @@ export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
     }
     .people-3 {
       opacity: 0;
-      animation: people 10s ease 2s infinite;
+      animation: people 18s ease 0s infinite;
     }
     .people-4 {
       opacity: 0;
-      animation: people 10s ease 7s infinite;
+      animation: people 18s ease 9s infinite;
     }
     .people-5 {
       opacity: 0;
-      animation: people 10s ease 3s infinite;
+      animation: people 14s ease 0s infinite;
     }
     .people-6 {
       opacity: 0;
-      animation: people 10s ease 8s infinite;
+      animation: people 14s ease 7s infinite;
     }
 
     @keyframes people {
@@ -43,7 +43,7 @@ export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
         opacity: 0;
       }
       20%,
-      50% {
+      30% {
         opacity: 1;
       }
       70%,
