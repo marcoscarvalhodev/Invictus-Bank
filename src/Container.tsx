@@ -4,6 +4,7 @@ import Header from './Components/Header/Header.tsx';
 import Hero from './Components/Body/Hero/Hero.tsx';
 import HeroBackground from './Components/Body/Hero/HeroBackground.tsx';
 import People from './Components/Body/People/People.tsx';
+import Advantages from './Components/Body/Advantages/Advantages.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,6 +23,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
       <HeroBackground />
       <Hero activeBx={activeBx} />
       <People />
+      <Advantages />
     </StyledContainer>
   );
 };
