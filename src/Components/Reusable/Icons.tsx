@@ -1,12 +1,19 @@
-export const Icons = (icon : string) => {
-  return (
-    `background-image: url(${icon});
-    background-size: cover;
-    transition: 0.5s ease;
-    cursor: pointer;
-    filter: drop-shadow(0px 16px 24px rgba(27, 108, 231, 0.3));
-    
-    
-    `)
+import React from 'react'
+import { StyledIcons } from '../../Styles/Reusable/Icons.styled'
+
+type IconsProps = React.ComponentProps<'div'> & {
+  
+  inheritedClass?: string;
 }
 
+const Icons = ({children, inheritedClass} : IconsProps) => {
+  return (
+    <StyledIcons className={inheritedClass} >{children}</StyledIcons>
+      
+
+
+    
+  )
+}
+
+export default Icons

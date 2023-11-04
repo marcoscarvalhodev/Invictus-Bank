@@ -37,7 +37,7 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
 
     .rect-4 {
       animation: bg-home-rect 3s ease 1s infinite alternate;
-    }
+    }*/
 
     .bg-blur-1 {
       transform: translate3d(0, -100px, 0);
@@ -45,7 +45,7 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
 
     .bg-blur-2 {
       transform: translate3d(0, -150px, 0);
-    }*/
+    }
 
     @keyframes bg-home-rect {
       0% {

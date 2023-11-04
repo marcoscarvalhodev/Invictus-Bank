@@ -12,7 +12,7 @@ import People4 from '../../../assets/img/woman-holding-card.jpg';
 import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
 import People6 from '../../../assets/img/woman-looking-laptop.jpg';
 import IconCheck from '../../../assets/svg/icon-check.svg';
-import { Icons } from '../../Reusable/Icons';
+import Icons from '../../Reusable/Icons';
 
 import ContainerSizes from '../../../ContainerSizes';
 
@@ -20,7 +20,7 @@ const People = () => {
   const {small, xsmall, xlarge, large, medium} = ContainerSizes()
   return (
     <StyledPeople
-      $icon={Icons(IconCheck)}
+      
       $small={small}
       $xsmall={xsmall}
       className='container container-people'
@@ -38,11 +38,11 @@ const People = () => {
 
         <ul className='people-list'>
           {ContentPeople.list_bulets.map(
-            ({ bullet_id, bullet_title, bullet_description }) => {
+            ({ bullet_id, bullet_title, bullet_description, bullet_icon }) => {
               return (
-                <div key={bullet_id} className='list-wrapper'>
-                  <div className='check-icon'></div>
-                  <li className={`people-list-item bg-icon-check`}>
+                <li key={bullet_id} className='list-wrapper'>
+                  <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
+                  <div className={`people-list-item bg-icon-check`}>
                     <StyledHeadings
                       className='bullet-title'
                       as='h5'
@@ -54,8 +54,8 @@ const People = () => {
                     <StyledTexts as='p' $size='p1' $device='mobile'>
                       {bullet_description}
                     </StyledTexts>
-                  </li>
-                </div>
+                  </div>
+                </li>
               );
             }
           )}

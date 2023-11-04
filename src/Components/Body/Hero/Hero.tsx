@@ -49,10 +49,10 @@ const Hero = ({activeBx}: HeroProps) => {
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
           <Button />
-          <a href='https://www.apple.com/br/app-store' target='_blank'>
+          <a href='https://www.apple.com/br/app-store' target='_blank' aria-label="apple button">
             <AppStore className='appstore-icon'/>
           </a>
-          <a href='https://play.google.com/' target='_blank'>
+          <a href='https://play.google.com/' target='_blank' aria-label='playstore button'>
             <PlayStore className='playstore-icon'/>
           </a>
         </div>

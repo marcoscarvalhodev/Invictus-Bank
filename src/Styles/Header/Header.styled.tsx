@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
         0px 15.375px 24.1177px rgba(27, 108, 231, 0.05),
         0px 6.4px 10px rgba(27, 108, 231, 0.04),
         0px 2.3px 3.6px rgba(27, 108, 231, 0.02);
-        background-color: ${theme.colors.white_auxiliary.white_normal};
+        background-color: ${theme.colors.white_auxiliary.white_light};
     }
 
     &.click-header {

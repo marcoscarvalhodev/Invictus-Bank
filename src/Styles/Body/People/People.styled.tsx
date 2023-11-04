@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 
 interface PeopleProps {
-  $icon: string;
   $small: boolean;
   $xsmall: boolean;
 }
 
 export const StyledPeople = styled.section<PeopleProps>`
-  ${({ theme, $icon, $small, $xsmall }) => css`
+  ${({ theme, $small, $xsmall }) => css`
     && {
       ${theme.boxProps.flex.flex_column};
       gap: 24px;
@@ -44,7 +43,7 @@ export const StyledPeople = styled.section<PeopleProps>`
 
       .bullet-title {
         background: ${theme.colors.black_auxiliary.black_normal};
-        background-clip: text;
+        
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
@@ -67,16 +66,12 @@ export const StyledPeople = styled.section<PeopleProps>`
         display: flex;
       }
 
-      .check-icon {
-        width: 40px;
-        height: 40px;
-        ${$icon};
+      .bullet-icons {
+        
         margin-top: -10px;
-        padding: 20px;
-
-        &:hover {
-          transform: scale(1.15);
-        }
+        
+        
+        
       }
 
       .bg-icon-check:hover::after {
@@ -91,5 +86,7 @@ export const StyledPeople = styled.section<PeopleProps>`
       flex-direction: column;
       `}
     }
+
+    
   `}
 `;
