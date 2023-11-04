@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
     body {
       overflow-x: hidden;
-      background: ${theme.colors.white_auxiliary.white_normal};
+      background: ${theme.colors.white_auxiliary.white_light};
     }
 
     .container {
@@ -42,7 +42,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   
 
   .container + .container {
-    padding: 0px 24px ${theme.spacing.gap_6};
+    padding: 0px 24px ${theme.spacing.gap_6} 24px;
     
   }
 

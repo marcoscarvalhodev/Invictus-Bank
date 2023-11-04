@@ -96,7 +96,7 @@ ${as === "h5" &&
     `
     text-transform: uppercase;
     background: linear-gradient(220.94deg, ${theme.colors.blue_main.primary_normal} 14.43%, ${theme.colors.blue_main.secondary_dark} 85.28%);
-    background-clip: text;
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;

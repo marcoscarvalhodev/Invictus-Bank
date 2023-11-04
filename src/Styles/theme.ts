@@ -1,4 +1,5 @@
 import { themeAttrs } from './ThemeAttrs';
+import { css } from 'styled-components';
 
 const theme = {
   colors: {
@@ -11,7 +12,7 @@ const theme = {
       secondary_light: '#3376E3',
     },
     white_auxiliary: {
-      white_normal: '#F1F7FF',
+      white_normal: '#EBF3FF',
       white_dark: '#E1EBF9',
       white_light: '#F6FAFF',
     },
@@ -57,10 +58,11 @@ const theme = {
   },
 
   containerHero: {
-    container_xl: `
+    container_xl: css`
       max-width: ${themeAttrs.container.container_xl};
       margin: 0 auto;
       padding: 96px 24px;
+      padding-right: calc(24px + 16px);
       display: flex;
       justify-content: center;
       align-items: center;

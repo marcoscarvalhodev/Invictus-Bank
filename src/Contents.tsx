@@ -1,7 +1,9 @@
-import Cash from './assets/svg/icon-cash.svg?url';
-import Transfers from './assets/svg/icon-transfer.svg?url';
-import Card from './assets/svg/icon-card.svg?url'
-import Support from './assets/svg/icon-time.svg?url'
+import IconCheck from './assets/svg/icon-check.svg?react';
+
+import Cash from './assets/svg/icon-cash.svg?react';
+import Transfers from './assets/svg/icon-transfer.svg?react';
+import Card from './assets/svg/icon-card.svg?react';
+import Support from './assets/svg/icon-support.svg?react';
 
 export const ContentHero = {
   title: 'Welcome to Supreme Bank: Your financial future starts here.',
@@ -20,29 +22,31 @@ export const ContentPeople = {
       bullet_title: 'Security First.',
       bullet_description:
         'Your financial security is our top priority, with robust measures in place to protect your assets.',
+      bullet_icon: <IconCheck />,
     },
     {
       bullet_id: '2',
       bullet_title: 'Digital Convenience.',
       bullet_description:
         'Enjoy the convenience of modern digital banking while retaining the personal touch you deserve.',
+      bullet_icon: <IconCheck />,
     },
     {
       bullet_id: '3',
       bullet_title: '24/7 Accessibility.',
       bullet_description:
         'Providing round-the-clock access to your accounts and services.',
+      bullet_icon: <IconCheck />,
     },
   ],
   link_advantages: 'Supreme advantages.',
 };
 
-
 export const ContentAdvantages = {
-  advantages : [
-    {id: 1, icon: Cash, text: 'money is good'},
-    {id: 2,icon: Transfers, text: 'transfer is essential'},
-    {id: 3,icon: Card, text: 'card at any time'},
-    {id: 4,icon: Support, text: '24/7 support'}
-  ]
-}
+  advantages: [
+    { id: 1, icon: <Cash />, text: 'Attractive savings account interest rates.' },
+    { id: 2, icon: <Transfers />, text: 'Versatile transfer options available.' },
+    { id: 3, icon: <Card />, text: 'Flexible credit limit options.' },
+    { id: 4, icon: <Support />, text: 'Multi-lingual customer support.' },
+  ],
+};
