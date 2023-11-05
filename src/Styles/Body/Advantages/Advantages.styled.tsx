@@ -62,11 +62,11 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
     }
 
     .advantages-icons-description {
-      padding: 20px 0px;
+      padding: 2.4rem 0rem;
     }
 
     .advantages-title {
-      padding: 20px 0px;
+      padding: 1.6rem 0rem;
     }
   `}
 `;

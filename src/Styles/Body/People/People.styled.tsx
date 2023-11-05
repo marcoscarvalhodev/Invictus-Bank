@@ -17,6 +17,10 @@ export const StyledPeople = styled.section<PeopleProps>`
         
       }
 
+      .title {
+        padding: 1.6rem 0rem;
+      }
+
     
       .flex-item-3-people {
         ${theme.boxProps.flex_items.flex_item_3};
