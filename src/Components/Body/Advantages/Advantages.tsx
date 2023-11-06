@@ -14,10 +14,10 @@ const Advantages = () => {
     <StyledAdvantages $xsmall={xsmall} $small={small} className='container'>
       <div className='advantages'>
         <div className='auto-title'>
-          <StyledHeadings className='advantages-subtitle' as='h5' $device='desktop'>
+          <StyledHeadings className='advantages-subtitle' as='h5' $device='mobile'>
             Supreme
           </StyledHeadings>
-          <StyledHeadings className='advantages-title' as='h2' $device='desktop'>
+          <StyledHeadings className='advantages-title' as='h2' $device='mobile'>
             Why Supreme Bank?
           </StyledHeadings>
         </div>

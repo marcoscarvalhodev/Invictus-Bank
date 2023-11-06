@@ -44,9 +44,29 @@ export const ContentPeople = {
 
 export const ContentAdvantages = {
   advantages: [
-    { id: 1, icon: <Cash />, text: 'Attractive savings account interest rates.' },
-    { id: 2, icon: <Transfers />, text: 'Versatile transfer options available.' },
+    {
+      id: 1,
+      icon: <Cash />,
+      text: 'Attractive savings account interest rates.',
+    },
+    {
+      id: 2,
+      icon: <Transfers />,
+      text: 'Versatile transfer options available.',
+    },
     { id: 3, icon: <Card />, text: 'Flexible credit limit options.' },
     { id: 4, icon: <Support />, text: 'Multi-lingual customer support.' },
+  ],
+};
+
+export const ContentTestimonials = {
+  h5_subtitle: 'TESTIMONIALS',
+  h2_title: 'Discover the Supreme Experience',
+  list_testimonials: [
+    { photo: '', name: '', testimonial: '' },
+    { photo: '', name: '', testimonial: '' },
+    { photo: '', name: '', testimonial: '' },
+    { photo: '', name: '', testimonial: '' },
+    { photo: '', name: '', testimonial: '' },
   ],
 };
