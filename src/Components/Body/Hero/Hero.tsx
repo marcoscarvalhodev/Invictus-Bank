@@ -14,46 +14,46 @@ import ContainerSizes from '../../../ContainerSizes';
 
 interface HeroProps {
   activeBx: boolean;
+  smallState: 'desktop' | 'mobile';
 }
 
-const Hero = ({activeBx}: HeroProps) => {
-  const { small, xsmall } = ContainerSizes();
+const Hero = ({ activeBx, smallState }: HeroProps) => {
+  const { small, xsmall, xlarge } = ContainerSizes();
+
   return (
     <StyledHero
       $small={small}
       $xsmall={xsmall}
-      className={`container ${small ? 'container-small' : ''} ${activeBx ? 'hero-active-bx' : ''}`}
+      $xlarge={xlarge}
+      className={`container ${small ? 'container-small' : ''} ${
+        activeBx ? 'hero-active-bx' : ''
+      }`}
     >
       <div className='flex-item-1-hero'>
-        {(xsmall && (
-          <>
-            <StyledHeadings as='h1' $device='mobile'>
-              {ContentHero.title}
-            </StyledHeadings>
-            <StyledTexts $size='p1' $device='mobile'>
-              {ContentHero.paragraph}
-            </StyledTexts>
-          </>
-        )) || (
-          <>
-            <StyledHeadings as='h1' $device='desktop'>
-              {ContentHero.title}
-            </StyledHeadings>
-            <StyledTexts $size='p1' $device='desktop'>
-              {ContentHero.paragraph}
-            </StyledTexts>
-          </>
-        )}
+        <StyledHeadings as='h1' $device={smallState}>
+          {ContentHero.title}
+        </StyledHeadings>
+        <StyledTexts $size='p1' $device={smallState}>
+          {ContentHero.paragraph}
+        </StyledTexts>
 
         <div
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
           <Button />
-          <a href='https://www.apple.com/br/app-store' target='_blank' aria-label="apple button">
-            <AppStore className='appstore-icon'/>
+          <a
+            href='https://www.apple.com/br/app-store'
+            target='_blank'
+            aria-label='apple button'
+          >
+            <AppStore className='appstore-icon' />
           </a>
-          <a href='https://play.google.com/' target='_blank' aria-label='playstore button'>
-            <PlayStore className='playstore-icon'/>
+          <a
+            href='https://play.google.com/'
+            target='_blank'
+            aria-label='playstore button'
+          >
+            <PlayStore className='playstore-icon' />
           </a>
         </div>
       </div>
@@ -62,10 +62,8 @@ const Hero = ({activeBx}: HeroProps) => {
         <IconCard className='icon-card-hero dropshadow' />
         <IconMobile className='icon-mobile-hero dropshadow' />
         <IconContactless className='icon-contactless-hero dropshadow' />
-        <Card xsmall={xsmall} />
+        <Card xsmall={xsmall} xlarge={xlarge} />
       </div>
-
-      
     </StyledHero>
   );
 };

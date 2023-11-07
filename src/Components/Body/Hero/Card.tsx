@@ -5,12 +5,13 @@ import SupremeVerse from '../../../assets/svg/supreme-verse.svg?url';
 
 interface CardProps {
   xsmall: boolean;
+  xlarge: boolean;
 }
 
-const Card = ({xsmall} : CardProps) => {
+const Card = ({xsmall, xlarge} : CardProps) => {
   
   return (
-    <StyledCard $xsmall={xsmall}  $supreme={Supreme} $supremeVerse={SupremeVerse}>
+    <StyledCard $xsmall={xsmall} $xlarge={xlarge}  $supreme={Supreme} $supremeVerse={SupremeVerse}>
       
     </StyledCard>
   );

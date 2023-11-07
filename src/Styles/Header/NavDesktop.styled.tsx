@@ -6,8 +6,7 @@ interface DesktopProps {
 
 export const StyledNavDesktop = styled.nav<DesktopProps>`
   ${({ theme, $dropdown }) => css`
-    max-width: ${theme.containerSizes.container_xl};
-    margin: 0 auto;
+    
     padding: 1.6rem 2.4rem;
     display: flex;
     justify-content: space-between;

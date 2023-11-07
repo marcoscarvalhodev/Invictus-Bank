@@ -13,20 +13,35 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import ContainerSizes from '../../../ContainerSizes';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-const Testiominials = () => {
-  const {xsmall} = ContainerSizes();
+interface TestimonialsProps {
+  smallState: 'desktop' | 'mobile';
+}
+
+const Testiominials = ({smallState}: TestimonialsProps) => {
+  const {xsmall, xlarge} = ContainerSizes();
+  const [slideState, setSlideState] = React.useState(2);
+
+  React.useEffect(() => {
+    if(xsmall) {
+      setSlideState(1);
+    } else if(xlarge){ 
+      setSlideState(3);
+    } else {
+      setSlideState(2);
+    }
+  }, [xlarge, xsmall])
 
   return (
     <StyledTestimonials className='container'>
       <div className='box'>
         <StyledHeadings
           className='testimonials-subtitle'
-          $device='mobile'
+          $device={smallState}
           as='h5'
         >
           {ContentTestimonials.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings className='testimonials-title' $device='mobile' as='h2'>
+        <StyledHeadings className='testimonials-title' $device={smallState} as='h2'>
           {ContentTestimonials.h2_title}
         </StyledHeadings>
       </div>
@@ -34,7 +49,7 @@ const Testiominials = () => {
       <Swiper
         modules={[Pagination, Navigation]}
         spaceBetween={40}
-        slidesPerView={xsmall ? 1 : 2}
+        slidesPerView={slideState}
         navigation
         grabCursor={true}
         pagination={{ clickable: true, type: 'progressbar' }}
@@ -42,8 +57,8 @@ const Testiominials = () => {
         {ContentTestimonials.list_testimonials.map(({name, testimonial, photo, id}) => {
           return <SwiperSlide key={id}>
             <img src={photo} className='photo-profile'></img>
-            <StyledHeadings className='testimonials-name' $device="mobile" as="h4">{name}</StyledHeadings>
-            <StyledTexts $device='mobile' $size='p1'>{testimonial}</StyledTexts>
+            <StyledHeadings className='testimonials-name' $device={smallState} as="h4">{name}</StyledHeadings>
+            <StyledTexts $device={smallState} $size='p1'>{testimonial}</StyledTexts>
           </SwiperSlide>;
         })}
       </Swiper>

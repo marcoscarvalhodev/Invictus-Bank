@@ -9,6 +9,7 @@ export const StyledPeople = styled.section<PeopleProps>`
   ${({ theme, $small, $xsmall }) => css`
     && {
       ${theme.boxProps.flex.flex_column};
+      justify-content: space-between;
       gap: 24px;
       flex-direction: row;
       .flex-item-4-people {
@@ -23,7 +24,7 @@ export const StyledPeople = styled.section<PeopleProps>`
 
     
       .flex-item-3-people {
-        ${theme.boxProps.flex_items.flex_item_3};
+        justify-content: end;
         
         flex-direction: column;
         
@@ -31,8 +32,13 @@ export const StyledPeople = styled.section<PeopleProps>`
       }
 
       .flex-item-1-people {
-        ${theme.boxProps.flex_items.flex_item_1};
+        
         flex-direction: column;
+        display: flex;
+        gap: 24px;
+      }
+
+      .flex-pics {
         display: flex;
         gap: 24px;
       }
@@ -51,8 +57,7 @@ export const StyledPeople = styled.section<PeopleProps>`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
-        font-size: 1.8rem;
-        line-height: 140%;
+        
       }
 
       .title {
@@ -88,6 +93,17 @@ export const StyledPeople = styled.section<PeopleProps>`
 
       ${$small && css`
       flex-direction: column;
+
+      .flex-pics {
+        flex-direction: column;
+        
+        align-self: center;
+      }
+
+      .flex-item-1-people {
+        justify-content: center;
+        align-items: center;
+      }
       `}
     }
 

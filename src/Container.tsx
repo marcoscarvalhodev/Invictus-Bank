@@ -5,7 +5,8 @@ import Hero from './Components/Body/Hero/Hero.tsx';
 import HeroBackground from './Components/Body/Hero/HeroBackground.tsx';
 import People from './Components/Body/People/People.tsx';
 import Advantages from './Components/Body/Advantages/Advantages.tsx';
-import Slides from './Components/Body/Testimonials/Testimonials.tsx';
+import Testimonials from './Components/Body/Testimonials/Testimonials.tsx';
+import ContainerSizes from './ContainerSizes.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,6 +14,12 @@ interface ContainerProps {
 
 const Container = ({ setActiveMenu }: ContainerProps) => {
   const [activeBx, setActiveBx] = React.useState(false);
+  const { small, xsmall } = ContainerSizes();
+  const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
+
+  React.useEffect(() => {
+    small ? setSmallState('mobile') : setSmallState('desktop');
+  }, [small])
 
   React.useEffect(() => {
     setActiveMenu(activeBx);
@@ -22,10 +29,10 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
     <StyledContainer className={`${activeBx ? 'container-active-bx' : ''}`}>
       <Header setActiveBx={setActiveBx} />
       <HeroBackground />
-      <Hero activeBx={activeBx} />
-      <People />
-      <Advantages />
-      <Slides />
+      <Hero activeBx={activeBx} smallState={smallState}/>
+      <People smallState={smallState}/>
+      <Advantages smallState={smallState}/>
+      <Testimonials smallState={smallState}/>
     </StyledContainer>
   );
 };

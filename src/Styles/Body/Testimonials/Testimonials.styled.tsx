@@ -18,7 +18,7 @@ export const StyledTestimonials = styled.section`
 
       .swiper-wrapper {
         display: flex;
-        
+        width: max-content;
       }
       
 
@@ -27,7 +27,7 @@ export const StyledTestimonials = styled.section`
       }
 
       .testimonials-title {
-        width: 500px;
+        width: 50vw;
         padding: 1.6rem 0rem;
       }
 

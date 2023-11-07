@@ -17,7 +17,7 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       border-radius: 50px;
       background: ${theme.colors.white_auxiliary.white_normal};
       padding: ${theme.spacing.gap_4} ${theme.spacing.gap_3};
-
+      width: 100%;
     }
 
     .entail {
@@ -25,7 +25,6 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       top: 0;
       left: 50%;
       transform: translate(-50%, 0);
-      
     }
 
     ${$small &&
@@ -33,7 +32,7 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       .advantages {
         flex-direction: column;
         justify-content: center;
-      align-items: center;
+        align-items: center;
       }
     `}
 
@@ -45,17 +44,14 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       align-items: start;
     }
 
-     
-      ${$small &&
-      css`
-        .advantages-item {
-          justify-content: center;
-          align-items: center;
-          padding: 0px;
-          
-        }
-      `}
-    
+    ${$small &&
+    css`
+      .advantages-item {
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+      }
+    `}
 
     .auto-title {
       ${theme.boxProps.flex_items.flex_item_auto};

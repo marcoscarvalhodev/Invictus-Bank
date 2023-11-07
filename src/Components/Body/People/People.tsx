@@ -16,7 +16,11 @@ import Icons from '../../Reusable/Icons';
 
 import ContainerSizes from '../../../ContainerSizes';
 
-const People = () => {
+interface PeopleProps {
+  smallState: 'desktop' | 'mobile';
+}
+
+const People = ({smallState} : PeopleProps) => {
   const {small, xsmall, xlarge, large, medium} = ContainerSizes()
   return (
     <StyledPeople
@@ -26,13 +30,13 @@ const People = () => {
       className='container container-people'
     >
       <div className='flex-item-4-people'>
-        <StyledHeadings className='subtitle' as='h5' $device='desktop'>
+        <StyledHeadings className='subtitle' as='h5' $device={smallState}>
           {ContentPeople.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings className='title' as='h2' $device='desktop'>
+        <StyledHeadings className='title' as='h2' $device={smallState}>
           {ContentPeople.h2_title}
         </StyledHeadings>
-        <StyledTexts as='p' $size='p1' $device='desktop'>
+        <StyledTexts as='p' $size='p1' $device={smallState}>
           {ContentPeople.p_description}
         </StyledTexts>
 
@@ -46,12 +50,12 @@ const People = () => {
                     <StyledHeadings
                       className='bullet-title'
                       as='h5'
-                      $device='desktop'
+                      $device={smallState}
                     >
                       {bullet_title}
                     </StyledHeadings>
 
-                    <StyledTexts as='p' $size='p1' $device='mobile'>
+                    <StyledTexts as='p' $size='p1' $device={smallState}>
                       {bullet_description}
                     </StyledTexts>
                   </div>
@@ -60,13 +64,13 @@ const People = () => {
             }
           )}
         </ul>
-        <StyledTexts as='a' href='' $size='p1' $device='desktop' $link={true}>
+        <StyledTexts as='a' href='' $size='p2' $device={smallState} $link={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
         
       </div>
       
-      
+      <div className='flex-pics'>
       {!xsmall ? <div className='flex-item-3-people'>
         <SVGPeople
           class1='people-1'
@@ -94,6 +98,8 @@ const People = () => {
           svg1={People6}
           svg2={People5}
         />
+      </div>
+
       </div>
       
     </StyledPeople>

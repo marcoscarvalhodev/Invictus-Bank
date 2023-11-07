@@ -47,7 +47,7 @@ const theme = {
     },
     drop_shadow: `
       filter: drop-shadow(-20px 16px 20px rgba(27, 108, 231, 0.2));
-    `
+    `,
   },
 
   containerSizes: {
@@ -59,13 +59,13 @@ const theme = {
 
   containerHero: {
     container_xl: css`
-      max-width: ${themeAttrs.container.container_xl};
-      margin: 0 auto;
+      max-width: 100%;
+
       padding: 96px 24px;
       padding-right: calc(24px + 16px);
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: start;
+      align-items: start;
       flex-direction: row;
       overflow-x: hidden;
     `,
@@ -77,7 +77,7 @@ const theme = {
     gap_3: '4.8rem',
     gap_4: '7.2rem',
     gap_5: '12.8rem',
-    gap_6: '9.6rem'
+    gap_6: '9.6rem',
   },
 
   boxProps: {
@@ -120,7 +120,7 @@ const theme = {
       `,
       flex_item_3_mobile: `
       flex: 3 1 250px;
-      ` ,
+      `,
       flex_item_4: `
       flex: 4 1 360px;
       `,
@@ -152,17 +152,26 @@ const theme = {
   },
   animations: {
     card: {
-      width_card: `${themeAttrs.card.widthCard}px`,
-      height_card: `${0.64 * themeAttrs.card.widthCard}px`,
-      width_card_responsive: `${themeAttrs.card.widthCardResponsive}px`,
-      height_card_responsive: `${0.64 * themeAttrs.card.widthCardResponsive}px`,
+      card_normal: {
+        width_card: `${themeAttrs.card.widthCard}px`,
+        height_card: `${0.64 * themeAttrs.card.widthCard}px`,
+      },
+      card_small: {
+        width_card_small: `${themeAttrs.card.widthCardSmall}px`,
+        height_card_small: `${0.64 * themeAttrs.card.widthCardSmall}px`,
+      },
+      card_large: {
+        width_card_large: `${themeAttrs.card.widthCardLarge}px`,
+        height_card_large: `${0.64 * themeAttrs.card.widthCardLarge}px`,
+      },
+
       div_card: `
     perspective: 500px;
     position: relative;
     
     `,
     },
-    dropdown_wrapper : `
+    dropdown_wrapper: `
     background: #F6FAFF;
       padding: 1.6rem 2.4rem;
       border-radius: 1.6rem;
@@ -183,8 +192,8 @@ const theme = {
       
       opacity: 0;
       pointer-events: none;
-    `, 
-    arrow_up_down : `
+    `,
+    arrow_up_down: `
     animation: arrow-y .3s ease infinite alternate;
     @keyframes arrow-y {
       0% {
@@ -194,7 +203,7 @@ const theme = {
            transform: translate3d(0, 4px, 0) rotate(45deg);
           }
         };
-    `
+    `,
   },
 };
 export default theme;
