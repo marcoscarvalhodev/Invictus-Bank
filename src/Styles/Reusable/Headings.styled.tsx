@@ -9,6 +9,7 @@ interface headingProps {
 export const StyledHeadings = styled.h1<headingProps>`
   ${({ theme, as, $device}) => css`
     font-family: "Sora", sans-serif;
+    color: ${theme.colors.black_auxiliary.black_normal};
     
     //H1
 

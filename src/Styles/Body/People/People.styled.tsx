@@ -57,6 +57,7 @@ export const StyledPeople = styled.section<PeopleProps>`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
+        padding-bottom: 8px;
         
       }
 

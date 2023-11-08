@@ -55,7 +55,7 @@ const People = ({smallState} : PeopleProps) => {
                       {bullet_title}
                     </StyledHeadings>
 
-                    <StyledTexts as='p' $size='p1' $device={smallState}>
+                    <StyledTexts as='p' $size='p4' $device={smallState} >
                       {bullet_description}
                     </StyledTexts>
                   </div>
@@ -64,7 +64,7 @@ const People = ({smallState} : PeopleProps) => {
             }
           )}
         </ul>
-        <StyledTexts as='a' href='' $size='p2' $device={smallState} $link={true}>
+        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
         

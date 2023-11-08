@@ -1,8 +1,12 @@
 import styled, { css } from 'styled-components';
 import Arrow from '../../../assets/svg/icon-arrow.svg?url';
 
-export const StyledTestimonials = styled.section`
-  ${({ theme }) => css`
+interface TestimonialsProps {
+  $small: boolean;
+}
+
+export const StyledTestimonials = styled.section<TestimonialsProps>`
+  ${({ theme, $small }) => css`
     && {
       display: flex;
       flex-direction: column;
@@ -11,7 +15,7 @@ export const StyledTestimonials = styled.section`
 
       .swiper {
         position: relative;
-        padding: 30px 0px;
+        padding: 24px 0px;
         width: 100%;
         overflow: visible;
       }
@@ -27,8 +31,8 @@ export const StyledTestimonials = styled.section`
       }
 
       .testimonials-title {
-        width: 50vw;
-        padding: 1.6rem 0rem;
+        ${$small ? 'width: auto': 'width: 580px'};
+        padding-top: 16px;
       }
 
       .swiper-pagination {
@@ -86,9 +90,6 @@ export const StyledTestimonials = styled.section`
         }
       }
 
-      p {
-        font-size: 18px;
-      }
 
       .photo-profile {
         width: 56px;

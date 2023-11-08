@@ -18,7 +18,7 @@ interface TestimonialsProps {
 }
 
 const Testiominials = ({smallState}: TestimonialsProps) => {
-  const {xsmall, xlarge} = ContainerSizes();
+  const {xsmall, xlarge, small} = ContainerSizes();
   const [slideState, setSlideState] = React.useState(2);
 
   React.useEffect(() => {
@@ -32,7 +32,7 @@ const Testiominials = ({smallState}: TestimonialsProps) => {
   }, [xlarge, xsmall])
 
   return (
-    <StyledTestimonials className='container'>
+    <StyledTestimonials className='container' $small={small}>
       <div className='box'>
         <StyledHeadings
           className='testimonials-subtitle'
@@ -58,7 +58,7 @@ const Testiominials = ({smallState}: TestimonialsProps) => {
           return <SwiperSlide key={id}>
             <img src={photo} className='photo-profile'></img>
             <StyledHeadings className='testimonials-name' $device={smallState} as="h4">{name}</StyledHeadings>
-            <StyledTexts $device={smallState} $size='p1'>{testimonial}</StyledTexts>
+            <StyledTexts $device={smallState} $size='p4'>{testimonial}</StyledTexts>
           </SwiperSlide>;
         })}
       </Swiper>
