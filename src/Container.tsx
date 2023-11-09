@@ -7,6 +7,7 @@ import People from './Components/Body/People/People.tsx';
 import Advantages from './Components/Body/Advantages/Advantages.tsx';
 import Testimonials from './Components/Body/Testimonials/Testimonials.tsx';
 import ContainerSizes from './ContainerSizes.tsx';
+import SupremeApp from './Components/Body/SupremeApp/SupremeApp.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,7 +33,9 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
       <Hero activeBx={activeBx} smallState={smallState}/>
       <People smallState={smallState}/>
       <Advantages smallState={smallState}/>
+      <SupremeApp smallState={smallState}/>
       <Testimonials smallState={smallState}/>
+      
     </StyledContainer>
   );
 };
