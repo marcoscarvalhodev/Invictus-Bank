@@ -1,5 +1,9 @@
 import IconCheck from './assets/svg/icon-check.svg?react';
 
+import Mobile from './assets/svg/icon-mobile.svg?react';
+import Time from './assets/svg/icon-time.svg?react';
+import Settings from './assets/svg/icon-config.svg?react';
+
 import Cash from './assets/svg/icon-cash.svg?react';
 import Transfers from './assets/svg/icon-transfer.svg?react';
 import Card from './assets/svg/icon-card.svg?react';
@@ -68,37 +72,74 @@ export const ContentAdvantages = {
 
 export const ContentTestimonials = {
   h5_subtitle: 'TESTIMONIALS',
-  h2_title: 'Discover the Supreme Experience',
+  h2_title: 'Discover the Supreme Experience.',
   list_testimonials: [
-    { id: 1,
+    {
+      id: 1,
       photo: Woman1,
       name: 'Joanne Fuentes',
       testimonial:
         "I recently moved to a new city and was in search of a trustworthy bank. I'm so glad I found Supreme Bank. I appreciate the personalized attention they give to their customers.",
     },
-    {id: 2,
+    {
+      id: 2,
       photo: Woman3,
       name: 'Kelly Davis',
       testimonial:
         "I've been their customer for years, and I couldn't be happier with their services. Their friendly staff is always there to assist me with any questions.",
     },
-    { id: 3,
+    {
+      id: 3,
       photo: Man1,
       name: 'Harry Portman',
       testimonial:
         'The security and peace of mind that they offer are unparalleled. I never have to worry about my accounts or personal information being compromised. Thank you Supreme Bank.',
     },
-    { id: 4,
+    {
+      id: 4,
       photo: Woman2,
       name: 'Lucy Young',
       testimonial:
         "I appreciate Sup's commitment to community involvement. Their charitable initiatives and sponsorships show their dedication to making a positive impact in our local area. It's a bank that truly cares about the community it serves.",
     },
-    { id: 5,
+    {
+      id: 5,
       photo: Man2,
       name: 'Norman Smith',
       testimonial:
         "I've had accounts with several banks, but Supreme stands out from the rest. Their commitment to security and innovation is impressive. I feel confident knowing my money is in safe hands.",
+    },
+  ],
+};
+
+export const ContentSupremeApp = {
+  app_description: [
+    {
+      id: 1,
+      h5_subtitle: 'SUPREME APP',
+      h2_title: 'Effortless financial control.',
+      p_description:
+        'Step into the future of banking with our digital account feature. Enjoy the absolute management of your finances with swift transactions, rock-solid security, and a user-friendly interface. Your money, your terms—experience banking reimagined.',
+    },
+  ],
+  app_bullets: [
+    {
+      bullet_id: '1',
+      bullet_title: 'Easy Payments',
+      bullet_description: 'Painless settlement with convenient in-app payment options.',
+      bullet_icon: <Mobile />,
+    },
+    {
+      bullet_id: '2',
+      bullet_title: 'Quick Transactions',
+      bullet_description: 'Complete transactions swiftly with efficient processing, saving you valuable time.',
+      bullet_icon: <Time />,
+    },
+    {
+      bullet_id: '3',
+      bullet_title: 'Accessibility Options',
+      bullet_description: 'Enhance usability with settings catering to different accessibility needs.',
+      bullet_icon: <Settings />,
     },
   ],
 };
