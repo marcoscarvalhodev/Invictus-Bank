@@ -15,24 +15,17 @@ export const StyledPeople = styled.section<PeopleProps>`
       .flex-item-4-people {
         display: flex;
         flex-direction: column;
-        
       }
 
-      .title {
-        padding: 1.6rem 0rem;
-      }
+      
 
-    
       .flex-item-3-people {
         justify-content: end;
-        
+
         flex-direction: column;
-        
-        
       }
 
       .flex-item-1-people {
-        
         flex-direction: column;
         display: flex;
         gap: 24px;
@@ -51,63 +44,45 @@ export const StyledPeople = styled.section<PeopleProps>`
         border-radius: 6rem;
       }
 
-      .bullet-title {
-        background: ${theme.colors.black_auxiliary.black_normal};
-        
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-        padding-bottom: 8px;
-        
+      .title {
+        ${theme.bullets.title};
       }
 
-      .title {
-        color: ${theme.colors.black_auxiliary.black_normal};
+      .bullet-title {
+        ${theme.bullets.bullet_title};
       }
 
       .people-list-item {
-        position: relative;
-        margin-left: 24px;
-
-        margin-bottom: 4.8rem;
+        ${theme.bullets.list_item};
       }
 
       .list-wrapper {
-        display: flex;
+        ${theme.bullets.list_wrapper};
       }
 
       .bullet-icons {
-        
-        margin-top: -10px;
-        
-        
-        
-      }
-
-      .bg-icon-check:hover::after {
-        transform: scale(1.5);
+        ${theme.bullets.bullet_icons};
       }
 
       .people-list {
-        margin-top: ${theme.spacing.gap_3};
+        ${theme.bullets.list};
       }
 
-      ${$small && css`
-      flex-direction: column;
-
-      .flex-pics {
+      ${$small &&
+      css`
         flex-direction: column;
-        
-        align-self: center;
-      }
 
-      .flex-item-1-people {
-        justify-content: center;
-        align-items: center;
-      }
+        .flex-pics {
+          flex-direction: column;
+
+          align-self: center;
+        }
+
+        .flex-item-1-people {
+          justify-content: center;
+          align-items: center;
+        }
       `}
     }
-
-    
   `}
 `;

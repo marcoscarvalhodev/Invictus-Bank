@@ -119,7 +119,7 @@ export const ContentSupremeApp = {
       h5_subtitle: 'SUPREME APP',
       h2_title: 'Effortless financial control.',
       p_description:
-        'Step into the future of banking with our digital account feature. Enjoy the absolute management of your finances with swift transactions, rock-solid security, and a user-friendly interface. Your money, your terms—experience banking reimagined.',
+        'Step into the future of banking with our digital account feature. Enjoy the absolute management of your finances with swift transactions, rock-solid security, and a user-friendly interface. ',
     },
   ],
   app_bullets: [

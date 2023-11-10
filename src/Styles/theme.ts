@@ -205,5 +205,37 @@ const theme = {
         };
     `,
   },
+
+  bullets: {
+    title: css`
+      padding: 1.6rem 0rem;
+    `,
+    bullet_title: css`
+      background: #242526;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      padding-bottom: 8px;
+    `,
+    list_item: css`
+      position: relative;
+      margin-left: 24px;
+      margin-bottom: 4.8rem;
+
+      &:hover::after {
+        transform: scale(1.5);
+      }
+    `,
+    list_wrapper: css`
+      display: flex;
+    `,
+    list: css`
+      margin-top: 4.8rem;
+    `,
+    bullet_icons: css`
+      margin-top: -10px;
+    `,
+  },
 };
 export default theme;

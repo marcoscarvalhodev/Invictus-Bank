@@ -12,8 +12,8 @@ interface SupremeAppProps {
 const SupremeApp = ({ smallState }: SupremeAppProps) => {
   return (
     <StyledSupremeApp className='container'>
-      <div className='SupremeApp-item-1'></div>
-      <div className='SupremeApp-item-1'>
+      <div className='supremeapp-item-1 item-1'></div>
+      <div className='supremeapp-item-1'>
         {ContentSupremeApp.app_description.map(
           ({ h5_subtitle, h2_title, p_description, id }) => {
             return (
@@ -21,7 +21,7 @@ const SupremeApp = ({ smallState }: SupremeAppProps) => {
                 <StyledHeadings as='h5' $device={smallState}>
                   {h5_subtitle}
                 </StyledHeadings>
-                <StyledHeadings as='h2' $device={smallState}>
+                <StyledHeadings as='h2' $device={smallState} className='title'>
                   {h2_title}
                 </StyledHeadings>
                 <StyledTexts $device={smallState} $size='p1'>
@@ -32,13 +32,13 @@ const SupremeApp = ({ smallState }: SupremeAppProps) => {
           }
         )}
 
-        <ul>
+        <ul className='supremeapp-list'>
           {ContentSupremeApp.app_bullets.map(
             ({ bullet_id, bullet_title, bullet_description, bullet_icon }) => {
               return (
-                <li key={bullet_id}>
+                <li key={bullet_id} className='list-wrapper'>
                   <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
-                  <div>
+                  <div className='supremeapp-list-item'>
                     <StyledHeadings
                       className='bullet-title'
                       as='h5'
