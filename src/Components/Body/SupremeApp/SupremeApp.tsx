@@ -4,15 +4,20 @@ import { ContentSupremeApp } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
+import ContainerSizes from '../../../ContainerSizes';
+
+import PhoneMockup from '../../../assets/svg/figsb2.svg?react'
 
 interface SupremeAppProps {
   smallState: 'desktop' | 'mobile';
 }
 
 const SupremeApp = ({ smallState }: SupremeAppProps) => {
+  const {small} = ContainerSizes();
+
   return (
-    <StyledSupremeApp className='container'>
-      <div className='supremeapp-item-1 item-1'></div>
+    <StyledSupremeApp $small={small} className='container'>
+      <div className='supremeapp-item-1 item-1'><PhoneMockup /></div>
       <div className='supremeapp-item-1'>
         {ContentSupremeApp.app_description.map(
           ({ h5_subtitle, h2_title, p_description, id }) => {
@@ -56,6 +61,10 @@ const SupremeApp = ({ smallState }: SupremeAppProps) => {
             }
           )}
         </ul>
+
+        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true}>
+          {ContentSupremeApp.link_supremeapp}
+        </StyledTexts>
       </div>
     </StyledSupremeApp>
   );
