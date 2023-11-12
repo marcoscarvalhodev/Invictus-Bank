@@ -142,4 +142,6 @@ export const ContentSupremeApp = {
       bullet_icon: <Settings />,
     },
   ],
+
+  link_supremeapp: 'Secure and efficient.'
 };

@@ -1,19 +1,46 @@
 import styled, { css } from 'styled-components';
 
-interface SupremeAppProps {}
+interface SupremeAppProps {
+  $small: boolean;
+}
 
 export const StyledSupremeApp = styled.section<SupremeAppProps>`
-  ${({ theme }) => css`
+  ${({ theme, $small }) => css`
+  gap: 80px;
+
+  ${$small && css`
+  & {
+    flex-direction: column-reverse;
+
+    .item-1 {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+      
+      width: 500px;
+        
+      }
+    }
+  }
+  ` }
+  
+  
+    .item-1 {
+      width: 100%;
+      svg {
+      
+        
+        
+      }
+    }
+
     .supremeapp-item-1 {
       ${theme.boxProps.flex_items.flex_item_1};
 
       .title {
         ${theme.bullets.title};
-      }
-
-      .item-1 {
-        background: red;
-        height: 100px;
       }
 
       .supremeapp-list-item {
