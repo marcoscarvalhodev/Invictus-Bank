@@ -28,7 +28,7 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
             ({ bullet_id, bullet_title, bullet_description, bullet_icon }) => {
               return (
                 <li key={bullet_id} className='list-wrapper'>
-                  <Icons className='bullet-icons'>{bullet_icon}</Icons>
+                  <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
                   <div className='list-item'>
                     <StyledHeadings $device={smallState} as='h5' className='bullet-title'>
                       {bullet_title}
@@ -41,7 +41,7 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
           )}
         </ul>
 
-        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true}>
+        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true} className='link'>
           {ContentDoubleCard.link_double_card}
         </StyledTexts>
       </div>

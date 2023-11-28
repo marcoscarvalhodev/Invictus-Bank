@@ -129,7 +129,7 @@ export const ContentSupremeApp = {
       bullet_id: '1',
       bullet_title: 'Easy Payments',
       bullet_description:
-        'Painless settlement with convenient in-app payment options.',
+        'Painless settlement with convenient in-app payment options, rendering a great experience.',
       bullet_icon: <Mobile />,
     },
     {
@@ -160,7 +160,7 @@ export const ContentDoubleCard = {
     {
       bullet_id: 1,
       bullet_title: 'Contactless Technology',
-      bullet_description: 'Enjoy the contactless payment feature. Quick payment at any time.',
+      bullet_description: 'Enjoy the contactless payment feature. Quick payment at your leisure.',
       bullet_icon: <Contactless />,
     },
     {
