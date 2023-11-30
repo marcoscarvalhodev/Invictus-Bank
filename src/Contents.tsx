@@ -16,8 +16,6 @@ import Woman3 from './assets/img/testimonial-woman-3.jpg';
 import Man1 from './assets/img/testimonial-man-1.jpg';
 import Man2 from './assets/img/testimonial-man-2.jpg';
 
-import Contactless from './assets/svg/icon-contactless.svg?react';
-
 export const ContentHero = {
   title: 'Welcome to Supreme Bank: Your financial future starts here.',
   paragraph:
@@ -128,48 +126,22 @@ export const ContentSupremeApp = {
     {
       bullet_id: '1',
       bullet_title: 'Easy Payments',
-      bullet_description:
-        'Painless settlement with convenient in-app payment options, rendering a great experience.',
+      bullet_description: 'Painless settlement with convenient in-app payment options.',
       bullet_icon: <Mobile />,
     },
     {
       bullet_id: '2',
       bullet_title: 'Quick Transactions',
-      bullet_description:
-        'Complete transactions swiftly with efficient processing, saving you valuable time.',
+      bullet_description: 'Complete transactions swiftly with efficient processing, saving you valuable time.',
       bullet_icon: <Time />,
     },
     {
       bullet_id: '3',
       bullet_title: 'Accessibility Options',
-      bullet_description:
-        'Enhance usability with settings catering to different accessibility needs.',
+      bullet_description: 'Enhance usability with settings catering to different accessibility needs.',
       bullet_icon: <Settings />,
     },
   ],
 
-  link_supremeapp: 'Secure and efficient.',
-};
-
-export const ContentDoubleCard = {
-  h5_subtitle: 'TURN SUPREME',
-  h2_title: 'Credit and debit card.',
-  p_description:
-    "Maximize your spending with our bank's credit card. Earn points on every purchase, redeemable for exciting rewards. Take control of your finances – apply now for a card that works for you!",
-  icons_bullets: [
-    {
-      bullet_id: 1,
-      bullet_title: 'Contactless Technology',
-      bullet_description: 'Enjoy the contactless payment feature. Quick payment at your leisure.',
-      bullet_icon: <Contactless />,
-    },
-    {
-      bullet_id: 2,
-      bullet_title: 'Virtual Card',
-      bullet_description: 'Go cardless: our virtual card offers secure transactions. Zero physical hassle.',
-      bullet_icon: <Card />,
-    },
-  ],
-
-  link_double_card: 'Learn more'
+  link_supremeapp: 'Secure and efficient.'
 };
