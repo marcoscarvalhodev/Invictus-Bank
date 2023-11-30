@@ -3,15 +3,19 @@ import { StyledDoubleCard } from '../../../Styles/Body/DoubleCard/DoubleCard.sty
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { ContentDoubleCard } from '../../../Contents';
+import DoubleCards from '../../../assets/svg/figsb3.svg?react';
 import Icons from '../../Reusable/Icons';
-
+import ContainerSizes from '../../../ContainerSizes';
 interface DoubleCardProps {
   smallState: 'mobile' | 'desktop';
 }
 
 const DoubleCard = ({ smallState }: DoubleCardProps) => {
+
+  const {small} = ContainerSizes();
+
   return (
-    <StyledDoubleCard className='container'>
+    <StyledDoubleCard className='container' $small={small}>
       <div className='double-card-flex-item-1'>
         <StyledHeadings as='h5' $device={smallState}>
           {ContentDoubleCard.h5_subtitle}
@@ -45,7 +49,7 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
           {ContentDoubleCard.link_double_card}
         </StyledTexts>
       </div>
-      <div className='double-card-flex-item-1'></div>
+      <div className='double-card-flex-item-1 double-cards-wrapper'><DoubleCards className='double-cards' /></div>
     </StyledDoubleCard>
   );
 };

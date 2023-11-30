@@ -134,7 +134,7 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
         }
 
         #figsb2-icon3 {
-          animation: figsb2-icon-move 3s ease 2s infinite alternate;
+          animation: figsb2-icon-move 3s ease 3s infinite alternate;
         }
 
         #figsb2-icon4 {

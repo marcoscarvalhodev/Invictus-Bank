@@ -1,7 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const StyledDoubleCard = styled.section`
-  ${({ theme }) => css`
+interface DoubleCardsProps {
+  $small: boolean | null;
+}
+
+
+export const StyledDoubleCard = styled.section<DoubleCardsProps>`
+  ${({ theme, $small }) => css`
       
       display: flex;
       align-items: center;
@@ -39,5 +44,21 @@ export const StyledDoubleCard = styled.section`
     .link {
       padding-right: 0px;
     }
+
+    .double-cards {
+      width: 500px;
+    }
+
+    .double-cards-wrapper {
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ${$small && css`
+    display: flex;
+      flex-direction: column;
+    `}
   `}
 `;
