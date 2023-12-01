@@ -46,7 +46,7 @@ const theme = {
       yellow_light: '#ffd76b',
     },
     drop_shadow: `
-      filter: drop-shadow(-20px 16px 20px rgba(27, 108, 231, 0.2));
+      filter: drop-shadow(-6px 16px 20px rgba(27, 108, 231, 0.2));
     `,
   },
 
@@ -220,8 +220,8 @@ const theme = {
     `,
     list_item: css`
       position: relative;
-      margin-left: 24px;
-      margin-bottom: 4.8rem;
+      margin-left: 2.4rem;
+      
 
       &:hover::after {
         transform: scale(1.5);
@@ -229,6 +229,7 @@ const theme = {
     `,
     list_wrapper: css`
       display: flex;
+      margin-bottom: 4.8rem;
     `,
     list: css`
       margin-top: 4.8rem;

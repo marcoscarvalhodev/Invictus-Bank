@@ -5,19 +5,26 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
 import ContainerSizes from '../../../ContainerSizes';
+import IconShield from '../../../assets/svg/icon-shield.svg?react';
+import IconMoney from '../../../assets/svg/icon-money.svg?react';
+import IconBell from '../../../assets/svg/icon-bell.svg?react';
 
-import PhoneMockup from '../../../assets/svg/figsb2.svg?react'
+import PhoneMockup from '../../../assets/svg/figsb2.svg?react';
 
 interface SupremeAppProps {
   smallState: 'desktop' | 'mobile';
 }
 
 const SupremeApp = ({ smallState }: SupremeAppProps) => {
-  const {small} = ContainerSizes();
+  const { small, xlarge, xsmall } = ContainerSizes();
 
   return (
-    <StyledSupremeApp $small={small} className='container'>
-      <div className='supremeapp-item-1 item-1'><PhoneMockup /></div>
+    <StyledSupremeApp $small={small} $xlarge={xlarge} $xsmall={xsmall} className='container'>
+      <div className='supremeapp-item-1 item-1'>
+
+        <PhoneMockup className='phone-mockup' />
+        
+      </div>
       <div className='supremeapp-item-1'>
         {ContentSupremeApp.app_description.map(
           ({ h5_subtitle, h2_title, p_description, id }) => {
@@ -52,17 +59,23 @@ const SupremeApp = ({ smallState }: SupremeAppProps) => {
                       {bullet_title}
                     </StyledHeadings>
 
-                    <StyledTexts as='p' $size='p4' $device={smallState} >
+                    <StyledTexts as='p' $size='p4' $device={smallState}>
                       {bullet_description}
                     </StyledTexts>
-                    </div>
+                  </div>
                 </li>
               );
             }
           )}
         </ul>
 
-        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true}>
+        <StyledTexts
+          as='a'
+          href=''
+          $size='p1'
+          $device={smallState}
+          $link={true}
+        >
           {ContentSupremeApp.link_supremeapp}
         </StyledTexts>
       </div>
