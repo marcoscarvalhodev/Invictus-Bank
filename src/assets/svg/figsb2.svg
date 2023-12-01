@@ -1,4 +1,4 @@
-<svg width="606" height="928" viewBox="0 0 606 928" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 606 928" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="figsb2" clip-path="url(#clip0_121_2)">
 <g id="Clip path group">
 <mask id="mask0_121_2" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="606" height="928">
@@ -636,7 +636,7 @@
 <feBlend mode="normal" in2="effect3_dropShadow_121_2" result="effect4_dropShadow_121_2"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_121_2" result="shape"/>
 </filter>
-<linearGradient id="paint0_linear_121_2" x1="-nan" y1="-nan" x2="-nan" y2="-nan" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_121_2" gradientUnits="userSpaceOnUse">
 <stop stop-color="#003FA6"/>
 <stop offset="1" stop-color="#003FA6" stop-opacity="0"/>
 </linearGradient>
@@ -652,7 +652,7 @@
 <stop stop-color="#1B6CE7"/>
 <stop offset="1" stop-color="#003FA6"/>
 </linearGradient>
-<linearGradient id="paint4_linear_121_2" x1="-nan" y1="-nan" x2="-nan" y2="-nan" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint4_linear_121_2" gradientUnits="userSpaceOnUse">
 <stop stop-color="#1B6CE7"/>
 <stop offset="1" stop-color="#003FA6"/>
 </linearGradient>

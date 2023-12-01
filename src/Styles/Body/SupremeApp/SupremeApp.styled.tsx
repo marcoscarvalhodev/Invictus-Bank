@@ -2,41 +2,19 @@ import styled, { css } from 'styled-components';
 
 interface SupremeAppProps {
   $small: boolean;
+  $xlarge: boolean;
+  $xsmall: boolean;
 }
 
 export const StyledSupremeApp = styled.section<SupremeAppProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme, $small, $xlarge, $xsmall }) => css`
     && {
-      gap: 80px;
+      
       display: flex;
-
-      ${$small &&
-      css`
-        & {
-          display: flex;
-          flex-direction: column-reverse;
-
-          
-
-          .item-1 {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-
-            .phone-mockup {
-              
-              width: 500px;
-              
-            }
-          }
-        }
-      `}
-
+      flex-direction: row;
+      gap: 80px;
       .item-1 {
-        width: 100%;
-        padding: ${theme.spacing.gap_2};
+        padding: ${theme.spacing.gap_1};
 
         #figsb2-screen1 {
           animation: figsb2-screen1 20s ease infinite alternate;
@@ -141,13 +119,9 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
           animation: figsb2-icon-move 3s ease 1.5s infinite alternate;
         }
 
-
         #figsb2-icon5 {
           animation: figsb2-icon-move 3s ease 0s infinite alternate;
         }
-
-
-
 
         @keyframes figsb2-icon-move {
           0% {
@@ -161,7 +135,7 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
 
       .supremeapp-item-1 {
         ${theme.boxProps.flex_items.flex_item_1};
-
+        flex: 1;
         .title {
           ${theme.bullets.title};
         }
@@ -186,6 +160,39 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
           ${theme.bullets.bullet_title};
         }
       }
+
+      ${$small &&
+      css`
+        & {
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
+          gap: 40px;
+        }
+      `}
+
+      ${($small ||
+      $xlarge) &&
+        css`
+          .phone-mockup {
+            width: 500px;
+          }
+        `}
+
+      ${$xsmall && css`
+        
+      .phone-mockup {
+            width: 400px;
+          }
+      `}
+
+      ${$xlarge && css`
+        .item-1 {
+          display: flex;
+          justify-content: center;
+          
+        }
+      `}
     }
   `}
 `;
