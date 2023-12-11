@@ -9,6 +9,7 @@ import Testimonials from './Components/Body/Testimonials/Testimonials.tsx';
 import ContainerSizes from './ContainerSizes.tsx';
 import SupremeApp from './Components/Body/SupremeApp/SupremeApp.tsx';
 import DoubleCard from './Components/Body/DoubleCard/DoubleCard.tsx';
+import DownloadApp from './Components/Body/DownloadApp/DownloadApp.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -37,6 +38,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
       <SupremeApp smallState={smallState}/>
       <DoubleCard smallState={smallState}/>
       <Testimonials smallState={smallState}/>
+      <DownloadApp smallState={smallState}/>
       
     </StyledContainer>
   );
