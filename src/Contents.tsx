@@ -173,3 +173,10 @@ export const ContentDoubleCard = {
 
   link_double_card: 'Learn more'
 };
+
+
+export const ContentDownloadApp = {
+  h5_subtitle: 'CREATE YOUR ACCOUNT.',
+  h2_title: "Get yours. It's free.",
+  p_description: 'Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.'
+}
