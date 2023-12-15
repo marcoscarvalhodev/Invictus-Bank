@@ -18,6 +18,9 @@ import Man2 from './assets/img/testimonial-man-2.jpg';
 
 import Contactless from './assets/svg/icon-contactless.svg?react';
 
+import PlayStore from './assets/svg/app-store.svg?react';
+import GooglePlay from './assets/svg/google-play.svg?react';
+
 export const ContentHero = {
   title: 'Welcome to Supreme Bank: Your financial future starts here.',
   paragraph:
@@ -178,5 +181,9 @@ export const ContentDoubleCard = {
 export const ContentDownloadApp = {
   h5_subtitle: 'CREATE YOUR ACCOUNT.',
   h2_title: "Get yours. It's free.",
-  p_description: 'Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.'
+  p_description: 'Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.',
+  buttons: [
+    {button: <PlayStore />},
+    {button: <GooglePlay />}
+  ]
 }
