@@ -6,7 +6,7 @@ interface HeroProps {
   $xlarge: boolean;
 }
 
-export const StyledHero = styled.main<HeroProps>`
+export const StyledHero = styled.section<HeroProps>`
   ${({ theme, $xsmall, $small, $xlarge }) => css`
     && {
       .flex-item-1-hero {
