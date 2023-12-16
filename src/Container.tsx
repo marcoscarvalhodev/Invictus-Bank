@@ -5,6 +5,7 @@ import ContainerSizes from './ContainerSizes.tsx';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.tsx';
+import Savings from './Components/SubPages/Savings/Savings.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -33,6 +34,8 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
             path='/'
             element={<Home activeBx={activeBx} smallState={smallState} />}
           />
+
+          <Route path='savings/*' element={<Savings />} />
         
         </Routes>
       </BrowserRouter>

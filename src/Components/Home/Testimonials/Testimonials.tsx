@@ -3,7 +3,7 @@ import { ContentTestimonials } from '../../../Contents';
 
 import {Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { StyledTestimonials } from '../../../Styles/Body/Testimonials/Testimonials.styled';
+import { StyledTestimonials } from '../../../Styles/Home/Testimonials/Testimonials.styled';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

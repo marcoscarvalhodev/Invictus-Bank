@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledSVGPeople } from '../../../Styles/Body/People/SVGPeople.styled';
+import { StyledSVGPeople } from '../../../Styles/Home/People/SVGPeople.styled';
 import ContainerSizes from '../../../ContainerSizes';
 
 interface SVGPeopleProps {

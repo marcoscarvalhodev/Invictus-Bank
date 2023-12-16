@@ -1,13 +1,13 @@
 import React from 'react';
 
-import SupremeApp from './Components/Body/SupremeApp/SupremeApp.tsx';
-import DoubleCard from './Components/Body/DoubleCard/DoubleCard.tsx';
-import DownloadApp from './Components/Body/DownloadApp/DownloadApp.tsx';
-import Hero from './Components/Body/Hero/Hero.tsx';
-import HeroBackground from './Components/Body/Hero/HeroBackground.tsx';
-import People from './Components/Body/People/People.tsx';
-import Advantages from './Components/Body/Advantages/Advantages.tsx';
-import Testimonials from './Components/Body/Testimonials/Testimonials.tsx';
+import SupremeApp from './Components/Home/SupremeApp/SupremeApp.tsx';
+import DoubleCard from './Components/Home/DoubleCard/DoubleCard.tsx';
+import DownloadApp from './Components/Home/DownloadApp/DownloadApp.tsx';
+import Hero from './Components/Home/Hero/Hero.tsx';
+import HeroBackground from './Components/Home/Hero/HeroBackground.tsx';
+import People from './Components/Home/People/People.tsx';
+import Advantages from './Components/Home/Advantages/Advantages.tsx';
+import Testimonials from './Components/Home/Testimonials/Testimonials.tsx';
 
 interface HomeProps {
   activeBx: boolean;

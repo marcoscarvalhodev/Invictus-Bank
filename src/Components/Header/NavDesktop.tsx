@@ -1,8 +1,10 @@
-import React from "react";
-import { StyledNavDesktop } from "../../Styles/Header/NavDesktop.styled";
-import Button from "../Reusable/Button";
-import Login from "../Reusable/Login";
-import Logo from "../Reusable/Logo";
+import React from 'react';
+import { StyledNavDesktop } from '../../Styles/Header/NavDesktop.styled';
+import Button from '../Reusable/Button';
+import Login from '../Reusable/Login';
+import Logo from '../Reusable/Logo';
+
+import { NavLink } from 'react-router-dom';
 
 const NavDesktop = () => {
   const [dropdownMenu, setDropdownMenu] = React.useState(false);
@@ -13,10 +15,8 @@ const NavDesktop = () => {
   const [menuState, setMenuState] = React.useState(false);
 
   const handleClick: React.MouseEventHandler<HTMLLIElement> = (event) => {
-   
     event.preventDefault();
     setDropdownState(Number(event.currentTarget.id));
-    
   };
 
   const mouseLeft: React.MouseEventHandler<HTMLLIElement> = (event) => {
@@ -24,40 +24,42 @@ const NavDesktop = () => {
   };
 
   return (
-    <StyledNavDesktop className="navbar-desktop" $dropdown={dropdownMenu}>
-      <div className="navbar-desktop-item-1">
-        <Logo />
-        <ul className="menu-desktop">
+    <StyledNavDesktop className='navbar-desktop' $dropdown={dropdownMenu}>
+      <div className='navbar-desktop-item-1'>
+        <NavLink to='/'>
+          <Logo />
+        </NavLink>
+        <ul className='menu-desktop'>
           <li
-            className="menu-item"
-            id="1"
+            className='menu-item'
+            id='1'
             onClick={handleClick}
             onMouseOver={handleClick}
             ref={linkRef1}
             onMouseLeave={mouseLeft}
           >
-            <a href="" className="nav-link-desktop">
+            <a href='' className='nav-link-desktop'>
               Supreme Bank
             </a>
             <ul
               className={`dropdown-menu ${
                 Number(linkRef1.current?.id) === dropdownState
-                  ? "active-dropdown"
-                  : ""
+                  ? 'active-dropdown'
+                  : ''
               }`}
             >
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <NavLink to='/savings' className='nav-link-dropdown'>
                   Savings
-                </a>
+                </NavLink>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Who we are
                 </a>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Careers
                 </a>
               </li>
@@ -65,35 +67,35 @@ const NavDesktop = () => {
           </li>
 
           <li
-            className="menu-item"
-            id="2"
+            className='menu-item'
+            id='2'
             onClick={handleClick}
             onMouseOver={handleClick}
             ref={linkRef2}
             onMouseLeave={mouseLeft}
           >
-            <a href="" className="nav-link-desktop">
+            <a href='' className='nav-link-desktop'>
               Digital Account
             </a>
             <ul
               className={`dropdown-menu ${
                 Number(linkRef2.current?.id) === dropdownState
-                  ? "active-dropdown"
-                  : ""
+                  ? 'active-dropdown'
+                  : ''
               }`}
             >
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Create your account
                 </a>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Transfers
                 </a>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Income
                 </a>
               </li>
@@ -101,35 +103,35 @@ const NavDesktop = () => {
           </li>
 
           <li
-            className="menu-item"
-            id="3"
+            className='menu-item'
+            id='3'
             onClick={handleClick}
             onMouseOver={handleClick}
             ref={linkRef3}
             onMouseLeave={mouseLeft}
           >
-            <a href="" className="nav-link-desktop">
+            <a href='' className='nav-link-desktop'>
               For you
             </a>
             <ul
               className={`dropdown-menu ${
                 Number(linkRef3.current?.id) === dropdownState
-                  ? "active-dropdown"
-                  : ""
+                  ? 'active-dropdown'
+                  : ''
               }`}
             >
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Community
                 </a>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   Rewards
                 </a>
               </li>
-              <li className="dropdown-item">
-                <a href="" className="nav-link-dropdown">
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
                   News
                 </a>
               </li>
@@ -138,7 +140,7 @@ const NavDesktop = () => {
         </ul>
       </div>
 
-      <div className="navbar-desktop-item-2">
+      <div className='navbar-desktop-item-2'>
         <Button />
         <Login />
       </div>

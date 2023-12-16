@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledPeople } from '../../../Styles/Body/People/People.styled';
+import { StyledPeople } from '../../../Styles/Home/People/People.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentPeople } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';

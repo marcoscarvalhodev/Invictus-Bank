@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledAdvantages } from '../../../Styles/Body/Advantages/Advantages.styled';
+import { StyledAdvantages } from '../../../Styles/Home/Advantages/Advantages.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentAdvantages } from '../../../Contents';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledSupremeApp } from '../../../Styles/Body/SupremeApp/SupremeApp.styled';
+import { StyledSupremeApp } from '../../../Styles/Home/SupremeApp/SupremeApp.styled';
 import { ContentSupremeApp } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
