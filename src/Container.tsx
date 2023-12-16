@@ -1,15 +1,10 @@
 import React from 'react';
 import { StyledContainer } from './Styles/Container.styled.ts';
 import Header from './Components/Header/Header.tsx';
-import Hero from './Components/Body/Hero/Hero.tsx';
-import HeroBackground from './Components/Body/Hero/HeroBackground.tsx';
-import People from './Components/Body/People/People.tsx';
-import Advantages from './Components/Body/Advantages/Advantages.tsx';
-import Testimonials from './Components/Body/Testimonials/Testimonials.tsx';
 import ContainerSizes from './ContainerSizes.tsx';
-import SupremeApp from './Components/Body/SupremeApp/SupremeApp.tsx';
-import DoubleCard from './Components/Body/DoubleCard/DoubleCard.tsx';
-import DownloadApp from './Components/Body/DownloadApp/DownloadApp.tsx';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,7 +17,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
 
   React.useEffect(() => {
     small ? setSmallState('mobile') : setSmallState('desktop');
-  }, [small])
+  }, [small]);
 
   React.useEffect(() => {
     setActiveMenu(activeBx);
@@ -30,16 +25,17 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
 
   return (
     <StyledContainer className={`${activeBx ? 'container-active-bx' : ''}`}>
-      <Header setActiveBx={setActiveBx} />
-      <HeroBackground />
-      <Hero activeBx={activeBx} smallState={smallState}/>
-      <People smallState={smallState}/>
-      <Advantages smallState={smallState}/>
-      <SupremeApp smallState={smallState}/>
-      <DoubleCard smallState={smallState}/>
-      <Testimonials smallState={smallState}/>
-      <DownloadApp smallState={smallState}/>
-      
+      <BrowserRouter>
+        <Header setActiveBx={setActiveBx} />
+
+        <Routes>
+          <Route
+            path='/'
+            element={<Home activeBx={activeBx} smallState={smallState} />}
+          />
+        
+        </Routes>
+      </BrowserRouter>
     </StyledContainer>
   );
 };
