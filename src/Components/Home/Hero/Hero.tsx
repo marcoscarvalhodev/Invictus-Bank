@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHero } from '../../../Styles/Body/Hero/Hero.styled';
+import { StyledHero } from '../../../Styles/Home/Hero/Hero.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Button from '../../Reusable/Button';

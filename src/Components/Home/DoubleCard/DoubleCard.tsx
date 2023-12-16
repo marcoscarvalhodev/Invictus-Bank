@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDoubleCard } from '../../../Styles/Body/DoubleCard/DoubleCard.styled';
+import { StyledDoubleCard } from '../../../Styles/Home/DoubleCard/DoubleCard.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { ContentDoubleCard } from '../../../Contents';

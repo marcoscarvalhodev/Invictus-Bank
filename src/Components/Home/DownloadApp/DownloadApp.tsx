@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDownloadApp } from '../../../Styles/Body/DownloadApp/DownloadApp.styled';
+import { StyledDownloadApp } from '../../../Styles/Home/DownloadApp/DownloadApp.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { ContentDownloadApp, ContentDoubleCard } from '../../../Contents';
