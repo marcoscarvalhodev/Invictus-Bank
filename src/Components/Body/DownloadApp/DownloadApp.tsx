@@ -35,7 +35,7 @@ const DownloadApp = ({ smallState }: DownloadAppProps) => {
       </div>
 
       <div className='download-app-item flex-item-2'>
-        <LogoSB />
+        <LogoSB className='logo-sb' />
       </div>
     </StyledDownloadApp>
   );
