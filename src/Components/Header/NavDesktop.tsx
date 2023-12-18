@@ -55,12 +55,12 @@ const NavDesktop = () => {
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
-                  Who we are
+                  Checking
                 </a>
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
-                  Careers
+                  Cards
                 </a>
               </li>
             </ul>
@@ -96,7 +96,7 @@ const NavDesktop = () => {
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
-                  Income
+                  Deposits
                 </a>
               </li>
             </ul>
@@ -122,17 +122,17 @@ const NavDesktop = () => {
             >
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
-                  Community
-                </a>
-              </li>
-              <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
                   Rewards
                 </a>
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
-                  News
+                  Careers
+                </a>
+              </li>
+              <li className='dropdown-item'>
+                <a href='' className='nav-link-dropdown'>
+                  About us
                 </a>
               </li>
             </ul>

@@ -85,7 +85,7 @@ const theme = {
       flex_start: `
       display: flex;
       justify-content: start;
-      align-items: center;
+      align-items: start;
     `,
       flex_center: `
       display: flex;

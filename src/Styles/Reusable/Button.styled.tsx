@@ -36,7 +36,7 @@ export const StyledButton = styled.a<ButtonProps>`
         box-shadow: 0px 17px 31px rgba(27, 108, 231, 0.27),
           0px 5px 9px rgba(27, 108, 231, 0.17),
           0px 2px 4px rgba(27, 108, 231, 0.135),
-          0px 7.5px 1.5px rgba(27, 108, 231, 0.1);
+          0px 5px 20px rgba(27, 108, 231, 0.1);
       }
 
       ${$xsmall &&
