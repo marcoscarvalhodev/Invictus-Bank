@@ -41,9 +41,9 @@ export const StyledDownloadApp = styled.section<StyledDownloadAppProps>`
         .button-download-app {
           cursor: pointer;
           transition: 0.5s ease;
-          
+          ${theme.colors.drop_shadow};
           &:hover {
-            ${theme.colors.drop_shadow};
+            filter: drop-shadow(-10px 20px 20px rgba(27, 108, 231, 0.3));
             transform: scale(1.05);
           }
         }

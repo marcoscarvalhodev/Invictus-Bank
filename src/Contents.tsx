@@ -155,35 +155,44 @@ export const ContentSupremeApp = {
 };
 
 export const ContentDoubleCard = {
-  h5_subtitle: 'TURN SUPREME',
-  h2_title: 'Credit and debit card.',
+  h5_subtitle: "TURN SUPREME",
+  h2_title: "Credit and debit card.",
   p_description:
     "Maximize your spending with our bank's credit card. Earn points on every purchase, redeemable for exciting rewards. Take control of your finances – apply now for a card that works for you!",
   icons_bullets: [
     {
       bullet_id: 1,
-      bullet_title: 'Contactless Technology',
-      bullet_description: 'Enjoy the contactless payment feature. Quick payment at your leisure.',
+      bullet_title: "Contactless Technology",
+      bullet_description: "Enjoy the contactless payment feature. Quick payment at your leisure.",
       bullet_icon: <Contactless />,
     },
     {
       bullet_id: 2,
-      bullet_title: 'Virtual Card',
-      bullet_description: 'Go cardless: our virtual card offers secure transactions. Zero physical hassle.',
+      bullet_title: "Virtual Card",
+      bullet_description: "Go cardless: our virtual card offers secure transactions. Zero physical hassle.",
       bullet_icon: <Card />,
     },
   ],
 
-  link_double_card: 'Learn more'
+  link_double_card: "Learn more"
 };
 
 
 export const ContentDownloadApp = {
-  h5_subtitle: 'CREATE YOUR ACCOUNT.',
+  h5_subtitle: "CREATE YOUR ACCOUNT.",
   h2_title: "Get yours. It's free.",
-  p_description: 'Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.',
+  p_description: "Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.",
   buttons: [
     {button: <PlayStore />},
     {button: <GooglePlay />}
   ]
+}
+
+
+export const ContentAccountTypes = {
+  Savings: {
+    h5_subtitle: 'CASH OASIS',
+    h2_title: "Savings Account & CDs",
+    p_description: "Smart savings platform for a prosperous and stress-free financial journey."
+  }
 }

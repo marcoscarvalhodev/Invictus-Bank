@@ -35,7 +35,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
             element={<Home activeBx={activeBx} smallState={smallState} />}
           />
 
-          <Route path='savings/*' element={<Savings />} />
+          <Route path='savings/*' element={<Savings smallState={smallState}/>} />
         
         </Routes>
       </BrowserRouter>
