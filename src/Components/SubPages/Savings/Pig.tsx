@@ -14,12 +14,12 @@ const Pig = () => {
 
   return (
     <StyledPig $pigTop={pigTop}>
-      <div className='second-section'>
+      <div className='pig-section'>
         <div className='pig-wrapper' ref={pigWrapper}>
           <PigSVG className='pig' />
           <div className='hole'></div>
 
-          <div className='container'>
+          <div className='container-pig'>
             <div className='coined'>
               <Coin className='face front' />
               <Coin className='face back' />

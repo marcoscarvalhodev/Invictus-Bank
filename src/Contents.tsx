@@ -193,6 +193,7 @@ export const ContentAccountTypes = {
   Savings: {
     h5_subtitle: 'CASH OASIS',
     h2_title: "Savings Account & CDs",
-    p_description: "Smart savings platform for a prosperous and stress-free financial journey."
+    p_description: "Smart savings platform for a prosperous and stress-free financial journey.",
+    link_button: "Get a review"
   }
 }

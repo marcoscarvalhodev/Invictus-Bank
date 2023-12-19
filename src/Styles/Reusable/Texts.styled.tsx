@@ -21,7 +21,7 @@ export const StyledTexts = styled.p<TextsProps>`
         color: ${theme.colors.blue_main.primary_normal};
         background: url(${IconArrow}) no-repeat 0% 50%;
         padding: 16px 16px 16px 40px;
-
+        cursor: pointer;
         text-align: left;
         position: relative;
         transition: 0.5s ease;
