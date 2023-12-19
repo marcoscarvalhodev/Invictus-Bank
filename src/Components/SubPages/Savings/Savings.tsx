@@ -4,6 +4,8 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Pig from './Pig';
+import HeroBackground from '../../Home/Hero/HeroBackground.tsx';
+
 
 interface SavingsProps {
   smallState: 'mobile' | 'desktop';
@@ -12,6 +14,7 @@ interface SavingsProps {
 const Savings = ({ smallState }: SavingsProps) => {
   return (
     <StyledSavings className='container'>
+      <HeroBackground />
       <div className='flex-savings'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
@@ -23,6 +26,10 @@ const Savings = ({ smallState }: SavingsProps) => {
 
         <StyledTexts $size='p1' $device={smallState}>
           {ContentAccountTypes.Savings.p_description}
+        </StyledTexts>
+
+        <StyledTexts $size='p1' as="a" $device={smallState} $link={true} >
+          {ContentAccountTypes.Savings.link_button}
         </StyledTexts>
       </div>
       <div className='flex-savings'>

@@ -2,6 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const StyledSavings = styled.section`
   ${({ theme }) => css`
+  height: 200vh;
+  background: ${theme.colors.white_auxiliary.white_light};
 
   && {
     ${theme.boxProps.flex.flex_start};

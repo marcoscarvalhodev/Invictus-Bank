@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface PigProps {
- $pigTop: number;
+  $pigTop: number;
 }
 
 function eachFigure() {
@@ -11,7 +11,7 @@ function eachFigure() {
     figureValue += `
       .figureSide-${i} {
         transform: translate3d(-50%, -50%, 0) rotateY(90deg)
-          rotateX(calc((${i + 1} - 1) * 18deg)) translateZ(20px);
+          rotateX(calc((${i + 1} - 1) * 18deg)) translateZ(2rem);
       };
     `;
   }
@@ -42,67 +42,53 @@ function eachCoin() {
 }
 
 export const StyledPig = styled.div<PigProps>`
-  ${({ theme, $pigTop}) => css`
+  ${({ theme, $pigTop }) => css`
     && {
-      
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       position: relative;
 
-      .container {
+      .container-pig {
         width: 40px;
         height: 40px;
         position: absolute;
         perspective: 300px;
         animation: moveCoin 3s linear infinite;
-        top: calc(${-$pigTop}px + -60px);
-        left: calc(50% + -16px);
-        transform: translateZ(-0.4em);
+        top: calc(${-$pigTop}px + -70px);
+        left: calc(50% + -15px);
+        
         z-index: 1;
       }
 
-      .second-section {
+      .pig-section {
         display: flex;
         justify-content: center;
         align-items: center;
         flex: 1;
         position: relative;
-        padding-top: 100px;
       }
-
 
       .pig-wrapper {
         position: relative;
-        
-      }
-
-      .first-section {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        perspective: 300px;
       }
 
       .pig {
         width: 200px;
-        
-        
       }
 
       .hole {
         width: 13px;
         height: 60px;
-        background-color: #E7A7AB;
+        background-color: #e7a7ab;
         position: absolute;
         left: 49%;
         top: 13px;
         z-index: 998;
       }
 
-      .container {
+      .container-pig {
         .coined {
           width: 40px;
           height: 40px;
@@ -110,6 +96,7 @@ export const StyledPig = styled.div<PigProps>`
           transform-style: preserve-3d;
           animation: spinCoin 3s linear infinite;
           backface-visibility: hidden;
+          
         }
       }
 
@@ -124,23 +111,23 @@ export const StyledPig = styled.div<PigProps>`
       }
 
       .front {
-        transform: translate3d(0, 0, 0.2rem) rotateY(0deg);
+        transform: translate3d(0, 0, 0.32rem) rotateY(0deg);
       }
 
       .back {
-        transform: rotateY(180deg) translate3d(0, 0, 0.2rem);
+        transform: rotateY(180deg) translate3d(0, 0, 0.32rem);
       }
 
       .side {
-        width: 0.4rem;
-        height: 0.2rem;
+        width: 0.64rem;
+        height: 0.32rem;
         background: #f7e259;
         position: absolute;
         left: 50%;
         top: 50%;
         backface-visibility: hidden;
-        border-top: #f7e259 0.2em solid;
-        border-bottom: #f7e259 0.2em solid;
+        border-top: #f7e259 0.32rem solid;
+        border-bottom: #f7e259 0.32rem solid;
       }
 
       .figureSide-0,
@@ -155,8 +142,8 @@ export const StyledPig = styled.div<PigProps>`
       .figureSide-18,
       .figureSide-19 {
         background-color: #f8d548;
-        border-top: #f8d548 0.2em solid;
-        border-bottom: #f8d548 0.2em solid;
+        border-top: #f8d548 0.32rem solid;
+        border-bottom: #f8d548 0.32rem solid;
       }
 
       .container-1,
@@ -195,11 +182,9 @@ export const StyledPig = styled.div<PigProps>`
         left: 10px;
       }
 
-
       ${eachFigure()};
       ${eachCoin()};
 
-    
       @keyframes spinCoin {
         0% {
           transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
