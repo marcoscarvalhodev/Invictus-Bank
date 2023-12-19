@@ -3,6 +3,7 @@ import { StyledSavings } from '../../../Styles/SubPages/Savings/Savings.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
+import Pig from './Pig';
 
 interface SavingsProps {
   smallState: 'mobile' | 'desktop';
@@ -24,7 +25,9 @@ const Savings = ({ smallState }: SavingsProps) => {
           {ContentAccountTypes.Savings.p_description}
         </StyledTexts>
       </div>
-      <div className='flex-savings'></div>
+      <div className='flex-savings'>
+        <Pig />
+      </div>
     </StyledSavings>
   );
 };
