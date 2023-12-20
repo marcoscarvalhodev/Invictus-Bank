@@ -40,7 +40,7 @@ const Hero = ({ activeBx, smallState }: HeroProps) => {
         <div
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
-          <Button />
+          <Button>Join Supreme Bank</Button>
           <a
             href='https://www.apple.com/br/app-store'
             target='_blank'
