@@ -1,11 +1,10 @@
-import React from "react";
-import { StyledNavMobile } from "../../Styles/Header/NavMobile.styled";
-import Login from "../Reusable/Login";
-import Logo from "../Reusable/Logo";
+import React from 'react';
+import { StyledNavMobile } from '../../Styles/Header/NavMobile.styled';
+import Logo from '../Reusable/Logo';
+import Button from '../Reusable/Button';
 
 interface NavMenuProps {
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
-  
 }
 
 const NavMenuMobile = ({ setMenuIcon }: NavMenuProps) => {
@@ -19,14 +18,14 @@ const NavMenuMobile = ({ setMenuIcon }: NavMenuProps) => {
     setActiveBx(!activeBx);
   };
   return (
-    <StyledNavMobile className="navbar-mobile">
+    <StyledNavMobile className='navbar-mobile'>
       <div
-        className={`bx ${activeBx ? "activeBx" : ""}`}
-        id="bx"
+        className={`bx ${activeBx ? 'activeBx' : ''}`}
+        id='bx'
         onClick={handleClick}
       ></div>
       <Logo />
-      <Login />
+      <Button light={true}>Login</Button>
     </StyledNavMobile>
   );
 };

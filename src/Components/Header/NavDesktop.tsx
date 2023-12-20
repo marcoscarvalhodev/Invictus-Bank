@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyledNavDesktop } from '../../Styles/Header/NavDesktop.styled';
 import Button from '../Reusable/Button';
-import Login from '../Reusable/Login';
 import Logo from '../Reusable/Logo';
-
 import { NavLink } from 'react-router-dom';
 
 const NavDesktop = () => {
@@ -141,8 +139,8 @@ const NavDesktop = () => {
       </div>
 
       <div className='navbar-desktop-item-2'>
-        <Button />
-        <Login />
+        <Button>Join Supreme Bank</Button>
+        <Button light={true}>Login</Button>
       </div>
     </StyledNavDesktop>
   );

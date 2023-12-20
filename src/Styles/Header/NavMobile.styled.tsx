@@ -8,7 +8,8 @@ export const StyledNavMobile = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    overflow: hidden;
+    position: relative;
     .bx {
       width: 3.6rem;
       height: 3.6rem;

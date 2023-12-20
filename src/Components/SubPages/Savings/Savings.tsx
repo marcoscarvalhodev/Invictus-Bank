@@ -5,7 +5,7 @@ import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Pig from './Pig';
 import HeroBackground from '../../Home/Hero/HeroBackground.tsx';
-
+import Button from '../../Reusable/Button.tsx';
 
 interface SavingsProps {
   smallState: 'mobile' | 'desktop';
@@ -28,9 +28,11 @@ const Savings = ({ smallState }: SavingsProps) => {
           {ContentAccountTypes.Savings.p_description}
         </StyledTexts>
 
-        <StyledTexts $size='p1' as="a" $device={smallState} $link={true} >
-          {ContentAccountTypes.Savings.link_button}
-        </StyledTexts>
+        <div className='buttons-flex'>
+        <Button>{ContentAccountTypes.Savings.link_button_1}</Button>
+        <Button light={true}>{ContentAccountTypes.Savings.link_button_2}</Button>
+        </div>
+        
       </div>
       <div className='flex-savings'>
         <Pig />

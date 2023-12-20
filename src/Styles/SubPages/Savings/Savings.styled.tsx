@@ -16,6 +16,12 @@ export const StyledSavings = styled.section`
     .title {
       ${theme.bullets.title};
     }
+
+    .buttons-flex {
+      display: flex;
+      gap: 2.4rem;
+      padding: 2rem 0rem;
+    }
   }
   }
   
