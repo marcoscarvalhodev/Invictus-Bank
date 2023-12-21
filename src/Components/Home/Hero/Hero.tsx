@@ -13,11 +13,11 @@ import { ContentHero } from '../../../Contents';
 import ContainerSizes from '../../../ContainerSizes';
 
 interface HeroProps {
-  activeBx: boolean;
+  mobileBx: boolean;
   smallState: 'desktop' | 'mobile';
 }
 
-const Hero = ({ activeBx, smallState }: HeroProps) => {
+const Hero = ({ mobileBx, smallState }: HeroProps) => {
   const { small, xsmall, xlarge } = ContainerSizes();
 
   return (
@@ -26,7 +26,7 @@ const Hero = ({ activeBx, smallState }: HeroProps) => {
       $xsmall={xsmall}
       $xlarge={xlarge}
       className={`container ${small ? 'container-small' : ''} ${
-        activeBx ? 'hero-active-bx' : ''
+        mobileBx ? 'hero-active-bx' : ''
       }`}
     >
       <div className='flex-item-1-hero'>

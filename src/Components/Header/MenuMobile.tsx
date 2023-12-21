@@ -6,35 +6,43 @@ import Twitter from '../../assets/svg/icon-twitter.svg?react';
 import Instagram from '../../assets/svg/icon-instagram.svg?react';
 import Youtube from '../../assets/svg/icon-youtube.svg?react';
 import DropdownItem from '../Reusable/DropdownItem';
-import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
+import { ContentNavMobile } from '../../Contents';
+import { NavLink } from 'react-router-dom';
+import useRefs from '../Reusable/useRefs';
 
 interface MenuProps {
   menuIcon: boolean;
+  setMobileBx: React.Dispatch<React.SetStateAction<boolean>>;
+  setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
+  setActiveBx: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MenuMobile = ({ menuIcon }: MenuProps) => {
+const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx }: MenuProps) => {
   const [menuState, setMenuState] = React.useState(0);
-  const menuRef1 = React.useRef<HTMLAnchorElement>(null);
-  const menuRef2 = React.useRef<HTMLAnchorElement>(null);
-  const menuRef3 = React.useRef<HTMLAnchorElement>(null);
+  const itemsRef = React.useRef([]);
+  const { refsByKey, setRef } = useRefs();
+  const refs = Object.values(refsByKey).filter(Boolean);
 
-  function verifyMenuState(menuRef: React.MutableRefObject<HTMLAnchorElement>) {
-    if (menuState === Number(menuRef.current?.id)) {
-      return true;
-    } else {
-      return false;
-    }
+  const buttonDisable = () => {
+    setMobileBx(false);
+    setMenuIcon(false);
+    setActiveBx(false);
+    setMenuState(0);
   }
 
-  React.useEffect(() => {
-    if (!menuIcon) {
-      setMenuState(0);
+  const verifyMenuState = (menuRef: HTMLElement) => {
+    if (menuRef) {
+      if (menuState === Number(menuRef.id)) {
+        return true;
+      } else {
+        return false;
+      }
     }
-  }, [menuIcon]);
+  };
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     const linkId = Number(event.currentTarget.id);
-
+    console.log(linkId)
     event.preventDefault();
     setMenuState(linkId);
 
@@ -43,103 +51,59 @@ const MenuMobile = ({ menuIcon }: MenuProps) => {
     }
   };
 
+  React.useEffect(() => {
+    itemsRef.current = itemsRef.current.slice(
+      0,
+      ContentNavMobile.nav_mobile.length
+    );
+  }, [itemsRef]);
+
   return (
     <StyledMenuMobile
       className={`menu-mobile ${menuIcon ? 'active-menu-mobile' : ''}`}
     >
       <ul className='nav-list-mobile'>
-        <li className='dropdown-title'>
-          <a
-            ref={menuRef1}
-            onClick={handleClick}
-            id='1'
-            href=''
-            
-            className={`nav-link-mobile ${
-              verifyMenuState(menuRef1)
-                ? 'nav-link-mobile-active'
-                : ''
-            }`}
-          >
-            <StyledHeadings as='h3' $device='desktop'>
-              Supreme Bank
-            </StyledHeadings>
-          </a>
+        {ContentNavMobile.nav_mobile.map(({ id, pages, title_link }) => {
+          return (
+            <li key={id} className='dropdown-title'>
+              <a
+                id={id}
+                href=''
+                ref={(el) => setRef(el, id)}
+                onClick={handleClick}
+                className={`nav-link-mobile ${
+                  verifyMenuState(refs[Number(id) - 1])
+                    ? 'nav-link-mobile-active'
+                    : ''
+                }`}
+              >
+                <StyledHeadings as='h3' $device='desktop'>
+                  {title_link}
+                </StyledHeadings>
+              </a>
 
-          <ul
-            className={`dropdown-wrapper ${
-              verifyMenuState(menuRef1)
-                ? 'dropdown-wrapper-active'
-                : ''
-            }`}
-          >
-            <DropdownItem>Savings</DropdownItem>
+              <ul
+                className={`dropdown-wrapper ${
+                  verifyMenuState(refs[Number(id) - 1])
+                    ? 'dropdown-wrapper-active'
+                    : ''
+                }`}
+              >
+                <NavLink to={pages.page_1.url} onClick={buttonDisable}>
+                  <DropdownItem >{pages.page_1.link}</DropdownItem>
+                </NavLink>
 
-            <DropdownItem>Who we are</DropdownItem>
+                <NavLink to={pages.page_2.url} onClick={buttonDisable}>
+                  <DropdownItem>{pages.page_2.link}</DropdownItem>
+                </NavLink>
 
-            <DropdownItem>Careers</DropdownItem>
-          </ul>
-        </li>
-
-        <li className='dropdown-title'>
-          <a
-            ref={menuRef2}
-            onClick={handleClick}
-            id='2'
-            href=''
-            className={`nav-link-mobile ${
-              verifyMenuState(menuRef2)
-                ? 'nav-link-mobile-active'
-                : ''
-            }`}
-          >
-            <StyledHeadings as='h3' $device='desktop'>
-              Digital Account
-            </StyledHeadings>
-          </a>
-
-          <ul
-            className={`dropdown-wrapper ${
-              verifyMenuState(menuRef2)
-                ? 'dropdown-wrapper-active'
-                : ''
-            }`}
-          >
-            <DropdownItem>Create your account</DropdownItem>
-            <DropdownItem>Transfers</DropdownItem>
-            <DropdownItem>Income</DropdownItem>
-          </ul>
-        </li>
-
-        <li className='dropdown-title'>
-          <a
-            ref={menuRef3}
-            id='3'
-            onClick={handleClick}
-            href=''
-            className={`nav-link-mobile ${
-              verifyMenuState(menuRef3)
-                ? 'nav-link-mobile-active'
-                : ''
-            }`}
-          >
-            <StyledHeadings as='h3' $device='desktop'>
-              For you
-            </StyledHeadings>
-          </a>
-
-          <ul
-            className={`dropdown-wrapper ${
-              verifyMenuState(menuRef3)
-                ? 'dropdown-wrapper-active'
-                : ''
-            }`}
-          >
-            <DropdownItem>Community</DropdownItem>
-            <DropdownItem>Rewards</DropdownItem>
-            <DropdownItem>News</DropdownItem>
-          </ul>
-        </li>
+                <NavLink to={pages.page_3.url} onClick={buttonDisable}>
+                  <DropdownItem>{pages.page_3.link}</DropdownItem>
+                </NavLink>
+              </ul>
+            </li>
+          );
+        })}
 
         <li>
           <a href='' className='nav-link-mobile'>

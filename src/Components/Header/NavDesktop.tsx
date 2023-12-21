@@ -24,7 +24,7 @@ const NavDesktop = () => {
   return (
     <StyledNavDesktop className='navbar-desktop' $dropdown={dropdownMenu}>
       <div className='navbar-desktop-item-1'>
-        <NavLink to='/'>
+        <NavLink to='/' end className="logo-sb">
           <Logo />
         </NavLink>
         <ul className='menu-desktop'>

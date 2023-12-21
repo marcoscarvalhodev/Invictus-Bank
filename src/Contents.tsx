@@ -21,6 +21,128 @@ import Contactless from './assets/svg/icon-contactless.svg?react';
 import PlayStore from './assets/svg/app-store.svg?react';
 import GooglePlay from './assets/svg/google-play.svg?react';
 
+/*<li className='dropdown-title'>
+<a
+  ref={menuRef1}
+  onClick={handleClick}
+  id='1'
+  href=''
+  className={`nav-link-mobile ${
+    verifyMenuState(menuRef1) ? 'nav-link-mobile-active' : ''
+  }`}
+>
+  <StyledHeadings as='h3' $device='desktop'>
+    Supreme Bank
+  </StyledHeadings>
+</a>
+
+<ul
+  className={`dropdown-wrapper ${
+    verifyMenuState(menuRef1) ? 'dropdown-wrapper-active' : ''
+  }`}
+>
+  
+
+  <NavLink to="/savings"><DropdownItem>Savings</DropdownItem></NavLink>
+
+  <DropdownItem>Who we are</DropdownItem>
+
+  <DropdownItem>Careers</DropdownItem>
+</ul>
+</li>
+
+<li className='dropdown-title'>
+<a
+  ref={menuRef2}
+  onClick={handleClick}
+  id='2'
+  href=''
+  className={`nav-link-mobile ${
+    verifyMenuState(menuRef2) ? 'nav-link-mobile-active' : ''
+  }`}
+>
+  <StyledHeadings as='h3' $device='desktop'>
+    Digital Account
+  </StyledHeadings>
+</a>
+
+<ul
+  className={`dropdown-wrapper ${
+    verifyMenuState(menuRef2) ? 'dropdown-wrapper-active' : ''
+  }`}
+>
+  <DropdownItem>Create your account</DropdownItem>
+  <DropdownItem>Transfers</DropdownItem>
+  <DropdownItem>Income</DropdownItem>
+</ul>
+</li>
+
+<li className='dropdown-title'>
+<a
+  ref={menuRef3}
+  id='3'
+  onClick={handleClick}
+  href=''
+  className={`nav-link-mobile ${
+    verifyMenuState(menuRef3) ? 'nav-link-mobile-active' : ''
+  }`}
+>
+  <StyledHeadings as='h3' $device='desktop'>
+    For you
+  </StyledHeadings>
+</a>
+
+<ul
+  className={`dropdown-wrapper ${
+    verifyMenuState(menuRef3) ? 'dropdown-wrapper-active' : ''
+  }`}
+>
+  <DropdownItem>Community</DropdownItem>
+  <DropdownItem>Rewards</DropdownItem>
+  <DropdownItem>News</DropdownItem>
+</ul>
+</li>
+
+<li>
+<a href='' className='nav-link-mobile'>
+  <StyledHeadings as='h3' $device='desktop'>
+    Join Supreme Bank
+  </StyledHeadings>
+</a>
+</li>*/
+
+export const ContentNavMobile = {
+  nav_mobile: [
+    {
+      id: '1',
+      title_link: 'Supreme Bank',
+      pages: {
+        page_1: { link: 'Savings', url: 'savings' },
+        page_2: { link: 'Checking', url: 'checking' },
+        page_3: { link: 'Cards', url: 'cards' },
+      },
+    },
+    {
+      id: '2',
+      title_link: 'Digital Account',
+      pages: {
+        page_1: { link: 'Create your account', url: 'account' },
+        page_2: { link: 'Transfers', url: 'transfers' },
+        page_3: { link: 'Deposits', url: 'deposits' },
+      },
+    },
+    {
+      id: '3',
+      title_link: 'For You',
+      pages: {
+        page_1: { link: 'Rewards', url: 'rewards' },
+        page_2: { link: 'Careers', url: 'careers' },
+        page_3: { link: 'About us', url: 'about' },
+      },
+    },
+  ],
+};
+
 export const ContentHero = {
   title: 'Welcome to Supreme Bank: Your financial future starts here.',
   paragraph:
@@ -155,46 +277,45 @@ export const ContentSupremeApp = {
 };
 
 export const ContentDoubleCard = {
-  h5_subtitle: "TURN SUPREME",
-  h2_title: "Credit and debit card.",
+  h5_subtitle: 'TURN SUPREME',
+  h2_title: 'Credit and debit card.',
   p_description:
     "Maximize your spending with our bank's credit card. Earn points on every purchase, redeemable for exciting rewards. Take control of your finances – apply now for a card that works for you!",
   icons_bullets: [
     {
       bullet_id: 1,
-      bullet_title: "Contactless Technology",
-      bullet_description: "Enjoy the contactless payment feature. Quick payment at your leisure.",
+      bullet_title: 'Contactless Technology',
+      bullet_description:
+        'Enjoy the contactless payment feature. Quick payment at your leisure.',
       bullet_icon: <Contactless />,
     },
     {
       bullet_id: 2,
-      bullet_title: "Virtual Card",
-      bullet_description: "Go cardless: our virtual card offers secure transactions. Zero physical hassle.",
+      bullet_title: 'Virtual Card',
+      bullet_description:
+        'Go cardless: our virtual card offers secure transactions. Zero physical hassle.',
       bullet_icon: <Card />,
     },
   ],
 
-  link_double_card: "Learn more"
+  link_double_card: 'Learn more',
 };
 
-
 export const ContentDownloadApp = {
-  h5_subtitle: "CREATE YOUR ACCOUNT.",
+  h5_subtitle: 'CREATE YOUR ACCOUNT.',
   h2_title: "Get yours. It's free.",
-  p_description: "Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.",
-  buttons: [
-    {button: <PlayStore />},
-    {button: <GooglePlay />}
-  ]
-}
-
+  p_description:
+    'Join the best bank in the universe, with more than 20 million active clients all over the world. Boost your financial experience with Supreme Bank.',
+  buttons: [{ button: <PlayStore /> }, { button: <GooglePlay /> }],
+};
 
 export const ContentAccountTypes = {
   Savings: {
     h5_subtitle: 'CASH OASIS',
-    h2_title: "Savings Account & CDs",
-    p_description: "Smart savings platform for a prosperous and stress-free financial journey.",
-    link_button_1: "Get a review",
-    link_button_2: "Find my branch"
-  }
-}
+    h2_title: 'Savings Account & CDs',
+    p_description:
+      'Smart savings platform for a prosperous and stress-free financial journey.',
+    link_button_1: 'Get a review',
+    link_button_2: 'Find my branch',
+  },
+};
