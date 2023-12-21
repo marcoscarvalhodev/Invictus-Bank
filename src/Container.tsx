@@ -7,13 +7,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.tsx';
 import Savings from './Components/SubPages/Savings/Savings.tsx';
 
-
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Container = ({ setActiveMenu }: ContainerProps) => {
-  const [activeBx, setActiveBx] = React.useState(false);
+  const [mobileBx, setMobileBx] = React.useState(false);
   const { small, xsmall } = ContainerSizes();
   const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
 
@@ -22,22 +21,24 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
   }, [small]);
 
   React.useEffect(() => {
-    setActiveMenu(activeBx);
-  }, [activeBx, setActiveMenu]);
+    setActiveMenu(mobileBx);
+  }, [mobileBx, setActiveMenu]);
 
   return (
-    <StyledContainer className={`${activeBx ? 'container-active-bx' : ''}`}>
+    <StyledContainer className={`${mobileBx ? 'container-active-bx' : ''}`}>
       <BrowserRouter>
-        <Header setActiveBx={setActiveBx} />
+        <Header setMobileBx={setMobileBx} mobileBx={mobileBx} />
 
         <Routes>
           <Route
             path='/'
-            element={<Home activeBx={activeBx} smallState={smallState} />}
+            element={<Home mobileBx={mobileBx} smallState={smallState} />}
           />
-          
-          <Route path='savings/*' element={<Savings smallState={smallState}/>} />
-        
+
+          <Route
+            path='savings/*'
+            element={<Savings smallState={smallState} />}
+          />
         </Routes>
       </BrowserRouter>
     </StyledContainer>

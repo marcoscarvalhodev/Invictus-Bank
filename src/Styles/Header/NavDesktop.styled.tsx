@@ -27,6 +27,8 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       gap: 2.4rem;
     }
 
+    
+
     .menu-desktop {
       display: flex;
       justify-content: flex-start;

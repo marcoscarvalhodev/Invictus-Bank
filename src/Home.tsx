@@ -10,15 +10,15 @@ import Advantages from './Components/Home/Advantages/Advantages.tsx';
 import Testimonials from './Components/Home/Testimonials/Testimonials.tsx';
 
 interface HomeProps {
-  activeBx: boolean;
+  mobileBx: boolean;
   smallState: "desktop" | "mobile";
 }
 
-const Home = ({activeBx, smallState} : HomeProps) => {
+const Home = ({mobileBx, smallState} : HomeProps) => {
   return (
     <main>
       <HeroBackground />
-      <Hero activeBx={activeBx} smallState={smallState} />
+      <Hero mobileBx={mobileBx} smallState={smallState} />
       <People smallState={smallState} />
       <Advantages smallState={smallState} />
       <SupremeApp smallState={smallState} />

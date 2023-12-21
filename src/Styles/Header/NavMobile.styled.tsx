@@ -10,6 +10,16 @@ export const StyledNavMobile = styled.nav`
     align-items: center;
     overflow: hidden;
     position: relative;
+
+
+    .logo-sb {
+      position: absolute;
+      top: 0px;
+      padding-top: inherit;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
     .bx {
       width: 3.6rem;
       height: 3.6rem;
