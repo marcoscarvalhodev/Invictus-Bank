@@ -21,95 +21,10 @@ import Contactless from './assets/svg/icon-contactless.svg?react';
 import PlayStore from './assets/svg/app-store.svg?react';
 import GooglePlay from './assets/svg/google-play.svg?react';
 
-/*<li className='dropdown-title'>
-<a
-  ref={menuRef1}
-  onClick={handleClick}
-  id='1'
-  href=''
-  className={`nav-link-mobile ${
-    verifyMenuState(menuRef1) ? 'nav-link-mobile-active' : ''
-  }`}
->
-  <StyledHeadings as='h3' $device='desktop'>
-    Supreme Bank
-  </StyledHeadings>
-</a>
-
-<ul
-  className={`dropdown-wrapper ${
-    verifyMenuState(menuRef1) ? 'dropdown-wrapper-active' : ''
-  }`}
->
-  
-
-  <NavLink to="/savings"><DropdownItem>Savings</DropdownItem></NavLink>
-
-  <DropdownItem>Who we are</DropdownItem>
-
-  <DropdownItem>Careers</DropdownItem>
-</ul>
-</li>
-
-<li className='dropdown-title'>
-<a
-  ref={menuRef2}
-  onClick={handleClick}
-  id='2'
-  href=''
-  className={`nav-link-mobile ${
-    verifyMenuState(menuRef2) ? 'nav-link-mobile-active' : ''
-  }`}
->
-  <StyledHeadings as='h3' $device='desktop'>
-    Digital Account
-  </StyledHeadings>
-</a>
-
-<ul
-  className={`dropdown-wrapper ${
-    verifyMenuState(menuRef2) ? 'dropdown-wrapper-active' : ''
-  }`}
->
-  <DropdownItem>Create your account</DropdownItem>
-  <DropdownItem>Transfers</DropdownItem>
-  <DropdownItem>Income</DropdownItem>
-</ul>
-</li>
-
-<li className='dropdown-title'>
-<a
-  ref={menuRef3}
-  id='3'
-  onClick={handleClick}
-  href=''
-  className={`nav-link-mobile ${
-    verifyMenuState(menuRef3) ? 'nav-link-mobile-active' : ''
-  }`}
->
-  <StyledHeadings as='h3' $device='desktop'>
-    For you
-  </StyledHeadings>
-</a>
-
-<ul
-  className={`dropdown-wrapper ${
-    verifyMenuState(menuRef3) ? 'dropdown-wrapper-active' : ''
-  }`}
->
-  <DropdownItem>Community</DropdownItem>
-  <DropdownItem>Rewards</DropdownItem>
-  <DropdownItem>News</DropdownItem>
-</ul>
-</li>
-
-<li>
-<a href='' className='nav-link-mobile'>
-  <StyledHeadings as='h3' $device='desktop'>
-    Join Supreme Bank
-  </StyledHeadings>
-</a>
-</li>*/
+import PigIcon from './assets/svg/savings/slide/pig-icon.svg?react';
+import CDIcon from './assets/svg/savings/slide/cd-icon.svg?react';
+import MoneyIcon from './assets/svg/savings/slide/money-icon.svg?react';
+import SunsetIcon from './assets/svg/savings/slide/sunset-icon.svg?react';
 
 export const ContentNavMobile = {
   nav_mobile: [
@@ -317,5 +232,17 @@ export const ContentAccountTypes = {
       'Smart savings platform for a prosperous and stress-free financial journey.',
     link_button_1: 'Get a review',
     link_button_2: 'Find my branch',
+
+    savings_slides: {
+      title: 'Ready to transform your finances?',
+      p_description:
+        'Discover which smart money-saving strategy is the best for you.',
+      slides: [
+        {id: '1',icon: <PigIcon className='pig-icon'/>, name: 'Savings Account', link: 'Compare accounts'},
+        {id: '2', icon: <CDIcon />, name: 'Certificates of Deposit (CDs)', link: 'See CDs' },
+        {id: '3', icon: <MoneyIcon />, name: 'Money Market Account', link:'Compare accounts' },
+        {id: '4', icon: <SunsetIcon />, name: 'For Retirement', link: 'Learn more' },
+      ],
+    },
   },
 };
