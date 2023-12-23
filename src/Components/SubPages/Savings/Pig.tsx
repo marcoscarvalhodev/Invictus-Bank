@@ -1,7 +1,7 @@
 import React from 'react';
-import PigSVG from '../../../assets/svg/pig-coin/pig.svg?react';
+import PigSVG from '../../../assets/svg/savings/pig-coin/pig.svg?react';
 import { StyledPig } from '../../../Styles/SubPages/Savings/pig.styled';
-import Coin from '../../../assets/svg/pig-coin/coin-wrapper.svg?react';
+import Coin from '../../../assets/svg/savings/pig-coin/coin-wrapper.svg?react';
 
 const Pig = () => {
   const pigWrapper = React.useRef();
