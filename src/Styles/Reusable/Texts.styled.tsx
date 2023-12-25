@@ -45,7 +45,9 @@ export const StyledTexts = styled.p<TextsProps>`
           padding-left: 64px;
           background-position: 8px 50%;
           &:after {
-            width: 80%;
+            left: 8%;
+            position: absolute;
+            width: 85%;
           }
         }
       `}

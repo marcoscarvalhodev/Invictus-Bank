@@ -244,5 +244,19 @@ export const ContentAccountTypes = {
         {id: '4', icon: <SunsetIcon />, name: 'For Retirement', link: 'Learn more' },
       ],
     },
+
+    savings_advantages: {
+      title: 'Your savings made easy and secure.',
+      p_description: "We're talking about a fortress-level security engineering, money that practically moonwalks to growth, and access so easy it's practically a high-five. Let's elevate your savings game!",
+      bullets: [
+        {id: 1, bullet_description: "Pay bills directly from your savings account hassle-free."},
+        {id: 2,bullet_description: "96% of customers appreciate our clear and straightforward fee structure."},
+        {id: 3,bullet_description: "Set it and let it – watch your savings grow automatically."},
+        {id: 4,bullet_description: "Choose from a range of accounts suitableb to different needs and preferences."},
+        {id: 5,bullet_description: "89% of users utilizing auto-savings meet their financial targets."},
+        {id: 6,bullet_description: "No hidden fees; Our customers express trust in our fee transparency."},
+        {id: 7,bullet_description: "Process withdrawals and deposits within an average of 3 seconds."}
+      ]
+    }
   },
 };
