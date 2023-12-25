@@ -7,7 +7,7 @@ export const StyledSavingsHero = styled.section`
     flex-direction: row;
 
     .flex-savings {
-    padding: ${theme.spacing.gap_3} 0;
+    padding-top: ${theme.spacing.gap_3};
     flex: 1;
     
     
