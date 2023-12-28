@@ -8,6 +8,7 @@ interface GlobalStyleProps {
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   ${({ $activeBx, $xsmall }) => css`
+  
     ${$activeBx &&
     `body {
       overflow: hidden; 
@@ -18,6 +19,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     body {
       overflow-x: hidden;
       background: ${theme.colors.white_auxiliary.white_light};
+     
     }
 
     .container {
@@ -29,7 +31,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     }
 
     ${$xsmall &&
-    `
+    css`
   .container {
     padding-bottom: 0px;
 

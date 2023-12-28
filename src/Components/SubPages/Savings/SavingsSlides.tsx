@@ -10,12 +10,14 @@ interface SavingsSlidesProps {
 
 const SavingsSlides = ({ smallState }: SavingsSlidesProps) => {
   return (
-    <StyledSavingsSlides className='container'>
+    <StyledSavingsSlides >
+
+      <section className='container'>
       <div className='flex-savings-slides'>
-        <StyledHeadings $device={smallState} as='h2' className='title'>
+        <StyledHeadings $device={smallState} as='h2' className='title-slides'>
           {ContentAccountTypes.Savings.savings_slides.title}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState} className='description'>
+        <StyledTexts $size='p1' $device={smallState} className='description-slides'>
           {ContentAccountTypes.Savings.savings_slides.p_description}
         </StyledTexts>
       </div>
@@ -32,7 +34,7 @@ const SavingsSlides = ({ smallState }: SavingsSlidesProps) => {
             </li>;
           })}
         </ul>
-      
+        </section>
     </StyledSavingsSlides>
   );
 };

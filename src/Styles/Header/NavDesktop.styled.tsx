@@ -11,7 +11,8 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-width: ${theme.containerSizes.container_xl};
+    margin: 0 auto;
     .navbar-desktop-item-1 {
       flex: 1 1 auto;
       display: flex;
@@ -25,6 +26,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       align-items: center;
       justify-content: flex-end;
       gap: 2.4rem;
+      margin-right: 1.6rem;
     }
 
     

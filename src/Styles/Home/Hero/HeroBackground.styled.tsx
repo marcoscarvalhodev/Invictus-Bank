@@ -13,7 +13,7 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
     height: 100%;
     
     overflow: hidden;
-
+    
     
     .svg-background {
       width: 100%;

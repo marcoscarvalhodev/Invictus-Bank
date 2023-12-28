@@ -8,6 +8,7 @@ import HeroBackground from './Components/Home/Hero/HeroBackground.tsx';
 import People from './Components/Home/People/People.tsx';
 import Advantages from './Components/Home/Advantages/Advantages.tsx';
 import Testimonials from './Components/Home/Testimonials/Testimonials.tsx';
+import { StyledHome } from './Styles/Home.styled.tsx';
 
 interface HomeProps {
   mobileBx: boolean;
@@ -16,7 +17,7 @@ interface HomeProps {
 
 const Home = ({mobileBx, smallState} : HomeProps) => {
   return (
-    <main>
+    <StyledHome className='home'>
       <HeroBackground />
       <Hero mobileBx={mobileBx} smallState={smallState} />
       <People smallState={smallState} />
@@ -25,7 +26,7 @@ const Home = ({mobileBx, smallState} : HomeProps) => {
       <DoubleCard smallState={smallState} />
       <Testimonials smallState={smallState} />
       <DownloadApp smallState={smallState} />
-    </main>
+    </StyledHome>
   );
 };
 

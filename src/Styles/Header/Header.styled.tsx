@@ -2,13 +2,14 @@ import styled, { css } from 'styled-components';
 
 export const StyledHeader = styled.header`
   ${({ theme }) => css`
-    width: 100%;
+    width: 100vw;
     background: transparent;
     box-shadow: none;
     position: fixed;
     z-index: 999;
     transition: 0.5s ease;
     background-color: transparent;
+   
 
     &.active-header {
       box-shadow: 0px 51px 80px rgba(27, 108, 231, 0.08),

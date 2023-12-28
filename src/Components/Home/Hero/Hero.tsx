@@ -29,6 +29,9 @@ const Hero = ({ mobileBx, smallState }: HeroProps) => {
         mobileBx ? 'hero-active-bx' : ''
       }`}
     >
+
+
+
       <div className='flex-item-1-hero'>
         <StyledHeadings as='h1' $device={smallState}>
           {ContentHero.title}

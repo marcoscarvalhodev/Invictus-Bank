@@ -101,6 +101,10 @@ export const StyledTestimonials = styled.section<TestimonialsProps>`
         margin: ${theme.spacing.gap_1} 0px;
       }
 
+      .testimonials-review {
+        margin-top: 0 auto;
+      }
+
       .swiper-pagination-progressbar-fill {
         --swiper-theme-color: linear-gradient(
           220.94deg,

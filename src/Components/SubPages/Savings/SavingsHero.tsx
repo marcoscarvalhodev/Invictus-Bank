@@ -14,12 +14,12 @@ interface SavingsHeroProps {
 const SavingsHero = ({smallState}: SavingsHeroProps) => {
   return (
     <StyledSavingsHero className='container'>
-      <div className='flex-savings'>
+      <div className='flex-savings-hero'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
         </StyledHeadings>
 
-        <StyledHeadings $device={smallState} as='h2' className='title'>
+        <StyledHeadings $device={smallState} as='h2' className='title-hero'>
           {ContentAccountTypes.Savings.h2_title}
         </StyledHeadings>
 
@@ -27,14 +27,14 @@ const SavingsHero = ({smallState}: SavingsHeroProps) => {
           {ContentAccountTypes.Savings.p_description}
         </StyledTexts>
 
-        <div className='buttons-flex'>
+        <div className='buttons-flex-hero'>
           <Button>{ContentAccountTypes.Savings.link_button_1}</Button>
           <Button light={true}>
             {ContentAccountTypes.Savings.link_button_2}
           </Button>
         </div>
       </div>
-      <div className='flex-savings'>
+      <div className='flex-savings-hero'>
         <Pig />
       </div>
     </StyledSavingsHero>

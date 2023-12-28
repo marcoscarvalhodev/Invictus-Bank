@@ -5,7 +5,11 @@ export const StyledSavings = styled.section`
     background: ${theme.colors.white_auxiliary.white_light};
 
     && {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
+      max-width: ${theme.containerSizes.container_xl};
     }
   `}
 `;

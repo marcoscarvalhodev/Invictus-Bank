@@ -58,7 +58,7 @@ const Testiominials = ({smallState}: TestimonialsProps) => {
           return <SwiperSlide key={id}>
             <img src={photo} className='photo-profile'></img>
             <StyledHeadings className='testimonials-name' $device={smallState} as="h4">{name}</StyledHeadings>
-            <StyledTexts $device={smallState} $size='p4'>{testimonial}</StyledTexts>
+            <StyledTexts $device={smallState} $size='p4' className='testimonials-review'>{testimonial}</StyledTexts>
           </SwiperSlide>;
         })}
       </Swiper>

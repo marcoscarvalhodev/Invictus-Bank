@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
 
-export const StyledContainer = styled.div`
+export const StyledHome = styled.main`
   ${({ theme }) => css`
     position: relative;
     width: 100vw;
-    display: flex;
-    justify-content: center;
+    height: 100%;
   `}
 `;

@@ -238,9 +238,9 @@ export const ContentAccountTypes = {
       p_description:
         'Discover which smart money-saving strategy is the best for you.',
       slides: [
-        {id: '1',icon: <PigIcon className='pig-icon'/>, name: 'Savings Account', link: 'Compare accounts'},
+        {id: '1',icon: <PigIcon className='pig-icon'/>, name: 'Savings Account', link: 'Compare '},
         {id: '2', icon: <CDIcon />, name: 'Certificates of Deposit (CDs)', link: 'See CDs' },
-        {id: '3', icon: <MoneyIcon />, name: 'Money Market Account', link:'Compare accounts' },
+        {id: '3', icon: <MoneyIcon />, name: 'Money Market Account', link:'Compare' },
         {id: '4', icon: <SunsetIcon />, name: 'For Retirement', link: 'Learn more' },
       ],
     },

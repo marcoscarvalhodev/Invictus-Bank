@@ -16,7 +16,7 @@ interface SavingsProps {
 
 const Savings = ({ smallState }: SavingsProps) => {
   return (
-    <StyledSavings>
+    <StyledSavings >
       <SavingsHero smallState={smallState}/>
 
       <SavingsSlides smallState={smallState} />

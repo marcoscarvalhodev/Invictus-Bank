@@ -15,10 +15,10 @@ const SavingsAdvantages = ({ smallState }: SavingsAdvantagesProps) => {
   return (
     <StyledSavingsAdvantages className='container'>
       <div className='savings-advantages-flex'>
-        <StyledHeadings as='h2' $device={smallState} className='title'>
+        <StyledHeadings as='h2' $device={smallState} className='title-advantages'>
           {ContentAccountTypes.Savings.savings_advantages.title}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState} className='description'>
+        <StyledTexts $size='p1' $device={smallState} className='description-advantages'>
           {ContentAccountTypes.Savings.savings_advantages.p_description}
         </StyledTexts>
 
@@ -26,13 +26,13 @@ const SavingsAdvantages = ({ smallState }: SavingsAdvantagesProps) => {
           {ContentAccountTypes.Savings.savings_advantages.bullets.map(
             ({ id, bullet_description }) => {
               return (
-                <li key={id} className='bullet-wrapper'>
-                  <div className='bullet bullet-1'>
+                <li key={id} className='bullet-wrapper-advantages'>
+                  <div className='bullet-advantages bullet-1'>
                     <Icons>
                       <IconCheck />
                     </Icons>
                   </div>
-                  <div className='bullet bullet-2'>
+                  <div className='bullet-advantages bullet-2'>
                     <StyledTexts $size='p4' $device={smallState}>
                       {bullet_description}
                     </StyledTexts>
