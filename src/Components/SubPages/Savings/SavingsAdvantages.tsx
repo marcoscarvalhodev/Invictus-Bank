@@ -5,7 +5,7 @@ import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
-import AdantagesImage from '../../../assets/img/advantages/man-looking-bank.jpg'; 
+import AdantagesImage from '../../../assets/img/advantages/man-looking-bank.jpg';
 
 interface SavingsAdvantagesProps {
   smallState: 'mobile' | 'desktop';
@@ -15,10 +15,23 @@ const SavingsAdvantages = ({ smallState }: SavingsAdvantagesProps) => {
   return (
     <StyledSavingsAdvantages className='container'>
       <div className='savings-advantages-flex'>
-        <StyledHeadings as='h2' $device={smallState} className='title-advantages'>
-          {ContentAccountTypes.Savings.savings_advantages.title}
+
+        <StyledHeadings as="h5" $device={smallState}>
+        {ContentAccountTypes.Savings.savings_advantages.h5_subtitle}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState} className='description-advantages'>
+        
+        <StyledHeadings
+          as='h2'
+          $device={smallState}
+          className='title-advantages'
+        >
+          {ContentAccountTypes.Savings.savings_advantages.h2_title}
+        </StyledHeadings>
+        <StyledTexts
+          $size='p1'
+          $device={smallState}
+          className='description-advantages'
+        >
           {ContentAccountTypes.Savings.savings_advantages.p_description}
         </StyledTexts>
 
@@ -45,7 +58,7 @@ const SavingsAdvantages = ({ smallState }: SavingsAdvantagesProps) => {
       </div>
 
       <div className='savings-advantages-flex flex-2'>
-            <img src={AdantagesImage} alt="" className='advantages-image' />
+        <img src={AdantagesImage} alt='' className='advantages-image' />
       </div>
     </StyledSavingsAdvantages>
   );

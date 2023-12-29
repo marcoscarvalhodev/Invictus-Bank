@@ -6,6 +6,7 @@ import ContainerSizes from './ContainerSizes.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.tsx';
 import Savings from './Components/SubPages/Savings/Savings.tsx';
+import Checking from './Components/SubPages/Checking/Checking.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,6 +40,9 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
             path='savings/*'
             element={<Savings smallState={smallState} />}
           />
+
+          <Route path='checking/*' element={<Checking smallState={smallState}/>}/>
+
         </Routes>
       </BrowserRouter>
     </StyledContainer>
