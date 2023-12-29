@@ -65,7 +65,7 @@ const theme = {
         padding: 96px 24px;
         padding-right: calc(24px + 16px);
         display: flex;
-        
+
         flex-direction: row;
         overflow-x: hidden;
         margin: 0 auto;
@@ -240,18 +240,30 @@ const theme = {
   },
 
   sub_pages: {
+    main_page: function () {
+      return css`
+        background: ${theme.colors.white_auxiliary.white_light};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: ${theme.containerSizes.container_xl};
+        width: 100vw;
+      `;
+    },
     sub_pages_hero: function () {
       return css`
         display: flex;
         justify-content: space-between;
         flex-direction: row;
 
-        .flex-savings-hero {
+        .flex-hero {
           padding-top: ${theme.spacing.gap_3};
           flex: 1;
 
           .title-hero {
             ${theme.bullets.title};
+            margin-left: -0.4rem;
           }
 
           .buttons-flex-hero {
@@ -269,20 +281,21 @@ const theme = {
         min-width: 100vw;
 
         .title-slides {
-          padding-top: 9rem;
+          ${theme.bullets.title};
+          margin-left: -0.4rem;
         }
 
         .description-slides {
-          padding: calc(${theme.spacing.gap_2} + 1rem) 0;
+          padding-bottom: 1.6rem;
         }
 
-        .savings-slides-wrapper {
+        .slides-wrapper {
           display: flex;
           gap: 3rem;
           width: 100%;
-          
+
           justify-content: start;
-          .savings-slides {
+          .slides {
             border-radius: 0.5rem;
             flex-direction: column;
             ${theme.boxProps.flex_items.flex_item_3};
@@ -291,11 +304,11 @@ const theme = {
             padding: 3rem;
             background: ${theme.colors.white_auxiliary.white_light};
             gap: 3rem;
-            .savings-slide-titles {
+            .slide-titles {
               text-align: center;
             }
 
-            .savings-slide-links {
+            .slide-links {
               margin-top: auto;
             }
           }
@@ -311,12 +324,14 @@ const theme = {
         display: flex;
         gap: 3rem;
         background: ${theme.colors.white_auxiliary.white_light};
+
         .title-advantages {
-          padding-top: 9rem;
+          ${theme.bullets.title};
+          margin-left: -0.4rem;
         }
 
         .description-advantages {
-          padding: calc(${theme.spacing.gap_2} + 1rem) 0;
+          padding-bottom: 1.6rem;
         }
 
         .bullet-wrapper-advantages {

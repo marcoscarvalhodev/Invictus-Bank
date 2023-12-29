@@ -13,9 +13,12 @@ const SavingsSlides = ({ smallState }: SavingsSlidesProps) => {
     <StyledSavingsSlides >
 
       <section className='container'>
-      <div className='flex-savings-slides'>
+      <div className='flex-slides'>
+      <StyledHeadings as='h5' $device={smallState}>
+          {ContentAccountTypes.Savings.savings_slides.h5_subtitle}
+        </StyledHeadings>
         <StyledHeadings $device={smallState} as='h2' className='title-slides'>
-          {ContentAccountTypes.Savings.savings_slides.title}
+          {ContentAccountTypes.Savings.savings_slides.h2_title}
         </StyledHeadings>
         <StyledTexts $size='p1' $device={smallState} className='description-slides'>
           {ContentAccountTypes.Savings.savings_slides.p_description}
@@ -23,14 +26,14 @@ const SavingsSlides = ({ smallState }: SavingsSlidesProps) => {
       </div>
 
       
-        <ul className='savings-slides-wrapper'>
+        <ul className='slides-wrapper'>
           {ContentAccountTypes.Savings.savings_slides.slides.map(({id, icon, name, link}) => {
-            return <li key={id} className='savings-slides'>
+            return <li key={id} className='slides'>
               {icon}
 
-              <StyledHeadings as="h4" $device={smallState} className='savings-slide-titles'>{name}</StyledHeadings>
+              <StyledHeadings as="h4" $device={smallState} className='slide-titles'>{name}</StyledHeadings>
 
-              <StyledTexts $link={true} $device={smallState} $size='p1' className='savings-slide-links'>{link}</StyledTexts>
+              <StyledTexts $link={true} $device={smallState} $size='p1' className='slide-links'>{link}</StyledTexts>
             </li>;
           })}
         </ul>

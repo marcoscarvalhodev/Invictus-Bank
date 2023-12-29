@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const StyledSavings = styled.section`
+export const StyledChecking = styled.section`
   ${({ theme }) => css`
     && {
       ${theme.sub_pages.main_page};

@@ -1,30 +1,29 @@
-import React from 'react';
-
+import React from 'react'
+import { StyledCheckingHero } from '../../../Styles/SubPages/Checking/CheckingHero.styled';
+import { ContentAccountTypes } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
-import { ContentAccountTypes } from '../../../Contents';
 import Button from '../../Reusable/Button';
-import Pig from './Pig';
-import { StyledSavingsHero } from '../../../Styles/SubPages/Savings/SavingsHero.styled';
+import Pig from '../Savings/Pig';
 
-interface SavingsHeroProps {
-  smallState: 'mobile' | 'desktop';
+interface CheckingHeroProps {
+  smallState: "mobile" | "desktop";
 }
 
-const SavingsHero = ({smallState}: SavingsHeroProps) => {
+const CheckingHero = ({smallState}: CheckingHeroProps) => {
   return (
-    <StyledSavingsHero className='container'>
+    <StyledCheckingHero className='container'>
       <div className='flex-hero'>
         <StyledHeadings $device={smallState} as='h5'>
-          {ContentAccountTypes.Savings.h5_subtitle}
+          {ContentAccountTypes.Checking.h5_subtitle}
         </StyledHeadings>
 
         <StyledHeadings $device={smallState} as='h2' className='title-hero'>
-          {ContentAccountTypes.Savings.h2_title}
+          {ContentAccountTypes.Checking.h2_title}
         </StyledHeadings>
 
         <StyledTexts $size='p1' $device={smallState}>
-          {ContentAccountTypes.Savings.p_description}
+          {ContentAccountTypes.Checking.p_description}
         </StyledTexts>
 
         <div className='buttons-flex-hero'>
@@ -37,8 +36,8 @@ const SavingsHero = ({smallState}: SavingsHeroProps) => {
       <div className='flex-hero'>
         <Pig />
       </div>
-    </StyledSavingsHero>
-  );
-};
+    </StyledCheckingHero>
+  )
+}
 
-export default SavingsHero;
+export default CheckingHero

@@ -234,7 +234,8 @@ export const ContentAccountTypes = {
     link_button_2: 'Find my branch',
 
     savings_slides: {
-      title: 'Ready to transform your finances?',
+      h5_subtitle: "ACCOUNT TYPES",
+      h2_title: 'Ready to transform your finances?',
       p_description:
         'Discover which smart money-saving strategy is the best for you.',
       slides: [
@@ -246,7 +247,8 @@ export const ContentAccountTypes = {
     },
 
     savings_advantages: {
-      title: 'Your savings made easy and secure.',
+      h5_subtitle: 'SAVINGS ADVANTAGES',
+      h2_title: 'Your savings made easy and secure.',
       p_description: "We're talking about a fortress-level security engineering, money that practically moonwalks to growth, and access so easy it's practically a high-five. Let's elevate your savings game!",
       bullets: [
         {id: 1, bullet_description: "Pay bills directly from your savings account hassle-free."},
@@ -259,4 +261,10 @@ export const ContentAccountTypes = {
       ]
     }
   },
+
+  Checking: {
+    h5_subtitle: "CASH HARMONY",
+    h2_title: "Checking Account",
+    p_description: "Simple, fee-free checking. Easy online access for a superb integration."
+  }
 };
