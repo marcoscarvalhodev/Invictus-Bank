@@ -45,7 +45,6 @@ export const StyledPig = styled.div<PigProps>`
   ${({ theme, $pigTop }) => css`
     && {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       position: relative;

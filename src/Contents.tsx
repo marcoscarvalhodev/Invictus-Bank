@@ -26,6 +26,11 @@ import CDIcon from './assets/svg/savings/slide/cd-icon.svg?react';
 import MoneyIcon from './assets/svg/savings/slide/money-icon.svg?react';
 import SunsetIcon from './assets/svg/savings/slide/sunset-icon.svg?react';
 
+import Wallet from './assets/svg/checking/slide/wallet.svg?react';
+import Hand from './assets/svg/checking/slide/hand.svg?react';
+import Book from './assets/svg/checking/slide/book.svg?react';
+import Elder from './assets/svg/checking/slide/elder.svg?react';
+
 export const ContentNavMobile = {
   nav_mobile: [
     {
@@ -265,6 +270,19 @@ export const ContentAccountTypes = {
   Checking: {
     h5_subtitle: "CASH HARMONY",
     h2_title: "Checking Account",
-    p_description: "Simple, fee-free checking. Easy online access for a superb integration."
+    p_description: "Simple, fee-free checking. Easy online access for a superb integration.",
+
+    checking_slides: {
+      h5_subtitle: "ACCOUNT TYPES",
+      h2_title: "Maximize your finances with our checking solutions.",
+      p_description:
+        "Your financial aspirations deserve the best, and that's why we are here for.",
+      slides: [
+        {id: "1",icon: <Wallet />, name: "Simple Checking", link: "Details"},
+        {id: "2", icon: <Hand />, name: "Business Checking", link: "Details" },
+        {id: "3", icon: <Book />, name: "Student Checking", link:"Details" },
+        {id: "4", icon: <Elder />, name: "Senior Checking", link: "Details" },
+      ],
+    },
   }
 };
