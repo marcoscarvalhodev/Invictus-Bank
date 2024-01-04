@@ -270,7 +270,15 @@ const theme = {
             display: flex;
             gap: 2.4rem;
             padding: 2rem 0rem;
+            z-index: 2;
+            position: relative;
           }
+        }
+
+        .flex-hero-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       `;
     },

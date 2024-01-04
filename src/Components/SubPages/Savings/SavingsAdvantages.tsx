@@ -9,11 +9,12 @@ import AdantagesImage from '../../../assets/img/advantages/man-looking-bank.jpg'
 
 interface SavingsAdvantagesProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const SavingsAdvantages = ({ smallState }: SavingsAdvantagesProps) => {
+const SavingsAdvantages = ({ smallState, small }: SavingsAdvantagesProps) => {
   return (
-    <StyledSavingsAdvantages className='container'>
+    <StyledSavingsAdvantages className='container' $small={small}>
       <div className='savings-advantages-flex'>
 
         <StyledHeadings as="h5" $device={smallState}>
