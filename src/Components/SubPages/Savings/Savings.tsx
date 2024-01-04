@@ -16,13 +16,13 @@ interface SavingsProps {
 }
 
 const Savings = ({ smallState }: SavingsProps) => {
-  const {small} = ContainerSizes();
+  const {small, medium, xsmall} = ContainerSizes();
 
   return (
     <StyledSavings >
       <SavingsHero smallState={smallState} small={small}/>
 
-      <SavingsSlides smallState={smallState} small={small} />
+      <SavingsSlides smallState={smallState} small={small} medium={medium} xsmall={xsmall}/>
       <SavingsAdvantages smallState={smallState} small={small}/>
     </StyledSavings>
   );

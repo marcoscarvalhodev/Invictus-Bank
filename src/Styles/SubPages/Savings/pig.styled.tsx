@@ -56,9 +56,10 @@ export const StyledPig = styled.div<PigProps>`
         position: absolute;
         perspective: 300px;
         animation: moveCoin 3s linear infinite;
-        top: calc(${-$pigTop}px + -70px);
+        top: calc(${-$pigTop}px + ${$small ? '-20px' : '-70px'});
+
         left: calc(50% + -15px);
-        
+
         z-index: 1;
       }
 
@@ -96,7 +97,6 @@ export const StyledPig = styled.div<PigProps>`
           transform-style: preserve-3d;
           animation: spinCoin 3s linear infinite;
           backface-visibility: hidden;
-          
         }
       }
 
@@ -206,7 +206,9 @@ export const StyledPig = styled.div<PigProps>`
         }
 
         100% {
-          transform: translateY(calc(${$pigTop}px + 15px + 75px));
+          transform: translateY(
+            calc(${$pigTop}px + 15px + ${$small ? '20px' : '75px'})
+          );
         }
       }
 
@@ -220,13 +222,11 @@ export const StyledPig = styled.div<PigProps>`
         }
       }
 
-
-      ${$small && css`
-      
-      .pig-section {
-        padding: 9.4rem 0rem;
-      }
-      
+      ${$small &&
+      css`
+        .pig-section {
+          padding: 9.4rem 0rem;
+        }
       `}
     }
   `}

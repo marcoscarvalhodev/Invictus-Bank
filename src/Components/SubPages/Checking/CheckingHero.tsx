@@ -8,11 +8,12 @@ import Bank from './Bank';
 
 interface CheckingHeroProps {
   smallState: "mobile" | "desktop";
+  small: boolean;
 }
 
-const CheckingHero = ({smallState}: CheckingHeroProps) => {
+const CheckingHero = ({smallState, small}: CheckingHeroProps) => {
   return (
-    <StyledCheckingHero className='container'>
+    <StyledCheckingHero className='container' $small={small}>
       <div className='flex-hero'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Checking.h5_subtitle}
@@ -34,7 +35,7 @@ const CheckingHero = ({smallState}: CheckingHeroProps) => {
         </div>
       </div>
       <div className='flex-hero flex-hero-2'>
-        <Bank />
+        <Bank small={small}/>
       </div>
     </StyledCheckingHero>
   )

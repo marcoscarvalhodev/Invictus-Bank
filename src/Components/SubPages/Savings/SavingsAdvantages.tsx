@@ -58,7 +58,7 @@ const SavingsAdvantages = ({ smallState, small }: SavingsAdvantagesProps) => {
         </ul>
       </div>
 
-      <div className='savings-advantages-flex flex-2'>
+      <div className='advantages-flex flex-2'>
         <img src={AdantagesImage} alt='' className='advantages-image' />
       </div>
     </StyledSavingsAdvantages>

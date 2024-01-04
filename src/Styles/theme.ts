@@ -1,5 +1,8 @@
+
 import { themeAttrs } from './ThemeAttrs';
 import { css } from 'styled-components';
+
+
 
 const theme = {
   colors: {
@@ -270,11 +273,12 @@ const theme = {
             display: flex;
             gap: 2.4rem;
             padding: 2rem 0rem;
-            z-index: 2;
-            position: relative;
           }
         }
-
+        .flex-hero-1 {
+          z-index: 2;
+          position: relative;
+        }
         .flex-hero-2 {
           display: flex;
           justify-content: center;
@@ -298,9 +302,10 @@ const theme = {
         }
 
         .slides-wrapper {
-          display: flex;
+          display: grid;
           gap: 3rem;
           width: 100%;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
 
           justify-content: start;
           .slides {
@@ -356,14 +361,14 @@ const theme = {
 
         .flex-2 {
           margin-top: 9.4rem;
-          padding: 3rem;
+          
           display: flex;
           align-self: center;
           justify-content: center;
           align-items: center;
         }
 
-        .savings-advantages-flex {
+        .advantages-flex {
           flex: 1;
         }
       `;
