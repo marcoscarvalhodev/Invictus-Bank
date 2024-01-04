@@ -9,18 +9,21 @@ import Button from '../../Reusable/Button.tsx';
 import SavingsSlides from './SavingsSlides.tsx';
 import SavingsHero from './SavingsHero.tsx';
 import SavingsAdvantages from './SavingsAdvantages.tsx';
+import ContainerSizes from '../../../ContainerSizes.tsx';
 
 interface SavingsProps {
   smallState: 'mobile' | 'desktop';
 }
 
 const Savings = ({ smallState }: SavingsProps) => {
+  const {small} = ContainerSizes();
+
   return (
     <StyledSavings >
-      <SavingsHero smallState={smallState}/>
+      <SavingsHero smallState={smallState} small={small}/>
 
-      <SavingsSlides smallState={smallState} />
-      <SavingsAdvantages smallState={smallState}/>
+      <SavingsSlides smallState={smallState} small={small} />
+      <SavingsAdvantages smallState={smallState} small={small}/>
     </StyledSavings>
   );
 };

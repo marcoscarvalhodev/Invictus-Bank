@@ -4,7 +4,7 @@ import { ContentAccountTypes } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Button from '../../Reusable/Button';
-import Bank from '../../../assets/svg/checking/bank.svg?react'
+import Bank from './Bank';
 
 interface CheckingHeroProps {
   smallState: "mobile" | "desktop";
@@ -33,8 +33,8 @@ const CheckingHero = ({smallState}: CheckingHeroProps) => {
           </Button>
         </div>
       </div>
-      <div className='flex-hero bank-wrapper'>
-        <Bank className='bank'/>
+      <div className='flex-hero flex-hero-2'>
+        <Bank />
       </div>
     </StyledCheckingHero>
   )

@@ -3,7 +3,11 @@ import PigSVG from '../../../assets/svg/savings/pig-coin/pig.svg?react';
 import { StyledPig } from '../../../Styles/SubPages/Savings/pig.styled';
 import Coin from '../../../assets/svg/savings/pig-coin/coin-wrapper.svg?react';
 
-const Pig = () => {
+interface PigProps {
+  small: boolean;
+}
+
+const Pig = ({small}: PigProps) => {
   const pigWrapper = React.useRef();
   const [pigTop, setPigTop] = React.useState(0);
 
@@ -13,7 +17,7 @@ const Pig = () => {
   }, []);
 
   return (
-    <StyledPig $pigTop={pigTop}>
+    <StyledPig $pigTop={pigTop} $small={small}>
       <div className='pig-section'>
         <div className='pig-wrapper' ref={pigWrapper}>
           <PigSVG className='pig' />

@@ -9,11 +9,12 @@ import { StyledSavingsHero } from '../../../Styles/SubPages/Savings/SavingsHero.
 
 interface SavingsHeroProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const SavingsHero = ({smallState}: SavingsHeroProps) => {
+const SavingsHero = ({smallState, small}: SavingsHeroProps) => {
   return (
-    <StyledSavingsHero className='container'>
+    <StyledSavingsHero className='container' $small={small}>
       <div className='flex-hero'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
@@ -34,8 +35,8 @@ const SavingsHero = ({smallState}: SavingsHeroProps) => {
           </Button>
         </div>
       </div>
-      <div className='flex-hero'>
-        <Pig />
+      <div className='flex-hero flex-hero-2'>
+        <Pig small={small}/>
       </div>
     </StyledSavingsHero>
   );

@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface PigProps {
   $pigTop: number;
+  $small: boolean;
 }
 
 function eachFigure() {
@@ -42,7 +43,7 @@ function eachCoin() {
 }
 
 export const StyledPig = styled.div<PigProps>`
-  ${({ theme, $pigTop }) => css`
+  ${({ theme, $pigTop, $small }) => css`
     && {
       display: flex;
       justify-content: center;
@@ -218,6 +219,15 @@ export const StyledPig = styled.div<PigProps>`
           transform: translateY(50px) rotateX(180deg);
         }
       }
+
+
+      ${$small && css`
+      
+      .pig-section {
+        padding: 9.4rem 0rem;
+      }
+      
+      `}
     }
   `}
 `;

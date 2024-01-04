@@ -6,11 +6,12 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 
 interface SavingsSlidesProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const SavingsSlides = ({ smallState }: SavingsSlidesProps) => {
+const SavingsSlides = ({ smallState, small }: SavingsSlidesProps) => {
   return (
-    <StyledSavingsSlides >
+    <StyledSavingsSlides $small={small}>
 
       <section className='container'>
       <div className='flex-slides'>
