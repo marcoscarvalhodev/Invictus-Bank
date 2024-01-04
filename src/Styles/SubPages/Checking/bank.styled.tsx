@@ -1,10 +1,17 @@
 import styled, { css } from 'styled-components';
 
-export const StyledBank = styled.div`
-  ${({ theme }) => css`
+interface BankProps {
+  $small: boolean;
+}
+
+export const StyledBank = styled.div<BankProps>`
+  ${({ theme, $small }) => css`
     && {
-      position: relative;
-      width: max-content;
+      .bank-wrapper {
+        position: relative;
+        width: max-content;
+      }
+      
       .bank {
         width: 300px;
       }
@@ -40,6 +47,11 @@ export const StyledBank = styled.div`
           transform: rotateY(360deg);
         }
       }
+
+      ${$small &&
+      css`
+        padding: 9.4rem 0rem;
+      `}
     }
   `}
 `;

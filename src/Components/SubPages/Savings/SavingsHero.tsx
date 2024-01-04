@@ -15,7 +15,7 @@ interface SavingsHeroProps {
 const SavingsHero = ({smallState, small}: SavingsHeroProps) => {
   return (
     <StyledSavingsHero className='container' $small={small}>
-      <div className='flex-hero'>
+      <div className='flex-hero flex-hero-1'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
         </StyledHeadings>

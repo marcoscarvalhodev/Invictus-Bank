@@ -9,13 +9,23 @@ export const StyledSavingsAdvantages = styled.section<SavingsAdvantagesProps>`
     && {
       ${theme.sub_pages.sub_pages_advantages};
 
-      ${$small && css`
-        
-      flex-direction: column;
+      ${$small &&
+      css`
+        padding: 9.6rem 2.4rem;
 
-      .flex-2 {
-        margin: 0px;
-      }
+        flex-direction: column;
+
+        .flex-2 {
+          width: 100%;
+        }
+
+        .advantages-image {
+          width: 100%;
+        }
+
+        .flex-2 {
+          margin: 0px;
+        }
       `}
     }
   `}

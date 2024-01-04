@@ -6,11 +6,14 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
 interface CheckingSlidesProps {
   smallState: "desktop" | "mobile";
+  small: boolean;
+  medium: boolean;
+  xsmall: boolean;
 }
 
-const CheckingSlides = ({smallState}: CheckingSlidesProps) => {
+const CheckingSlides = ({smallState, small, medium, xsmall}: CheckingSlidesProps) => {
   return (
-    <StyledCheckingSlides>
+    <StyledCheckingSlides $small={small} $medium={medium} $xsmall={xsmall}>
       <section className='container'>
       <div className='flex-slides'>
       <StyledHeadings as='h5' $device={smallState}>
