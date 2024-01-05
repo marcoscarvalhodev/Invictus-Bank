@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 interface PigProps {
   $pigTop: number;
   $small: boolean;
+  $flexHeight: number;
+  $childTop: number;
 }
 
 function eachFigure() {
@@ -43,7 +45,7 @@ function eachCoin() {
 }
 
 export const StyledPig = styled.div<PigProps>`
-  ${({ theme, $pigTop, $small }) => css`
+  ${({ theme, $pigTop, $small, $flexHeight, $childTop }) => css`
     && {
       display: flex;
       justify-content: center;
@@ -56,8 +58,8 @@ export const StyledPig = styled.div<PigProps>`
         position: absolute;
         perspective: 300px;
         animation: moveCoin 3s linear infinite;
-        top: calc(${-$pigTop}px + ${$small ? '-20px' : '-70px'});
-
+        top: calc(-9.6rem + -15px +  ${$small ? `-40px` : '-70px'});
+        
         left: calc(50% + -15px);
 
         z-index: 1;
@@ -207,7 +209,7 @@ export const StyledPig = styled.div<PigProps>`
 
         100% {
           transform: translateY(
-            calc(${$pigTop}px + 15px + ${$small ? '20px' : '75px'})
+            calc(9.6rem + 25px + ${$small ? `40px` : '75px'})
           );
         }
       }

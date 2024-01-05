@@ -2,6 +2,7 @@ import React from 'react';
 import { StyledContainer } from './Styles/Container.styled.ts';
 import Header from './Components/Header/Header.tsx';
 import ContainerSizes from './ContainerSizes.tsx';
+import ScrollToTop from './Hooks/scrollToTop.tsx';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.tsx';
@@ -28,6 +29,8 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
   return (
     <StyledContainer className={`${mobileBx ? 'container-active-bx' : ''}`}>
       <BrowserRouter>
+      <ScrollToTop />
+
         <Header setMobileBx={setMobileBx} mobileBx={mobileBx} />
 
         <Routes>
