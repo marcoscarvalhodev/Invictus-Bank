@@ -20,7 +20,7 @@ export const StyledSavingsAdvantages = styled.section<SavingsAdvantagesProps>`
         }
 
         .advantages-image {
-          width: 100%;
+          max-width: 100%;
         }
 
         .flex-2 {

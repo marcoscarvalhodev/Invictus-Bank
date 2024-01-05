@@ -280,6 +280,7 @@ const theme = {
           position: relative;
         }
         .flex-hero-2 {
+          
           display: flex;
           justify-content: center;
           align-items: center;
