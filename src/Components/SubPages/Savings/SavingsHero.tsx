@@ -13,25 +13,9 @@ interface SavingsHeroProps {
 }
 
 const SavingsHero = ({ smallState, small }: SavingsHeroProps) => {
-  const flexRef = React.useRef<HTMLDivElement | null>(null);
-  const childRef = React.useRef<HTMLDivElement | null>(null);
-  const parentRef = React.useRef<HTMLElement | null>(null);
-  const [childTop, setChildTop] = React.useState(0);
-
-  const [flexHeight, setFlexHeight] = React.useState(0);
-
-  React.useEffect(() => {
-    setChildTop(childRef.current.offsetTop)
-  }, [])
-
-
-  React.useEffect(() => {
-    setFlexHeight(flexRef.current.offsetHeight);
-  }, [flexRef]);
-
   return (
-    <StyledSavingsHero className='container' $small={small} ref={parentRef}>
-      <div className='flex-hero flex-hero-1' ref={flexRef}>
+    <StyledSavingsHero className='container' $small={small}>
+      <div className='flex-hero flex-hero-1'>
         <StyledHeadings $device={smallState} as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
         </StyledHeadings>
@@ -51,8 +35,8 @@ const SavingsHero = ({ smallState, small }: SavingsHeroProps) => {
           </Button>
         </div>
       </div>
-      <div className='flex-hero flex-hero-2' ref={childRef}>
-        <Pig small={small} flexHeight={flexHeight} childTop={childTop} />
+      <div className='flex-hero flex-hero-2'>
+        <Pig small={small} />
       </div>
     </StyledSavingsHero>
   );

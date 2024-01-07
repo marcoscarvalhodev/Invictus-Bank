@@ -13,7 +13,7 @@ export const StyledCheckingHero = styled.section<CheckingHeroProps>`
     ${$small &&
       css`
         flex-direction: column;
-
+        padding: 9.6rem 2.4rem 0rem 2.4rem;
         .flex-hero-2 {
           padding-top: 0px;
         }

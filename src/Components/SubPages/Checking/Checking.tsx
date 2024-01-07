@@ -3,6 +3,7 @@ import { StyledChecking } from '../../../Styles/SubPages/Checking/Checking.style
 import CheckingHero from './CheckingHero';
 import CheckingSlides from './CheckingSlides';
 import ContainerSizes from '../../../ContainerSizes';
+import CheckingAdvantages from './CheckingAdvantages';
 
 interface CheckingProps {
   smallState: 'mobile' | 'desktop';
@@ -20,6 +21,7 @@ const Checking = ({ smallState }: CheckingProps) => {
         medium={medium}
         xsmall={xsmall}
       />
+      <CheckingAdvantages small={small} smallState={smallState} />
     </StyledChecking>
   );
 };

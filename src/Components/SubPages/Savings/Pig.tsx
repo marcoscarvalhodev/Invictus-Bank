@@ -5,30 +5,13 @@ import Coin from '../../../assets/svg/savings/pig-coin/coin-wrapper.svg?react';
 
 interface PigProps {
   small: boolean;
-  flexHeight: number;
-  childTop: number;
 }
 
-const Pig = ({ small, flexHeight, childTop }: PigProps) => {
-  const pigWrapper = React.useRef<HTMLDivElement | null>(null);
-  const pigParentRef = React.useRef<HTMLElement | null>(null);
-  const [pigTop, setPigTop] = React.useState(0);
-
-  const [scrolled, setScrolled] = React.useState(false);
-  const [scrollTop, setScrollTop] = React.useState(0);
-
-  React.useEffect(() => {
-    const pigDiv = pigWrapper.current as HTMLDivElement;
-
-    setPigTop(pigDiv.getBoundingClientRect().top);
-
-    
-  }, []);
-
+const Pig = ({ small }: PigProps) => {
   return (
-    <StyledPig $pigTop={pigTop} $small={small} $flexHeight={flexHeight} $childTop={childTop}>
+    <StyledPig $small={small}>
       <div className='pig-section'>
-        <div className='pig-wrapper' ref={pigWrapper}>
+        <div className='pig-wrapper'>
           <PigSVG className='pig' />
           <div className='hole'></div>
 
