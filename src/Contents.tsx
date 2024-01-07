@@ -284,5 +284,20 @@ export const ContentAccountTypes = {
         {id: "4", icon: <Elder />, name: "Senior Checking", link: "Details" },
       ],
     },
+
+    checking_advantages: {
+      h5_subtitle: 'CHECKING ADVANTAGES',
+      h2_title: 'Your money grows with one swipe at a time.',
+      p_description: "Get paid to spend! Our checking account offers cool cash rewards with every swipe. Enjoy perks like never before!",
+      bullets: [
+        {id: 1, bullet_description: "Your transactions are protected with cutting-edge encryption technology."},
+        {id: 2,bullet_description: "Manage your money on-the-go with our app—rated 4.8 stars with 100,000+ downloads."},
+        {id: 3,bullet_description: "Access over 30,000 ATMs nationwide with zero fees, ensuring convenient and cost-effective cash withdrawals."},
+        {id: 4,bullet_description: "Enjoy a 95% success rate in preventing overdrafts, offering flexible protection options to suit your needs."},
+        {id: 5,bullet_description: "Utilize integrated budgeting features with a 92% user satisfaction rate, helping you track spending and achieve financial goals."},
+        {id: 6,bullet_description: "Settle bills online with a 99% success rate, eliminating postage costs and ensuring timely payments."},
+        {id: 7,bullet_description: "85% of users successfully manage their budget with our integrated tools."}
+      ]
+    }
   }
 };
