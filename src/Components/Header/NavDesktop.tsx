@@ -57,9 +57,9 @@ const NavDesktop = () => {
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
+              <NavLink to='/cards' className='nav-link-dropdown'>
                   Cards
-                </a>
+                </NavLink>
               </li>
             </ul>
           </li>
