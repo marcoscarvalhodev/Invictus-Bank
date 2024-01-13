@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home.tsx';
 import Savings from './Components/SubPages/Savings/Savings.tsx';
 import Checking from './Components/SubPages/Checking/Checking.tsx';
+import Cards from './Components/SubPages/Cards/Cards.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -45,6 +46,8 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
           />
 
           <Route path='checking/*' element={<Checking smallState={smallState}/>}/>
+
+          <Route path='cards/*' element={<Cards smallState={smallState}/>}/>
 
         </Routes>
       </BrowserRouter>
