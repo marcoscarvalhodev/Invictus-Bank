@@ -301,3 +301,11 @@ export const ContentAccountTypes = {
     }
   }
 };
+
+export const ContentCards = {
+  Cards: {
+    h5_subtitle: "CARD MANAGEMENT",
+    h2_title: "Supreme Cards",
+    p_description: "Simplify your financial transactions, gain insights, and earn rewards with our card services.",
+  }
+}
