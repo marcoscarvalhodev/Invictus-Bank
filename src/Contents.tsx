@@ -31,6 +31,9 @@ import Hand from './assets/svg/checking/slide/hand.svg?react';
 import Book from './assets/svg/checking/slide/book.svg?react';
 import Elder from './assets/svg/checking/slide/elder.svg?react';
 
+import Card1 from './assets/svg/cards/card-1.svg?react';
+import Card2 from './assets/svg/cards/card-2.svg?react';
+
 export const ContentNavMobile = {
   nav_mobile: [
     {
@@ -239,75 +242,167 @@ export const ContentAccountTypes = {
     link_button_2: 'Find my branch',
 
     savings_slides: {
-      h5_subtitle: "ACCOUNT TYPES",
+      h5_subtitle: 'ACCOUNT TYPES',
       h2_title: 'Ready to transform your finances?',
       p_description:
         'Discover which smart money-saving strategy is the best for you.',
       slides: [
-        {id: '1',icon: <PigIcon className='pig-icon'/>, name: 'Savings Account', link: 'Compare '},
-        {id: '2', icon: <CDIcon />, name: 'Certificates of Deposit (CDs)', link: 'See CDs' },
-        {id: '3', icon: <MoneyIcon />, name: 'Money Market Account', link:'Compare' },
-        {id: '4', icon: <SunsetIcon />, name: 'For Retirement', link: 'Learn more' },
+        {
+          id: '1',
+          icon: <PigIcon className='pig-icon' />,
+          name: 'Savings Account',
+          link: 'Compare ',
+        },
+        {
+          id: '2',
+          icon: <CDIcon />,
+          name: 'Certificates of Deposit (CDs)',
+          link: 'See CDs',
+        },
+        {
+          id: '3',
+          icon: <MoneyIcon />,
+          name: 'Money Market Account',
+          link: 'Compare',
+        },
+        {
+          id: '4',
+          icon: <SunsetIcon />,
+          name: 'For Retirement',
+          link: 'Learn more',
+        },
       ],
     },
 
     savings_advantages: {
       h5_subtitle: 'SAVINGS ADVANTAGES',
       h2_title: 'Your savings made easy and secure.',
-      p_description: "We're talking about a fortress-level security engineering, money that practically moonwalks to growth, and access so easy it's practically a high-five. Let's elevate your savings game!",
+      p_description:
+        "We're talking about a fortress-level security engineering, money that practically moonwalks to growth, and access so easy it's practically a high-five. Let's elevate your savings game!",
       bullets: [
-        {id: 1, bullet_description: "Pay bills directly from your savings account hassle-free."},
-        {id: 2,bullet_description: "96% of customers appreciate our clear and straightforward fee structure."},
-        {id: 3,bullet_description: "Set it and let it – watch your savings grow automatically."},
-        {id: 4,bullet_description: "Choose from a range of accounts suitableb to different needs and preferences."},
-        {id: 5,bullet_description: "89% of users utilizing auto-savings meet their financial targets."},
-        {id: 6,bullet_description: "No hidden fees; Our customers express trust in our fee transparency."},
-        {id: 7,bullet_description: "Process withdrawals and deposits within an average of 3 seconds."}
-      ]
-    }
+        {
+          id: 1,
+          bullet_description:
+            'Pay bills directly from your savings account hassle-free.',
+        },
+        {
+          id: 2,
+          bullet_description:
+            '96% of customers appreciate our clear and straightforward fee structure.',
+        },
+        {
+          id: 3,
+          bullet_description:
+            'Set it and let it – watch your savings grow automatically.',
+        },
+        {
+          id: 4,
+          bullet_description:
+            'Choose from a range of accounts suitableb to different needs and preferences.',
+        },
+        {
+          id: 5,
+          bullet_description:
+            '89% of users utilizing auto-savings meet their financial targets.',
+        },
+        {
+          id: 6,
+          bullet_description:
+            'No hidden fees; Our customers express trust in our fee transparency.',
+        },
+        {
+          id: 7,
+          bullet_description:
+            'Process withdrawals and deposits within an average of 3 seconds.',
+        },
+      ],
+    },
   },
 
   Checking: {
-    h5_subtitle: "CASH HARMONY",
-    h2_title: "Checking Account",
-    p_description: "Simple, fee-free checking. Easy online access for a superb integration.",
+    h5_subtitle: 'CASH HARMONY',
+    h2_title: 'Checking Account',
+    p_description:
+      'Simple, fee-free checking. Easy online access for a superb integration.',
 
     checking_slides: {
-      h5_subtitle: "ACCOUNT TYPES",
-      h2_title: "Maximize your finances with our checking solutions.",
+      h5_subtitle: 'ACCOUNT TYPES',
+      h2_title: 'Maximize your finances with our checking solutions.',
       p_description:
         "Your financial aspirations deserve the best, and that's why we are here for.",
       slides: [
-        {id: "1",icon: <Wallet />, name: "Simple Checking", link: "Details"},
-        {id: "2", icon: <Hand />, name: "Business Checking", link: "Details" },
-        {id: "3", icon: <Book />, name: "Student Checking", link:"Details" },
-        {id: "4", icon: <Elder />, name: "Senior Checking", link: "Details" },
+        { id: '1', icon: <Wallet />, name: 'Simple Checking', link: 'Details' },
+        { id: '2', icon: <Hand />, name: 'Business Checking', link: 'Details' },
+        { id: '3', icon: <Book />, name: 'Student Checking', link: 'Details' },
+        { id: '4', icon: <Elder />, name: 'Senior Checking', link: 'Details' },
       ],
     },
 
     checking_advantages: {
       h5_subtitle: 'CHECKING ADVANTAGES',
       h2_title: 'Your money grows with one swipe at a time.',
-      p_description: "Get paid to spend! Our checking account offers cool cash rewards with every swipe. Enjoy perks like never before!",
+      p_description:
+        'Get paid to spend! Our checking account offers cool cash rewards with every swipe. Enjoy perks like never before!',
       bullets: [
-        {id: 1, bullet_description: "Your transactions are protected with cutting-edge encryption technology."},
-        {id: 2,bullet_description: "Manage your money on-the-go with our app—rated 4.8 stars with 100,000+ downloads."},
-        {id: 3,bullet_description: "Access over 30,000 ATMs nationwide with zero fees, ensuring convenient and cost-effective cash withdrawals."},
-        {id: 4,bullet_description: "Enjoy a 95% success rate in preventing overdrafts, offering flexible protection options to suit your needs."},
-        {id: 5,bullet_description: "Utilize integrated budgeting features with a 92% user satisfaction rate, helping you track spending and achieve financial goals."},
-        {id: 6,bullet_description: "Settle bills online with a 99% success rate, eliminating postage costs and ensuring timely payments."},
-        {id: 7,bullet_description: "85% of users successfully manage their budget with our integrated tools."}
-      ]
-    }
-  }
+        {
+          id: 1,
+          bullet_description:
+            'Your transactions are protected with cutting-edge encryption technology.',
+        },
+        {
+          id: 2,
+          bullet_description:
+            'Manage your money on-the-go with our app—rated 4.8 stars with 100,000+ downloads.',
+        },
+        {
+          id: 3,
+          bullet_description:
+            'Access over 30,000 ATMs nationwide with zero fees, ensuring convenient and cost-effective cash withdrawals.',
+        },
+        {
+          id: 4,
+          bullet_description:
+            'Enjoy a 95% success rate in preventing overdrafts, offering flexible protection options to suit your needs.',
+        },
+        {
+          id: 5,
+          bullet_description:
+            'Utilize integrated budgeting features with a 92% user satisfaction rate, helping you track spending and achieve financial goals.',
+        },
+        {
+          id: 6,
+          bullet_description:
+            'Settle bills online with a 99% success rate, eliminating postage costs and ensuring timely payments.',
+        },
+        {
+          id: 7,
+          bullet_description:
+            '85% of users successfully manage their budget with our integrated tools.',
+        },
+      ],
+    },
+  },
 };
 
 export const ContentCards = {
   Cards: {
-    h5_subtitle: "CARD MANAGEMENT",
-    h2_title: "Supreme Cards",
-    p_description: "Simplify your financial transactions, gain insights, and earn rewards with our card services.",
+    h5_subtitle: 'CARD MANAGEMENT',
+    h2_title: 'Supreme Cards',
+    p_description:
+      'Simplify your financial transactions, gain insights, and earn rewards with our card services.',
     link_button_1: 'Get a card',
     link_button_2: 'Find my branch',
-  }
-}
+
+    card_options: {
+      h5_subtitle: 'CARD OPTIONS',
+      h2_title: 'With Supreme cards you can only go right.',
+      p_description:
+        ' Choose the card that suits your lifestyle, and enjoy the multiple advantages that we offer through them.',
+
+      slides: [
+        { id: '1', name: 'Credit Card', icon: <Card1 /> },
+        { id: '2', name: 'Debit Card', icon: <Card2 /> },
+      ],
+    },
+  },
+};

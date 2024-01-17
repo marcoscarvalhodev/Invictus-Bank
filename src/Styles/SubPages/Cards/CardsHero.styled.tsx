@@ -9,14 +9,14 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
     && {
       ${theme.sub_pages.sub_pages_hero};
 
-      overflow: visible;
+      
 
       .circle {
         position: relative;
 
         width: 100px;
         height: 100px;
-        
+
         border-radius: 100%;
       }
 
@@ -25,6 +25,7 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
         justify-content: center;
         align-items: center;
         position: relative;
+        overflow: visible;
       }
 
       .card {
@@ -50,14 +51,26 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
       css`
         flex-direction: column;
         padding: 9.6rem 2.4rem 0rem 2.4rem;
+        
         .flex-hero-2 {
-          padding-top: 0px;
+          padding: 9.6rem 2.4rem;
+        }
+        .card {
+          width: 15rem;
         }
       `}
 
       @keyframes card-move {
         0% {
           transform: rotate(0deg) translateX(60px) rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(-180deg) translateX(-100px) rotate(180deg);
+        }
+
+        70% {
+          z-index: 3;
         }
 
         100% {
@@ -68,6 +81,10 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
       @keyframes card-move-2 {
         0% {
           transform: rotate(0deg) translateX(-100px) rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(180deg) translateX(-100px) rotate(-180deg);
         }
 
         100% {
