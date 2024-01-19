@@ -249,25 +249,25 @@ export const ContentAccountTypes = {
       slides: [
         {
           id: '1',
-          icon: <PigIcon className='pig-icon' />,
+          icon: <PigIcon className='pig-icon slide-svg' />,
           name: 'Savings Account',
           link: 'Compare ',
         },
         {
           id: '2',
-          icon: <CDIcon />,
+          icon: <CDIcon className='slide-svg'/>,
           name: 'Certificates of Deposit (CDs)',
           link: 'See CDs',
         },
         {
           id: '3',
-          icon: <MoneyIcon />,
+          icon: <MoneyIcon className='slide-svg'/>,
           name: 'Money Market Account',
           link: 'Compare',
         },
         {
           id: '4',
-          icon: <SunsetIcon />,
+          icon: <SunsetIcon className='slide-svg'/>,
           name: 'For Retirement',
           link: 'Learn more',
         },
@@ -331,10 +331,10 @@ export const ContentAccountTypes = {
       p_description:
         "Your financial aspirations deserve the best, and that's why we are here for.",
       slides: [
-        { id: '1', icon: <Wallet />, name: 'Simple Checking', link: 'Details' },
-        { id: '2', icon: <Hand />, name: 'Business Checking', link: 'Details' },
-        { id: '3', icon: <Book />, name: 'Student Checking', link: 'Details' },
-        { id: '4', icon: <Elder />, name: 'Senior Checking', link: 'Details' },
+        { id: '1', icon: <Wallet className='slide-svg'/>, name: 'Simple Checking', link: 'Details' },
+        { id: '2', icon: <Hand className='slide-svg'/>, name: 'Business Checking', link: 'Details' },
+        { id: '3', icon: <Book className='slide-svg'/>, name: 'Student Checking', link: 'Details' },
+        { id: '4', icon: <Elder className='slide-svg'/>, name: 'Senior Checking', link: 'Details' },
       ],
     },
 
@@ -400,8 +400,32 @@ export const ContentCards = {
         ' Choose the card that suits your lifestyle, and enjoy the multiple advantages that we offer through them.',
 
       slides: [
-        { id: '1', name: 'Credit Card', icon: <Card1 /> },
-        { id: '2', name: 'Debit Card', icon: <Card2 /> },
+        {
+          id: '1',
+          name: 'Credit Card',
+          icon: <Card2 className='bullet-card'/>,
+          advantages: [
+            'Earn loyalty points for each transaction and redeem them for exciting rewards.',
+            'Flexibility of adjustable credit limits to meet your changing financial needs.',
+            'Full protection of your card against unauthorized use.',
+            'Travel perks, including insurance coverage, for a worry-free journey.',
+            'Access special discounts and offers from our partner merchants with your credit card.',
+            'Set up automatic bill payments to ensure you never miss a due date and avoid late fees.',
+          ],
+        },
+        {
+          id: '2',
+          name: 'Debit Card',
+          icon: <Card1 className='bullet-card'/>,
+          advantages: [
+            'Quick and secure payments with contactless technology for added convenience.',
+            'Immediate access to your funds anytime, anywhere with our debit card.',
+            'Benefit from robust fraud protection measures, ensuring the security of your transactions.',
+            'Easily link your debit card to a savings account for simplified fund transfers and better financial management.',
+            'Cashback on select purchases, turning everyday spending into savings.',
+            'Use your debit card internationally with ease, with competitive foreign exchange rates.',
+          ],
+        },
       ],
     },
   },
