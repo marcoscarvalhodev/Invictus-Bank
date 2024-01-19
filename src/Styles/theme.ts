@@ -326,7 +326,7 @@ const theme = {
               margin-top: auto;
             }
           }
-          svg {
+          .slide-svg {
             width: 10rem;
             height: 10rem;
           }

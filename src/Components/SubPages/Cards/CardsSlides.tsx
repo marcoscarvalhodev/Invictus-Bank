@@ -4,6 +4,9 @@ import { ContentCards } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
+import Icons from '../../Reusable/Icons';
+import IconCheck from '../../../assets/svg/icon-check.svg?react';
+
 interface CardsSlidesProps {
   smallState: 'desktop' | 'mobile';
 }
@@ -29,20 +32,39 @@ const CardsSlides = ({ smallState }: CardsSlidesProps) => {
         </div>
 
         <ul className='slides-wrapper'>
-          {ContentCards.Cards.card_options.slides.map(({ id, icon, name }) => {
-            return (
-              <li key={id} className='slides'>
-                <StyledHeadings
-                  as='h4'
-                  $device={smallState}
-                  className='slide-titles'
-                >
-                  {name}
-                </StyledHeadings>
-                {icon}
-              </li>
-            );
-          })}
+          {ContentCards.Cards.card_options.slides.map(
+            ({ id, icon, name, advantages }) => {
+              return (
+                <li key={id} className='slides'>
+                  <StyledHeadings
+                    as='h3'
+                    $device={smallState}
+                    className='slide-titles'
+                  >
+                    {name}
+                  </StyledHeadings>
+                  {icon}
+
+                  <ul>
+                    {advantages.map((item) => (
+                      <li className='bullet-wrapper-advantages'>
+                        <div className='bullet-advantages bullet-1'>
+                          <Icons>
+                            <IconCheck />
+                          </Icons>
+                        </div>
+                        <div className='bullet-advantages bullet-2'>
+                          <StyledTexts $size='p1' $device={smallState}>
+                            {item}
+                          </StyledTexts>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
+          )}
         </ul>
       </section>
     </StyledCardsSlides>
