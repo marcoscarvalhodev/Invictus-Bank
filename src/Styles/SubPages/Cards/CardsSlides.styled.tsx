@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const StyledCardsSlides = styled.section`
-  ${({ theme }) => css`
+interface CardsSlidesProps {
+  $small: boolean;
+}
+
+export const StyledCardsSlides = styled.section<CardsSlidesProps>`
+  ${({ theme, $small }) => css`
     ${theme.sub_pages.sub_pages_slides};
     ${theme.sub_pages.sub_pages_advantages};
     && {
@@ -18,14 +22,21 @@ export const StyledCardsSlides = styled.section`
       }
 
       .slides {
-        justify-content: center;
+        justify-content: start;
         align-items: center;
 
         .bullet-card {
-          width: 15rem;
+          width: 20rem;
           height: auto;
         }
       }
+
+      ${$small && css`
+      
+      .slides-wrapper {
+        grid-template-columns: 1fr;
+      }
+      `}
     }
   `}
 `;

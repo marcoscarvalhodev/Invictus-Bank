@@ -6,14 +6,18 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
 import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
+import ContainerSizes from '../../../ContainerSizes';
 
 interface CardsSlidesProps {
   smallState: 'desktop' | 'mobile';
 }
 
 const CardsSlides = ({ smallState }: CardsSlidesProps) => {
+  const {small} = ContainerSizes();
+
+
   return (
-    <StyledCardsSlides>
+    <StyledCardsSlides $small={small}>
       <section className='container'>
         <div className='flex-slides'>
           <StyledHeadings $device={smallState} as='h5'>
@@ -46,15 +50,15 @@ const CardsSlides = ({ smallState }: CardsSlidesProps) => {
                   {icon}
 
                   <ul>
-                    {advantages.map((item) => (
-                      <li className='bullet-wrapper-advantages'>
+                    {advantages.map((item, index) => (
+                      <li className='bullet-wrapper-advantages' key={index}>
                         <div className='bullet-advantages bullet-1'>
                           <Icons>
                             <IconCheck />
                           </Icons>
                         </div>
                         <div className='bullet-advantages bullet-2'>
-                          <StyledTexts $size='p1' $device={smallState}>
+                          <StyledTexts $size='p4' $device={smallState}>
                             {item}
                           </StyledTexts>
                         </div>

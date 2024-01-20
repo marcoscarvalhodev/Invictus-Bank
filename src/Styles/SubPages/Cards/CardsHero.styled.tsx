@@ -53,7 +53,7 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
         padding: 9.6rem 2.4rem 0rem 2.4rem;
         
         .flex-hero-2 {
-          padding: 9.6rem 2.4rem;
+          padding: 12.8rem 3rem;
         }
         .card {
           width: 15rem;

@@ -16,11 +16,10 @@ const CheckingAdvantages = ({ smallState, small }: CheckingAdvantagesProps) => {
   return (
     <StyledCheckingAdvantages className='container' $small={small}>
       <div className='savings-advantages-flex'>
-
-        <StyledHeadings as="h5" $device={smallState}>
-        {ContentAccountTypes.Checking.checking_advantages.h5_subtitle}
+        <StyledHeadings as='h5' $device={smallState}>
+          {ContentAccountTypes.Checking.checking_advantages.h5_subtitle}
         </StyledHeadings>
-        
+
         <StyledHeadings
           as='h2'
           $device={smallState}

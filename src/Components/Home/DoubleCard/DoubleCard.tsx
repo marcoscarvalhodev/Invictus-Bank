@@ -6,13 +6,14 @@ import { ContentDoubleCard } from '../../../Contents';
 import DoubleCards from '../../../assets/svg/figsb3.svg?react';
 import Icons from '../../Reusable/Icons';
 import ContainerSizes from '../../../ContainerSizes';
+import { NavLink } from 'react-router-dom';
+
 interface DoubleCardProps {
   smallState: 'mobile' | 'desktop';
 }
 
 const DoubleCard = ({ smallState }: DoubleCardProps) => {
-
-  const {small, xsmall} = ContainerSizes();
+  const { small, xsmall } = ContainerSizes();
 
   return (
     <StyledDoubleCard className='container' $small={small} $xsmall={xsmall}>
@@ -34,10 +35,16 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
                 <li key={bullet_id} className='list-wrapper'>
                   <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
                   <div className='list-item'>
-                    <StyledHeadings $device={smallState} as='h5' className='bullet-title'>
+                    <StyledHeadings
+                      $device={smallState}
+                      as='h5'
+                      className='bullet-title'
+                    >
                       {bullet_title}
                     </StyledHeadings>
-                    <StyledTexts $device={smallState} $size='p4'>{bullet_description}</StyledTexts>
+                    <StyledTexts $device={smallState} $size='p4'>
+                      {bullet_description}
+                    </StyledTexts>
                   </div>
                 </li>
               );
@@ -45,11 +52,20 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
           )}
         </ul>
 
-        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true} className='link'>
-          {ContentDoubleCard.link_double_card}
-        </StyledTexts>
+        <NavLink to='/cards'>
+          <StyledTexts
+            $size='p1'
+            $device={smallState}
+            $link={true}
+            className='link'
+          >
+            {ContentDoubleCard.link_double_card}
+          </StyledTexts>
+        </NavLink>
       </div>
-      <div className='double-card-flex-item-1 double-cards-wrapper'><DoubleCards className='double-cards' /></div>
+      <div className='double-card-flex-item-1 double-cards-wrapper'>
+        <DoubleCards className='double-cards' />
+      </div>
     </StyledDoubleCard>
   );
 };
