@@ -31,11 +31,11 @@ export const StyledCardsSlides = styled.section<CardsSlidesProps>`
         }
       }
 
-      ${$small && css`
-      
-      .slides-wrapper {
-        grid-template-columns: 1fr;
-      }
+      ${$small &&
+      css`
+        .slides-wrapper {
+          grid-template-columns: 1fr;
+        }
       `}
     }
   `}
