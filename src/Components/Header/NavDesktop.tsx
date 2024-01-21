@@ -24,7 +24,7 @@ const NavDesktop = () => {
   return (
     <StyledNavDesktop className='navbar-desktop' $dropdown={dropdownMenu}>
       <div className='navbar-desktop-item-1'>
-        <NavLink to='/' end className="logo-sb">
+        <NavLink to='/' end className='logo-sb'>
           <Logo />
         </NavLink>
         <ul className='menu-desktop'>
@@ -57,7 +57,7 @@ const NavDesktop = () => {
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-              <NavLink to='/cards' className='nav-link-dropdown'>
+                <NavLink to='/cards' className='nav-link-dropdown'>
                   Cards
                 </NavLink>
               </li>
@@ -140,7 +140,9 @@ const NavDesktop = () => {
 
       <div className='navbar-desktop-item-2'>
         <Button>Join Supreme Bank</Button>
-        <Button light={true}>Login</Button>
+        <NavLink to="/login">
+          <Button light={true}>Login</Button>
+        </NavLink>
       </div>
     </StyledNavDesktop>
   );

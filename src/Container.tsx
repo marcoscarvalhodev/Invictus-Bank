@@ -3,12 +3,8 @@ import { StyledContainer } from './Styles/Container.styled.ts';
 import Header from './Components/Header/Header.tsx';
 import ContainerSizes from './ContainerSizes.tsx';
 import ScrollToTop from './Hooks/scrollToTop.tsx';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Home.tsx';
-import Savings from './Components/SubPages/Savings/Savings.tsx';
-import Checking from './Components/SubPages/Checking/Checking.tsx';
-import Cards from './Components/SubPages/Cards/Cards.tsx';
+import AppRoutes from './AppRoutes.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -30,26 +26,11 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
   return (
     <StyledContainer className={`${mobileBx ? 'container-active-bx' : ''}`}>
       <BrowserRouter>
-      <ScrollToTop />
+        <ScrollToTop />
 
         <Header setMobileBx={setMobileBx} mobileBx={mobileBx} />
 
-        <Routes>
-          <Route
-            path='/'
-            element={<Home mobileBx={mobileBx} smallState={smallState} />}
-          />
-
-          <Route
-            path='savings/*'
-            element={<Savings smallState={smallState} />}
-          />
-
-          <Route path='checking/*' element={<Checking smallState={smallState}/>}/>
-
-          <Route path='cards/*' element={<Cards smallState={smallState}/>}/>
-
-        </Routes>
+        <AppRoutes smallState={smallState} mobileBx={mobileBx} />
       </BrowserRouter>
     </StyledContainer>
   );
