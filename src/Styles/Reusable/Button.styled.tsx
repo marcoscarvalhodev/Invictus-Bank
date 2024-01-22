@@ -6,9 +6,10 @@ interface ButtonProps {
   $light: boolean;
 }
 
-export const StyledButton = styled.a<ButtonProps>`
+export const StyledButton = styled.button<ButtonProps>`
   ${({ theme, $xsmall, $light }) => css`
     && {
+      
       text-decoration: none;
       font-size: ${theme.spacing.gap_2};
       line-height: 140%;

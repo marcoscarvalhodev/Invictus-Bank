@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   ${({ $activeBx, $xsmall }) => css`
   
     ${$activeBx &&
-    `body {
+    css`body {
       overflow: hidden; 
       
     };

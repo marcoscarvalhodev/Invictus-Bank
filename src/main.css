@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
 
-
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0rem;
   margin: 0rem;
   box-sizing: border-box;
   font-size: 10px;
   list-style: none;
-  caret-color: transparent;
+
   -webkit-tap-highlight-color: transparent;
 }
 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+  text-decoration: none;
+  font-family: 'Source Sans 3';
+}
 
 html {
   scroll-behavior: smooth;
-  
 }
 
 body {
-  
   scroll-behavior: smooth;
   width: 100vw;
 }
 
-
 a {
   text-decoration: none;
   font-family: 'Source Sans 3';
-  
 }
-
-

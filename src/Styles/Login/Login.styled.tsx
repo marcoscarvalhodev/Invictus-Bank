@@ -20,7 +20,7 @@ export const StyledLogin = styled.section`
   ${({ theme }) => css`
     .background-wrapper {
       position: relative;
-      padding: 8rem 0rem;
+      padding: 2.5rem 0rem;
       
       width: 90%;
       
@@ -52,13 +52,17 @@ export const StyledLogin = styled.section`
     }
 
     .dots-login-1 {
-      right: -15px;
-      top: -50px;
+      right: -60px;
+      top: -25px;
     }
 
     .dots-login-2 {
-      left: 14px;
-      bottom: -15px;
+      left: -60px;
+      bottom: -25px;
+    }
+
+    .background-login {
+      filter: drop-shadow(-10px 10px 15px rgba(56, 58, 62, 0.35));
     }
   `}
 `;

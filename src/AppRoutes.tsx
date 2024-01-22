@@ -21,7 +21,7 @@ const AppRoutes = ({ smallState, mobileBx }: AppRoutesProps) => {
         element={<Home mobileBx={mobileBx} smallState={smallState} />}
       />
 
-      <Route path='login/*' element={<Login />} />
+      <Route path='login/*' element={<Login smallState={smallState}/>} />
 
       <Route path='savings/*' element={<Savings smallState={smallState} />} />
 
