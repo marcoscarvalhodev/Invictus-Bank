@@ -6,7 +6,8 @@ import { ContentDoubleCard } from '../../../Contents';
 import DoubleCards from '../../../assets/svg/figsb3.svg?react';
 import Icons from '../../Reusable/Icons';
 import ContainerSizes from '../../../ContainerSizes';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 
 interface DoubleCardProps {
   smallState: 'mobile' | 'desktop';
@@ -54,6 +55,7 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
 
         <NavLink to='/cards'>
           <StyledTexts
+            as="p"
             $size='p1'
             $device={smallState}
             $link={true}

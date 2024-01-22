@@ -430,3 +430,11 @@ export const ContentCards = {
     },
   },
 };
+
+
+export const ContentLoginForm = {
+  h2: "Login",
+  h4: "Log in to your Supreme Account",
+  email: "Email",
+  password: "Password"
+}
