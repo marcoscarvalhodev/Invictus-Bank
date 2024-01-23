@@ -24,6 +24,14 @@ export const StyledLoginForm = styled.div`
       display: flex;
       flex-direction: column;
       gap: 30px;
+
+      .icon {
+      width: 17px;
+    }
+
+    .email-icon {
+      width: 19px;
+    }
     }
 
     .button-login {

@@ -24,9 +24,7 @@ export const StyledInput = styled.div`
       font-weight: 300;
     }
 
-    .icon {
-      width: 15px;
-    }
+    
 
     .label-wrapper {
       display: flex;
