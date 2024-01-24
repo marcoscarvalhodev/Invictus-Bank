@@ -255,19 +255,19 @@ export const ContentAccountTypes = {
         },
         {
           id: '2',
-          icon: <CDIcon className='slide-svg'/>,
+          icon: <CDIcon className='slide-svg' />,
           name: 'Certificates of Deposit (CDs)',
           link: 'See CDs',
         },
         {
           id: '3',
-          icon: <MoneyIcon className='slide-svg'/>,
+          icon: <MoneyIcon className='slide-svg' />,
           name: 'Money Market Account',
           link: 'Compare',
         },
         {
           id: '4',
-          icon: <SunsetIcon className='slide-svg'/>,
+          icon: <SunsetIcon className='slide-svg' />,
           name: 'For Retirement',
           link: 'Learn more',
         },
@@ -331,10 +331,30 @@ export const ContentAccountTypes = {
       p_description:
         "Your financial aspirations deserve the best, and that's why we are here for.",
       slides: [
-        { id: '1', icon: <Wallet className='slide-svg'/>, name: 'Simple Checking', link: 'Details' },
-        { id: '2', icon: <Hand className='slide-svg'/>, name: 'Business Checking', link: 'Details' },
-        { id: '3', icon: <Book className='slide-svg'/>, name: 'Student Checking', link: 'Details' },
-        { id: '4', icon: <Elder className='slide-svg'/>, name: 'Senior Checking', link: 'Details' },
+        {
+          id: '1',
+          icon: <Wallet className='slide-svg' />,
+          name: 'Simple Checking',
+          link: 'Details',
+        },
+        {
+          id: '2',
+          icon: <Hand className='slide-svg' />,
+          name: 'Business Checking',
+          link: 'Details',
+        },
+        {
+          id: '3',
+          icon: <Book className='slide-svg' />,
+          name: 'Student Checking',
+          link: 'Details',
+        },
+        {
+          id: '4',
+          icon: <Elder className='slide-svg' />,
+          name: 'Senior Checking',
+          link: 'Details',
+        },
       ],
     },
 
@@ -403,7 +423,7 @@ export const ContentCards = {
         {
           id: '1',
           name: 'Credit Card',
-          icon: <Card2 className='bullet-card'/>,
+          icon: <Card2 className='bullet-card' />,
           advantages: [
             'Earn loyalty points for each transaction and redeem them for exciting rewards.',
             'Flexibility of adjustable credit limits to meet your changing financial needs.',
@@ -416,7 +436,7 @@ export const ContentCards = {
         {
           id: '2',
           name: 'Debit Card',
-          icon: <Card1 className='bullet-card'/>,
+          icon: <Card1 className='bullet-card' />,
           advantages: [
             'Quick and secure payments with contactless technology for added convenience.',
             'Immediate access to your funds anytime, anywhere with our debit card.',
@@ -431,10 +451,23 @@ export const ContentCards = {
   },
 };
 
+export const ContentLoginSignupForm = {
+  login: { h2: 'Login', h4: 'Log in to your Supreme Bank Account' },
+  signup: { h2: 'Signup', h4: 'Create a Supreme Bank Account' },
 
-export const ContentLoginForm = {
-  h2: "Login",
-  h4: "Log in to your Supreme Account",
-  email: "Email",
-  password: "Password"
-}
+  alternateAccount: {
+    login: {
+      title: "Signup",
+      message: "Don't you have an account?",
+      button: "Signup",
+      link: "/signup"
+    },
+    signup: {
+      title: "Login",
+      message: "Already have an account?",
+      button: "Login",
+      link: "/login" 
+    }
+
+  }
+};

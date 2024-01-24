@@ -1,8 +1,5 @@
-
 import { themeAttrs } from './ThemeAttrs';
 import { css } from 'styled-components';
-
-
 
 const theme = {
   colors: {
@@ -280,7 +277,6 @@ const theme = {
           position: relative;
         }
         .flex-hero-2 {
-          
           display: flex;
           justify-content: center;
           align-items: center;
@@ -362,7 +358,7 @@ const theme = {
 
         .flex-2 {
           margin-top: 9.4rem;
-          
+
           display: flex;
           align-self: center;
           justify-content: center;
@@ -374,6 +370,47 @@ const theme = {
         }
       `;
     },
+  },
+
+  form: {
+    login_signup: css`
+      filter: drop-shadow(-10px 10px 15px rgba(56, 58, 62, 0.35));
+      position: absolute;
+      background: #f1f7ff;
+      width: 500px;
+      top: 50%;
+      right: 0;
+      border-radius: 40px;
+      transform: translate(0, -50%);
+      padding: 4.8rem 3.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      z-index: 0;
+
+      .title {
+        margin-bottom: 1.2rem;
+        margin-left: -4px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .icon {
+          width: 17px;
+        }
+
+        .email-icon {
+          width: 19px;
+        }
+      }
+
+      .button {
+        width: max-content;
+      }
+    `,
   },
 };
 export default theme;

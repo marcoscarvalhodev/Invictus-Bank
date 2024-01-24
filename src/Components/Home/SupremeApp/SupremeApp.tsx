@@ -75,6 +75,7 @@ const SupremeApp = ({ smallState }: SupremeAppProps) => {
           $size='p1'
           $device={smallState}
           $link={true}
+          $arrow={true}
         >
           {ContentSupremeApp.link_supremeapp}
         </StyledTexts>

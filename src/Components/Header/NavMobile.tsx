@@ -8,11 +8,15 @@ interface NavMenuProps {
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
   setActiveBx: React.Dispatch<React.SetStateAction<boolean>>;
   activeBx: boolean;
+  setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const NavMenuMobile = ({ setMenuIcon, setActiveBx, activeBx}: NavMenuProps) => {
-  
-
+const NavMenuMobile = ({
+  setMenuIcon,
+  setActiveBx,
+  activeBx,
+  setAccountState,
+}: NavMenuProps) => {
   React.useEffect(() => {
     setMenuIcon(activeBx);
   }, [activeBx, setMenuIcon]);
@@ -20,6 +24,9 @@ const NavMenuMobile = ({ setMenuIcon, setActiveBx, activeBx}: NavMenuProps) => {
   const handleClick = () => {
     setActiveBx(!activeBx);
   };
+
+ 
+
   return (
     <StyledNavMobile className='navbar-mobile'>
       <div
@@ -27,8 +34,17 @@ const NavMenuMobile = ({ setMenuIcon, setActiveBx, activeBx}: NavMenuProps) => {
         id='bx'
         onClick={handleClick}
       ></div>
-      <NavLink to="/" end className="logo-sb" onClick={() => setActiveBx(false)}><Logo /></NavLink>
-      <Button light={true}>Login</Button>
+      <NavLink
+        to='/'
+        end
+        className='logo-sb'
+        onClick={() => setActiveBx(false)}
+      >
+        <Logo />
+      </NavLink>
+      <NavLink to='/account' onClick={() => setAccountState(1)}>
+        <Button light={true}>Login</Button>
+      </NavLink>
     </StyledNavMobile>
   );
 };

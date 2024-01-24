@@ -60,6 +60,7 @@ const DoubleCard = ({ smallState }: DoubleCardProps) => {
             $device={smallState}
             $link={true}
             className='link'
+            $arrow={true}
           >
             {ContentDoubleCard.link_double_card}
           </StyledTexts>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledInput } from '../../Styles/Login/Input.styled';
+import { StyledInput } from '../../Styles/Account/Input.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
 interface InputProps {
@@ -25,16 +25,13 @@ const Input = ({
 }: InputProps) => {
   return (
     <StyledInput>
-      <div className='label-wrapper'>
-        <div>
-          {icon}
-        </div>
-        <label htmlFor={name}>
-          <StyledTexts $device={smallState} $size='p1'>
-            {label}
-          </StyledTexts>
-        </label>
-      </div>
+      <label htmlFor={name} className='label-wrapper'>
+        {icon}
+        <StyledTexts $device={smallState} $size='p1'>
+          {label}
+        </StyledTexts>
+      </label>
+
       <input
         id={name}
         type={type}
@@ -42,6 +39,7 @@ const Input = ({
         value={value}
         onBlur={onBlur}
         className='input'
+        autoComplete='on'
       />
     </StyledInput>
   );

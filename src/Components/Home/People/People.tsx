@@ -64,7 +64,7 @@ const People = ({smallState} : PeopleProps) => {
             }
           )}
         </ul>
-        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true}>
+        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true} $arrow={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
         

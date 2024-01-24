@@ -6,10 +6,11 @@ interface TextsProps {
   $size: 'p1' | 'p2' | 'p3' | 'p4';
   $link?: boolean;
   $fontSize?: number;
+  $arrow?: boolean;
 }
 
 export const StyledTexts = styled.p<TextsProps>`
-  ${({ theme, $size, $device, $link, $fontSize }) => css`
+  ${({ theme, $size, $device, $link, $fontSize, $arrow }) => css`
     && {
       font-family: 'Source Sans 3', sans-serif;
       color: ${theme.colors.gray_auxiliary.gray_1};
@@ -19,8 +20,16 @@ export const StyledTexts = styled.p<TextsProps>`
       css`
         display: inline-block;
         color: ${theme.colors.blue_main.primary_normal};
-        background: url(${IconArrow}) no-repeat 0% 50%;
-        padding: 16px 16px 16px 40px;
+
+        ${$arrow
+          ? css`
+              background: url(${IconArrow}) no-repeat 0% 50%;
+              padding: 16px 16px 16px 40px;
+            `
+          : css`
+              padding: 12px 12px;
+            `}
+
         cursor: pointer;
         text-align: left;
         position: relative;
@@ -41,10 +50,18 @@ export const StyledTexts = styled.p<TextsProps>`
         }
 
         &:hover {
-          opacity: 0.8;
-          padding-left: 64px;
+          
+          ${$arrow
+            ? css`
+                padding-left: 64px;
+              `
+            : css`
+                padding-left: 12px;
+              `}
+
           background-position: 8px 50%;
           &:after {
+            
             left: 8%;
             position: absolute;
             width: 85%;
@@ -113,7 +130,8 @@ ${$size === 'p3' &&
           `)}
       `}
 
-      ${$fontSize && css`
+      ${$fontSize &&
+      css`
         font-size: ${$fontSize}px;
       `}
     }
