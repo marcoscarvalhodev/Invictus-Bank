@@ -56,6 +56,7 @@ const SavingsSlides = ({
                     $device={smallState}
                     $size='p1'
                     className='slide-links'
+                    $arrow={true}
                   >
                     {link}
                   </StyledTexts>

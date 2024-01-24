@@ -13,13 +13,14 @@ import { StyledHome } from './Styles/Home.styled.tsx';
 interface HomeProps {
   mobileBx: boolean;
   smallState: "desktop" | "mobile";
+  setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Home = ({mobileBx, smallState} : HomeProps) => {
+const Home = ({mobileBx, smallState, setAccountState} : HomeProps) => {
   return (
     <StyledHome className='home'>
-      <HeroBackground />
-      <Hero mobileBx={mobileBx} smallState={smallState} />
+      <HeroBackground/>
+      <Hero mobileBx={mobileBx} smallState={smallState} setAccountState={setAccountState} />
       <People smallState={smallState} />
       <Advantages smallState={smallState} />
       <SupremeApp smallState={smallState} />

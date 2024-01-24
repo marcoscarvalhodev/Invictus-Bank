@@ -11,14 +11,20 @@ import IconContactless from '../../../assets/svg/icon-contactless.svg?react';
 import Card from './Card';
 import { ContentHero } from '../../../Contents';
 import ContainerSizes from '../../../ContainerSizes';
+import { NavLink } from 'react-router-dom';
 
 interface HeroProps {
   mobileBx: boolean;
   smallState: 'desktop' | 'mobile';
+  setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Hero = ({ mobileBx, smallState }: HeroProps) => {
+const Hero = ({ mobileBx, smallState, setAccountState }: HeroProps) => {
   const { small, xsmall, xlarge } = ContainerSizes();
+
+  const accountHandleClick = () => {
+    setAccountState(2);
+  }
 
   return (
     <StyledHero
@@ -29,9 +35,6 @@ const Hero = ({ mobileBx, smallState }: HeroProps) => {
         mobileBx ? 'hero-active-bx' : ''
       }`}
     >
-
-
-
       <div className='flex-item-1-hero'>
         <StyledHeadings as='h1' $device={smallState}>
           {ContentHero.title}
@@ -43,7 +46,9 @@ const Hero = ({ mobileBx, smallState }: HeroProps) => {
         <div
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
-          <Button>Join Supreme Bank</Button>
+          <NavLink to="/account" onClick={accountHandleClick}>
+            <Button>Join Supreme Bank</Button>
+          </NavLink>
           <a
             href='https://www.apple.com/br/app-store'
             target='_blank'

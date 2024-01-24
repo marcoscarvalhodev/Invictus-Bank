@@ -15,6 +15,8 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
   const { small, xsmall } = ContainerSizes();
   const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
 
+  const [accountState, setAccountState] = React.useState(0);
+
   React.useEffect(() => {
     small ? setSmallState('mobile') : setSmallState('desktop');
   }, [small]);
@@ -28,9 +30,9 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
       <BrowserRouter>
         <ScrollToTop />
 
-        <Header setMobileBx={setMobileBx} mobileBx={mobileBx} />
+        <Header setMobileBx={setMobileBx} mobileBx={mobileBx} setAccountState={setAccountState}/>
 
-        <AppRoutes smallState={smallState} mobileBx={mobileBx} />
+        <AppRoutes smallState={smallState} mobileBx={mobileBx} setAccountState={setAccountState} accountState={accountState}/>
       </BrowserRouter>
     </StyledContainer>
   );

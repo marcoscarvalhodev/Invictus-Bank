@@ -4,7 +4,11 @@ import Button from '../Reusable/Button';
 import Logo from '../Reusable/Logo';
 import { NavLink } from 'react-router-dom';
 
-const NavDesktop = () => {
+interface NavDesktopProps {
+  setAccountState: React.Dispatch<React.SetStateAction<number>>;
+}
+
+const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
   const [dropdownMenu, setDropdownMenu] = React.useState(false);
   const linkRef1 = React.useRef<HTMLLIElement>(null);
   const linkRef2 = React.useRef<HTMLLIElement>(null);
@@ -139,8 +143,10 @@ const NavDesktop = () => {
       </div>
 
       <div className='navbar-desktop-item-2'>
-        <Button>Join Supreme Bank</Button>
-        <NavLink to="/login">
+        <NavLink to='/account' onClick={() => setAccountState(2)}>
+          <Button>Join Supreme Bank</Button>
+        </NavLink>
+        <NavLink to='/account' onClick={() => setAccountState(1)}>
           <Button light={true}>Login</Button>
         </NavLink>
       </div>

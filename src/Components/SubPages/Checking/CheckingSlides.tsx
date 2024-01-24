@@ -35,7 +35,7 @@ const CheckingSlides = ({smallState, small, medium, xsmall}: CheckingSlidesProps
 
               <StyledHeadings as="h4" $device={smallState} className='slide-titles'>{name}</StyledHeadings>
 
-              <StyledTexts $link={true} $device={smallState} $size='p1' className='slide-links'>{link}</StyledTexts>
+              <StyledTexts $arrow={true} $link={true} $device={smallState} $size='p1' className='slide-links'>{link}</StyledTexts>
             </li>;
           })}
         </ul>

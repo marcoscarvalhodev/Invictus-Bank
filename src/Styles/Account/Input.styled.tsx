@@ -27,7 +27,7 @@ export const StyledInput = styled.div`
     
 
     .label-wrapper {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
     }
