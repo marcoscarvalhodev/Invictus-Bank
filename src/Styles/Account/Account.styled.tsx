@@ -72,6 +72,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         css`
           .signup-form {
             animation: shadow-out 1s linear forwards;
+            
           }
 
           .login-form {
@@ -82,20 +83,24 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         css`
           .login-form {
             animation: shadow-out 1s linear forwards;
+            
           }
 
           .signup-form {
             animation: account-motion 1s linear forwards;
+            
           }
         `)}
 
       @keyframes shadow-out {
         0% {
           filter: drop-shadow(-10px 10px 15px rgba(56, 58, 62, 0.35));
+          z-index: 0;
         }
 
         90% {
           filter: drop-shadow(-10px 10px 15px rgba(56, 58, 62, 0.35));
+          z-index: 0;
         }
 
         100% {
