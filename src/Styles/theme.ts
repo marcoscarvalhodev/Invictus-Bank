@@ -386,7 +386,7 @@ const theme = {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      z-index: 0;
+      
 
       .title {
         margin-bottom: 1.2rem;
