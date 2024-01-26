@@ -7,7 +7,9 @@ import Input from './Input';
 import Button from '../Reusable/Button';
 import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';
+import UserIcon from '../../assets/svg/login/user.svg?react';
 import AlternateAccount from './AlternateAccount';
+import { NavLink } from 'react-router-dom';
 
 interface SignupFormProps {
   smallState: 'desktop' | 'mobile';
@@ -32,7 +34,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           label='Name'
           type='text'
           smallState={smallState}
-          icon={<EmailIcon className='icon email-icon' />}
+          icon={<UserIcon className='icon user-icon' />}
         />
         <Input
           name='email-signup'
@@ -48,7 +50,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           smallState={smallState}
           icon={<PasswordIcon className='icon' />}
         />
-        <Button classed='button'>Signup</Button>
+        <NavLink to="/"><Button classed='button'>Signup</Button></NavLink>
       </form>
 
       <AlternateAccount

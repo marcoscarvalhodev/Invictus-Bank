@@ -8,6 +8,7 @@ import Button from '../Reusable/Button';
 import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';
 import AlternateAccount from './AlternateAccount';
+import { NavLink } from 'react-router-dom';
 
 interface LoginFormProps {
   smallState: 'desktop' | 'mobile';
@@ -41,7 +42,7 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
           smallState={smallState}
           icon={<PasswordIcon className='icon' />}
         />
-        <Button classed='button'>Login</Button>
+        <NavLink to="/"><Button classed='button'>Login</Button></NavLink>
       </form>
 
       <AlternateAccount

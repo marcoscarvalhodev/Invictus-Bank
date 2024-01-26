@@ -15,7 +15,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
   const { small, xsmall } = ContainerSizes();
   const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
 
-  const [accountState, setAccountState] = React.useState(0);
+  const [accountState, setAccountState] = React.useState(1);
 
   React.useEffect(() => {
     small ? setSmallState('mobile') : setSmallState('desktop');

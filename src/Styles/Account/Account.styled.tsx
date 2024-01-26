@@ -72,7 +72,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         css`
           .signup-form {
             animation: shadow-out 1s linear forwards;
-            
+            pointer-events: none;
           }
 
           .login-form {
@@ -83,12 +83,11 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         css`
           .login-form {
             animation: shadow-out 1s linear forwards;
-            
+            pointer-events: none;
           }
 
           .signup-form {
             animation: account-motion 1s linear forwards;
-            
           }
         `)}
 
@@ -122,8 +121,10 @@ export const StyledAccount = styled.section<StyledAccountProps>`
 
         60% {
           transform: translate(-50%, -50%) scale(1.1);
+          filter: drop-shadow(-40px 50px 20px rgba(56, 58, 62, 0.35));
           z-index: 3;
         }
+
 
         100% {
           transform: translate(0%, -50%) scale(1);
