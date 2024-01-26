@@ -403,7 +403,7 @@ const theme = {
         }
 
         .email-icon {
-          width: 19px;
+          width: 20px;
         }
       }
 
