@@ -27,7 +27,7 @@ export const StyledTexts = styled.p<TextsProps>`
               padding: 16px 16px 16px 40px;
             `
           : css`
-              padding: 12px 12px;
+              padding: 10px 12px;
             `}
 
         cursor: pointer;
