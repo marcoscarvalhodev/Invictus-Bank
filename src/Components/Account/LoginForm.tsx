@@ -10,12 +10,20 @@ import PasswordIcon from '../../assets/svg/login/password.svg?react';
 import AlternateAccount from './AlternateAccount';
 import { NavLink } from 'react-router-dom';
 
+import useForm from '../../Hooks/useForm';
+import PasswordShow from './PasswordShow';
+
 interface LoginFormProps {
   smallState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
+  const email = useForm('email');
+  const password = useForm('password');
+
+  const [passwordShow, setPasswordShow] = React.useState(false);
+
   return (
     <StyledLoginForm className='login-form'>
       <div>
@@ -34,15 +42,25 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
           type='text'
           smallState={smallState}
           icon={<EmailIcon className='icon email-icon' />}
+          {...email}
         />
         <Input
           name='password-login'
           label='Password'
-          type='password'
+          type={passwordShow ? 'text' : 'password'}
           smallState={smallState}
           icon={<PasswordIcon className='icon' />}
-        />
-        <NavLink to="/"><Button classed='button'>Login</Button></NavLink>
+          {...password}
+          inputPassword={true}
+        >
+          <PasswordShow
+            passwordShow={passwordShow}
+            setPassowrdShow={setPasswordShow}
+          />
+        </Input>
+        <NavLink to='/'>
+          <Button classed='button'>Login</Button>
+        </NavLink>
       </form>
 
       <AlternateAccount

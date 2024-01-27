@@ -4,10 +4,10 @@ export const StyledLoginForm = styled.div`
   ${({ theme }) => css`
     && {
       ${theme.form.login_signup};
-      gap: 55.5px;
+      gap: 48.8px;
 
       .form {
-        gap: 55.5px;
+        gap: 48.8px;
       }
     }
   `}

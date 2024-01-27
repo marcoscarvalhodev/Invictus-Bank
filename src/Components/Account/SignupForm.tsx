@@ -11,12 +11,21 @@ import UserIcon from '../../assets/svg/login/user.svg?react';
 import AlternateAccount from './AlternateAccount';
 import { NavLink } from 'react-router-dom';
 
+import useForm from '../../Hooks/useForm';
+import PasswordShow from './PasswordShow';
+
 interface SignupFormProps {
   smallState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
+  const name = useForm();
+  const email = useForm('email');
+  const password = useForm('password');
+
+  const [passwordShow, setPasswordShow] = React.useState(false);
+
   return (
     <StyledSignupForm className='signup-form'>
       <div>
@@ -29,12 +38,13 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
       </div>
 
       <form className='form'>
-      <Input
+        <Input
           name='name-signup'
           label='Name'
           type='text'
           smallState={smallState}
           icon={<UserIcon className='icon user-icon' />}
+          {...name}
         />
         <Input
           name='email-signup'
@@ -42,15 +52,25 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           type='text'
           smallState={smallState}
           icon={<EmailIcon className='icon email-icon' />}
+          {...email}
         />
         <Input
           name='password-signup'
           label='Password'
-          type='password'
+          type={passwordShow ? "text" : "password"}
           smallState={smallState}
           icon={<PasswordIcon className='icon' />}
-        />
-        <NavLink to="/"><Button classed='button'>Signup</Button></NavLink>
+          {...password}
+          inputPassword={true}
+        >
+          <PasswordShow
+            passwordShow={passwordShow}
+            setPassowrdShow={setPasswordShow}
+          />
+        </Input>
+        <NavLink to='/'>
+          <Button classed='button'>Signup</Button>
+        </NavLink>
       </form>
 
       <AlternateAccount

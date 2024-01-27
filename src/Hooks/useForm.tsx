@@ -1,4 +1,5 @@
-/*import React from "react";
+import React from "react";
+
 
 const types = {
   email: {
@@ -6,7 +7,7 @@ const types = {
     message: 'Fill in the field with a valid email'
   },
   password: {
-    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).+/,
     message: 'The password must contain at least 1 upper character, 1 lower character, 1 digit. With at least 8 characters. '
   },
   number: {
@@ -19,7 +20,7 @@ const useForm = (type ?: string) => {
   const [value, setValue] = React.useState("");
   const [error, setError] = React.useState(null);
   
-  function onChange({target}) {
+  const onChange : React.ChangeEventHandler<HTMLInputElement> = ({target}) => {
     if(error) validate(target.value)
     setValue(target.value)
     
@@ -51,4 +52,3 @@ const useForm = (type ?: string) => {
 };
 
 export default useForm;
-*/

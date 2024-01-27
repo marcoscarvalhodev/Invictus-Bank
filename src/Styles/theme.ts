@@ -385,7 +385,7 @@ const theme = {
       padding: 4.8rem 3.2rem;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 24px;
       
 
       .title {
@@ -396,7 +396,7 @@ const theme = {
       .form {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 24px;
 
         .icon {
           width: 17px;
@@ -404,6 +404,10 @@ const theme = {
 
         .email-icon {
           width: 20px;
+        }
+
+        .eye-icon {
+          width: 23px;
         }
       }
 
