@@ -15,9 +15,10 @@ interface MenuProps {
   setMobileBx: React.Dispatch<React.SetStateAction<boolean>>;
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
   setActiveBx: React.Dispatch<React.SetStateAction<boolean>>;
+  setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx }: MenuProps) => {
+const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccountState }: MenuProps) => {
   const [menuState, setMenuState] = React.useState(0);
   const itemsRef = React.useRef([]);
   const { refsByKey, setRef } = useRefs();
@@ -50,6 +51,11 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx }: MenuPro
       setMenuState(0);
     }
   };
+
+  const handleJoinClick = () => {
+    setAccountState(2);
+    buttonDisable();
+  }
 
   React.useEffect(() => {
     itemsRef.current = itemsRef.current.slice(
@@ -89,7 +95,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx }: MenuPro
                     : ''
                 }`}
               >
-                <NavLink to={pages.page_1.url} onClick={buttonDisable}>
+                <NavLink to={pages.page_1.url} onClick={pages.page_1.signup && handleJoinClick}>
                   <DropdownItem >{pages.page_1.link}</DropdownItem>
                 </NavLink>
 
@@ -106,11 +112,11 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx }: MenuPro
         })}
 
         <li>
-          <a href='' className='nav-link-mobile'>
+          <NavLink to="/account" className='nav-link-mobile' onClick={handleJoinClick}>
             <StyledHeadings as='h3' $device='desktop'>
               Join Supreme Bank
             </StyledHeadings>
-          </a>
+          </NavLink>
         </li>
 
         <li className='social-icons'>
