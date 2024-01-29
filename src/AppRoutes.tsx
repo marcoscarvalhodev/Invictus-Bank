@@ -7,6 +7,7 @@ import Cards from './Components/SubPages/Cards/Cards';
 
 import { Routes, Route } from 'react-router-dom';
 import Account from './Components/Account/Account';
+import Transfers from './Components/SubPages/Transfers/Transfers';
 
 interface AppRoutesProps {
   smallState: 'desktop' | 'mobile';
@@ -31,6 +32,8 @@ const AppRoutes = ({ smallState, mobileBx, setAccountState, accountState, smallM
       <Route path='checking/*' element={<Checking smallState={smallState} />} />
 
       <Route path='cards/*' element={<Cards smallState={smallState} />} />
+
+      <Route path='transfers/*' element={<Transfers smallState={smallState}/>}/>
     </Routes>
   );
 };
