@@ -7,8 +7,8 @@ const types = {
     message: 'Fill in the field with a valid email'
   },
   password: {
-    regex: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).+/,
-    message: 'The password must contain at least 1 upper character, 1 lower character, 1 digit. With at least 8 characters. '
+    regex: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W])(?!.*\s).{8,}$/,
+    message: 'Must contain no less than 1 upper character, 1 lower character, 1 digit, 1 special character. With at least 8 characters.'
   },
   number: {
     regex: /^\d+$/,

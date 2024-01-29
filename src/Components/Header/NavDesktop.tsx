@@ -87,9 +87,13 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
               }`}
             >
               <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
+                <NavLink
+                  to='/account'
+                  className='nav-link-dropdown'
+                  onClick={() => setAccountState(2)}
+                >
                   Create your account
-                </a>
+                </NavLink>
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>

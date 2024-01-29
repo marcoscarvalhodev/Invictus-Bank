@@ -12,25 +12,29 @@ import { NavLink } from 'react-router-dom';
 
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
+import ContainerSizes from '../../ContainerSizes';
 
 interface LoginFormProps {
-  smallState: 'desktop' | 'mobile';
+  smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
+const LoginForm = ({ smallMediumState, setAccountState }: LoginFormProps) => {
   const email = useForm('email');
   const password = useForm('password');
 
+  const {xsmall,small, medium} = ContainerSizes();
+
   const [passwordShow, setPasswordShow] = React.useState(false);
+  
 
   return (
-    <StyledLoginForm className='login-form'>
+    <StyledLoginForm className='login-form' $small={small} $medium={medium} $xsmall={xsmall} >
       <div>
-        <StyledHeadings as='h2' $device={smallState} className='title'>
+        <StyledHeadings as='h2' $device={smallMediumState} className='title'>
           {ContentLoginSignupForm.login.h2}
         </StyledHeadings>
-        <StyledHeadings as='h5' $device={smallState} className='description'>
+        <StyledHeadings as='h5' $device={smallMediumState} className='description'>
           {ContentLoginSignupForm.login.h4}
         </StyledHeadings>
       </div>
@@ -40,7 +44,7 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
           name='email-login'
           label='Email'
           type='text'
-          smallState={smallState}
+          smallMediumState={smallMediumState}
           icon={<EmailIcon className='icon email-icon' />}
           {...email}
         />
@@ -48,7 +52,7 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
           name='password-login'
           label='Password'
           type={passwordShow ? 'text' : 'password'}
-          smallState={smallState}
+          smallMediumState={smallMediumState}
           icon={<PasswordIcon className='icon' />}
           {...password}
           inputPassword={true}
@@ -59,7 +63,7 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
           />
         </Input>
         <NavLink to='/'>
-          <Button classed='button'>Login</Button>
+          <Button classed='button' light={true}>Login</Button>
         </NavLink>
       </form>
 
@@ -68,7 +72,7 @@ const LoginForm = ({ smallState, setAccountState }: LoginFormProps) => {
         message={ContentLoginSignupForm.alternateAccount.login.message}
         button={ContentLoginSignupForm.alternateAccount.login.button}
         setAccountState={setAccountState}
-        smallState={smallState}
+        smallMediumState={smallMediumState}
         accountStateManual={2}
       />
     </StyledLoginForm>

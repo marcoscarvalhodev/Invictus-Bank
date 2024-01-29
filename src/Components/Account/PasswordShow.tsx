@@ -10,10 +10,7 @@ interface PasswordShowProps {
 }
 
 const PasswordShow = ({ passwordShow, setPassowrdShow }: PasswordShowProps) => {
-  React.useEffect(() => {
-    console.log(passwordShow)
-  }, [passwordShow])
-
+  
   return (
     <StyledPasswordShow onClick={() => setPassowrdShow(!passwordShow)}>
       {passwordShow ? (

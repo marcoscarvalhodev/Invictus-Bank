@@ -13,26 +13,29 @@ import { NavLink } from 'react-router-dom';
 
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
+import ContainerSizes from '../../ContainerSizes';
 
 interface SignupFormProps {
-  smallState: 'desktop' | 'mobile';
+  smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
+const SignupForm = ({ smallMediumState, setAccountState }: SignupFormProps) => {
   const name = useForm();
   const email = useForm('email');
   const password = useForm('password');
 
+  const {xsmall, small, medium} = ContainerSizes();
+
   const [passwordShow, setPasswordShow] = React.useState(false);
 
   return (
-    <StyledSignupForm className='signup-form'>
+    <StyledSignupForm className='signup-form' $small={small} $medium={medium} $xsmall={xsmall}>
       <div>
-        <StyledHeadings as='h2' $device={smallState} className='title'>
+        <StyledHeadings as='h2' $device={smallMediumState} className='title'>
           {ContentLoginSignupForm.signup.h2}
         </StyledHeadings>
-        <StyledHeadings as='h5' $device={smallState} className='description'>
+        <StyledHeadings as='h5' $device={smallMediumState} className='description'>
           {ContentLoginSignupForm.signup.h4}
         </StyledHeadings>
       </div>
@@ -42,7 +45,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           name='name-signup'
           label='Name'
           type='text'
-          smallState={smallState}
+          smallMediumState={smallMediumState}
           icon={<UserIcon className='icon user-icon' />}
           {...name}
         />
@@ -50,7 +53,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           name='email-signup'
           label='Email'
           type='text'
-          smallState={smallState}
+          smallMediumState={smallMediumState}
           icon={<EmailIcon className='icon email-icon' />}
           {...email}
         />
@@ -58,7 +61,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
           name='password-signup'
           label='Password'
           type={passwordShow ? "text" : "password"}
-          smallState={smallState}
+          smallMediumState={smallMediumState}
           icon={<PasswordIcon className='icon' />}
           {...password}
           inputPassword={true}
@@ -78,7 +81,7 @@ const SignupForm = ({ smallState, setAccountState }: SignupFormProps) => {
         message={ContentLoginSignupForm.alternateAccount.signup.message}
         button={ContentLoginSignupForm.alternateAccount.signup.button}
         setAccountState={setAccountState}
-        smallState={smallState}
+        smallMediumState={smallMediumState}
         accountStateManual={1}
       />
     </StyledSignupForm>
