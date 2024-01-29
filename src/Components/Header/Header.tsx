@@ -64,6 +64,7 @@ const Header = ({ setMobileBx, mobileBx, setAccountState }: HeaderProps) => {
           setActiveBx={setActiveBx}
           setMobileBx={setMobileBx}
           setMenuIcon={setMenuIcon}
+          setAccountState={setAccountState}
         />
       )}
     </StyledHeader>

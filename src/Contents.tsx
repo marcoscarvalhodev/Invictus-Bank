@@ -49,7 +49,7 @@ export const ContentNavMobile = {
       id: '2',
       title_link: 'Digital Account',
       pages: {
-        page_1: { link: 'Create your account', url: 'account' },
+        page_1: { link: 'Create your account', url: 'account', signup: true },
         page_2: { link: 'Transfers', url: 'transfers' },
         page_3: { link: 'Deposits', url: 'deposits' },
       },

@@ -134,6 +134,8 @@ export const StyledAccount = styled.section<StyledAccountProps>`
 
       ${$small &&
       css`
+        padding: 9.6rem 2.4rem;
+
         .background-wrapper {
           width: 100%;
           height: 100vh;
