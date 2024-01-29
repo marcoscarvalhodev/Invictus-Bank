@@ -471,3 +471,12 @@ export const ContentLoginSignupForm = {
 
   }
 };
+
+
+export const ContentTransfers = {
+  hero: {
+    h5_subtitle: 'SUPREME TRANSFERS',
+    h2_title: 'Your funds racing to success with our brisk transfers.',
+    p_description: "Enjoy at the fullest swift transfers that will save you time and headaches. Don't you fret, with Supreme there is no threat."
+  }
+}

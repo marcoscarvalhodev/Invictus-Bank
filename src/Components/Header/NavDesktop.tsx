@@ -96,9 +96,9 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
+                <NavLink to="/transfers" className='nav-link-dropdown'>
                   Transfers
-                </a>
+                </NavLink>
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
