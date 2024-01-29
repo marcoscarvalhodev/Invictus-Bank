@@ -9,7 +9,7 @@ interface AlternateAccountProps {
   title: string;
   message: string;
   button: string;
-  smallState: 'mobile' | 'desktop';
+  smallMediumState: 'mobile' | 'desktop';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountStateManual: number;
 }
@@ -18,17 +18,17 @@ const AlternateAccount = ({
   title,
   message,
   button,
-  smallState,
+  smallMediumState,
   setAccountState,
   accountStateManual,
 }: AlternateAccountProps) => {
   return (
     <StyledAlternateAccount>
       
-      <StyledTexts $device={smallState} $size='p2'>
+      <StyledTexts $device={smallMediumState} $size='p2'>
         {message}
       </StyledTexts>
-      <StyledTexts $link={true} $device={smallState} $size="p2" $arrow={false} onClick={() => setAccountState(accountStateManual)}>{button}</StyledTexts>
+      <StyledTexts $link={true} $device={smallMediumState} $size="p2" $arrow={false} onClick={() => setAccountState(accountStateManual)}>{button}</StyledTexts>
     </StyledAlternateAccount>
   );
 };

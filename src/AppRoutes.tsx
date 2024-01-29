@@ -13,9 +13,10 @@ interface AppRoutesProps {
   mobileBx: boolean;
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountState: number;
+  smallMediumState: 'desktop' | 'mobile';
 }
 
-const AppRoutes = ({ smallState, mobileBx, setAccountState, accountState }: AppRoutesProps) => {
+const AppRoutes = ({ smallState, mobileBx, setAccountState, accountState, smallMediumState }: AppRoutesProps) => {
   return (
     <Routes>
       <Route
@@ -23,7 +24,7 @@ const AppRoutes = ({ smallState, mobileBx, setAccountState, accountState }: AppR
         element={<Home mobileBx={mobileBx} smallState={smallState} setAccountState={setAccountState}/>}
       />
 
-      <Route path='account/*' element={<Account smallState={smallState} setAccountState={setAccountState} accountState={accountState}/>} />
+      <Route path='account/*' element={<Account smallState={smallState} setAccountState={setAccountState} accountState={accountState} smallMediumState={smallMediumState}/>} />
 
       <Route path='savings/*' element={<Savings smallState={smallState} />} />
 

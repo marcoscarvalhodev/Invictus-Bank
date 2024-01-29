@@ -1,6 +1,7 @@
 import { themeAttrs } from './ThemeAttrs';
 import { css } from 'styled-components';
 
+
 const theme = {
   colors: {
     blue_main: {

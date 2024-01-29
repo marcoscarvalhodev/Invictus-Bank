@@ -9,7 +9,7 @@ interface InputProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   value?: string;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
-  smallState: 'desktop' | 'mobile';
+  smallMediumState: 'desktop' | 'mobile';
   icon?: React.JSX.Element;
   error: string;
   children?: React.JSX.Element;
@@ -24,7 +24,7 @@ const Input = ({
   onChange,
   value,
   onBlur,
-  smallState,
+  smallMediumState,
   icon,
   error,
   inputPassword
@@ -33,7 +33,7 @@ const Input = ({
     <StyledInput $inputPassword={inputPassword}>
       <label htmlFor={name} className='label-wrapper'>
         {icon}
-        <StyledTexts $device={smallState} $size='p1'>
+        <StyledTexts $device={smallMediumState} $size='p1'>
           {label}
         </StyledTexts>
       </label>
@@ -50,7 +50,7 @@ const Input = ({
         {children}
       </div>
       {error && (
-        <StyledTexts $device={smallState} $size='p2' className='error-input'>
+        <StyledTexts $device={smallMediumState} $size='p2' className='error-input'>
           {error}
         </StyledTexts>
       )}

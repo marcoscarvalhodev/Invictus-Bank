@@ -18,10 +18,11 @@ function eachDot() {
 
 interface StyledAccountProps {
   $accountState: number;
+  $small: boolean;
 }
 
 export const StyledAccount = styled.section<StyledAccountProps>`
-  ${({ theme, $accountState }) => css`
+  ${({ theme, $accountState, $small }) => css`
     && {
       .background-wrapper {
         position: relative;
@@ -125,12 +126,30 @@ export const StyledAccount = styled.section<StyledAccountProps>`
           z-index: 3;
         }
 
-
         100% {
           transform: translate(0%, -50%) scale(1);
           z-index: 3;
         }
       }
+
+      ${$small &&
+      css`
+        .background-wrapper {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+        }
+
+        .signup-form,
+        .login-form {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `}
     }
   `}
 `;

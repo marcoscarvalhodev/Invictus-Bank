@@ -12,14 +12,19 @@ interface ContainerProps {
 
 const Container = ({ setActiveMenu }: ContainerProps) => {
   const [mobileBx, setMobileBx] = React.useState(false);
-  const { small, xsmall } = ContainerSizes();
+  const { small, medium, xsmall } = ContainerSizes();
   const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
-
+  const [smallMediumState, setSmallMediumState] = React.useState<'mobile' | 'desktop'>();
   const [accountState, setAccountState] = React.useState(1);
 
   React.useEffect(() => {
     small ? setSmallState('mobile') : setSmallState('desktop');
-  }, [small]);
+
+    small || medium ? setSmallMediumState('mobile') : setSmallMediumState('desktop')
+    
+    
+
+  }, [small, medium, smallMediumState]);
 
   React.useEffect(() => {
     setActiveMenu(mobileBx);
@@ -32,7 +37,7 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
 
         <Header setMobileBx={setMobileBx} mobileBx={mobileBx} setAccountState={setAccountState}/>
 
-        <AppRoutes smallState={smallState} mobileBx={mobileBx} setAccountState={setAccountState} accountState={accountState}/>
+        <AppRoutes smallMediumState={smallMediumState} smallState={smallState} mobileBx={mobileBx} setAccountState={setAccountState} accountState={accountState}/>
       </BrowserRouter>
     </StyledContainer>
   );
