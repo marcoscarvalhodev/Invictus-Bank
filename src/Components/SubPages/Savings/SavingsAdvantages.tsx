@@ -15,7 +15,7 @@ interface SavingsAdvantagesProps {
 const SavingsAdvantages = ({ smallState, small }: SavingsAdvantagesProps) => {
   return (
     <StyledSavingsAdvantages className='container' $small={small}>
-      <div className='savings-advantages-flex'>
+      <div className='advantages-flex'>
 
         <StyledHeadings as="h5" $device={smallState}>
         {ContentAccountTypes.Savings.savings_advantages.h5_subtitle}

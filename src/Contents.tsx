@@ -457,26 +457,30 @@ export const ContentLoginSignupForm = {
 
   alternateAccount: {
     login: {
-      title: "Signup",
+      title: 'Signup',
       message: "Don't you have an account?",
-      button: "Signup",
-      link: "/signup"
+      button: 'Signup',
+      link: '/signup',
     },
     signup: {
-      title: "Login",
-      message: "Already have an account?",
-      button: "Login",
-      link: "/login" 
-    }
-
-  }
+      title: 'Login',
+      message: 'Already have an account?',
+      button: 'Login',
+      link: '/login',
+    },
+  },
 };
-
 
 export const ContentTransfers = {
   hero: {
     h5_subtitle: 'SUPREME TRANSFERS',
     h2_title: 'Your funds racing to success with our brisk transfers.',
-    p_description: "Enjoy at the fullest swift transfers that will save you time and headaches. Don't you fret, with Supreme there is no threat."
-  }
-}
+    p_description:
+      "Enjoy at the fullest swift transfers that will save you time and headaches. Don't you fret, with Supreme there is no threat.",
+  },
+  advantages: {
+    h5_subtitle: 'EASY TRANSFERS',
+    h2_title: 'Experience the ease of transferring money as never before.',
+    p_descripion: 'Take advantage of lower fees, enhanced features, and personalized services. Make the switch today for a banking experience suitable to your needs.'
+  },
+};

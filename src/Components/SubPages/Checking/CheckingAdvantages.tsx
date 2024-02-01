@@ -15,7 +15,7 @@ interface CheckingAdvantagesProps {
 const CheckingAdvantages = ({ smallState, small }: CheckingAdvantagesProps) => {
   return (
     <StyledCheckingAdvantages className='container' $small={small}>
-      <div className='savings-advantages-flex'>
+      <div className='advantages-flex'>
         <StyledHeadings as='h5' $device={smallState}>
           {ContentAccountTypes.Checking.checking_advantages.h5_subtitle}
         </StyledHeadings>
