@@ -34,6 +34,9 @@ import Elder from './assets/svg/checking/slide/elder.svg?react';
 import Card1 from './assets/svg/cards/card-1.svg?react';
 import Card2 from './assets/svg/cards/card-2.svg?react';
 
+import TransfersIcon from './assets/svg/transfers/transfer-icon.svg?react';
+import ArrowWrapper from './assets/svg/transfers/arrow-wrapper.svg?react';
+
 export const ContentNavMobile = {
   nav_mobile: [
     {
@@ -481,6 +484,28 @@ export const ContentTransfers = {
   advantages: {
     h5_subtitle: 'EASY TRANSFERS',
     h2_title: 'Experience the ease of transferring money as never before.',
-    p_descripion: 'Take advantage of lower fees, enhanced features, and personalized services. Make the switch today for a banking experience suitable to your needs.'
+    p_descripion:
+      'Take advantage of lower fees, enhanced features, and personalized services. Make the switch today for a banking experience suitable to your needs.',
+    icons: [
+      {
+        id: 1,
+        icon: <TransfersIcon />,
+        icon_description:
+          'Your money at the top priority for your easy access.',
+        
+      },
+      {
+        id: 2,
+        icon: <TransfersIcon />,
+        icon_description: 'Create cards that best meet your needs.',
+        
+      },
+      {
+        id: 3,
+        icon: <TransfersIcon />,
+        icon_description: 'View history and analytics from your transactions.',
+        
+      },
+    ],
   },
 };
