@@ -11,17 +11,57 @@ interface TransfersAdvantagesProps {
 }
 
 const TransfersAdvantages = ({ smallState }: TransfersAdvantagesProps) => {
+  const [iconState, setIconState] = React.useState(0);
+
   return (
     <StyledTransfersAdvantages className='container'>
       <div className='advantages-flex'>
-        <div className='laptop-mockup-wrapper'>
-          <img src={LaptopMockup} alt='' className='laptop-mockup' />
+        <div className='wrapper'>
+          <div className='laptop-mockup-wrapper'>
+            {ContentTransfers.advantages.icons.map(
+              ({ id, icon, icon_description }) => (
+                <>
+                <div className={`icon-wrapper icon-wrapper-${id}`} key={id}>
+                  <div
+                    onMouseOver={() => setIconState(id)}
+                    onMouseLeave={() => setIconState(0)}
+                  >
+                    <div className='icon'>{icon}</div>
+
+                    <div className={`icon-description-wrapper ${iconState === id ? 'icon-description-wrapper-enable' : 'icon-description-wrapper-disable'}`}>
+                      <StyledTexts
+                        $size='p1'
+                        className='icon-description'
+                        $device={smallState}
+                      >
+                        {' '}
+                        {icon_description}
+                      </StyledTexts>
+                    </div>
+                  </div>
+                </div>
+
+                </>
+              )
+            )}
+
+            <img src={LaptopMockup} alt='' className='laptop-mockup' />
+          </div>
         </div>
       </div>
       <div className='advantages-flex'>
-        <StyledHeadings as="h5" $device={smallState}>{ContentTransfers.advantages.h5_subtitle}</StyledHeadings>
-        <StyledHeadings as="h2" $device={smallState} className='title-advantages'>{ContentTransfers.advantages.h2_title}</StyledHeadings>
-        <StyledTexts $size="p1" $device={smallState}>{ContentTransfers.advantages.p_descripion}
+        <StyledHeadings as='h5' $device={smallState}>
+          {ContentTransfers.advantages.h5_subtitle}
+        </StyledHeadings>
+        <StyledHeadings
+          as='h2'
+          $device={smallState}
+          className='title-advantages'
+        >
+          {ContentTransfers.advantages.h2_title}
+        </StyledHeadings>
+        <StyledTexts $size='p1' $device={smallState}>
+          {ContentTransfers.advantages.p_descripion}
         </StyledTexts>
       </div>
     </StyledTransfersAdvantages>
