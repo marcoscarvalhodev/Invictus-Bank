@@ -6,6 +6,9 @@ import { ContentAccountTypes } from '../../../Contents';
 import Button from '../../Reusable/Button';
 import Pig from './Pig';
 import { StyledSavingsHero } from '../../../Styles/SubPages/Savings/SavingsHero.styled';
+import CoinPile from '../../../assets/svg/savings/pig-coin/coin-pile-wrapper.png?url';
+import MoneyBag from '../../../assets/svg/savings/pig-coin/money-bag.png?url';
+import ShadowPig from '../../../assets/svg/savings/pig-coin/shadow.svg?react';
 
 interface SavingsHeroProps {
   smallState: 'mobile' | 'desktop';
@@ -37,6 +40,16 @@ const SavingsHero = ({ smallState, small }: SavingsHeroProps) => {
       </div>
       <div className='flex-hero flex-hero-2'>
         <Pig small={small} />
+
+        <div className='coin-pile-wrapper'>
+          <img src={CoinPile} alt="" className='coin-pile' />
+        </div>
+
+        <div className='money-bag-wrapper'>
+          <img src={MoneyBag} alt='' className='money-bag'/>
+        </div>
+
+        <ShadowPig className='shadow-pig'/>
       </div>
     </StyledSavingsHero>
   );

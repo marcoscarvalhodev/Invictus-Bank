@@ -3,6 +3,8 @@ import PigSVG from '../../../assets/svg/savings/pig-coin/pig.svg?react';
 import { StyledPig } from '../../../Styles/SubPages/Savings/pig.styled';
 import Coin from '../../../assets/svg/savings/pig-coin/coin-wrapper.svg?react';
 
+
+
 interface PigProps {
   small: boolean;
 }
@@ -24,6 +26,9 @@ const Pig = ({ small }: PigProps) => {
               ))}
             </div>
           </div>
+
+
+          
         </div>
       </div>
     </StyledPig>
