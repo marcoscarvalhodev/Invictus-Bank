@@ -27,7 +27,7 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
           position: absolute;
           min-width: 250px;
           max-width: 300px;
-          background: rgba(0, 0, 0, 0.8);
+          background: rgba(0, 0, 0, 0.7);
           padding: 10px 20px;
           border-radius: 0.4rem;
           margin-top: 1rem;
