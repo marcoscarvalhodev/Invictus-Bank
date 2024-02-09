@@ -21,26 +21,34 @@ const TransfersAdvantages = ({ smallState }: TransfersAdvantagesProps) => {
             {ContentTransfers.advantages.icons.map(
               ({ id, icon, icon_description }) => (
                 <>
-                <div className={`icon-wrapper icon-wrapper-${id}`} key={id}>
-                  <div
-                    onMouseOver={() => setIconState(id)}
-                    onMouseLeave={() => setIconState(0)}
-                  >
-                    <div className='icon'>{icon}</div>
-
-                    <div className={`icon-description-wrapper ${iconState === id ? 'icon-description-wrapper-enable' : 'icon-description-wrapper-disable'}`}>
-                      <StyledTexts
-                        $size='p1'
-                        className='icon-description'
-                        $device={smallState}
+                  <div className={`icon-wrapper icon-wrapper-${id} ${iconState === 0 - id && 'icon-wrapper-disable'}`} key={id}>
+                    <div>
+                      <div
+                        className='icon'
+                        onMouseOver={() => setIconState(id)}
+                        onMouseLeave={() => setIconState(0 - id)}
                       >
-                        {' '}
-                        {icon_description}
-                      </StyledTexts>
+                        {icon}
+                      </div>
+
+                      <div
+                        className={`icon-description-wrapper ${
+                          iconState === id
+                            ? 'icon-description-wrapper-enable'
+                            : 'icon-description-wrapper-disable'
+                        }`}
+                      >
+                        <StyledTexts
+                          $size='p1'
+                          className='icon-description'
+                          $device={smallState}
+                        >
+                          {' '}
+                          {icon_description}
+                        </StyledTexts>
+                      </div>
                     </div>
                   </div>
-                </div>
-
                 </>
               )
             )}

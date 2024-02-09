@@ -95,7 +95,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
                     : ''
                 }`}
               >
-                <NavLink to={pages.page_1.url} onClick={pages.page_1.signup && handleJoinClick}>
+                <NavLink to={pages.page_1.url} onClick={pages.page_1.signup ? handleJoinClick : () => buttonDisable()}>
                   <DropdownItem >{pages.page_1.link}</DropdownItem>
                 </NavLink>
 
