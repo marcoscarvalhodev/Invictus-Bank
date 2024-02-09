@@ -49,7 +49,7 @@ export const StyledPig = styled.div<PigProps>`
       align-items: center;
       position: relative;
       z-index: 4;
-      
+
       .container-pig {
         width: 40px;
         height: 40px;
@@ -57,10 +57,8 @@ export const StyledPig = styled.div<PigProps>`
         perspective: 300px;
         animation: moveCoin 3s linear infinite;
         top: calc(-9.6rem + -15px + ${$small ? `-40px` : '-70px'});
-
         left: calc(50% + -20px);
-
-        z-index: 1;
+        z-index: 0;
       }
 
       .pig-section {
@@ -69,12 +67,10 @@ export const StyledPig = styled.div<PigProps>`
         align-items: center;
         flex: 1;
         position: relative;
-        
       }
 
       .pig-wrapper {
         position: relative;
-        
       }
 
       .pig {
@@ -87,7 +83,7 @@ export const StyledPig = styled.div<PigProps>`
         background-color: #e7a7ab;
         position: absolute;
         left: calc(50% + -7px);
-        top: ${$small ? "22px" : "21.5px"};
+        top: ${$small ? '22px' : '21.5px'};
         z-index: 998;
       }
 
@@ -213,8 +209,6 @@ export const StyledPig = styled.div<PigProps>`
           );
         }
       }
-
-     
 
       ${$small &&
       css`

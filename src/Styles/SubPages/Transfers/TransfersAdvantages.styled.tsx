@@ -63,9 +63,16 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
           position: absolute;
           &:hover {
             #arrow-wrapper {
-              animation: spin-arrow 1.5s infinite forwards;
+              animation: spin-arrow 1.5s infinite linear forwards;
               transform-origin: 50%;
             }
+          }
+        }
+
+        .icon-wrapper-disable {
+          #arrow-wrapper {
+            animation: spin-arrow-out 1.5s forwards;
+            transform-origin: 50%;
           }
         }
 
@@ -93,6 +100,12 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
         }
         100% {
           transform: scale(1.1);
+        }
+      }
+
+      @keyframes spin-arrow-out {
+        100% {
+          transform: rotateZ(-360deg);
         }
       }
 

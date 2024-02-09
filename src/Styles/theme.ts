@@ -274,7 +274,7 @@ const theme = {
           }
         }
         .flex-hero-1 {
-          z-index: 2;
+          z-index: 5;
           position: relative;
         }
         .flex-hero-2 {
