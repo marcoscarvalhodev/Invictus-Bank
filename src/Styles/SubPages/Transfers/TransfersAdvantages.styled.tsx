@@ -104,6 +104,9 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
       }
 
       @keyframes spin-arrow-out {
+      0% {
+        transform: rotateZ(current);
+      }
         100% {
           transform: rotateZ(-360deg);
         }

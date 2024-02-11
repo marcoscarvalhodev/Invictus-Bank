@@ -6,6 +6,9 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentTransfers } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
+
+
+
 interface TransfersAdvantagesProps {
   smallState: 'mobile' | 'desktop';
 }
@@ -20,36 +23,39 @@ const TransfersAdvantages = ({ smallState }: TransfersAdvantagesProps) => {
           <div className='laptop-mockup-wrapper'>
             {ContentTransfers.advantages.icons.map(
               ({ id, icon, icon_description }) => (
-                <>
-                  <div className={`icon-wrapper icon-wrapper-${id} ${iconState === 0 - id && 'icon-wrapper-disable'}`} key={id}>
-                    <div>
-                      <div
-                        className='icon'
-                        onMouseOver={() => setIconState(id)}
-                        onMouseLeave={() => setIconState(0 - id)}
-                      >
-                        {icon}
-                      </div>
+                <div
+                  className={`icon-wrapper icon-wrapper-${id} ${
+                    iconState === 0 - id && 'icon-wrapper-disable'
+                  }`}
+                  key={id}
+                >
+                  <div>
+                    <div
+                      className='icon'
+                      onMouseOver={() => setIconState(id)}
+                      onMouseLeave={() => setIconState(0 - id)}
+                    >
+                      {icon}
+                    </div>
 
-                      <div
-                        className={`icon-description-wrapper ${
-                          iconState === id
-                            ? 'icon-description-wrapper-enable'
-                            : 'icon-description-wrapper-disable'
-                        }`}
+                    <div
+                      className={`icon-description-wrapper ${
+                        iconState === id
+                          ? 'icon-description-wrapper-enable'
+                          : 'icon-description-wrapper-disable'
+                      }`}
+                    >
+                      <StyledTexts
+                        $size='p1'
+                        className='icon-description'
+                        $device={smallState}
                       >
-                        <StyledTexts
-                          $size='p1'
-                          className='icon-description'
-                          $device={smallState}
-                        >
-                          {' '}
-                          {icon_description}
-                        </StyledTexts>
-                      </div>
+                        {' '}
+                        {icon_description}
+                      </StyledTexts>
                     </div>
                   </div>
-                </>
+                </div>
               )
             )}
 
@@ -71,6 +77,8 @@ const TransfersAdvantages = ({ smallState }: TransfersAdvantagesProps) => {
         <StyledTexts $size='p1' $device={smallState}>
           {ContentTransfers.advantages.p_descripion}
         </StyledTexts>
+
+        
       </div>
     </StyledTransfersAdvantages>
   );
