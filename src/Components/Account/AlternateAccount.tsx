@@ -24,11 +24,18 @@ const AlternateAccount = ({
 }: AlternateAccountProps) => {
   return (
     <StyledAlternateAccount>
-      
       <StyledTexts $device={smallMediumState} $size='p2'>
         {message}
       </StyledTexts>
-      <StyledTexts $link={true} $device={smallMediumState} $size="p2" $arrow={false} onClick={() => setAccountState(accountStateManual)}>{button}</StyledTexts>
+      <StyledTexts
+        $link={true}
+        $device={smallMediumState}
+        $size='p2'
+        $arrow={false}
+        onClick={() => setAccountState(accountStateManual)}
+      >
+        {button}
+      </StyledTexts>
     </StyledAlternateAccount>
   );
 };

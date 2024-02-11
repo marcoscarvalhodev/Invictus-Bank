@@ -492,20 +492,50 @@ export const ContentTransfers = {
         icon: <TransfersIcon />,
         icon_description:
           'Your money at the top priority for your easy access.',
-        
       },
       {
         id: 2,
         icon: <TransfersIcon />,
         icon_description: 'Create cards that best meet your needs.',
-        
       },
       {
         id: 3,
         icon: <TransfersIcon />,
         icon_description: 'View history and analytics from your transactions.',
-        
       },
     ],
   },
+
+  transfers_bullets: [
+    {
+      bullet:
+        '95% of our online transactions are processed within seconds, ensuring your money reaches its destination in the blink of an eye.',
+      id: 1,
+    },
+    {
+      bullet:
+        'Our website boasts a staggering 99.9% uptime, ensuring you can access your accounts whenever you want, without any downtime interruptions.',
+      id: 2,
+    },
+    {
+      bullet:
+        "Consider our transfers history your financial diary. Every transaction is recorded, helping you reminisce about your money's adventures.",
+      id: 3,
+    },
+    {
+      bullet:
+        ' Our online transfers are 30% more cost-effective than traditional methods, allowing our customers to allocate those savings to what matters most to them.',
+      id: 5,
+    },
+    {
+      bullet:
+        "Your funds move in real-time, just like handing cash to a friend. It's quick, it's instant.",
+      id: 6,
+    },
+    {
+      bullet:
+        'Over 70% of our users take advantage of our automated transfer feature, streamlining their financial responsibilities and freeing up time for more meaningful activities.',
+      id: 7,
+    },
+  ],
 };
