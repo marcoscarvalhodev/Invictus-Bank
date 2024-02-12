@@ -6,7 +6,7 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
   ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_advantages};
     &&& {
-      padding: 4.8rem 2.4rem 9.6rem 2.4rem;
+      padding: 4.8rem 2.4rem 4.8rem 2.4rem;
 
       .wrapper {
         padding: 30px;
