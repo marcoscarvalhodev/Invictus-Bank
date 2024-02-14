@@ -1,0 +1,18 @@
+<svg  viewBox="0 0 285 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="safe-shadows">
+<g id="safe-shadow-2">
+<rect id="safe-shadow-2_2" x="3" y="22" width="272" height="254" rx="13.7094" fill="#4686E4"/>
+<g id="lock-ball-wrapper">
+<g id="lock-ball-2">
+<circle id="shadow" cx="273" cy="206" r="8" fill="#0B2568"/>
+<circle id="lock-ball" cx="277" cy="206" r="8" fill="#8CAFE4"/>
+</g>
+<g id="lock-ball-1">
+<circle id="shadow_2" cx="273" cy="92" r="8" fill="#0B2568"/>
+<circle id="lock-ball_2" cx="277" cy="92" r="8" fill="#8CAFE4"/>
+</g>
+</g>
+</g>
+<rect id="safe-shadow-1" width="272.024" height="298" rx="20.9249" fill="#003FA6"/>
+</g>
+</svg>
