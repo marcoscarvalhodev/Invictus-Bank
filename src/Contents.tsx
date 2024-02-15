@@ -539,3 +539,11 @@ export const ContentTransfers = {
     },
   ],
 };
+
+export const ContentDeposits = {
+  hero: {
+    h5_subtitle: "DEPOSITS",
+    h2_title: "Plunge yourself into profit with our deposit delights",
+    p_description: "Elevate financial mojo with cutting-edge deposits, sparking growth and cash charisma that we offer you."
+  }
+}

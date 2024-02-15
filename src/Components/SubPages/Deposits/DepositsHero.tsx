@@ -8,6 +8,8 @@ import SafeDoor from '../../../assets/svg/deposits/safe-door.svg?react';
 import SafeShadows from '../../../assets/svg/deposits/safe-shadows.svg?react';
 import ShadowWrapper from '../../../assets/svg/deposits/shadow-wrapper.svg?react';
 
+import { ContentDeposits } from '../../../Contents';
+
 interface DepositsHeroProps {
   smallState: 'mobile' | 'desktop';
 }
@@ -17,15 +19,13 @@ const DepositsHero = ({ smallState }: DepositsHeroProps) => {
     <StyledDepositsHero className='container'>
       <div className='flex-hero'>
         <StyledHeadings as='h5' $device={smallState}>
-          Subtitulo
+          {ContentDeposits.hero.h5_subtitle}
         </StyledHeadings>
         <StyledHeadings as='h2' $device={smallState} className='title-hero'>
-          Titulo
+        {ContentDeposits.hero.h2_title}
         </StyledHeadings>
         <StyledTexts $size='p1' $device={smallState}>
-          Descrição Descrição Descrição Descrição Descrição Descrição Descrição
-          Descrição Descrição Descrição Descrição Descrição Descrição Descrição
-          Descrição
+        {ContentDeposits.hero.p_description}
         </StyledTexts>
       </div>
       <div className='flex-hero flex-hero-2'>

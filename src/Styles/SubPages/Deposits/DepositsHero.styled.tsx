@@ -59,14 +59,14 @@ export const StyledDepositsHero = styled.section`
 
     @keyframes lock-ball {
       0%,
-      30% {
-        transform: rotateY(50deg);
+      60% {
+        transform: rotateY(70deg);
       }
 
       100% {
-        transform: rotateY(30deg);
+        transform: rotateY(50deg);
       }
-    }
+    }}
 
     @keyframes door-shadows-2 {
       0%,
