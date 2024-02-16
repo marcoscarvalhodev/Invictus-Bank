@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const StyledDepositsHero = styled.section`
   ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_hero};
-
+    overflow: visible;
     .safe {
       width: 230px;
     }
@@ -26,7 +26,7 @@ export const StyledDepositsHero = styled.section`
       position: absolute;
       width: calc(232px * 0.78779840848);
       height: 183px;
-      animation: safe-door 3s linear alternate infinite;
+      animation: safe-door 5s linear alternate infinite;
       right: 50%;
       top: calc(50% + 8.8px);
       transform: translate(50%, -50%);
@@ -36,24 +36,76 @@ export const StyledDepositsHero = styled.section`
     .safe-door {
       z-index: 3;
 
-      #digits-shadow,
+      #digits-shadow {
+        animation: safe-shadows 5s linear alternate infinite;
+      }
+
       #opener-shadow {
-        animation: safe-shadows 3s linear alternate infinite;
+        animation: opener-shadows 5s linear alternate infinite;
+      }
+
+      #opener-wrapper {
+        animation: spin-opener 10s ease infinite;
+
+        transform-origin: center;
       }
     }
 
     .safe-shadows {
       z-index: 1;
-      animation: door-shadows 3s linear alternate infinite;
+      animation: door-shadows 5s linear alternate infinite;
 
       #safe-shadow-2 {
-        animation: door-shadows-2 3s linear alternate infinite;
+        animation: door-shadows-2 5s linear alternate infinite;
 
         #lock-ball-wrapper {
-          animation: lock-ball 3s linear infinite;
+          animation: lock-ball 5s linear infinite;
           transform-box: fill-box;
           transform-origin: center;
         }
+      }
+    }
+
+    .door-shadow-animation {
+      position: absolute;
+      width: 300px;
+      transform: translate(-50%, -50%);
+      bottom: calc(-50%);
+      left: calc(50% + -40px);
+
+      animation: door-shadow-animation 5s linear infinite alternate;
+    }
+
+    @keyframes door-shadow-animation {
+
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes spin-opener {
+      0%,
+      5% {
+        rotate: 0deg;
+      }
+
+      40% {
+        rotate: -180deg;
+      }
+
+      41%,
+      85% {
+        rotate: -180deg;
+      }
+
+      100% {
+        rotate: 0deg;
       }
     }
 
@@ -66,7 +118,7 @@ export const StyledDepositsHero = styled.section`
       100% {
         transform: rotateY(50deg);
       }
-    }}
+    }
 
     @keyframes door-shadows-2 {
       0%,
@@ -87,6 +139,17 @@ export const StyledDepositsHero = styled.section`
 
       100% {
         transform: rotateY(-60deg) translate(50%, -50%) translateX(25px);
+      }
+    }
+
+    @keyframes opener-shadows {
+      0%,
+      30% {
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(-7px);
       }
     }
 
