@@ -542,8 +542,14 @@ export const ContentTransfers = {
 
 export const ContentDeposits = {
   hero: {
-    h5_subtitle: "DEPOSITS",
-    h2_title: "Plunge yourself into profit with our deposit delights",
+    h5_subtitle: "DEPOSIT SAFE",
+    h2_title: "Plunge yourself into profit with our deposit delights.",
     p_description: "Elevate financial mojo with cutting-edge deposits, sparking growth and cash charisma that we offer you."
+  },
+
+  advantages: {
+    h5_subtitle: "DEPOSITS ADVANTAGES",
+    h2_title: "We make your deposits reign supreme in the kingdom of financial decurity.",
+    p_description: "Discover the power of secure deposits with us, knowing your money is not only protected but also poised for exponential growth."
   }
 }

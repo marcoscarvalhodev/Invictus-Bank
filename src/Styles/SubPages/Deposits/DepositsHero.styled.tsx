@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components';
 export const StyledDepositsHero = styled.section`
   ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_hero};
-    overflow: visible;
+    
+    overflow: hidden;
     .safe {
       width: 230px;
     }
@@ -11,6 +12,7 @@ export const StyledDepositsHero = styled.section`
     .safe-wrapper {
       position: relative;
       perspective: 500px;
+      margin-bottom: 4rem;
     }
 
     .shadow-wrapper {
