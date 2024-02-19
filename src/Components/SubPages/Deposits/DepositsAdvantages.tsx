@@ -7,11 +7,12 @@ import { ContentDeposits } from '../../../Contents';
 
 interface DepositsAdvantagesProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const DepositsAdvantages = ({ smallState }: DepositsAdvantagesProps) => {
+const DepositsAdvantages = ({ smallState, small }: DepositsAdvantagesProps) => {
   return (
-    <StyledDepositsAdvantages className='container'>
+    <StyledDepositsAdvantages $small={small} className='container'>
       <div className='advantages-flex'>
         <div className='deposits-hourglass-wrapper'>
           <img src={DepositsHourglass} alt='' className='deposits-hourglass' />
