@@ -11,13 +11,15 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
 interface TransfersAdvantagesProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
+  xsmall: boolean;
 }
 
-const TransfersAdvantages = ({ smallState }: TransfersAdvantagesProps) => {
+const TransfersAdvantages = ({ smallState, small, xsmall }: TransfersAdvantagesProps) => {
   const [iconState, setIconState] = React.useState(0);
 
   return (
-    <StyledTransfersAdvantages className='container'>
+    <StyledTransfersAdvantages className='container' $small={small} $xsmall={xsmall}>
       <div className='advantages-flex'>
         <div className='wrapper'>
           <div className='laptop-mockup-wrapper'>

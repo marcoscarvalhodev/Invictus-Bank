@@ -10,11 +10,12 @@ import Phone2 from '../../../assets/svg/transfers/phone-2.png?url'
 
 interface TransfersHeroProps {
   smallState: "desktop" | "mobile";
+  small: boolean;
 }
 
-const TransfersHero = ({smallState} : TransfersHeroProps) => {
+const TransfersHero = ({smallState, small} : TransfersHeroProps) => {
   return (
-    <StyledTransfersHero className='container'>
+    <StyledTransfersHero className='container' $small={small}>
       <div className='flex-hero flex-hero-1'>
         <StyledHeadings as="h5" $device={smallState}>{ContentTransfers.hero.h5_subtitle}</StyledHeadings>
         <StyledHeadings as="h2" $device={smallState} className='title-hero'>{ContentTransfers.hero.h2_title}</StyledHeadings>

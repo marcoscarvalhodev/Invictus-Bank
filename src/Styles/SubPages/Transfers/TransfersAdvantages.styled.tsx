@@ -1,10 +1,50 @@
 import styled, { css } from 'styled-components';
 
-interface StyledTransfersAdvantagesProps {}
+interface StyledTransfersAdvantagesProps {
+  $small: boolean;
+  $xsmall: boolean;
+}
 
 export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantagesProps>`
-  ${({ theme }) => css`
+  ${({ theme, $small, $xsmall }) => css`
     ${theme.sub_pages.sub_pages_advantages};
+
+    .icon {
+      width: 5rem;
+      animation: icon-expand 1.5s alternate linear infinite;
+      cursor: pointer;
+    }
+
+    .icon-description-wrapper {
+      position: absolute;
+      min-width: 250px;
+      max-width: 300px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-radius: 0.4rem;
+      margin-top: 1rem;
+      left: -100px;
+
+      .icon-description {
+        color: ${theme.colors.white_auxiliary.white_light};
+      }
+    }
+
+    .icon-wrapper-1 {
+      top: 30px;
+      right: 90px;
+    }
+
+    .icon-wrapper-2 {
+      bottom: 70px;
+      right: 140px;
+    }
+
+    .icon-wrapper-3 {
+      bottom: 110px;
+      left: 120px;
+    }
+
     &&& {
       padding: 4.8rem 2.4rem 4.8rem 2.4rem;
 
@@ -23,21 +63,6 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
 
         //icon-description
 
-        .icon-description-wrapper {
-          position: absolute;
-          min-width: 250px;
-          max-width: 300px;
-          background: rgba(0, 0, 0, 0.7);
-          padding: 10px 20px;
-          border-radius: 0.4rem;
-          margin-top: 1rem;
-          left: -100px;
-
-          .icon-description {
-            color: ${theme.colors.white_auxiliary.white_light};
-          }
-        }
-
         .icon-description-wrapper-enable {
           opacity: 1;
           pointer-events: all;
@@ -52,12 +77,6 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
         }
 
         //icon-wrapper
-
-        .icon {
-          width: 5rem;
-          animation: icon-expand 1.5s alternate linear infinite;
-          cursor: pointer;
-        }
 
         .icon-wrapper {
           position: absolute;
@@ -75,21 +94,6 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
             transform-origin: 50%;
           }
         }
-
-        .icon-wrapper-1 {
-          top: 30px;
-          right: 90px;
-        }
-
-        .icon-wrapper-2 {
-          bottom: 70px;
-          right: 140px;
-        }
-
-        .icon-wrapper-3 {
-          bottom: 110px;
-          left: 120px;
-        }
       }
 
       //keyframes
@@ -104,9 +108,9 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
       }
 
       @keyframes spin-arrow-out {
-      0% {
-        transform: rotateZ(current);
-      }
+        0% {
+          transform: rotateZ(current);
+        }
         100% {
           transform: rotateZ(-360deg);
         }
@@ -121,6 +125,63 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
           transform: rotateZ(-360deg);
         }
       }
+
+      ${$small &&
+      css`
+        flex-direction: column-reverse;
+
+        .icon {
+          width: 4rem;
+          svg {
+            width: 100%;
+          }
+        }
+
+        .icon-description-wrapper {
+          min-width: 200px;
+          max-width: 200px;
+          z-index: 3;
+
+          .icon-description {
+            color: ${theme.colors.white_auxiliary.white_light};
+          }
+        }
+      `}
+
+      ${$xsmall &&
+      css`
+        .icon {
+          width: 3rem;
+          svg {
+            width: 100%;
+          }
+        }
+
+        .icon-description-wrapper {
+          margin-top: 0rem;
+        }
+
+        .icon-wrapper-1 {
+          top: 10px;
+          right: 50px;
+
+          .icon-description-wrapper {
+            position: absolute;
+            top: 0px;
+            left: -210px;
+          }
+        }
+
+        .icon-wrapper-2 {
+          bottom: 30px;
+          right: 60px;
+        }
+
+        .icon-wrapper-3 {
+          bottom: 50px;
+          left: 70px;
+        }
+      `}
     }
   `}
 `;

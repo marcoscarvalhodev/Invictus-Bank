@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const StyledDepositsAdvantages = styled.section`
-  ${({ theme }) => css`
+interface DepositsAdvantagesProps {
+  $small: boolean;
+}
+
+export const StyledDepositsAdvantages = styled.section<DepositsAdvantagesProps>`
+  ${({ theme, $small }) => css`
 
   &&& {
     padding-top: 4rem;
@@ -12,6 +16,16 @@ export const StyledDepositsAdvantages = styled.section`
       border-radius: 4px;
       
     }
+
+
+    ${$small && css`
+    flex-direction: column-reverse;
+
+    .deposits-hourglass {
+      width: 100%;
+      
+    }
+    `}
 
   }
   `}
