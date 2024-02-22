@@ -525,31 +525,67 @@ export const ContentTransfers = {
     {
       bullet:
         ' Our online transfers are 30% more cost-effective than traditional methods, allowing our customers to allocate those savings to what matters most to them.',
-      id: 5,
+      id: 4,
     },
     {
       bullet:
         "Your funds move in real-time, just like handing cash to a friend. It's quick, it's instant.",
-      id: 6,
+      id: 5,
     },
     {
       bullet:
         'Over 70% of our users take advantage of our automated transfer feature, streamlining their financial responsibilities and freeing up time for more meaningful activities.',
-      id: 7,
+      id: 6,
     },
   ],
 };
 
 export const ContentDeposits = {
   hero: {
-    h5_subtitle: "DEPOSIT SAFE",
-    h2_title: "Plunge yourself into profit with our deposit delights.",
-    p_description: "Elevate financial mojo with cutting-edge deposits, sparking growth and cash charisma that we offer you."
+    h5_subtitle: 'DEPOSIT SAFE',
+    h2_title: 'Plunge yourself into profit with our deposit delights.',
+    p_description:
+      'Elevate financial mojo with cutting-edge deposits, sparking growth and cash charisma that we offer you.',
   },
 
   advantages: {
-    h5_subtitle: "DEPOSITS ADVANTAGES",
-    h2_title: "We make your deposits reign supreme in the kingdom of financial decurity.",
-    p_description: "Discover the power of secure deposits with us, knowing your money is not only protected but also poised for exponential growth."
-  }
-}
+    h5_subtitle: 'DEPOSITS ADVANTAGES',
+    h2_title:
+      'We make your deposits reign supreme in the kingdom of financial decurity.',
+    p_description:
+      'Discover the power of secure deposits with us, knowing your money is not only protected but also poised for exponential growth.',
+
+    bullets: [
+      {
+        bullet:
+          'We boast of an Annual Percentage Yield (APY) significantly higher than the national average.',
+        id: 1,
+      },
+      {
+        bullet:
+          '85% of deposit account holders actively participate in our rewards programs.',
+        id: 2,
+      },
+      {
+        bullet:
+          'Our depositors collectively saw a 12% increase in their account balances over the last year, showcasing the potential for long-term wealth growth.',
+        id: 3,
+      },
+      {
+        bullet:
+          'Take advantage of our high-yield certificates of deposit, contributing to the financial success of 95% of our deposit account holders.',
+        id: 4,
+      },
+      {
+        bullet:
+          'Over the past year, 90% of customer issues related to deposits were resolved within the same business day.',
+        id: 5,
+      },
+      {
+        bullet:
+          'Your data is safe with us – we invest $70 million annually in cybersecurity to ensure the highest level of protection.',
+        id: 6,
+      },
+    ],
+  },
+};

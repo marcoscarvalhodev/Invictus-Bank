@@ -1,22 +1,24 @@
 import React from 'react';
-import { ContentTransfers } from '../../../Contents';
+import { StyledDepositsBulletAdvantages } from '../../../Styles/SubPages/Deposits/DepositsBulletAdvantages.styled';
+import { ContentDeposits } from '../../../Contents';
 import Icons from '../../Reusable/Icons';
-import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
-import { StyledTransfersBulletAdvantages } from '../../../Styles/SubPages/Transfers/TransfersBulletAdvantages.styled';
+import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-interface TransfersBulletAdvantagesProps {
+interface DepositsBulletAdvantagesProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const TransfersBulletAdvantages = ({
+const DepositsBulletAdvantages = ({
   smallState,
-}: TransfersBulletAdvantagesProps) => {
+  small,
+}: DepositsBulletAdvantagesProps) => {
   return (
-    <StyledTransfersBulletAdvantages>
+    <StyledDepositsBulletAdvantages>
       <div className='container'>
         <ul>
-          {ContentTransfers.transfers_bullets.map(({ bullet, id }) => (
+          {ContentDeposits.advantages.bullets.map(({ bullet, id }) => (
             <li key={id} className='bullet-wrapper-advantages'>
               <div className='bullet-advantages bullet-1'>
                 <Icons>
@@ -32,8 +34,8 @@ const TransfersBulletAdvantages = ({
           ))}
         </ul>
       </div>
-    </StyledTransfersBulletAdvantages>
+    </StyledDepositsBulletAdvantages>
   );
 };
 
-export default TransfersBulletAdvantages;
+export default DepositsBulletAdvantages;
