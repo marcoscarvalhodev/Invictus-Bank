@@ -1,7 +1,6 @@
 import { themeAttrs } from './ThemeAttrs';
 import { css } from 'styled-components';
 
-
 const theme = {
   colors: {
     blue_main: {
@@ -387,7 +386,6 @@ const theme = {
       display: flex;
       flex-direction: column;
       gap: 24px;
-      
 
       .title {
         margin-bottom: 1.2rem;
@@ -415,6 +413,19 @@ const theme = {
       .button {
         width: max-content;
       }
+    `,
+  },
+
+  checking_animation: {
+    box_shadow_normal: css`
+      box-shadow: 0 0 1px 10px rgba(49, 122, 233, 1),
+        0 0 1px 20px rgba(49, 122, 233, 0.2),
+        0 0 10px 30px rgba(49, 122, 233, 0.4);
+    `,
+    box_shadow_reduced: css`
+      box-shadow: 0 0 1px 5px rgba(49, 122, 233, 1),
+        0 0 1px 10px rgba(49, 122, 233, 0.2),
+        0 0 5px 20px rgba(49, 122, 233, 0.4);
     `,
   },
 };
