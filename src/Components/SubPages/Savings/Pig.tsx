@@ -14,6 +14,7 @@ const Pig = ({ small }: PigProps) => {
     <StyledPig $small={small}>
       <div className='pig-section'>
         <div className='pig-wrapper'>
+          {[...Array(6)].map((item) => <div className='firework'></div>)}
           <PigSVG className='pig' />
           <div className='hole'></div>
 

@@ -14,7 +14,7 @@ const Checking = ({ smallState }: CheckingProps) => {
 
   return (
     <StyledChecking>
-      <CheckingHero smallState={smallState} small={small} />
+      <CheckingHero smallState={smallState} small={small} xsmall={xsmall}/>
       <CheckingSlides
         smallState={smallState}
         small={small}
