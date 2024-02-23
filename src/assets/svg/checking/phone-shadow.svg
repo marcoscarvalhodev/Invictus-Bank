@@ -1,0 +1,22 @@
+<svg  viewBox="0 0 730 227" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="phone-shadow">
+<g id="Ellipse 495" filter="url(#filter0_f_273_83)">
+<ellipse cx="540.5" cy="114" rx="119.5" ry="10" fill="black" fill-opacity="0.8"/>
+</g>
+<g id="Ellipse 496" filter="url(#filter1_f_273_83)">
+<ellipse cx="325.5" cy="113.5" rx="225.5" ry="13.5" fill="black" fill-opacity="0.8"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_273_83" x="351" y="34" width="379" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="35" result="effect1_foregroundBlur_273_83"/>
+</filter>
+<filter id="filter1_f_273_83" x="0" y="0" width="651" height="227" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur_273_83"/>
+</filter>
+</defs>
+</svg>
