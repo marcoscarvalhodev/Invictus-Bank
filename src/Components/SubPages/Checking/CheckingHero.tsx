@@ -9,9 +9,10 @@ import Bank from './Bank';
 interface CheckingHeroProps {
   smallState: "mobile" | "desktop";
   small: boolean;
+  xsmall: boolean;
 }
 
-const CheckingHero = ({smallState, small}: CheckingHeroProps) => {
+const CheckingHero = ({smallState, small, xsmall}: CheckingHeroProps) => {
   return (
     <StyledCheckingHero className='container' $small={small}>
       <div className='flex-hero'>
@@ -35,7 +36,7 @@ const CheckingHero = ({smallState, small}: CheckingHeroProps) => {
         </div>
       </div>
       <div className='flex-hero flex-hero-2'>
-        <Bank small={small}/>
+        <Bank small={small} xsmall={xsmall}/>
       </div>
     </StyledCheckingHero>
   )

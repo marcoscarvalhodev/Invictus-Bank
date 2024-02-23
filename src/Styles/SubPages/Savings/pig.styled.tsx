@@ -55,7 +55,7 @@ export const StyledPig = styled.div<PigProps>`
         height: 40px;
         position: absolute;
         perspective: 300px;
-        animation: moveCoin 3s linear infinite;
+        animation: moveCoin 4s linear infinite;
         top: calc(-9.6rem + -15px + ${$small ? `-40px` : '-70px'});
         left: calc(50% + -20px);
         z-index: 0;
@@ -71,6 +71,42 @@ export const StyledPig = styled.div<PigProps>`
 
       .pig-wrapper {
         position: relative;
+
+        .firework {
+          width: 0.4rem;
+          height: 4rem;
+
+          position: absolute;
+          transform: translateY(-5px);
+          transform-origin: 50% 100%;
+          top: -4rem;
+          left: calc(50% + -0.2rem);
+          overflow: hidden;
+        }
+
+        .firework:nth-child(1) {
+          transform: rotate(45deg) translateY(-5px);
+        }
+        .firework:nth-child(2) {
+          transform: rotate(90deg) translateY(-5px);
+        }
+        .firework:nth-child(3) {
+          transform: rotate(270deg) translateY(-5px);
+        }
+        .firework:nth-child(4) {
+          transform: rotate(315deg) translateY(-5px);
+        }
+
+        .firework::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 100%;
+          height: 2rem;
+          background: ${theme.colors.blue_main.primary_light};
+          animation: firework 4s 0s ease-in-out infinite;
+        }
       }
 
       .pig {
@@ -93,7 +129,7 @@ export const StyledPig = styled.div<PigProps>`
           height: 40px;
           position: absolute;
           transform-style: preserve-3d;
-          animation: spinCoin 3s linear infinite;
+          animation: spinCoin 4s linear infinite;
           backface-visibility: hidden;
         }
       }
@@ -184,29 +220,43 @@ export const StyledPig = styled.div<PigProps>`
       ${eachCoin()};
 
       @keyframes spinCoin {
-        0% {
-          transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
-        }
-        50% {
-          transform: rotateX(45deg) rotateY(calc(-360deg)) rotateZ(180deg);
+        0%,
+        20% {
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg);
         }
 
-        80%,
+        40% {
+          transform: rotateX(45deg) rotateY(-180deg) rotateZ(0deg);
+        }
+        ${$small ? '68%' : '70%'},
         100% {
-          transform: rotateX(45deg) rotateY(calc(-2 * 360deg + 90deg))
-            rotateZ(360deg);
+          transform: rotateX(60deg) rotateY(calc(-2 * 180deg + -90deg))
+            rotateZ(0deg);
         }
       }
 
       @keyframes moveCoin {
-        0% {
-          transform: translateY(0px);
+        0%,
+        20% {
+          transform: translateY(${$small ? '-6px' : '-10px'});
+        }
+
+        80%,
+        100% {
+          transform: translateY(
+            calc(9.6rem + 35px + ${$small ? `45px` : '75px'})
+          );
+        }
+      }
+
+      @keyframes firework {
+        0%,
+        80% {
+          top: 100%;
         }
 
         100% {
-          transform: translateY(
-            calc(9.6rem + 35px + ${$small ? `40px` : '75px'})
-          );
+          top: -50%;
         }
       }
 

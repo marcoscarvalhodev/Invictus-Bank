@@ -2,10 +2,11 @@ import styled, { css } from 'styled-components';
 
 interface BankProps {
   $small: boolean;
+  $xsmall: boolean;
 }
 
 export const StyledBank = styled.div<BankProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme, $small, $xsmall }) => css`
     && {
       .phone-wrapper {
         position: relative;
@@ -23,7 +24,7 @@ export const StyledBank = styled.div<BankProps>`
         .bank-card {
           width: 90px;
           transform: translate(50%, -50%);
-          top: calc(50% + -5rem);
+          top: calc(50% + -7rem);
           left: calc(50% + -2.8rem);
           animation: bank-move 20s linear infinite alternate;
         }
@@ -31,8 +32,9 @@ export const StyledBank = styled.div<BankProps>`
         .background-phone {
           width: 11rem;
           transform: translate(50%, -50%);
-          top: calc(50%);
+          top: calc(50% + -2rem);
           right: calc(50% + -6.9rem);
+          z-index: 2;
         }
         .drop {
           width: 3rem;
@@ -41,7 +43,7 @@ export const StyledBank = styled.div<BankProps>`
           transform: matrix(0.98, 0.17, -0.21, 0.98, 0, 0) translate(-50%, -50%);
           animation: drop-show 20s linear infinite;
 
-          top: 50%;
+          top: calc(50% + -2rem);
           right: calc(50% + -4.2rem);
           z-index: 999;
           background: #4488ee;
@@ -49,18 +51,40 @@ export const StyledBank = styled.div<BankProps>`
           border: none;
         }
 
+        .logo-phone {
+          position: absolute;
+          width: 7rem;
+          transform: translate(-50%, -50%);
+          top: calc(50% + -2rem);
+          right: calc(50% + -8.5rem);
+          animation: logo-phone 20s linear infinite;
+          z-index: 3;
+        }
+
         .phone {
           width: 20rem;
           overflow: visible;
           margin-left: 5rem;
+          z-index: 2;
+          margin-bottom: 4rem;
         }
 
         .shadow-card {
           position: absolute;
           width: 25rem;
           left: 0;
-          bottom: 0;
+          bottom: 3rem;
           animation: shadow-card 20s linear infinite;
+        }
+
+        .crack-phone {
+          position: absolute;
+          height: 12rem;
+          transform: translate(-50%, -50%);
+          left: calc(50% + 1.6rem);
+          top: calc(50% + -3rem);
+          z-index: 0;
+          animation: crack 20s linear infinite;
         }
       }
 
@@ -68,8 +92,8 @@ export const StyledBank = styled.div<BankProps>`
         position: absolute;
         transform: translate(-50%, -50%);
         width: 30rem;
-        bottom: 2rem;
-        right: 8%;
+        bottom: -2rem;
+        right: 5%;
       }
 
       //background
@@ -93,18 +117,21 @@ export const StyledBank = styled.div<BankProps>`
         10% {
           transform: translate(50%, -50%) translateY(0px) rotateZ(0deg);
           scale: 1;
+          z-index: 1;
         }
 
         20% {
           transform: translateY(100px) translateX(-160px) rotateZ(50deg)
             rotateX(-20deg);
           scale: 1.2;
+          z-index: 1;
         }
 
         30% {
           transform: translateY(100px) translateX(-160px) rotateZ(60deg)
             rotateX(-20deg);
           scale: 1.2;
+          z-index: 1;
         }
 
         35% {
@@ -212,6 +239,8 @@ export const StyledBank = styled.div<BankProps>`
         }
       }
 
+      //shadow-card
+
       @keyframes shadow-card {
         0%,
         15% {
@@ -269,6 +298,88 @@ export const StyledBank = styled.div<BankProps>`
           scale: 0.6;
         }
       }
+
+      //logo-phone
+
+      @keyframes logo-phone {
+        0%,
+        5% {
+          opacity: 1;
+        }
+
+        10%,
+        90% {
+          opacity: 0;
+        }
+
+        95%,
+        100% {
+          opacity: 1;
+        }
+      }
+
+      //crack
+
+      @keyframes crack {
+        0%,
+        8% {
+          opacity: 0;
+        }
+
+        13% {
+          opacity: 1;
+        }
+
+        17%,
+        83% {
+          opacity: 0;
+        }
+
+        87%,
+        90% {
+          opacity: 1;
+        }
+
+        93%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      ${$small &&
+      css`
+        .phone-wrapper {
+          .phone {
+            margin-left: 20rem;
+          }
+
+          .bank-card {
+            left: calc(50% + 4.7rem);
+          }
+
+          .shadow-card {
+          
+          left: 13rem;
+          
+        }
+
+          .drop {
+            right: calc(50% + -11.8rem);
+          }
+
+          .logo-phone {
+            right: calc(50% + -16rem);
+          }
+
+          .background-phone {
+            right: calc(50% + -14.4rem);
+          }
+
+          .crack-phone {
+            left: calc(50% + 9.1rem);
+          }
+        }
+      `}
     }
   `}
 `;
