@@ -55,7 +55,7 @@ export const StyledPig = styled.div<PigProps>`
         height: 40px;
         position: absolute;
         perspective: 300px;
-        animation: moveCoin 4s linear infinite;
+        animation: moveCoin 5s linear infinite;
         top: calc(-9.6rem + -15px + ${$small ? `-40px` : '-70px'});
         left: calc(50% + -20px);
         z-index: 0;
@@ -82,6 +82,7 @@ export const StyledPig = styled.div<PigProps>`
           top: -4rem;
           left: calc(50% + -0.2rem);
           overflow: hidden;
+          border-radius: 50%;
         }
 
         .firework:nth-child(1) {
@@ -105,7 +106,8 @@ export const StyledPig = styled.div<PigProps>`
           top: 100%;
           height: 2rem;
           background: ${theme.colors.blue_main.primary_light};
-          animation: firework 4s 0s ease-in-out infinite;
+          border-radius: 50%;
+          animation: firework 5s 0s ease-in-out infinite;
         }
       }
 
@@ -129,7 +131,7 @@ export const StyledPig = styled.div<PigProps>`
           height: 40px;
           position: absolute;
           transform-style: preserve-3d;
-          animation: spinCoin 4s linear infinite;
+          animation: spinCoin 5s linear infinite;
           backface-visibility: hidden;
         }
       }
