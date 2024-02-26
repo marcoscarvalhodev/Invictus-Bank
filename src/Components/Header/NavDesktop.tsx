@@ -127,9 +127,9 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
               }`}
             >
               <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
+                <NavLink to="/rewards" className='nav-link-dropdown'>
                   Rewards
-                </a>
+                </NavLink>
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
