@@ -428,5 +428,74 @@ const theme = {
         0 0 5px 20px rgba(49, 122, 233, 0.4);
     `,
   },
+
+  rewards: {
+    rewards_faces: {
+      face_default: css`
+        width: 12rem;
+        height: 12rem;
+        background: rgb(0, 63, 166);
+        border: 1px solid #041f7767;
+        position: absolute;
+      `,
+      face_1: css`
+        right: 9rem;
+        transform: rotateY(-90deg);
+        background: rgb(0, 63, 166);
+        background: linear-gradient(
+          225deg,
+          rgba(0, 63, 166, 1) 59%,
+          rgba(27, 108, 231, 1) 100%
+        );
+        border-radius: 0px 2px 2px 0px;
+      `,
+      face_2: css`
+        left: 5.97rem;
+        transform: rotateY(90deg);
+        border-radius: 2px 0px 0px 2px;
+        background: rgb(0, 63, 166);
+        border: 1px solid #57565667;
+      `,
+      face_3: css`
+        bottom: 8.97rem;
+        transform: rotateX(90deg);
+        border-radius: 0px 0px 2px 2px;
+        background: rgb(0, 63, 166);
+        border: 1px solid #57565667;
+      `,
+      face_4: css`
+        top: 5.97rem;
+        transform: rotateX(-90deg);
+        background: rgb(0, 63, 166);
+        background: linear-gradient(
+          180deg,
+          rgba(0, 63, 166, 1) 8%,
+          rgba(27, 108, 231, 1) 100%
+        );
+        border-radius: 2px 2px 0px 0px;
+      `,
+      face_5: css`
+        transform: translateZ(6rem);
+        border-radius: 4px;
+        background: rgb(0, 63, 166);
+      `,
+    },
+    reward_straps: {
+      strap_1: css`
+        position: absolute;
+        transform: translate(-50%, 50%) rotateZ(-90deg);
+        height: 10rem;
+        right: 2.2rem;
+        bottom: 50%;
+      `,
+      strap_2: css`
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translate(-50%, 0%) rotateZ(180deg);
+        height: 10rem;
+      `,
+    },
+  },
 };
 export default theme;
