@@ -35,7 +35,7 @@ import Card1 from './assets/svg/cards/card-1.svg?react';
 import Card2 from './assets/svg/cards/card-2.svg?react';
 
 import TransfersIcon from './assets/svg/transfers/transfer-icon.svg?react';
-import ArrowWrapper from './assets/svg/transfers/arrow-wrapper.svg?react';
+import GiftStrap from './assets/svg/rewards/strap.svg?react';
 
 export const ContentNavMobile = {
   nav_mobile: [
@@ -587,5 +587,11 @@ export const ContentDeposits = {
         id: 6,
       },
     ],
+  },
+};
+
+export const ContentRewards = {
+  hero: {
+    box: [{strap: <GiftStrap className='strap'/>}, {}, {}, {strap: <GiftStrap className='strap'/>}, {}, {}, {}, {}, {}, {}],
   },
 };

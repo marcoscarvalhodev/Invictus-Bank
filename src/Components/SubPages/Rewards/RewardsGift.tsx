@@ -1,13 +1,24 @@
 import React from 'react';
 import { StyledRewardsGift } from '../../../Styles/SubPages/Rewards/RewardsGift.styled';
+import { ContentRewards } from '../../../Contents';
 
 const RewardsGift = () => {
   return (
     <StyledRewardsGift>
       <div className='container-gift'>
+        <div className='lid-gift'>
+          {ContentRewards.hero.box.map(({ strap }, index) => (
+            <div key={index} className={`lid lid-${index + 1}`}>
+              {strap}
+            </div>
+          ))}
+        </div>
+
         <div className='box-gift'>
-          {[...Array(10)].map((item, index) => (
-            <div key={index} className={`face face-${index + 1}`}></div>
+          {ContentRewards.hero.box.map(({ strap }, index) => (
+            <div key={index} className={`face face-${index + 1}`}>
+              {strap}
+            </div>
           ))}
         </div>
       </div>
