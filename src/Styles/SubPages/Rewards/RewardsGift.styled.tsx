@@ -1,19 +1,18 @@
 import styled, { css } from 'styled-components';
-import GiftStrap from '../../../assets/svg/rewards/strap.svg?url';
 
 export const StyledRewardsGift = styled.div`
   ${({ theme }) => css`
-    position: relative;
-    width: 100vw;
-    height: 200vh;
+    position: absolute;
+
+    top: 50%;
 
     .container-gift {
-      height: 30vh;
-      width: 60vh;
-      top: 50vh;
-      left: 50vw;
+      height: 300px;
+      width: 300px;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      position: absolute;
+      position: relative;
       perspective: 1000px;
     }
 
@@ -21,21 +20,30 @@ export const StyledRewardsGift = styled.div`
     .lid-gift {
       position: absolute;
       transform-style: preserve-3d;
-      height: 150px;
-      width: 150px;
+      height: 14rem;
+      width: 14rem;
       top: 100px;
       left: 100px;
       transform: rotateY(0deg) rotateX(-100deg) rotateZ(-230deg);
+      z-index: 2;
     }
 
     .lid-gift {
       width: 15.5rem;
       height: 15.5rem;
+      top: 4rem;
+      left: 10.85rem;
+      transform: rotateY(0deg) rotateX(80deg) rotateZ(-130deg);
+      z-index: 3;
+      animation: lid-move 10s linear infinite alternate;
     }
 
-    .lid-gift {
-      top: 0px;
-      left: 0px;
+    .lid-wrapper {
+      animation: lid-wrapper-move 10s linear infinite alternate;
+      position: absolute;
+      width: 500px;
+      height: 100px;
+      z-index: 3;
     }
 
     //gift-faces
@@ -50,8 +58,12 @@ export const StyledRewardsGift = styled.div`
       ${theme.rewards.rewards_faces.face_1};
     }
 
+    .face-1 {
+      right: 8rem;
+    }
+
     .face-6 {
-      right: 8.95rem;
+      right: 7.95rem;
     }
 
     .lid-1,
@@ -96,8 +108,12 @@ export const StyledRewardsGift = styled.div`
       ${theme.rewards.rewards_faces.face_3};
     }
 
+    .face-3 {
+      bottom: 8rem;
+    }
+
     .face-8 {
-      bottom: 8.95rem;
+      bottom: 7.95rem;
     }
 
     .lid-3,
@@ -197,23 +213,152 @@ export const StyledRewardsGift = styled.div`
     .lid-1 {
       .strap {
         ${theme.rewards.reward_straps.strap_1};
+        height: 3.1rem;
+        width: 2.7rem;
+        right: -1.2rem;
+        bottom: calc(50% + 0.2rem);
+      }
+    }
+
+    .face-2 {
+      .strap {
+        ${theme.rewards.reward_straps.strap_2};
+      }
+    }
+
+    .lid-2 {
+      .strap {
+        ${theme.rewards.reward_straps.strap_2};
         height: 3rem;
-        width: 2rem;
-        right: -0.6rem;
+        width: 2.7rem;
+        right: calc(-50% + 0.1rem);
+        bottom: 50%;
+      }
+    }
+
+    .face-3 {
+      .strap {
+        ${theme.rewards.reward_straps.strap_3};
+      }
+    }
+
+    .lid-3 {
+      .strap {
+        ${theme.rewards.reward_straps.strap_3};
+        height: 3rem;
+        width: 2.7rem;
+        right: calc(50% + 0.1rem);
+        top: calc(50% + -0.1rem);
       }
     }
 
     .face-4 {
       .strap {
-        ${theme.rewards.reward_straps.strap_2};
+        ${theme.rewards.reward_straps.strap_4};
       }
     }
 
     .lid-4 {
       .strap {
-        ${theme.rewards.reward_straps.strap_2};
+        ${theme.rewards.reward_straps.strap_4};
         height: 3rem;
-        width: 2rem;
+        width: 2.7rem;
+      }
+    }
+
+    //animations
+
+    @keyframes lid-move {
+      0%,
+      10% {
+        transform: rotateY(0deg) rotateX(80deg) rotateZ(-130deg) scale(1.07) translateZ(0px);
+      }
+
+      20% {
+        transform: rotateY(0deg) rotateX(100deg) rotateZ(-130deg)
+          translateZ(70px) scale(1.07);
+      }
+
+      30% {
+        transform: rotateY(50deg) rotateX(100deg) rotateZ(-120deg)
+          translateZ(200px) scale(1.07);
+      }
+      35% {
+        transform: rotateY(100deg) rotateX(100deg) rotateZ(-110deg)
+          translateZ(200px) scale(1.07);
+      }
+      40% {
+        transform: rotateY(150deg) rotateX(100deg) rotateZ(-100deg)
+          translateZ(200px) scale(1.07);
+      }
+      45% {
+        transform: rotateY(200deg) rotateX(100deg) rotateZ(-90deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      50% {
+        transform: rotateY(250deg) rotateX(100deg) rotateZ(-80deg)
+          translateZ(200px) scale(1.07);
+      }
+      55% {
+        transform: rotateY(300deg) rotateX(100deg) rotateZ(-70deg)
+          translateZ(200px) scale(1.07);
+      }
+      60% {
+        transform: rotateY(350deg) rotateX(100deg) rotateZ(-60deg)
+          translateZ(200px) scale(1.07);
+      }
+      65% {
+        transform: rotateY(400deg) rotateX(100deg) rotateZ(-50deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      70% {
+        transform: rotateY(450deg) rotateX(100deg) rotateZ(-40deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      75% {
+        transform: rotateY(500deg) rotateX(100deg) rotateZ(-30deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      80% {
+        transform: rotateY(550deg) rotateX(100deg) rotateZ(-20deg)
+          translateZ(200px) scale(1.07);
+      }
+      85% {
+        transform: rotateY(600deg) rotateX(100deg) rotateZ(-10deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      90% {
+        transform: rotateY(650deg) rotateX(100deg) rotateZ(0deg)
+          translateZ(200px) scale(1.07);
+      }
+
+      95% {
+        transform: rotateY(700deg) rotateX(100deg) rotateZ(10deg)
+          translateZ(200px) scale(1.07);
+      }
+      100% {
+        transform: rotateY(750deg) rotateX(100deg) rotateZ(20deg)
+          translateZ(200px) scale(1.07);
+      }
+    }
+
+    @keyframes lid-wrapper-move {
+      0%,
+      20% {
+        transform: rotate(0deg);
+      }
+      30% {
+        transform: rotate(200deg) translateX(-100px);
+      }
+
+      50%,
+      100% {
+        transform: rotate(200deg) translateX(-100px);
       }
     }
   `}

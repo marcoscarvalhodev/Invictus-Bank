@@ -6,12 +6,14 @@ const RewardsGift = () => {
   return (
     <StyledRewardsGift>
       <div className='container-gift'>
-        <div className='lid-gift'>
-          {ContentRewards.hero.box.map(({ strap }, index) => (
-            <div key={index} className={`lid lid-${index + 1}`}>
-              {strap}
-            </div>
-          ))}
+        <div className='lid-wrapper'>
+          <div className='lid-gift'>
+            {ContentRewards.hero.box.map(({ strap }, index) => (
+              <div key={index} className={`lid lid-${index + 1}`}>
+                {strap}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className='box-gift'>
