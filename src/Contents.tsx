@@ -592,6 +592,6 @@ export const ContentDeposits = {
 
 export const ContentRewards = {
   hero: {
-    box: [{strap: <GiftStrap className='strap'/>}, {}, {}, {strap: <GiftStrap className='strap'/>}, {}, {}, {}, {}, {}, {}],
+    box: [{strap: <GiftStrap className='strap'/>}, {strap: <GiftStrap className='strap'/>}, {strap: <GiftStrap className='strap'/>}, {strap: <GiftStrap className='strap'/>}, {}, {}, {}, {}, {}, {}],
   },
 };

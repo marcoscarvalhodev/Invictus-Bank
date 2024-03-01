@@ -490,6 +490,21 @@ const theme = {
       `,
       strap_2: css`
         position: absolute;
+        transform: translate(-50%, 50%) rotateZ(90deg);
+        height: 10rem;
+        right: 4.2rem;
+        bottom: 50%;
+      `,
+
+      strap_3: css`
+        position: absolute;
+        transform: translate(50%, -50%) rotateZ(360deg);
+        height: 10rem;
+        right: 50%;
+        top: calc(50% + 1rem);
+      `,
+      strap_4: css`
+        position: absolute;
         top: -1px;
         left: 50%;
         transform: translate(-50%, 0%) rotateZ(180deg);
