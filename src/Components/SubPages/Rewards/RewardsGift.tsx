@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyledRewardsGift } from '../../../Styles/SubPages/Rewards/RewardsGift.styled';
 import { ContentRewards } from '../../../Contents';
+import KnotGift from '../../../assets/svg/rewards/knot.svg?react';
 
 const RewardsGift = () => {
   return (
@@ -13,6 +14,17 @@ const RewardsGift = () => {
                 {strap}
               </div>
             ))}
+
+            <div className='knot-gift-wrapper'>
+              <KnotGift className='knot-gift knot-gift-1' />
+              <KnotGift className='knot-gift knot-gift-2' />
+
+              <div className='knot-fill-wrapper'>
+                {[...Array(10)].map((item, index) => (
+                  <div className={`knot-fill knot-fill-${index + 1}`}></div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
