@@ -1,7 +1,65 @@
 import styled, { css } from 'styled-components';
 
-export const StyledRewardsGift = styled.div`
-  ${({ theme }) => css`
+interface eachKnotFillProps {
+  maxNum: number;
+  minNum: number;
+  ryEach: number;
+  ryWrapper: number;
+  txWrapper: number;
+  tzWrapper: number;
+  tzEach: number;
+  tyWrapper?: number;
+}
+
+function eachKnotFill({
+  tzWrapper,
+  txWrapper,
+  ryEach,
+  tzEach,
+  ryWrapper,
+  maxNum,
+  minNum,
+  tyWrapper
+}: eachKnotFillProps) {
+  let knotFill = '';
+
+  for (let i = minNum; i < maxNum; i++) {
+    knotFill += `
+
+    .knot-fill-wrapper-${i} {
+      transform: translateZ(${tzWrapper}rem) translateX(${txWrapper}rem) translateY(${tyWrapper ? tyWrapper : 5.9}rem) rotateY(${ryWrapper}deg) ;
+      transform-style: preserve-3d;
+    }
+
+      .knot-fill-${i} {
+        width: 0.5rem;
+        height: 1rem;
+        background: #0d5c0d;
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        
+
+        border-left: #0d5c0d 0.32rem solid;
+        border-right: #0d5c0d 0.32rem solid;
+
+        transform: translate3d(50%, -50%, 0) rotateY(calc(${i} * ${ryEach}deg)) rotateX(360deg)
+          rotateZ(148deg) translateZ(${tzEach}rem) rotate(32deg);
+      }
+    `;
+  }
+
+  return `
+    ${knotFill}
+  `;
+}
+
+interface StyledRewardsProps {
+  $rangeState: number;
+}
+
+export const StyledRewardsGift = styled.div<StyledRewardsProps>`
+  ${({ theme, $rangeState }) => css`
     position: absolute;
 
     top: 50%;
@@ -33,15 +91,15 @@ export const StyledRewardsGift = styled.div`
       height: 15.5rem;
       top: -6rem;
       left: 10.85rem;
-      transform: rotateY(0deg) rotateX(80deg) rotateZ(-132deg) scale(1.04)
-        translateZ(0px);
+      transform: rotateY(0deg) rotateX(80deg) rotateZ(${$rangeState}deg)
+        scale(1.04) translateZ(0px);
       z-index: 3;
       //animation: lid-move 12s linear infinite alternate;
     }
 
     .lid-wrapper {
       //animation: lid-wrapper-move 12s linear infinite alternate;
-      position: absolute;
+      position: relative;
       top: 10rem;
       width: 30rem;
       height: 10rem;
@@ -51,7 +109,6 @@ export const StyledRewardsGift = styled.div`
         transform: rotateY(0deg) rotateX(93deg) rotateZ(212deg)
           translateY(-3.5rem) scale(1.04) translateZ(0px);
         position: absolute;
-        perspective: 1000px;
         transform-style: preserve-3d;
         height: 8rem;
         width: 9rem;
@@ -67,40 +124,43 @@ export const StyledRewardsGift = styled.div`
         .knot-gift-1 {
           transform: translateZ(1rem);
         }
-
-        //knot-fills
-
-        .knot-fill-wrapper {
-          width: 3rem;
-          height: 3rem;
-          position: relative;
-          
-          
-        }
-
-        .knot-fill {
-          width: 1rem;
-          height: 1rem;
-
-          background: #165033;
-          position: absolute;
-
-          border-top: #165033 0.32rem solid;
-          border-bottom: #165033 0.32rem solid;
-
-          position: absolute;
-          /*transform: translate3d(-50%, -50%, 0) rotateY(0deg) rotateX(-90deg) rotateZ(90deg)
-          translateZ(-10.5rem) translateX(-0.5rem);
-          top: 12rem;
-          left: 8rem;*/
-
-          transform: translate3d(-50%, -50%, 0) rotateY(0deg) rotateX(-45deg)
-            rotateZ(45deg)  translateX(-0.5rem);
-
-          z-index: 999;
-        }
       }
     }
+
+    //knot-fills
+
+    ${eachKnotFill({
+      maxNum: 8,
+      minNum: 0,
+      ryEach: -15,
+      ryWrapper: 61,
+      txWrapper: 4.2,
+      tzWrapper: -1.5,
+      tzEach: 0.9,
+      tyWrapper: 6
+    })} //upper-1
+
+  ${eachKnotFill({
+      maxNum: 20,
+      minNum: 9,
+      ryEach: -5,
+      ryWrapper: 50,
+      txWrapper: -0.2,
+      tzWrapper: -0.85,
+      tzEach: 0.9,
+      tyWrapper: 6
+    })} //upper-2
+
+${eachKnotFill({
+      maxNum: 51,
+      minNum: 21,
+      ryEach: 1.7,
+      ryWrapper: 5,
+      txWrapper: 6,
+      tzWrapper: 1.2,
+      tzEach: 4.3,
+      tyWrapper: 6
+    })}
 
     //gift-faces
 
