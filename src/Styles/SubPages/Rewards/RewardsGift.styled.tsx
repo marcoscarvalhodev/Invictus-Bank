@@ -19,7 +19,7 @@ function eachKnotFill({
   ryWrapper,
   maxNum,
   minNum,
-  tyWrapper
+  tyWrapper,
 }: eachKnotFillProps) {
   let knotFill = '';
 
@@ -27,21 +27,24 @@ function eachKnotFill({
     knotFill += `
 
     .knot-fill-wrapper-${i} {
-      transform: translateZ(${tzWrapper}rem) translateX(${txWrapper}rem) translateY(${tyWrapper ? tyWrapper : 5.9}rem) rotateY(${ryWrapper}deg) ;
+      
+      transform: translateZ(${tzWrapper}rem) translateX(${txWrapper}rem) translateY(${
+      tyWrapper ? tyWrapper : 5.9
+    }rem) rotateY(${ryWrapper}deg) ;
       transform-style: preserve-3d;
     }
 
       .knot-fill-${i} {
         width: 0.5rem;
         height: 1rem;
-        background: #0d5c0d;
+        background: #e9c924;
         position: absolute;
-        z-index: 999;
+        
         top: 50%;
         
-
-        border-left: #0d5c0d 0.32rem solid;
-        border-right: #0d5c0d 0.32rem solid;
+        
+        border-left: #e9c924 0.32rem solid;
+        border-right: #e9c924 0.32rem solid;
 
         transform: translate3d(50%, -50%, 0) rotateY(calc(${i} * ${ryEach}deg)) rotateX(360deg)
           rotateZ(148deg) translateZ(${tzEach}rem) rotate(32deg);
@@ -94,11 +97,11 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
       transform: rotateY(0deg) rotateX(80deg) rotateZ(${$rangeState}deg)
         scale(1.04) translateZ(0px);
       z-index: 3;
-      //animation: lid-move 12s linear infinite alternate;
+      animation: lid-move 12s linear infinite alternate;
     }
 
     .lid-wrapper {
-      //animation: lid-wrapper-move 12s linear infinite alternate;
+      animation: lid-wrapper-move 12s linear infinite alternate;
       position: relative;
       top: 10rem;
       width: 30rem;
@@ -132,12 +135,12 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
     ${eachKnotFill({
       maxNum: 8,
       minNum: 0,
-      ryEach: -15,
-      ryWrapper: 61,
-      txWrapper: 4.2,
-      tzWrapper: -1.5,
-      tzEach: 0.9,
-      tyWrapper: 6
+      ryEach: -6,
+      ryWrapper: 25,
+      txWrapper: 7.2,
+      tzWrapper: 0.65,
+      tzEach: 1.8,
+      tyWrapper: 6,
     })} //upper-1
 
   ${eachKnotFill({
@@ -146,21 +149,89 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
       ryEach: -5,
       ryWrapper: 50,
       txWrapper: -0.2,
-      tzWrapper: -0.85,
+      tzWrapper: -0.8,
       tzEach: 0.9,
-      tyWrapper: 6
+      tyWrapper: 6,
     })} //upper-2
 
 ${eachKnotFill({
       maxNum: 51,
       minNum: 21,
-      ryEach: 1.7,
-      ryWrapper: 5,
-      txWrapper: 6,
-      tzWrapper: 1.2,
-      tzEach: 4.3,
-      tyWrapper: 6
-    })}
+      ryEach: 1,
+      ryWrapper: 23.5,
+      txWrapper: 5.2,
+      tzWrapper: -1,
+      tzEach: 4.5,
+      tyWrapper: 6,
+    })}//side-exterior-1
+
+
+${eachKnotFill({
+      maxNum: 82,
+      minNum: 52,
+      ryEach: 0.4,
+      ryWrapper: -90,
+      txWrapper: 5.3,
+      tzWrapper: 5.2,
+      tzEach: 13,
+      tyWrapper: 6,
+    })}//side-exterior-2
+
+${eachKnotFill({
+      maxNum: 113,
+      minNum: 83,
+      ryEach: 0.7,
+      ryWrapper: -20,
+      txWrapper: -2.4,
+      tzWrapper: 1.5,
+      tzEach: 8,
+      tyWrapper: 6,
+    })}//side-interior-2
+
+${eachKnotFill({
+      maxNum: 144,
+      minNum: 114,
+      ryEach: 0.7,
+      ryWrapper: -148,
+      txWrapper: -1.8,
+      tzWrapper: 4.8,
+      tzEach: 6,
+      tyWrapper: 6,
+    })}//side-interior-1
+
+    ${eachKnotFill({
+      maxNum: 148,
+      minNum: 145,
+      ryEach: -3,
+      ryWrapper: 75,
+      txWrapper: 0.3,
+      tzWrapper: -8.8,
+      tzEach: 5,
+      tyWrapper: 6,
+    })}//inferior-middle
+
+${eachKnotFill({
+      maxNum: 155,
+      minNum: 149,
+      ryEach: -10,
+      ryWrapper: 155,
+      txWrapper: -12.35,
+      tzWrapper: -0.6,
+      tzEach: -1,
+      tyWrapper: 6,
+    })}//inferior-corner-2
+
+
+${eachKnotFill({
+      maxNum: 162,
+      minNum: 156,
+      ryEach: -10,
+      ryWrapper: 65,
+      txWrapper: 5.15,
+      tzWrapper: -4,
+      tzEach: -1,
+      tyWrapper: 6,
+    })}//inferior-corner-1
 
     //gift-faces
 
