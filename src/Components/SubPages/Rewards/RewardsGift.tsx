@@ -3,9 +3,13 @@ import { StyledRewardsGift } from '../../../Styles/SubPages/Rewards/RewardsGift.
 import { ContentRewards } from '../../../Contents';
 import KnotGift from '../../../assets/svg/rewards/knot.svg?react';
 
-const RewardsGift = () => {
+interface RewardsGiftProps {
+  rangeState: number;
+}
+
+const RewardsGift = ({rangeState} : RewardsGiftProps) => {
   return (
-    <StyledRewardsGift>
+    <StyledRewardsGift $rangeState={rangeState}>
       <div className='container-gift'>
         <div className='lid-wrapper'>
           <div className='lid-gift'>
@@ -18,13 +22,15 @@ const RewardsGift = () => {
             <div className='knot-gift-wrapper'>
               <KnotGift className='knot-gift knot-gift-1' />
               <KnotGift className='knot-gift knot-gift-2' />
-
-              <div className='knot-fill-wrapper'>
-                {[...Array(10)].map((item, index) => (
-                  <div className={`knot-fill knot-fill-${index + 1}`}></div>
-                ))}
-              </div>
             </div>
+
+            
+              {[...Array(100)].map((item, index) => (
+                <div className={`knot-fill-wrapper knot-fill-wrapper-${index + 1}`}>
+                <div className={`knot-fill knot-fill-${index + 1}`}></div>
+                </div>
+              ))}
+            
           </div>
         </div>
 
