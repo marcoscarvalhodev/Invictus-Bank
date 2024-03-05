@@ -25,7 +25,7 @@ const RewardsGift = ({rangeState} : RewardsGiftProps) => {
             </div>
 
             
-              {[...Array(100)].map((item, index) => (
+              {[...Array(163)].map((item, index) => (
                 <div className={`knot-fill-wrapper knot-fill-wrapper-${index + 1}`}>
                 <div className={`knot-fill knot-fill-${index + 1}`}></div>
                 </div>
