@@ -43,7 +43,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     const linkId = Number(event.currentTarget.id);
-    console.log(linkId)
+    
     event.preventDefault();
     setMenuState(linkId);
 

@@ -2,14 +2,14 @@ import React from 'react';
 import { StyledRewardsGift } from '../../../Styles/SubPages/Rewards/RewardsGift.styled';
 import { ContentRewards } from '../../../Contents';
 import KnotGift from '../../../assets/svg/rewards/knot.svg?react';
+import ShadowLid from '../../../assets/svg/rewards/shadow-lid.svg?react';
+import ShadowBox from '../../../assets/svg/rewards/shadow-box.svg?react';
 
-interface RewardsGiftProps {
-  rangeState: number;
-}
+const RewardsGift = () => {
+  
 
-const RewardsGift = ({rangeState} : RewardsGiftProps) => {
   return (
-    <StyledRewardsGift $rangeState={rangeState}>
+    <StyledRewardsGift>
       <div className='container-gift'>
         <div className='lid-wrapper'>
           <div className='lid-gift'>
@@ -24,13 +24,17 @@ const RewardsGift = ({rangeState} : RewardsGiftProps) => {
               <KnotGift className='knot-gift knot-gift-2' />
             </div>
 
-            
-              {[...Array(163)].map((item, index) => (
-                <div className={`knot-fill-wrapper knot-fill-wrapper-${index + 1}`}>
+            {[...Array(163)].map((item, index) => (
+              <div
+                className={`knot-fill-wrapper knot-fill-wrapper-${index + 1}`}
+              >
                 <div className={`knot-fill knot-fill-${index + 1}`}></div>
-                </div>
-              ))}
-            
+              </div>
+            ))}
+
+            <div className='shadow-lid-wrapper'>
+              <ShadowLid className='shadow-lid' />
+            </div>
           </div>
         </div>
 
@@ -40,7 +44,11 @@ const RewardsGift = ({rangeState} : RewardsGiftProps) => {
               {strap}
             </div>
           ))}
+
+          <ShadowBox className='shadow-box' />
         </div>
+
+        
       </div>
     </StyledRewardsGift>
   );

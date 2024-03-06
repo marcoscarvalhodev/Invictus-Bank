@@ -57,12 +57,10 @@ function eachKnotFill({
   `;
 }
 
-interface StyledRewardsProps {
-  $rangeState: number;
-}
+interface StyledRewardsGiftProps {}
 
-export const StyledRewardsGift = styled.div<StyledRewardsProps>`
-  ${({ theme, $rangeState }) => css`
+export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
+  ${({ theme }) => css`
     position: absolute;
 
     top: 50%;
@@ -89,15 +87,45 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
       z-index: 2;
     }
 
+    //shadow-box
+
+    .box-gift {
+      .shadow-box {
+        width: 35rem;
+        height: 35rem;
+        position: absolute;
+        transform: translate(-50%, -50%) translateZ(8rem) translateY(-6rem);
+        top: 50%;
+        left: 50%;
+      }
+    }
+
     .lid-gift {
       width: 15.5rem;
       height: 15.5rem;
       top: -6rem;
       left: 10.85rem;
-      transform: rotateY(0deg) rotateX(80deg) rotateZ(${$rangeState}deg)
-        scale(1.04) translateZ(0px);
+      transform: rotateY(0deg) rotateX(80deg) rotateZ(-131.5deg) scale(1.04)
+        translateZ(0rem);
       z-index: 3;
       animation: lid-move 12s linear infinite alternate;
+
+      //shadow-lid
+
+      .shadow-lid-wrapper {
+        width: 25rem;
+        height: 25rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(calc(-50% + -2rem), calc(-50% + -2rem))
+          translateZ(8rem) rotate(90deg);
+        animation: shadow-lid 12s linear infinite alternate;
+        .shadow-lid {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
 
     .lid-wrapper {
@@ -107,6 +135,8 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
       width: 30rem;
       height: 10rem;
       z-index: 3;
+
+      //knot-gift
 
       .knot-gift-wrapper {
         transform: rotateY(0deg) rotateX(93deg) rotateZ(212deg)
@@ -132,7 +162,7 @@ export const StyledRewardsGift = styled.div<StyledRewardsProps>`
 
     //knot-fills
 
-    ${eachKnotFill({
+    /*${eachKnotFill({
       maxNum: 8,
       minNum: 0,
       ryEach: -6,
@@ -232,7 +262,7 @@ ${eachKnotFill({
       tzEach: -1,
       tyWrapper: 6,
     })}//inferior-corner-1
-
+*/
     //gift-faces
 
     .face,
@@ -399,22 +429,6 @@ ${eachKnotFill({
       background: #1a1b1b;
     }
 
-    .face-7 {
-      background: linear-gradient(
-        -30deg,
-        rgba(35, 36, 37, 1) 8%,
-        rgba(92, 93, 94, 1) 100%
-      );
-    }
-
-    .face-8 {
-      background: linear-gradient(
-        100deg,
-        rgba(35, 36, 37, 1) 8%,
-        rgba(92, 93, 94, 1) 100%
-      );
-    }
-
     //detail-gift
 
     .face-1 {
@@ -460,7 +474,7 @@ ${eachKnotFill({
         ${theme.rewards.reward_straps.strap_3};
         height: 3.2rem;
         width: 2.6rem;
-        right: 50%;
+        right: calc(50% + -0.1rem);
         top: calc(50% + -0.1rem);
       }
     }
@@ -479,7 +493,45 @@ ${eachKnotFill({
       }
     }
 
+    .lid-1,
+    .lid-2,
+    .lid-3,
+    .lid-4,
+    .lid-5 {
+      background: linear-gradient(
+        50deg,
+        rgba(0, 63, 166, 1) 8%,
+        rgba(27, 108, 231, 1) 100%
+      );
+    }
+
+    .lid-3,
+    .lid-2 {
+      background: rgba(27, 108, 231, 1);
+    }
+
     //animations
+
+    @keyframes shadow-lid {
+      0%,
+      38% {
+        transform: translate(calc(-50% + -2rem), calc(-50% + -1rem))
+          translateZ(8rem) rotate(90deg) scale(0.7);
+        opacity: 0;
+      }
+
+      50% {
+        transform: translate(calc(-50% + -2rem), calc(-50% + -2rem))
+          translateZ(6rem) rotate(90deg) scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(calc(-50% + -2rem), calc(-50% + -2rem))
+          translateZ(6rem) rotate(90deg) scale(1);
+        opacity: 1;
+      }
+    }
 
     @keyframes lid-move {
       0%,
@@ -489,44 +541,44 @@ ${eachKnotFill({
       }
 
       20% {
-        transform: rotateY(0deg) rotateX(100deg) rotateZ(-131.5deg)
-          translateZ(70px) scale(1.04);
+        transform: rotateY(0deg) rotateX(90deg) rotateZ(-131.5deg)
+          translateZ(7rem) scale(1.04);
       }
 
       30% {
-        transform: rotateY(140deg) rotateX(100deg) rotateZ(75deg)
-          translateZ(200px) scale(1.04);
+        transform: rotateY(120deg) rotateX(180deg) rotateZ(75deg)
+          translateZ(5rem) scale(1.04);
       }
       40% {
-        transform: rotateY(150deg) rotateX(50deg) rotateZ(calc(1 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(120deg) rotateX(50deg) rotateZ(calc(1 * 75deg))
+          translateZ(13rem) scale(1.04);
       }
       50% {
-        transform: rotateY(140deg) rotateX(50deg) rotateZ(calc(2 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(130deg) rotateX(60deg) rotateZ(calc(2 * 75deg))
+          translateZ(19rem) scale(1.04);
       }
       60% {
-        transform: rotateY(150deg) rotateX(50deg) rotateZ(calc(3 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(120deg) rotateX(50deg) rotateZ(calc(3 * 75deg))
+          translateZ(20rem) scale(1.04);
       }
 
       70% {
-        transform: rotateY(140deg) rotateX(50deg) rotateZ(calc(4 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(130deg) rotateX(70deg) rotateZ(calc(4 * 75deg))
+          translateZ(20rem) scale(1.04);
       }
 
       80% {
-        transform: rotateY(150deg) rotateX(50deg) rotateZ(calc(5 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(120deg) rotateX(60deg) rotateZ(calc(5 * 75deg))
+          translateZ(20rem) scale(1.04);
       }
 
       90% {
-        transform: rotateY(140deg) rotateX(50deg) rotateZ(calc(6 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(130deg) rotateX(50deg) rotateZ(calc(6 * 75deg))
+          translateZ(20rem) scale(1.04);
       }
       100% {
-        transform: rotateY(150deg) rotateX(50deg) rotateZ(calc(7 * 75deg))
-          translateZ(200px) scale(1.04);
+        transform: rotateY(130deg) rotateX(50deg) rotateZ(calc(7 * 75deg))
+          translateZ(20rem) scale(1.04);
       }
     }
 
@@ -536,10 +588,9 @@ ${eachKnotFill({
         transform: rotate(0deg);
       }
       30% {
-        transform: rotate(120deg) translateX(-25rem);
+        transform: rotate(140deg) translateX(-25rem);
       }
 
-      50%,
       100% {
         transform: rotate(150deg) translateX(-25rem);
       }
