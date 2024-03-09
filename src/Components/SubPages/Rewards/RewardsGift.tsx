@@ -4,10 +4,9 @@ import { ContentRewards } from '../../../Contents';
 import KnotGift from '../../../assets/svg/rewards/knot.svg?react';
 import ShadowLid from '../../../assets/svg/rewards/shadow-lid.svg?react';
 import ShadowBox from '../../../assets/svg/rewards/shadow-box.svg?react';
+import RewardsCoins from './RewardsCoins';
 
 const RewardsGift = () => {
-  
-
   return (
     <StyledRewardsGift>
       <div className='container-gift'>
@@ -27,6 +26,7 @@ const RewardsGift = () => {
             {[...Array(163)].map((item, index) => (
               <div
                 className={`knot-fill-wrapper knot-fill-wrapper-${index + 1}`}
+                key={index}
               >
                 <div className={`knot-fill knot-fill-${index + 1}`}></div>
               </div>
@@ -46,9 +46,9 @@ const RewardsGift = () => {
           ))}
 
           <ShadowBox className='shadow-box' />
-        </div>
 
-        
+          <RewardsCoins />
+        </div>
       </div>
     </StyledRewardsGift>
   );
