@@ -32,7 +32,7 @@ export const StyledPig = styled.div<PigProps>`
       position: relative;
       z-index: 4;
 
-      .container-pig {
+      .container-coin {
         width: 40px;
         height: 40px;
         position: absolute;
@@ -107,62 +107,7 @@ export const StyledPig = styled.div<PigProps>`
         z-index: 998;
       }
 
-      .container-pig {
-        .coined {
-          width: 40px;
-          height: 40px;
-          position: absolute;
-          transform-style: preserve-3d;
-          animation: spinCoin 5s linear infinite;
-          backface-visibility: hidden;
-        }
-      }
-
-      .face {
-        border-radius: 50%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40px;
-        height: 40px;
-        backface-visibility: hidden;
-      }
-
-      .front {
-        transform: translate3d(0, 0, 0.32rem) rotateY(0deg);
-      }
-
-      .back {
-        transform: rotateY(180deg) translate3d(0, 0, 0.32rem);
-      }
-
-      .side {
-        width: 0.64rem;
-        height: 0.32rem;
-        background: #f7e259;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        backface-visibility: hidden;
-        border-top: #f7e259 0.32rem solid;
-        border-bottom: #f7e259 0.32rem solid;
-      }
-
-      .figureSide-0,
-      .figureSide-10,
-      .figureSide-11,
-      .figureSide-12,
-      .figureSide-13,
-      .figureSide-14,
-      .figureSide-15,
-      .figureSide-16,
-      .figureSide-17,
-      .figureSide-18,
-      .figureSide-19 {
-        background-color: #f8d548;
-        border-top: #f8d548 0.32rem solid;
-        border-bottom: #f8d548 0.32rem solid;
-      }
+      ${theme.coin.coin_parameters};
 
       
 

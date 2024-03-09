@@ -57,12 +57,13 @@ function eachKnotFill({
   `;
 }
 
-interface StyledRewardsGiftProps {}
+interface StyledRewardsGiftProps {
+  
+}
 
 export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
-  ${({ theme }) => css`
+  ${({ theme,}) => css`
     position: absolute;
-
     top: 50%;
 
     .container-gift {
@@ -98,6 +99,8 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
         top: 50%;
         left: 50%;
       }
+
+      
     }
 
     .lid-gift {
@@ -107,7 +110,7 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
       left: 10.85rem;
       transform: rotateY(0deg) rotateX(80deg) rotateZ(-131.5deg) scale(1.04)
         translateZ(0rem);
-      z-index: 3;
+      z-index: 10;
       animation: lid-move 12s linear infinite alternate;
 
       //shadow-lid
@@ -435,6 +438,8 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_1};
       }
+
+      
     }
 
     .lid-1 {
@@ -451,6 +456,8 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_2};
       }
+
+      
     }
 
     .lid-2 {
@@ -467,6 +474,7 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_3};
       }
+      
     }
 
     .lid-3 {
@@ -483,6 +491,8 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_4};
       }
+
+     
     }
 
     .lid-4 {
