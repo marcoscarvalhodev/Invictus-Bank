@@ -165,7 +165,7 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
 
     //knot-fills
 
-    /*${eachKnotFill({
+    ${eachKnotFill({
       maxNum: 8,
       minNum: 0,
       ryEach: -6,
@@ -265,7 +265,7 @@ ${eachKnotFill({
       tzEach: -1,
       tyWrapper: 6,
     })}//inferior-corner-1
-*/
+
     //gift-faces
 
     .face,
