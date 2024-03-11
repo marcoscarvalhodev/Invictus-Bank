@@ -44,13 +44,13 @@ function containerMoveEach() {
               }
       
 
-              60%, 80% {
+              70%, 90% {
                 transform: translateY(500px) rotateZ(calc(-200deg + ${
                   i * -5
                 }deg)) rotateY(180deg) translateX(calc(150px));           
                 }
 
-                81%, 100% {
+                91%, 100% {
                   transform: translateY(500px) rotateZ(calc(-200deg + ${
                     i * -5
                   }deg)) rotateY(180deg) translateX(calc(150px)); 
@@ -78,13 +78,13 @@ function containerMoveEach() {
               }
       
 
-              60%, 80% {
+              70%, 90% {
                 transform: translateY(500px) rotateZ(calc(200deg + ${
                   i * 5
                 }deg)) rotateY(180deg) translateX(calc(-100px));           
                 }
 
-                81%, 100% {
+                91%, 100% {
                   transform: translateY(500px) rotateZ(calc(200deg + ${
                     i * 5
                   }deg)) rotateY(180deg) translateX(calc(-100px));  
