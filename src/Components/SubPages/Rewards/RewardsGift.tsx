@@ -6,9 +6,13 @@ import ShadowLid from '../../../assets/svg/rewards/shadow-lid.svg?react';
 import ShadowBox from '../../../assets/svg/rewards/shadow-box.svg?react';
 import RewardsCoins from './RewardsCoins';
 
-const RewardsGift = () => {
+interface RewardsGiftProps {
+  small: boolean;
+}
+
+const RewardsGift = ({ small }: RewardsGiftProps) => {
   return (
-    <StyledRewardsGift>
+    <StyledRewardsGift $small={small}>
       <div className='container-gift'>
         <div className='lid-wrapper'>
           <div className='lid-gift'>
@@ -47,7 +51,7 @@ const RewardsGift = () => {
 
           <ShadowBox className='shadow-box' />
 
-          <RewardsCoins />
+          {small ? <></> : <RewardsCoins />}
         </div>
       </div>
     </StyledRewardsGift>

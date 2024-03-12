@@ -20,10 +20,10 @@ const Pig = ({ small }: PigProps) => {
 
           <div className='container-coin'>
             <div className='coined'>
-              <Coin className='face front' />
-              <Coin className='face back' />
+              <Coin className='face-coin front-coin' />
+              <Coin className='face-coin back-coin' />
               {[...Array(20)].map((x, i) => (
-                <div className={`side figureSide-${i}`} key={i}></div>
+                <div className={`side-coin figureSide-${i}`} key={i}></div>
               ))}
             </div>
           </div>
