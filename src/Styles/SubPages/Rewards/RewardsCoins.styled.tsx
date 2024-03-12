@@ -32,7 +32,7 @@ function containerMoveEach() {
               transform: rotateY(0deg) rotateX(100deg) rotateZ(230deg);
 
               .coined {
-                animation: spinCoinGift 1.5s linear infinite reverse;
+                animation: spinCoinGift 5s linear infinite reverse;
               }
              }
 
@@ -66,7 +66,7 @@ function containerMoveEach() {
               transform: rotateY(0deg) rotateX(100deg) rotateZ(230deg);
 
               .coined {
-                animation: spinCoinGift 1.5s linear infinite;
+                animation: spinCoinGift 5s linear infinite;
               }
              }
 
@@ -128,15 +128,23 @@ export const StyledRewardsCoins = styled.div<StyledRewardsCoinsProps>`
 
       @keyframes spinCoinGift {
         0% {
-          transform: rotateX(0deg) rotateY(0deg) rotateZ(90deg);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
         }
 
-        40% {
-          transform: rotateX(45deg) rotateY(-180deg) rotateZ(0deg);
+        25% {
+          transform: rotateX(45deg) rotateY(180deg) rotateZ(0deg);
+        }
+
+        50% {
+          transform: rotateX(90deg) rotateY(360deg) rotateZ(0deg);
+        }
+
+        75% {
+          transform: rotateX(135deg) rotateY(540deg) rotateZ(0deg);
         }
 
         100% {
-          transform: rotateX(60deg) rotateY(calc(-2 * 180deg)) rotateZ(0deg);
+          transform: rotateX(180deg) rotateY(720deg) rotateZ(0deg);
         }
       }
     }
