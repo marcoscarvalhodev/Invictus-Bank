@@ -126,6 +126,8 @@ export const StyledRewardsCoins = styled.div<StyledRewardsCoinsProps>`
 
       ${containerMoveEach()};
 
+      
+
       @keyframes spinCoinGift {
         0% {
           transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);

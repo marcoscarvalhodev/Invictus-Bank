@@ -6,12 +6,13 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
 interface RewardsProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const RewardsHero = ({ smallState }: RewardsProps) => {
+const RewardsHero = ({ smallState, small }: RewardsProps) => {
   return (
-    <StyledRewardsHero className='container'>
-      <div className='flex-hero'>
+    <StyledRewardsHero className='container' $small={small}>
+      <div className='flex-hero flex-hero-1'>
         <StyledHeadings as='h5' $device={smallState}>
           Rewards
         </StyledHeadings>
@@ -25,7 +26,7 @@ const RewardsHero = ({ smallState }: RewardsProps) => {
       </div>
 
       <div className='flex-hero flex-hero-2'>
-        <RewardsGift />
+        <RewardsGift small={small}/>
       </div>
     </StyledRewardsHero>
   );

@@ -58,21 +58,39 @@ function eachKnotFill({
 }
 
 interface StyledRewardsGiftProps {
-  
+  $small: boolean;
 }
 
 export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
-  ${({ theme,}) => css`
-    position: absolute;
-    top: 50%;
+  ${({ theme, $small }) => css`
+    position: relative;
+
+    ${$small
+      ? css`
+          top: -100%;
+        `
+      : css`
+          top: 50%;
+        `}
 
     .container-gift {
       height: 30rem;
       width: 30rem;
-      top: 50%;
-      left: calc(50% - 10rem);
-      transform: translate(-50%, -50%);
+
+      ${$small
+        ? css`
+            transform: translate(-50%, 0%);
+            left: calc(50% + -4rem);
+            
+          `
+        : css`
+            transform: translate(-50%, -50%);
+            left: calc(50%);
+            top: calc(-50% + 2rem);
+          `}
+
       position: relative;
+
       perspective: 100rem;
     }
 
@@ -99,8 +117,6 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
         top: 50%;
         left: 50%;
       }
-
-      
     }
 
     .lid-gift {
@@ -111,28 +127,43 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
       transform: rotateY(0deg) rotateX(80deg) rotateZ(-131.5deg) scale(1.04)
         translateZ(0rem);
       z-index: 10;
-      animation: lid-move 12s linear infinite alternate;
+
+      ${$small
+        ? css`
+            left: 10.95rem;
+          `
+        : css`
+            animation: lid-move 12s linear infinite alternate;
+          `};
 
       //shadow-lid
 
-      .shadow-lid-wrapper {
-        width: 25rem;
-        height: 25rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(calc(-50% + -2rem), calc(-50% + -2rem))
-          translateZ(8rem) rotate(90deg);
-        animation: shadow-lid 12s linear infinite alternate;
-        .shadow-lid {
-          width: 100%;
-          height: 100%;
-        }
-      }
+      ${$small
+        ? css``
+        : css`
+            .shadow-lid-wrapper {
+              width: 25rem;
+              height: 25rem;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(calc(-50% + -2rem), calc(-50% + -2rem))
+                translateZ(8rem) rotate(90deg);
+              animation: shadow-lid 12s linear infinite alternate;
+              .shadow-lid {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          `};
     }
 
     .lid-wrapper {
-      animation: lid-wrapper-move 12s linear infinite alternate;
+      ${$small
+        ? css``
+        : css`
+            animation: lid-wrapper-move 12s linear infinite alternate;
+          `};
       position: relative;
       top: 10rem;
       width: 30rem;
@@ -438,8 +469,6 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_1};
       }
-
-      
     }
 
     .lid-1 {
@@ -456,8 +485,6 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_2};
       }
-
-      
     }
 
     .lid-2 {
@@ -474,7 +501,6 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_3};
       }
-      
     }
 
     .lid-3 {
@@ -491,8 +517,6 @@ ${eachKnotFill({
       .strap {
         ${theme.rewards.reward_straps.strap_4};
       }
-
-     
     }
 
     .lid-4 {
