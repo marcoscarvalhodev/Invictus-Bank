@@ -9,10 +9,11 @@ import ContainerSizes from '../../../ContainerSizes';
 
 interface DownloadAppProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const DownloadApp = ({ smallState }: DownloadAppProps) => {
-  const {small} = ContainerSizes();
+const DownloadApp = ({ smallState, small }: DownloadAppProps) => {
+  
 
   return (
     <StyledDownloadApp className='container' $small={small} >

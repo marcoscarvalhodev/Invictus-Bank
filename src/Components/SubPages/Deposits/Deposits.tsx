@@ -7,10 +7,11 @@ import DepositsBulletAdvantages from './DepositsBulletAdvantages';
 
 interface DepositsProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const Deposits = ({ smallState }: DepositsProps) => {
-  const {small} = ContainerSizes();
+const Deposits = ({ smallState, small }: DepositsProps) => {
+  
 
   return <StyledDeposits>
     <DepositsHero smallState={smallState} small={small}/>

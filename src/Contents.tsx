@@ -36,7 +36,7 @@ import Card2 from './assets/svg/cards/card-2.svg?react';
 
 import TransfersIcon from './assets/svg/transfers/transfer-icon.svg?react';
 import GiftStrap from './assets/svg/rewards/strap.svg?react';
-import KnotStrap from './assets/svg/rewards/knot.svg?react'; 
+import KnotStrap from './assets/svg/rewards/knot.svg?react';
 
 export const ContentNavMobile = {
   nav_mobile: [

@@ -9,10 +9,12 @@ import Entail from '../../../assets/svg/entail.svg?react';
 
 interface AdvantagesProps {
   smallState: 'desktop' | 'mobile';
+  small: boolean;
+  xsmall: boolean;
 }
 
-const Advantages = ({ smallState }: AdvantagesProps) => {
-  const { xsmall, small, medium, large, xlarge } = ContainerSizes();
+const Advantages = ({ smallState, xsmall, small }: AdvantagesProps) => {
+  
   return (
     <StyledAdvantages $xsmall={xsmall} $small={small} className='container'>
       <div className='advantages'>

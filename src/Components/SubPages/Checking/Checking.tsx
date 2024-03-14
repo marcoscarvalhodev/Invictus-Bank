@@ -7,10 +7,13 @@ import CheckingAdvantages from './CheckingAdvantages';
 
 interface CheckingProps {
   smallState: 'mobile' | 'desktop';
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
 }
 
-const Checking = ({ smallState }: CheckingProps) => {
-  const { small, medium, xsmall } = ContainerSizes();
+const Checking = ({ smallState, small, xsmall, medium }: CheckingProps) => {
+  
 
   return (
     <StyledChecking>

@@ -5,19 +5,17 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
 import ContainerSizes from '../../../ContainerSizes';
-import IconShield from '../../../assets/svg/icon-shield.svg?react';
-import IconMoney from '../../../assets/svg/icon-money.svg?react';
-import IconBell from '../../../assets/svg/icon-bell.svg?react';
-
 import PhoneMockup from '../../../assets/svg/figsb2.svg?react';
 
 interface SupremeAppProps {
   smallState: 'desktop' | 'mobile';
+  xsmall: boolean;
+  small: boolean;
+  xlarge: boolean;
 }
 
-const SupremeApp = ({ smallState }: SupremeAppProps) => {
-  const { small, xlarge, xsmall } = ContainerSizes();
-
+const SupremeApp = ({ smallState, xsmall, small, xlarge }: SupremeAppProps) => {
+  
   return (
     <StyledSupremeApp $small={small} $xlarge={xlarge} $xsmall={xsmall} className='container'>
       <div className='supremeapp-item-1 item-1'>

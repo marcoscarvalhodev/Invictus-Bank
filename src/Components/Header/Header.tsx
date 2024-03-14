@@ -10,14 +10,15 @@ interface HeaderProps {
   setMobileBx: React.Dispatch<React.SetStateAction<boolean>>;
   mobileBx: boolean;
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  small: boolean;
 }
 
-const Header = ({ setMobileBx, mobileBx, setAccountState }: HeaderProps) => {
+const Header = ({ setMobileBx, mobileBx, setAccountState, small}: HeaderProps) => {
   const [scroll, setScroll] = React.useState(0);
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileDesktop, setMobileDesktop] = React.useState(false);
   const [menuIcon, setMenuIcon] = React.useState(false);
-  const { small } = ContainerSizes();
+  
 
   const [activeBx, setActiveBx] = React.useState(false);
 

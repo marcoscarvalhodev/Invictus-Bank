@@ -7,10 +7,12 @@ import ContainerSizes from '../../../ContainerSizes';
 
 interface TransfersProps {
   smallState: 'desktop' | 'mobile';
+  small: boolean;
+  xsmall: boolean;
 }
 
-const Transfers = ({smallState} : TransfersProps) => {
-  const {small, xsmall} = ContainerSizes();
+const Transfers = ({smallState, small, xsmall} : TransfersProps) => {
+  
 
   return (
     <StyledTransfers>

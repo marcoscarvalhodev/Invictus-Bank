@@ -8,18 +8,16 @@ interface GlobalStyleProps {
 
 export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   ${({ $activeBx, $xsmall }) => css`
-  
     ${$activeBx &&
-    css`body {
-      overflow: hidden; 
-      
-    };
-  `};
+    css`
+      body {
+        overflow: hidden;
+      }
+    `};
 
     body {
       overflow-x: hidden;
       background: ${theme.colors.white_auxiliary.white_light};
-     
     }
 
     .container {
@@ -32,22 +30,17 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
 
     ${$xsmall &&
     css`
-  .container {
-    padding-bottom: 0px;
+      .container {
+        padding-bottom: 0px;
 
-    .flex-item-3-hero {
-      ${theme.boxProps.flex_items.flex_item_3_mobile};
-    }
+        .flex-item-3-hero {
+          ${theme.boxProps.flex_items.flex_item_3_mobile};
+        }
+      }
 
-  }
-
-  
-
-  .container + .container {
-    padding: 0px 24px ${theme.spacing.gap_6} 24px;
-    
-  }
-
-  `};
+      .container + .container {
+        padding: 0px 24px ${theme.spacing.gap_6} 24px;
+      }
+    `};
   `}
 `;

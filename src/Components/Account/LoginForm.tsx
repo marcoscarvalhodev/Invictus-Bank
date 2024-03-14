@@ -17,24 +17,39 @@ import ContainerSizes from '../../ContainerSizes';
 interface LoginFormProps {
   smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
 }
 
-const LoginForm = ({ smallMediumState, setAccountState }: LoginFormProps) => {
+const LoginForm = ({
+  smallMediumState,
+  setAccountState,
+  xsmall,
+  small,
+  medium,
+}: LoginFormProps) => {
   const email = useForm('email');
   const password = useForm('password');
 
-  const {xsmall,small, medium} = ContainerSizes();
-
   const [passwordShow, setPasswordShow] = React.useState(false);
-  
 
   return (
-    <StyledLoginForm className='login-form' $small={small} $medium={medium} $xsmall={xsmall} >
+    <StyledLoginForm
+      className='login-form'
+      $small={small}
+      $medium={medium}
+      $xsmall={xsmall}
+    >
       <div>
         <StyledHeadings as='h2' $device={smallMediumState} className='title'>
           {ContentLoginSignupForm.login.h2}
         </StyledHeadings>
-        <StyledHeadings as='h5' $device={smallMediumState} className='description'>
+        <StyledHeadings
+          as='h5'
+          $device={smallMediumState}
+          className='description'
+        >
           {ContentLoginSignupForm.login.h4}
         </StyledHeadings>
       </div>
@@ -63,7 +78,9 @@ const LoginForm = ({ smallMediumState, setAccountState }: LoginFormProps) => {
           />
         </Input>
         <NavLink to='/'>
-          <Button classed='button' light={true}>Login</Button>
+          <Button classed='button' light={true}>
+            Login
+          </Button>
         </NavLink>
       </form>
 

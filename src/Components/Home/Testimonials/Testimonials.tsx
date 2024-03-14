@@ -15,10 +15,13 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
 interface TestimonialsProps {
   smallState: 'desktop' | 'mobile';
+  xsmall: boolean;
+  small: boolean;
+  xlarge: boolean;
 }
 
-const Testiominials = ({smallState}: TestimonialsProps) => {
-  const {xsmall, xlarge, small} = ContainerSizes();
+const Testiominials = ({smallState, xsmall, small, xlarge}: TestimonialsProps) => {
+  
   const [slideState, setSlideState] = React.useState(2);
 
   React.useEffect(() => {
