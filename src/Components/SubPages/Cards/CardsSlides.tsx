@@ -10,10 +10,11 @@ import ContainerSizes from '../../../ContainerSizes';
 
 interface CardsSlidesProps {
   smallState: 'desktop' | 'mobile';
+  small: boolean;
 }
 
-const CardsSlides = ({ smallState }: CardsSlidesProps) => {
-  const {small} = ContainerSizes();
+const CardsSlides = ({ smallState, small }: CardsSlidesProps) => {
+  
 
 
   return (

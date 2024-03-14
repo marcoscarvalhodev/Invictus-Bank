@@ -8,23 +8,27 @@ import AppRoutes from './AppRoutes.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
+  large: boolean;
+  xlarge: boolean;
+  smallState: 'desktop' | 'mobile';
+  smallMediumState: 'desktop' | 'mobile';
 }
 
-const Container = ({ setActiveMenu }: ContainerProps) => {
+const Container = ({
+  setActiveMenu,
+  xsmall,
+  small,
+  medium,
+  large,
+  xlarge,
+  smallState,
+  smallMediumState,
+}: ContainerProps) => {
   const [mobileBx, setMobileBx] = React.useState(false);
-  const { small, medium, xsmall } = ContainerSizes();
-  const [smallState, setSmallState] = React.useState<'mobile' | 'desktop'>();
-  const [smallMediumState, setSmallMediumState] = React.useState<'mobile' | 'desktop'>();
   const [accountState, setAccountState] = React.useState(1);
-
-  React.useEffect(() => {
-    small ? setSmallState('mobile') : setSmallState('desktop');
-
-    small || medium ? setSmallMediumState('mobile') : setSmallMediumState('desktop')
-    
-    
-
-  }, [small, medium, smallMediumState]);
 
   React.useEffect(() => {
     setActiveMenu(mobileBx);
@@ -35,9 +39,25 @@ const Container = ({ setActiveMenu }: ContainerProps) => {
       <BrowserRouter>
         <ScrollToTop />
 
-        <Header setMobileBx={setMobileBx} mobileBx={mobileBx} setAccountState={setAccountState}/>
+        <Header
+          setMobileBx={setMobileBx}
+          mobileBx={mobileBx}
+          setAccountState={setAccountState}
+          small={small}
+        />
 
-        <AppRoutes smallMediumState={smallMediumState} smallState={smallState} mobileBx={mobileBx} setAccountState={setAccountState} accountState={accountState}/>
+        <AppRoutes
+          smallMediumState={smallMediumState}
+          smallState={smallState}
+          mobileBx={mobileBx}
+          setAccountState={setAccountState}
+          accountState={accountState}
+          xsmall={xsmall}
+          small={small}
+          medium={medium}
+          large={large}
+          xlarge={xlarge}
+        />
       </BrowserRouter>
     </StyledContainer>
   );

@@ -14,7 +14,6 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
   const linkRef2 = React.useRef<HTMLLIElement>(null);
   const linkRef3 = React.useRef<HTMLLIElement>(null);
   const [dropdownState, setDropdownState] = React.useState(0);
-  const [menuState, setMenuState] = React.useState(false);
 
   const handleClick: React.MouseEventHandler<HTMLLIElement> = (event) => {
     event.preventDefault();
@@ -96,12 +95,12 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <NavLink to="/transfers" className='nav-link-dropdown'>
+                <NavLink to='/transfers' className='nav-link-dropdown'>
                   Transfers
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <NavLink to="/deposits" className='nav-link-dropdown'>
+                <NavLink to='/deposits' className='nav-link-dropdown'>
                   Deposits
                 </NavLink>
               </li>
@@ -127,7 +126,7 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
               }`}
             >
               <li className='dropdown-item'>
-                <NavLink to="/rewards" className='nav-link-dropdown'>
+                <NavLink to='/rewards' className='nav-link-dropdown'>
                   Rewards
                 </NavLink>
               </li>

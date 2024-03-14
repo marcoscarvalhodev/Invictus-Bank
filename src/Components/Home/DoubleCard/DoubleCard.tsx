@@ -5,16 +5,17 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { ContentDoubleCard } from '../../../Contents';
 import DoubleCards from '../../../assets/svg/figsb3.svg?react';
 import Icons from '../../Reusable/Icons';
-import ContainerSizes from '../../../ContainerSizes';
-import { Link, NavLink } from 'react-router-dom';
+import {NavLink } from 'react-router-dom';
 
 
 interface DoubleCardProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
+  xsmall: boolean;
 }
 
-const DoubleCard = ({ smallState }: DoubleCardProps) => {
-  const { small, xsmall } = ContainerSizes();
+const DoubleCard = ({ smallState, small, xsmall }: DoubleCardProps) => {
+  
 
   return (
     <StyledDoubleCard className='container' $small={small} $xsmall={xsmall}>

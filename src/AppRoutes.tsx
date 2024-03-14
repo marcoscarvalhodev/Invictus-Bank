@@ -10,6 +10,7 @@ import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
 import Rewards from './Components/SubPages/Rewards/Rewards';
+import ContainerSizes from './ContainerSizes';
 
 interface AppRoutesProps {
   smallState: 'desktop' | 'mobile';
@@ -17,6 +18,11 @@ interface AppRoutesProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountState: number;
   smallMediumState: 'desktop' | 'mobile';
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
+  large: boolean;
+  xlarge: boolean;
 }
 
 const AppRoutes = ({
@@ -25,6 +31,11 @@ const AppRoutes = ({
   setAccountState,
   accountState,
   smallMediumState,
+  xsmall,
+  small,
+  medium,
+  large,
+  xlarge,
 }: AppRoutesProps) => {
   return (
     <Routes>
@@ -35,6 +46,9 @@ const AppRoutes = ({
             mobileBx={mobileBx}
             smallState={smallState}
             setAccountState={setAccountState}
+            xsmall={xsmall}
+            small={small}
+            xlarge={xlarge}
           />
         }
       />
@@ -47,24 +61,58 @@ const AppRoutes = ({
             setAccountState={setAccountState}
             accountState={accountState}
             smallMediumState={smallMediumState}
+            xsmall={xsmall}
+            small={small}
+            medium={medium}
           />
         }
       />
 
-      <Route path='savings/*' element={<Savings smallState={smallState} />} />
+      <Route
+        path='savings/*'
+        element={
+          <Savings
+            smallState={smallState}
+            xsmall={xsmall}
+            small={small}
+            medium={medium}
+          />
+        }
+      />
 
-      <Route path='checking/*' element={<Checking smallState={smallState} />} />
+      <Route
+        path='checking/*'
+        element={
+          <Checking
+            smallState={smallState}
+            xsmall={xsmall}
+            small={small}
+            medium={medium}
+          />
+        }
+      />
 
-      <Route path='cards/*' element={<Cards smallState={smallState} />} />
+      <Route
+        path='cards/*'
+        element={<Cards smallState={smallState} small={small} />}
+      />
 
       <Route
         path='transfers/*'
-        element={<Transfers smallState={smallState} />}
+        element={
+          <Transfers smallState={smallState} small={small} xsmall={xsmall} />
+        }
       />
 
-      <Route path='deposits/*' element={<Deposits smallState={smallState} />} />
+      <Route
+        path='deposits/*'
+        element={<Deposits smallState={smallState} small={small} />}
+      />
 
-      <Route path='rewards/*' element={<Rewards smallState={smallState} />} />
+      <Route
+        path='rewards/*'
+        element={<Rewards smallState={smallState} small={small} />}
+      />
     </Routes>
   );
 };

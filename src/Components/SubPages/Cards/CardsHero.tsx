@@ -10,10 +10,11 @@ import Card2 from '../../../assets/svg/cards/card-2.svg?react';
 
 interface CardsHeroProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const CardsHero = ({ smallState }: CardsHeroProps) => {
-  const { small } = ContainerSizes();
+const CardsHero = ({ smallState, small }: CardsHeroProps) => {
+  
 
   return (
     <StyledCardsHero className='container' $small={small}>

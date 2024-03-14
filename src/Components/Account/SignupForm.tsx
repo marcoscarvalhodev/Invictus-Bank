@@ -18,24 +18,40 @@ import ContainerSizes from '../../ContainerSizes';
 interface SignupFormProps {
   smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
 }
 
-const SignupForm = ({ smallMediumState, setAccountState }: SignupFormProps) => {
+const SignupForm = ({
+  smallMediumState,
+  setAccountState,
+  xsmall,
+  small,
+  medium,
+}: SignupFormProps) => {
   const name = useForm();
   const email = useForm('email');
   const password = useForm('password');
 
-  const {xsmall, small, medium} = ContainerSizes();
-
   const [passwordShow, setPasswordShow] = React.useState(false);
 
   return (
-    <StyledSignupForm className='signup-form' $small={small} $medium={medium} $xsmall={xsmall}>
+    <StyledSignupForm
+      className='signup-form'
+      $small={small}
+      $medium={medium}
+      $xsmall={xsmall}
+    >
       <div>
         <StyledHeadings as='h2' $device={smallMediumState} className='title'>
           {ContentLoginSignupForm.signup.h2}
         </StyledHeadings>
-        <StyledHeadings as='h5' $device={smallMediumState} className='description'>
+        <StyledHeadings
+          as='h5'
+          $device={smallMediumState}
+          className='description'
+        >
           {ContentLoginSignupForm.signup.h4}
         </StyledHeadings>
       </div>
@@ -60,7 +76,7 @@ const SignupForm = ({ smallMediumState, setAccountState }: SignupFormProps) => {
         <Input
           name='password-signup'
           label='Password'
-          type={passwordShow ? "text" : "password"}
+          type={passwordShow ? 'text' : 'password'}
           smallMediumState={smallMediumState}
           icon={<PasswordIcon className='icon' />}
           {...password}

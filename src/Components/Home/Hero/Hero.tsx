@@ -10,21 +10,28 @@ import IconMobile from '../../../assets/svg/icon-mobile.svg?react';
 import IconContactless from '../../../assets/svg/icon-contactless.svg?react';
 import Card from './Card';
 import { ContentHero } from '../../../Contents';
-import ContainerSizes from '../../../ContainerSizes';
 import { NavLink } from 'react-router-dom';
 
 interface HeroProps {
   mobileBx: boolean;
   smallState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  xsmall: boolean;
+  xlarge: boolean;
+  small: boolean;
 }
 
-const Hero = ({ mobileBx, smallState, setAccountState }: HeroProps) => {
-  const { small, xsmall, xlarge } = ContainerSizes();
-
+const Hero = ({
+  mobileBx,
+  smallState,
+  setAccountState,
+  xsmall,
+  small,
+  xlarge,
+}: HeroProps) => {
   const accountHandleClick = () => {
     setAccountState(2);
-  }
+  };
 
   return (
     <StyledHero
@@ -46,7 +53,7 @@ const Hero = ({ mobileBx, smallState, setAccountState }: HeroProps) => {
         <div
           className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
         >
-          <NavLink to="/account" onClick={accountHandleClick}>
+          <NavLink to='/account' onClick={accountHandleClick}>
             <Button>Join Supreme Bank</Button>
           </NavLink>
           <a

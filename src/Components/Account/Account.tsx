@@ -12,6 +12,9 @@ interface AccountProps {
   smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountState: number;
+  xsmall: boolean;
+  small: boolean;
+  medium: boolean;
 }
 
 const Account = ({
@@ -19,15 +22,15 @@ const Account = ({
   setAccountState,
   accountState,
   smallMediumState,
+  small,
+  xsmall,
+  medium,
 }: AccountProps) => {
-  const { small } = ContainerSizes();
-
   return (
     <StyledAccount
       className='container'
       $accountState={accountState}
       $small={small}
-      
     >
       <div className='login-wrapper'>
         <div className='background-wrapper'>
@@ -46,12 +49,18 @@ const Account = ({
               <SignupForm
                 smallMediumState={smallMediumState}
                 setAccountState={setAccountState}
+                xsmall={xsmall}
+                small={small}
+                medium={medium}
               />
             }
             position_2={
               <LoginForm
                 smallMediumState={smallMediumState}
                 setAccountState={setAccountState}
+                xsmall={xsmall}
+                small={small}
+                medium={medium}
               />
             }
           />
@@ -62,12 +71,18 @@ const Account = ({
                 <LoginForm
                   smallMediumState={smallMediumState}
                   setAccountState={setAccountState}
+                  xsmall={xsmall}
+                  small={small}
+                  medium={medium}
                 />
               }
               position_2={
                 <SignupForm
                   smallMediumState={smallMediumState}
                   setAccountState={setAccountState}
+                  xsmall={xsmall}
+                  small={small}
+                  medium={medium}
                 />
               }
             />

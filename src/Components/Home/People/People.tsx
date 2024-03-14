@@ -11,17 +11,17 @@ import People3 from '../../../assets/img/man-holding-bank-pig.jpg';
 import People4 from '../../../assets/img/woman-holding-card.jpg';
 import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
 import People6 from '../../../assets/img/woman-looking-laptop.jpg';
-import IconCheck from '../../../assets/svg/icon-check.svg';
-import Icons from '../../Reusable/Icons';
 
-import ContainerSizes from '../../../ContainerSizes';
+import Icons from '../../Reusable/Icons';
 
 interface PeopleProps {
   smallState: 'desktop' | 'mobile';
+  small: boolean;
+  xsmall: boolean;
 }
 
-const People = ({smallState} : PeopleProps) => {
-  const {small, xsmall, xlarge, large, medium} = ContainerSizes()
+const People = ({smallState, small, xsmall} : PeopleProps) => {
+  
   return (
     <StyledPeople
       

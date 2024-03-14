@@ -5,13 +5,14 @@ import CardsSlides from './CardsSlides';
 
 interface CardsProps {
   smallState: "mobile" | "desktop";
+  small: boolean;
 }
 
-const Cards = ({smallState}: CardsProps) => {
+const Cards = ({smallState, small}: CardsProps) => {
   return (
     <StyledCards>
-      <CardsHero smallState={smallState}/>
-      <CardsSlides smallState={smallState}/>
+      <CardsHero smallState={smallState} small={small}/>
+      <CardsSlides smallState={smallState} small={small}/>
     </StyledCards>
   )
 }

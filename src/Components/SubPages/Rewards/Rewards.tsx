@@ -6,10 +6,11 @@ import ContainerSizes from '../../../ContainerSizes';
 
 interface RewardsProps {
   smallState: 'mobile' | 'desktop';
+  small: boolean;
 }
 
-const Rewards = ({ smallState }: RewardsProps) => {
-  const {small} = ContainerSizes();
+const Rewards = ({ smallState, small }: RewardsProps) => {
+  
 
   return (
     <StyledRewards>
