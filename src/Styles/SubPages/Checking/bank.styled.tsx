@@ -1,12 +1,7 @@
 import styled, { css } from 'styled-components';
 
-interface BankProps {
-  $small: boolean;
-  $xsmall: boolean;
-}
-
-export const StyledBank = styled.div<BankProps>`
-  ${({ theme, $small, $xsmall }) => css`
+export const StyledBank = styled.div`
+  ${({ theme }) => css`
     && {
       .phone-wrapper {
         position: relative;
@@ -346,8 +341,7 @@ export const StyledBank = styled.div<BankProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         .phone-wrapper {
           .phone {
             margin-left: 20rem;
@@ -379,7 +373,7 @@ export const StyledBank = styled.div<BankProps>`
             left: calc(50% + 9.1rem);
           }
         }
-      `}
+      `}//query-small
     }
   `}
 `;

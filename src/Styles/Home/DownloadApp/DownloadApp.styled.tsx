@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components';
 
 interface StyledDownloadAppProps {
-  $small: boolean;
+  
 }
 
 export const StyledDownloadApp = styled.section<StyledDownloadAppProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme}) => css`
     && {
       display: flex;
       flex-direction: row;
@@ -67,14 +67,13 @@ export const StyledDownloadApp = styled.section<StyledDownloadAppProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         flex-direction: column;
 
         .logo-sb {
           width: 300px;
         }
-      `}
+      `}//query-small
 
       
     }

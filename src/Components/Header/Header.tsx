@@ -48,7 +48,7 @@ const Header = ({ setMobileBx, mobileBx, setAccountState, small}: HeaderProps) =
     <StyledHeader
       className={`${scrolled ? 'active-header' : ''} ${
         menuIcon ? 'click-header' : ''
-      }`}
+      }`} 
     >
       {mobileDesktop && (
         <NavMobile
@@ -59,6 +59,7 @@ const Header = ({ setMobileBx, mobileBx, setAccountState, small}: HeaderProps) =
         />
       )}
       {!mobileDesktop && <NavDesktop setAccountState={setAccountState} />}
+      
       {mobileDesktop && (
         <MenuMobile
           menuIcon={menuIcon}

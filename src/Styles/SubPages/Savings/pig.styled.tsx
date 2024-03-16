@@ -21,8 +21,6 @@ function eachFigure() {
   `;
 }
 
-
-
 export const StyledPig = styled.div<PigProps>`
   ${({ theme, $small }) => css`
     && {
@@ -38,7 +36,9 @@ export const StyledPig = styled.div<PigProps>`
         position: absolute;
         perspective: 100rem;
         animation: moveCoin 5s linear infinite;
-        top: calc(-9.6rem + -15px + ${$small ? `-40px` : '-70px'});
+        top: calc(
+          -9.6rem + -15px + ${$small ? `-40px` : `-70px`}
+        );
         left: calc(50% + -20px);
         z-index: 0;
       }
@@ -103,16 +103,13 @@ export const StyledPig = styled.div<PigProps>`
         background-color: #e7a7ab;
         position: absolute;
         left: calc(50% + -7px);
-        top: ${$small ? '22px' : '21.5px'};
+        top: ${$small ? `22px` : `21.5px`};
         z-index: 998;
       }
 
       ${theme.coin.coin_parameters};
 
-      
-
       ${eachFigure()};
-      
 
       @keyframes spinCoin {
         0%,
@@ -123,7 +120,7 @@ export const StyledPig = styled.div<PigProps>`
         40% {
           transform: rotateX(45deg) rotateY(-180deg) rotateZ(0deg);
         }
-        ${$small ? '68%' : '70%'},
+        ${$small ? `68%` : `70%`},
         100% {
           transform: rotateX(60deg) rotateY(calc(-2 * 180deg + -90deg))
             rotateZ(0deg);
@@ -133,13 +130,13 @@ export const StyledPig = styled.div<PigProps>`
       @keyframes moveCoin {
         0%,
         20% {
-          transform: translateY(${$small ? '-6px' : '-10px'});
+          transform: translateY(${$small ? `-6px` : `-10px`});
         }
 
         80%,
         100% {
           transform: translateY(
-            calc(9.6rem + 35px + ${$small ? `45px` : '75px'})
+            calc(9.6rem + 35px + ${$small ? `45px` : `75px`})
           );
         }
       }
@@ -155,12 +152,11 @@ export const StyledPig = styled.div<PigProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         .pig-section {
           padding: 9.4rem 0rem;
         }
-      `}
+      `}//query-small
     }
   `}
 `;

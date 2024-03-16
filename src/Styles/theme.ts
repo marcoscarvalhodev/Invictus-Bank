@@ -1,5 +1,7 @@
 import { themeAttrs } from './ThemeAttrs';
+import { CSSProperties } from 'styled-components';
 import { css } from 'styled-components';
+import { StyledObject, Styles } from 'styled-components/dist/types';
 
 const theme = {
   colors: {
@@ -515,7 +517,7 @@ const theme = {
 
   coin: {
     coin_parameters: css`
-    .container-coin {
+      .container-coin {
         .coined {
           width: 100%;
           height: 100%;
@@ -568,10 +570,50 @@ const theme = {
       .figureSide-18,
       .figureSide-19 {
         background-color: #f8d548;
-        border-top: #f8d548 0.50rem solid;
-        border-bottom: #f8d548 0.50rem solid;
+        border-top: #f8d548 0.5rem solid;
+        border-bottom: #f8d548 0.5rem solid;
       }
-    `
-  }
+    `,
+  },
+  media_query: {
+    xsmall: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (max-width: ${themeAttrs.container.container_s}) {
+        ${css(literals, ...args)}
+      } //for extra small devices
+    `,
+
+    xsmall_small: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (min-width: ${themeAttrs.container.container_s}) {
+        ${css(literals, ...args)}
+      } //for above extra small devices
+    `,
+    small: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (max-width: ${themeAttrs.container.container_m}) {
+        ${css(literals, ...args)}
+      } //for small devices
+    `,
+    medium: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media ((max-width: ${themeAttrs.container.container_l}) and (min-width: ${themeAttrs.container.container_m})) {
+        ${css(literals, ...args)}
+      } //from small (960px) to large (1140px)
+    `,
+
+    medium_large: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (min-width: ${themeAttrs.container.container_m}) {
+        ${css(literals, ...args)}
+      } //for above small devices
+    `,
+
+    xlarge: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (min-width: ${themeAttrs.container.container_xl}) {
+        ${css(literals, ...args)}
+      } //for extra large devices
+    `,
+    max_large: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (max-width: ${themeAttrs.container.container_l}) {
+        ${css(literals, ...args)}
+      } //from 0 to large (1140px)
+    `,
+  },
 };
 export default theme;

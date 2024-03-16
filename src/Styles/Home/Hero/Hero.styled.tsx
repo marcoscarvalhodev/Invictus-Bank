@@ -1,13 +1,11 @@
 import styled, { css } from 'styled-components';
 
 interface HeroProps {
-  $xsmall: boolean;
-  $small: boolean;
-  $xlarge: boolean;
+  
 }
 
 export const StyledHero = styled.section<HeroProps>`
-  ${({ theme, $xsmall, $small, $xlarge }) => css`
+  ${({ theme}) => css`
     && {
       .flex-item-1-hero {
         ${theme.boxProps.flex_items.flex_item_1};
@@ -80,13 +78,16 @@ export const StyledHero = styled.section<HeroProps>`
         }
       }
 
-      &.container-small {
-        flex-direction: column;
-        height: auto;
-      }
+      
 
-      ${$xsmall &&
-      css`
+      ${theme.media_query.small`
+      flex-direction: column;
+      height: auto;
+      `}//query-small
+
+      ${theme.media_query.xsmall`
+        padding: ${theme.spacing.gap_3} 2.4rem;
+
         .icon-mobile-hero,
         .icon-contactless-hero,
         .icon-card-hero {
@@ -113,22 +114,16 @@ export const StyledHero = styled.section<HeroProps>`
             height: 40px;
           }
         }
-      `};
-
-      ${$xsmall &&
-      css`
-        &.container-small {
-          padding: ${theme.spacing.gap_3} 2.4rem;
-        }
 
         .flex-item-3-hero {
           padding: 0px;
           align-items: center;
         }
-      `}
+      `};//query-extra-small
 
-      ${$xlarge &&
-      css`
+      
+
+      ${theme.media_query.xlarge`
         display: grid;
         grid-template-columns: 1fr 1fr;
 
@@ -137,9 +132,9 @@ export const StyledHero = styled.section<HeroProps>`
           align-self: auto;
           flex-basis: auto;
         }
-      `}
+      `}//query-extra-large
 
-    &.hero-active-bx {
+      &.hero-active-bx {
         overflow-y: hidden;
       }
     }

@@ -11,25 +11,17 @@ import DoorShadowAnimation from '../../../assets/svg/deposits/door-shadow-animat
 import Clock from '../../../assets/svg/deposits/coin-clock.svg?react';
 import { ContentDeposits } from '../../../Contents';
 
-
-interface DepositsHeroProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-}
-
-const DepositsHero = ({ smallState, small }: DepositsHeroProps) => {
-  
-
+const DepositsHero = () => {
   return (
-    <StyledDepositsHero $small={small} className='container'>
+    <StyledDepositsHero className='container'>
       <div className='flex-hero'>
-        <StyledHeadings as='h5' $device={smallState}>
+        <StyledHeadings as='h5'>
           {ContentDeposits.hero.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings as='h2' $device={smallState} className='title-hero'>
+        <StyledHeadings as='h2' className='title-hero'>
           {ContentDeposits.hero.h2_title}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState}>
+        <StyledTexts $size='p1'>
           {ContentDeposits.hero.p_description}
         </StyledTexts>
       </div>
@@ -40,7 +32,7 @@ const DepositsHero = ({ smallState, small }: DepositsHeroProps) => {
           <SafeShadows className='safe-shadows' />
           <ShadowWrapper className='shadow-wrapper' />
           <DoorShadowAnimation className='door-shadow-animation' />
-          <Clock className='safe-clock'/>
+          <Clock className='safe-clock' />
         </div>
       </div>
     </StyledDepositsHero>

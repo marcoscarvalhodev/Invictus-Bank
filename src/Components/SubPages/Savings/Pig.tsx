@@ -12,8 +12,8 @@ const Pig = ({ small }: PigProps) => {
     <StyledPig $small={small}>
       <div className='pig-section'>
         <div className='pig-wrapper'>
-          {[...Array(6)].map((item) => (
-            <div className='firework'></div>
+          {[...Array(6)].map((item, index) => (
+            <div className='firework' key={index}></div>
           ))}
           <PigSVG className='pig' />
           <div className='hole'></div>

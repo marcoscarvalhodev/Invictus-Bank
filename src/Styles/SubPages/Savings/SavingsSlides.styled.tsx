@@ -1,21 +1,15 @@
 import styled, { css } from 'styled-components';
 
-interface SavingsSlidesProps {
-  $small: boolean;
-  $medium: boolean;
-  $xsmall: boolean;
-}
 
-export const StyledSavingsSlides = styled.section<SavingsSlidesProps>`
-  ${({ theme, $small, $medium, $xsmall }) => css`
+export const StyledSavingsSlides = styled.section`
+  ${({ theme}) => css`
     && {
       .container {
         flex-direction: column;
       }
       ${theme.sub_pages.sub_pages_slides};
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         .slides-wrapper {
           flex-direction: column;
           grid-template-columns: 1fr 1fr;
@@ -24,21 +18,19 @@ export const StyledSavingsSlides = styled.section<SavingsSlidesProps>`
         .container {
           padding: 9.6rem 2.4rem;
         }
-      `}
+      `}//query-small
 
-      ${$medium &&
-      css`
+      ${theme.media_query.medium`
         .slides-wrapper {
           grid-template-columns: 1fr 1fr 1fr;
         }
-      `}
+      `}//query-medium
 
-      ${$xsmall &&
-      css`
+      ${theme.media_query.xsmall`
         .slides-wrapper {
           grid-template-columns: 1fr;
         }
-      `}
+      `}//query-extra-small
     }
   `}
 `;

@@ -1,15 +1,11 @@
 import styled, { css } from 'styled-components';
 
 interface SupremeAppProps {
-  $small: boolean;
-  $xlarge: boolean;
-  $xsmall: boolean;
 }
 
 export const StyledSupremeApp = styled.section<SupremeAppProps>`
-  ${({ theme, $small, $xlarge, $xsmall }) => css`
+  ${({ theme }) => css`
     && {
-      
       display: flex;
       flex-direction: row;
       gap: 80px;
@@ -161,38 +157,35 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         & {
           flex-direction: column-reverse;
           align-items: center;
           justify-content: center;
           gap: 40px;
         }
-      `}
+      `} //query-small
 
-      ${($small ||
-      $xlarge) &&
-        css`
+      ${theme.media_query.xsmall_small`
           .phone-mockup {
             width: 500px;
           }
-        `}
+        `}//query-above-extra-small
 
-      ${$xsmall && css`
+      ${theme.media_query.xsmall`
         
       .phone-mockup {
             width: 400px;
           }
-      `}
+      `}//query-extra-small
 
-      ${$xlarge && css`
+      ${theme.media_query.xlarge`
         .item-1 {
           display: flex;
           justify-content: center;
           
         }
-      `}
+      `}//query-extra-large
     }
   `}
 `;

@@ -1,12 +1,10 @@
 import styled, { css } from 'styled-components';
 import Arrow from '../../../assets/svg/icon-arrow.svg?url';
 
-interface TestimonialsProps {
-  $small: boolean;
-}
+interface TestimonialsProps {}
 
 export const StyledTestimonials = styled.section<TestimonialsProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme }) => css`
     && {
       display: flex;
       flex-direction: column;
@@ -15,7 +13,7 @@ export const StyledTestimonials = styled.section<TestimonialsProps>`
 
       .swiper {
         position: relative;
-        padding: 24px 0px;
+        padding: 2.4rem 0rem;
         width: 100%;
         overflow: visible;
       }
@@ -24,16 +22,23 @@ export const StyledTestimonials = styled.section<TestimonialsProps>`
         display: flex;
         width: max-content;
       }
-      
 
       .testimonials-subtitle {
-        margin-left: 4px;
+        margin-left: 0.4rem;
       }
 
       .testimonials-title {
-        ${$small ? 'width: auto': 'width: 580px'};
-        padding-top: 16px;
+        width: 58rem;
+        padding-top: 1.6rem;
       }
+
+      ${theme.media_query.small`
+      
+      .testimonials-title {
+        width: auto;
+      }
+      
+      `}
 
       .swiper-pagination {
         position: absolute;
@@ -60,20 +65,20 @@ export const StyledTestimonials = styled.section<TestimonialsProps>`
 
       .swiper-button-next,
       .swiper-button-prev {
-        height: 36px;
-        width: 36px;
+        height: 3.6rem;
+        width: 3.6rem;
         position: absolute;
         --swiper-theme-color: ${theme.colors.blue_main.primary_dark};
         left: auto;
         top: auto;
-        bottom: -20px;
-        right: -5px;
+        bottom: -2rem;
+        right: -0.5rem;
         &:after {
-          font-size: 0px;
+          font-size: 0rem;
           content: '';
           display: inline-block;
-          width: 36px;
-          height: 36px;
+          width: 3.6rem;
+          height: 3.6rem;
           background: url(${Arrow}) no-repeat center center;
         }
 
@@ -83,17 +88,16 @@ export const StyledTestimonials = styled.section<TestimonialsProps>`
       }
 
       .swiper-button-prev {
-        right: 35px;
-        bottom: -21px;
+        right: 3.5rem;
+        bottom: -2.1rem;
         &:after {
           transform: rotate(180deg);
         }
       }
 
-
       .photo-profile {
-        width: 56px;
-        height: 56px;
+        width: 5.6rem;
+        height: 5.6rem;
         border-radius: 50%;
       }
 

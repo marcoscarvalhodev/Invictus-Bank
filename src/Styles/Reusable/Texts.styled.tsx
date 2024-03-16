@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import IconArrow from '../../assets/svg/icon-arrow.svg?url';
 
 interface TextsProps {
-  $device: 'mobile' | 'desktop';
   $size: 'p1' | 'p2' | 'p3' | 'p4';
   $link?: boolean;
   $fontSize?: number;
@@ -10,7 +9,7 @@ interface TextsProps {
 }
 
 export const StyledTexts = styled.p<TextsProps>`
-  ${({ theme, $size, $device, $link, $fontSize, $arrow }) => css`
+  ${({ theme, $size, $link, $fontSize, $arrow }) => css`
     && {
       font-family: 'Source Sans 3', sans-serif;
       color: ${theme.colors.gray_auxiliary.gray_1};
@@ -71,16 +70,15 @@ export const StyledTexts = styled.p<TextsProps>`
 
       ${$size === 'p1' &&
       css`
-        ${($device === 'desktop' &&
-          css`
-            font-size: 2.4rem;
-            line-height: 130%;
-          `) ||
-        ($device === 'mobile' &&
-          css`
-            font-size: 1.8rem;
-            line-height: 130%;
-          `)}
+        ${theme.media_query.medium_large`
+          font-size: 2.4rem;
+          line-height: 130%;
+        `} //query-desktop
+
+      ${theme.media_query.small`
+          font-size: 1.8rem;
+          line-height: 130%;
+        `}//query-mobile
       `}
 
       //P2
@@ -88,46 +86,43 @@ export const StyledTexts = styled.p<TextsProps>`
 
 ${$size === 'p2' &&
       css`
-        ${($device === 'desktop' &&
-          css`
-            font-size: 1.6rem;
-            line-height: 140%;
-          `) ||
-        ($device === 'mobile' &&
-          css`
-            font-size: 1.4rem;
-            line-height: 150%;
-          `)}
+        ${theme.media_query.medium_large`
+          font-size: 1.6rem;
+          line-height: 140%;
+        `} //query-desktop
+
+      ${theme.media_query.small`
+          font-size: 1.4rem;
+          line-height: 150%;
+        `}//query-mobile
       `}
 
 //P3
 
 ${$size === 'p3' &&
       css`
-        ${($device === 'desktop' &&
-          css`
-            font-size: 1.4rem;
-            line-height: 150%;
-          `) ||
-        ($device === 'mobile' &&
-          css`
-            font-size: 1.4rem;
-            line-height: 150%;
-          `)}
+        ${theme.media_query.medium_large`
+          font-size: 1.4rem;
+          line-height: 150%;
+        `} //query-desktop
+
+      ${theme.media_query.small`
+          font-size: 1.4rem;
+          line-height: 150%;
+        `}//query-mobile
       `}
 
       ${$size === 'p4' &&
       css`
-        ${($device === 'desktop' &&
-          css`
-            font-size: 1.8rem;
-            line-height: 130%;
-          `) ||
-        ($device === 'mobile' &&
-          css`
-            font-size: 1.6rem;
-            line-height: 140%;
-          `)}
+        ${theme.media_query.medium_large`
+          font-size: 1.8rem;
+          line-height: 130%;
+        `} //query-desktop
+
+      ${theme.media_query.small`
+          font-size: 1.6rem;
+          line-height: 140%;
+        `}//query-mobile
       `}
 
       ${$fontSize &&

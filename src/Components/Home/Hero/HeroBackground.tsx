@@ -5,11 +5,10 @@ import SVGHeroSmall from '../../../assets/svg/bg-home-mobile.svg?react'
 import ContainerSizes from '../../../ContainerSizes';
 
 const HeroBackground = () => {
-  const {xsmall, small, medium, large, xlarge} = ContainerSizes();
 
   return (
-    <StyledHeroBackground $small={small} $xsmall={xsmall} className='hero-background'>
-      {xsmall ? <SVGHeroSmall className='svg-background'/> :<SVGHeroLarge className='svg-background'/>}
+    <StyledHeroBackground className='hero-background'>
+      <div className='svg-background'></div>
     </StyledHeroBackground>
   )
 }

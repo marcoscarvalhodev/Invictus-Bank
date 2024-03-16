@@ -6,12 +6,9 @@ import IconCheck from '../../../assets/svg/icon-check.svg?react';
 import { StyledTransfersBulletAdvantages } from '../../../Styles/SubPages/Transfers/TransfersBulletAdvantages.styled';
 
 interface TransfersBulletAdvantagesProps {
-  smallState: 'mobile' | 'desktop';
 }
 
-const TransfersBulletAdvantages = ({
-  smallState,
-}: TransfersBulletAdvantagesProps) => {
+const TransfersBulletAdvantages = () => {
   return (
     <StyledTransfersBulletAdvantages>
       <div className='container'>
@@ -24,7 +21,7 @@ const TransfersBulletAdvantages = ({
                 </Icons>
               </div>
               <div className='bullet-advantages bullet-2'>
-                <StyledTexts $size='p4' $device={smallState} key={id}>
+                <StyledTexts $size='p4' key={id}>
                   {bullet}
                 </StyledTexts>
               </div>

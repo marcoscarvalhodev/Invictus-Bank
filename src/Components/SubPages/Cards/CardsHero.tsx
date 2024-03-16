@@ -8,26 +8,17 @@ import ContainerSizes from '../../../ContainerSizes';
 import Card1 from '../../../assets/svg/cards/card-1.svg?react';
 import Card2 from '../../../assets/svg/cards/card-2.svg?react';
 
-interface CardsHeroProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-}
-
-const CardsHero = ({ smallState, small }: CardsHeroProps) => {
-  
-
+const CardsHero = () => {
   return (
-    <StyledCardsHero className='container' $small={small}>
+    <StyledCardsHero className='container'>
       <div className='flex-hero'>
-        <StyledHeadings $device={smallState} as='h5'>
+        <StyledHeadings as='h5'>
           {ContentCards.Cards.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings $device={smallState} as='h2' className='title-hero'>
+        <StyledHeadings as='h2' className='title-hero'>
           {ContentCards.Cards.h2_title}
         </StyledHeadings>
-        <StyledTexts $device={smallState} $size='p1'>
-          {ContentCards.Cards.p_description}
-        </StyledTexts>
+        <StyledTexts $size='p1'>{ContentCards.Cards.p_description}</StyledTexts>
 
         <div className='buttons-flex-hero'>
           <Button>{ContentCards.Cards.link_button_1}</Button>

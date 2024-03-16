@@ -1,14 +1,12 @@
 import styled, { css } from 'styled-components';
 
 interface SVGPeopleProps {
-  $small: boolean;
-  $xsmall: boolean;
   $width: string;
   $height: string;
 }
 
 export const StyledSVGPeople = styled.svg<SVGPeopleProps>`
-  ${({ theme, $small, $xsmall, $width, $height }) => css`
+  ${({ theme, $width, $height }) => css`
     ${css`
       width: ${$width}px;
       

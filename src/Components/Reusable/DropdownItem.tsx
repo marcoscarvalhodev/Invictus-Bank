@@ -4,14 +4,14 @@ import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
 type DropdownProps = React.ComponentProps<'a'> & {
   xsmall?: string;
-}
+};
 
-const DropdownItem = ({children, xsmall}: DropdownProps) => {
+const DropdownItem = ({ children, xsmall }: DropdownProps) => {
   return (
     <StyledDropdownItem className='dropdown-item'>
-
-      <StyledTexts as="p" className='nav-link-dropdown' $size="p1" $device="desktop">{children}</StyledTexts>
-      
+      <StyledTexts as='p' className='nav-link-dropdown' $size='p1'>
+        {children}
+      </StyledTexts>
     </StyledDropdownItem>
   );
 };

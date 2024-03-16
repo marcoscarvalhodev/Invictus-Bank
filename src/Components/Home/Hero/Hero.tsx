@@ -14,20 +14,12 @@ import { NavLink } from 'react-router-dom';
 
 interface HeroProps {
   mobileBx: boolean;
-  smallState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
-  xsmall: boolean;
-  xlarge: boolean;
-  small: boolean;
 }
 
 const Hero = ({
   mobileBx,
-  smallState,
   setAccountState,
-  xsmall,
-  small,
-  xlarge,
 }: HeroProps) => {
   const accountHandleClick = () => {
     setAccountState(2);
@@ -35,23 +27,16 @@ const Hero = ({
 
   return (
     <StyledHero
-      $small={small}
-      $xsmall={xsmall}
-      $xlarge={xlarge}
-      className={`container ${small ? 'container-small' : ''} ${
+      className={`container ${
         mobileBx ? 'hero-active-bx' : ''
       }`}
     >
       <div className='flex-item-1-hero'>
-        <StyledHeadings as='h1' $device={smallState}>
-          {ContentHero.title}
-        </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState}>
-          {ContentHero.paragraph}
-        </StyledTexts>
+        <StyledHeadings as='h1'>{ContentHero.title}</StyledHeadings>
+        <StyledTexts $size='p1'>{ContentHero.paragraph}</StyledTexts>
 
         <div
-          className={`flex-interact ${xsmall ? 'flex-interact-xsmall' : ''}`}
+          className={`flex-interact`}
         >
           <NavLink to='/account' onClick={accountHandleClick}>
             <Button>Join Supreme Bank</Button>
@@ -77,7 +62,7 @@ const Hero = ({
         <IconCard className='icon-card-hero dropshadow' />
         <IconMobile className='icon-mobile-hero dropshadow' />
         <IconContactless className='icon-contactless-hero dropshadow' />
-        <Card xsmall={xsmall} xlarge={xlarge} />
+        <Card />
       </div>
     </StyledHero>
   );

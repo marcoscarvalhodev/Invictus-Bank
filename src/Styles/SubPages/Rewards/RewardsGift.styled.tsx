@@ -57,37 +57,35 @@ function eachKnotFill({
   `;
 }
 
-interface StyledRewardsGiftProps {
-  $small: boolean;
-}
 
-export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
-  ${({ theme, $small }) => css`
+
+export const StyledRewardsGift = styled.div`
+  ${({ theme}) => css`
     position: relative;
 
-    ${$small
-      ? css`
+    ${theme.media_query.small`
           top: -100%;
-        `
-      : css`
-          top: 50%;
         `}
+
+    ${theme.media_query.medium_large`
+          top: 50%;
+        `}//media-query
 
     .container-gift {
       height: 30rem;
       width: 30rem;
 
-      ${$small
-        ? css`
+      ${theme.media_query.small`
             transform: translate(-50%, 0%);
             left: calc(50% + -4rem);
-            
-          `
-        : css`
+          `}
+
+      ${theme.media_query.medium_large`
             transform: translate(-50%, -50%);
             left: calc(50%);
             top: calc(-50% + 2rem);
-          `}
+      `}//media-query
+
 
       position: relative;
 
@@ -128,19 +126,16 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
         translateZ(0rem);
       z-index: 10;
 
-      ${$small
-        ? css`
+      ${theme.media_query.small`
             left: 10.95rem;
-          `
-        : css`
-            animation: lid-move 12s linear infinite alternate;
           `};
+      ${theme.media_query.medium_large`
+            animation: lid-move 12s linear infinite alternate; 
+       `}
 
       //shadow-lid
 
-      ${$small
-        ? css``
-        : css`
+      ${theme.media_query.medium_large`
             .shadow-lid-wrapper {
               width: 25rem;
               height: 25rem;
@@ -159,9 +154,7 @@ export const StyledRewardsGift = styled.div<StyledRewardsGiftProps>`
     }
 
     .lid-wrapper {
-      ${$small
-        ? css``
-        : css`
+      ${theme.media_query.medium_large`
             animation: lid-wrapper-move 12s linear infinite alternate;
           `};
       position: relative;

@@ -7,31 +7,19 @@ import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
 import AdantagesImage from '../../../assets/img/advantages/man-looking-bank.jpg';
 
-interface CheckingAdvantagesProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-}
 
-const CheckingAdvantages = ({ smallState, small }: CheckingAdvantagesProps) => {
+const CheckingAdvantages = () => {
   return (
-    <StyledCheckingAdvantages className='container' $small={small}>
+    <StyledCheckingAdvantages className='container'>
       <div className='advantages-flex'>
-        <StyledHeadings as='h5' $device={smallState}>
+        <StyledHeadings as='h5'>
           {ContentAccountTypes.Checking.checking_advantages.h5_subtitle}
         </StyledHeadings>
 
-        <StyledHeadings
-          as='h2'
-          $device={smallState}
-          className='title-advantages'
-        >
+        <StyledHeadings as='h2' className='title-advantages'>
           {ContentAccountTypes.Checking.checking_advantages.h2_title}
         </StyledHeadings>
-        <StyledTexts
-          $size='p1'
-          $device={smallState}
-          className='description-advantages'
-        >
+        <StyledTexts $size='p1' className='description-advantages'>
           {ContentAccountTypes.Checking.checking_advantages.p_description}
         </StyledTexts>
 
@@ -46,9 +34,7 @@ const CheckingAdvantages = ({ smallState, small }: CheckingAdvantagesProps) => {
                     </Icons>
                   </div>
                   <div className='bullet-advantages bullet-2'>
-                    <StyledTexts $size='p4' $device={smallState}>
-                      {bullet_description}
-                    </StyledTexts>
+                    <StyledTexts $size='p4'>{bullet_description}</StyledTexts>
                   </div>
                 </li>
               );

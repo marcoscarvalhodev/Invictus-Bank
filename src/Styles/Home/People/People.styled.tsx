@@ -1,12 +1,9 @@
 import styled, { css } from 'styled-components';
 
-interface PeopleProps {
-  $small: boolean;
-  $xsmall: boolean;
-}
+interface PeopleProps {}
 
 export const StyledPeople = styled.section<PeopleProps>`
-  ${({ theme, $small, $xsmall }) => css`
+  ${({ theme }) => css`
     && {
       ${theme.boxProps.flex.flex_column};
       justify-content: space-between;
@@ -16,8 +13,6 @@ export const StyledPeople = styled.section<PeopleProps>`
         display: flex;
         flex-direction: column;
       }
-
-      
 
       .flex-item-3-people {
         justify-content: end;
@@ -68,8 +63,7 @@ export const StyledPeople = styled.section<PeopleProps>`
         ${theme.bullets.list};
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         flex-direction: column;
 
         .flex-pics {
@@ -82,7 +76,7 @@ export const StyledPeople = styled.section<PeopleProps>`
           justify-content: center;
           align-items: center;
         }
-      `}
+      `}//query-small
     }
   `}
 `;

@@ -1,11 +1,7 @@
 import styled, { css } from 'styled-components';
 
-interface DepositsHeroProps {
-  $small: boolean;
-}
-
-export const StyledDepositsHero = styled.section<DepositsHeroProps>`
-  ${({ theme, $small }) => css`
+export const StyledDepositsHero = styled.section`
+  ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_hero};
 
     &&& {
@@ -192,11 +188,10 @@ export const StyledDepositsHero = styled.section<DepositsHeroProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         flex-direction: column;
         padding-bottom: 9.6rem;
-      `}
+      `}//query-small
     }
   `}
 `;

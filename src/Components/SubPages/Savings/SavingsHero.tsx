@@ -11,23 +11,22 @@ import MoneyBag from '../../../assets/svg/savings/pig-coin/money-bag.png?url';
 import ShadowPig from '../../../assets/svg/savings/pig-coin/shadow.svg?react';
 
 interface SavingsHeroProps {
-  smallState: 'mobile' | 'desktop';
   small: boolean;
 }
 
-const SavingsHero = ({ smallState, small }: SavingsHeroProps) => {
+const SavingsHero = ({small }: SavingsHeroProps) => {
   return (
-    <StyledSavingsHero className='container' $small={small}>
+    <StyledSavingsHero className={`container`}>
       <div className='flex-hero flex-hero-1'>
-        <StyledHeadings $device={smallState} as='h5'>
+        <StyledHeadings  as='h5'>
           {ContentAccountTypes.Savings.h5_subtitle}
         </StyledHeadings>
 
-        <StyledHeadings $device={smallState} as='h2' className='title-hero'>
+        <StyledHeadings  as='h2' className='title-hero'>
           {ContentAccountTypes.Savings.h2_title}
         </StyledHeadings>
 
-        <StyledTexts $size='p1' $device={smallState}>
+        <StyledTexts $size='p1'>
           {ContentAccountTypes.Savings.p_description}
         </StyledTexts>
 
@@ -39,7 +38,7 @@ const SavingsHero = ({ smallState, small }: SavingsHeroProps) => {
         </div>
       </div>
       <div className='flex-hero flex-hero-2'>
-        <Pig small={small} />
+        <Pig small={small}/>
 
         <div className='coin-pile-wrapper'>
           <img src={CoinPile} alt="" className='coin-pile' />

@@ -3,35 +3,21 @@ import { StyledCardsSlides } from '../../../Styles/SubPages/Cards/CardsSlides.st
 import { ContentCards } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
-
 import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
-import ContainerSizes from '../../../ContainerSizes';
 
-interface CardsSlidesProps {
-  smallState: 'desktop' | 'mobile';
-  small: boolean;
-}
-
-const CardsSlides = ({ smallState, small }: CardsSlidesProps) => {
-  
-
-
+const CardsSlides = () => {
   return (
-    <StyledCardsSlides $small={small}>
+    <StyledCardsSlides>
       <section className='container'>
         <div className='flex-slides'>
-          <StyledHeadings $device={smallState} as='h5'>
+          <StyledHeadings as='h5'>
             {ContentCards.Cards.card_options.h5_subtitle}
           </StyledHeadings>
-          <StyledHeadings $device={smallState} as='h2' className='title-slides'>
+          <StyledHeadings as='h2' className='title-slides'>
             {ContentCards.Cards.card_options.h2_title}
           </StyledHeadings>
-          <StyledTexts
-            $size='p1'
-            $device={smallState}
-            className='description-slides'
-          >
+          <StyledTexts $size='p1' className='description-slides'>
             {ContentCards.Cards.card_options.p_description}
           </StyledTexts>
         </div>
@@ -41,11 +27,7 @@ const CardsSlides = ({ smallState, small }: CardsSlidesProps) => {
             ({ id, icon, name, advantages }) => {
               return (
                 <li key={id} className='slides'>
-                  <StyledHeadings
-                    as='h3'
-                    $device={smallState}
-                    className='slide-titles'
-                  >
+                  <StyledHeadings as='h3' className='slide-titles'>
                     {name}
                   </StyledHeadings>
                   {icon}
@@ -59,9 +41,7 @@ const CardsSlides = ({ smallState, small }: CardsSlidesProps) => {
                           </Icons>
                         </div>
                         <div className='bullet-advantages bullet-2'>
-                          <StyledTexts $size='p4' $device={smallState}>
-                            {item}
-                          </StyledTexts>
+                          <StyledTexts $size='p4'>{item}</StyledTexts>
                         </div>
                       </li>
                     ))}

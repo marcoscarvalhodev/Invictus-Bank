@@ -5,15 +5,7 @@ import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-interface DepositsBulletAdvantagesProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-}
-
-const DepositsBulletAdvantages = ({
-  smallState,
-  small,
-}: DepositsBulletAdvantagesProps) => {
+const DepositsBulletAdvantages = () => {
   return (
     <StyledDepositsBulletAdvantages>
       <div className='container'>
@@ -26,7 +18,7 @@ const DepositsBulletAdvantages = ({
                 </Icons>
               </div>
               <div className='bullet-advantages bullet-2'>
-                <StyledTexts $size='p4' $device={smallState} key={id}>
+                <StyledTexts $size='p4' key={id}>
                   {bullet}
                 </StyledTexts>
               </div>

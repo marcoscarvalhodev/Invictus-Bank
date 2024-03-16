@@ -1,27 +1,37 @@
 import styled, { css } from 'styled-components';
 
-interface HeroBackgroundProps {
- $xsmall: boolean;
- $small: boolean;
-}
+import SVGHeroSmall from '../../../assets/svg/bg-home-mobile.svg?url';
+import SVGHeroLarge from '../../../assets/svg/bg-home.svg?url';
+
+interface HeroBackgroundProps {}
 
 export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
-  ${({theme, $xsmall, $small}) => css`
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    
-    overflow: hidden;
-    
-    
+  ${({ theme }) => css`
     .svg-background {
       width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      overflow: hidden;
 
-      ${$xsmall ? `width: 180%;`: ''};
-      ${$small ? 'width: 150%' : ''};
-      
+      ${theme.media_query.xsmall`width: 180%;`};
+      ${theme.media_query.small`width: 150%;`};
     }
+
+    ${theme.media_query.xsmall`
+      .svg-background {
+        background: url(${SVGHeroSmall}) no-repeat;
+        
+        
+      }
+    `}
+
+    ${theme.media_query.xsmall_small`
+      .svg-background {
+        background: url(${SVGHeroLarge}) no-repeat;
+        
+      }
+    `}
 
     /*.rect-1 {
       animation: bg-home-rect 3s ease 0.5s infinite alternate;
@@ -55,6 +65,5 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
         transform: translate3d(0, 30px, 0);
       }
     }
-
   `}
 `;

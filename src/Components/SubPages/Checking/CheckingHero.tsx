@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { StyledCheckingHero } from '../../../Styles/SubPages/Checking/CheckingHero.styled';
 import { ContentAccountTypes } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
@@ -6,25 +6,20 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Button from '../../Reusable/Button';
 import Bank from './Bank';
 
-interface CheckingHeroProps {
-  smallState: "mobile" | "desktop";
-  small: boolean;
-  xsmall: boolean;
-}
 
-const CheckingHero = ({smallState, small, xsmall}: CheckingHeroProps) => {
+const CheckingHero = () => {
   return (
-    <StyledCheckingHero className='container' $small={small}>
+    <StyledCheckingHero className='container'>
       <div className='flex-hero'>
-        <StyledHeadings $device={smallState} as='h5'>
+        <StyledHeadings as='h5'>
           {ContentAccountTypes.Checking.h5_subtitle}
         </StyledHeadings>
 
-        <StyledHeadings $device={smallState} as='h2' className='title-hero'>
+        <StyledHeadings as='h2' className='title-hero'>
           {ContentAccountTypes.Checking.h2_title}
         </StyledHeadings>
 
-        <StyledTexts $size='p1' $device={smallState}>
+        <StyledTexts $size='p1'>
           {ContentAccountTypes.Checking.p_description}
         </StyledTexts>
 
@@ -36,10 +31,10 @@ const CheckingHero = ({smallState, small, xsmall}: CheckingHeroProps) => {
         </div>
       </div>
       <div className='flex-hero flex-hero-2'>
-        <Bank small={small} xsmall={xsmall}/>
+        <Bank/>
       </div>
     </StyledCheckingHero>
-  )
-}
+  );
+};
 
-export default CheckingHero
+export default CheckingHero;

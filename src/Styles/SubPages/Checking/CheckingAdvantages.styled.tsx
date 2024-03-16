@@ -1,16 +1,11 @@
 import styled, { css } from 'styled-components';
 
-interface CheckingAdvantagesProps {
-  $small: boolean;
-}
-
-export const StyledCheckingAdvantages = styled.section<CheckingAdvantagesProps>`
-  ${({ theme, $small }) => css`
+export const StyledCheckingAdvantages = styled.section`
+  ${({ theme }) => css`
     && {
       ${theme.sub_pages.sub_pages_advantages};
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         padding: 9.6rem 2.4rem;
 
         flex-direction: column;
@@ -26,7 +21,7 @@ export const StyledCheckingAdvantages = styled.section<CheckingAdvantagesProps>`
         .flex-2 {
           margin: 0px;
         }
-      `}
+      `}//query-small
     }
   `}
 `;

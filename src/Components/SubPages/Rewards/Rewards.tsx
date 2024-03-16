@@ -5,17 +5,13 @@ import RewardsCoins from './RewardsCoins';
 import ContainerSizes from '../../../ContainerSizes';
 
 interface RewardsProps {
-  smallState: 'mobile' | 'desktop';
   small: boolean;
 }
 
-const Rewards = ({ smallState, small }: RewardsProps) => {
-  
-
+const Rewards = ({ small }: RewardsProps) => {
   return (
     <StyledRewards>
-      <RewardsHero smallState={smallState} small={small} />
-      
+      <RewardsHero small={small} />
     </StyledRewards>
   );
 };

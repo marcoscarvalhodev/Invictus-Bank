@@ -3,17 +3,11 @@ import { StyledCard } from '../../../Styles/Home/Hero/Card.styled';
 import Supreme from '../../../assets/svg/supreme.svg?url';
 import SupremeVerse from '../../../assets/svg/supreme-verse.svg?url';
 
-interface CardProps {
-  xsmall: boolean;
-  xlarge: boolean;
-}
+interface CardProps {}
 
-const Card = ({xsmall, xlarge} : CardProps) => {
-  
+const Card = () => {
   return (
-    <StyledCard $xsmall={xsmall} $xlarge={xlarge}  $supreme={Supreme} $supremeVerse={SupremeVerse}>
-      
-    </StyledCard>
+    <StyledCard $supreme={Supreme} $supremeVerse={SupremeVerse}></StyledCard>
   );
 };
 
