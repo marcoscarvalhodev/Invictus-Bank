@@ -1,15 +1,11 @@
 import styled, { css } from 'styled-components';
 
-interface CardHeroProps {
-  $small: boolean;
-}
+interface CardHeroProps {}
 
 export const StyledCardsHero = styled.section<CardHeroProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme }) => css`
     && {
       ${theme.sub_pages.sub_pages_hero};
-
-      
 
       .circle {
         position: relative;
@@ -47,8 +43,7 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
         animation: card-move-2 10s linear infinite;
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         flex-direction: column;
         padding: 9.6rem 2.4rem 0rem 2.4rem;
         
@@ -58,7 +53,7 @@ export const StyledCardsHero = styled.section<CardHeroProps>`
         .card {
           width: 15rem;
         }
-      `}
+      `} //query-small
 
       @keyframes card-move {
         0% {

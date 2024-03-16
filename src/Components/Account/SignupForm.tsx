@@ -16,19 +16,12 @@ import PasswordShow from './PasswordShow';
 import ContainerSizes from '../../ContainerSizes';
 
 interface SignupFormProps {
-  smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
-  xsmall: boolean;
-  small: boolean;
-  medium: boolean;
 }
 
 const SignupForm = ({
-  smallMediumState,
   setAccountState,
-  xsmall,
-  small,
-  medium,
+  
 }: SignupFormProps) => {
   const name = useForm();
   const email = useForm('email');
@@ -39,19 +32,12 @@ const SignupForm = ({
   return (
     <StyledSignupForm
       className='signup-form'
-      $small={small}
-      $medium={medium}
-      $xsmall={xsmall}
     >
       <div>
-        <StyledHeadings as='h2' $device={smallMediumState} className='title'>
+        <StyledHeadings as='h2' className='title'>
           {ContentLoginSignupForm.signup.h2}
         </StyledHeadings>
-        <StyledHeadings
-          as='h5'
-          $device={smallMediumState}
-          className='description'
-        >
+        <StyledHeadings as='h5' className='description'>
           {ContentLoginSignupForm.signup.h4}
         </StyledHeadings>
       </div>
@@ -61,7 +47,6 @@ const SignupForm = ({
           name='name-signup'
           label='Name'
           type='text'
-          smallMediumState={smallMediumState}
           icon={<UserIcon className='icon user-icon' />}
           {...name}
         />
@@ -69,7 +54,6 @@ const SignupForm = ({
           name='email-signup'
           label='Email'
           type='text'
-          smallMediumState={smallMediumState}
           icon={<EmailIcon className='icon email-icon' />}
           {...email}
         />
@@ -77,7 +61,6 @@ const SignupForm = ({
           name='password-signup'
           label='Password'
           type={passwordShow ? 'text' : 'password'}
-          smallMediumState={smallMediumState}
           icon={<PasswordIcon className='icon' />}
           {...password}
           inputPassword={true}
@@ -97,7 +80,6 @@ const SignupForm = ({
         message={ContentLoginSignupForm.alternateAccount.signup.message}
         button={ContentLoginSignupForm.alternateAccount.signup.button}
         setAccountState={setAccountState}
-        smallMediumState={smallMediumState}
         accountStateManual={1}
       />
     </StyledSignupForm>

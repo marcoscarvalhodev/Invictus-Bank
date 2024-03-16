@@ -4,12 +4,10 @@ import { StyledAlternateAccount } from '../../Styles/Account/AlternateAccount.st
 import { StyledHeadings } from '../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
-
 interface AlternateAccountProps {
   title: string;
   message: string;
   button: string;
-  smallMediumState: 'mobile' | 'desktop';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountStateManual: number;
 }
@@ -18,18 +16,14 @@ const AlternateAccount = ({
   title,
   message,
   button,
-  smallMediumState,
   setAccountState,
   accountStateManual,
 }: AlternateAccountProps) => {
   return (
     <StyledAlternateAccount>
-      <StyledTexts $device={smallMediumState} $size='p2'>
-        {message}
-      </StyledTexts>
+      <StyledTexts $size='p2'>{message}</StyledTexts>
       <StyledTexts
         $link={true}
-        $device={smallMediumState}
         $size='p2'
         $arrow={false}
         onClick={() => setAccountState(accountStateManual)}

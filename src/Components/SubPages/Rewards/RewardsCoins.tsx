@@ -1,11 +1,6 @@
 import React from 'react';
-
 import { StyledRewardsCoins } from '../../../Styles/SubPages/Rewards/RewardsCoins.styled';
 import Coin from '../../../assets/svg/savings/pig-coin/coin-wrapper.svg?react';
-
-interface RewardsCoinsProps {
-  testState: boolean;
-}
 
 const RewardsCoins = () => {
   return (

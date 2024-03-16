@@ -13,8 +13,6 @@ interface ContainerProps {
   medium: boolean;
   large: boolean;
   xlarge: boolean;
-  smallState: 'desktop' | 'mobile';
-  smallMediumState: 'desktop' | 'mobile';
 }
 
 const Container = ({
@@ -24,8 +22,6 @@ const Container = ({
   medium,
   large,
   xlarge,
-  smallState,
-  smallMediumState,
 }: ContainerProps) => {
   const [mobileBx, setMobileBx] = React.useState(false);
   const [accountState, setAccountState] = React.useState(1);
@@ -47,8 +43,6 @@ const Container = ({
         />
 
         <AppRoutes
-          smallMediumState={smallMediumState}
-          smallState={smallState}
           mobileBx={mobileBx}
           setAccountState={setAccountState}
           accountState={accountState}

@@ -1,11 +1,7 @@
 import styled, { css } from 'styled-components';
 
-interface StyledTransfersHeroProps {
-  $small: boolean;
-}
-
-export const StyledTransfersHero = styled.section<StyledTransfersHeroProps>`
-  ${({ theme, $small }) => css`
+export const StyledTransfersHero = styled.section`
+  ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_hero};
 
     .flex-hero-2 {
@@ -26,23 +22,20 @@ export const StyledTransfersHero = styled.section<StyledTransfersHeroProps>`
       }
 
       .phone-1 {
-          left: 30%;
-        }
+        left: 30%;
+      }
 
-        .phone-2 {
-          z-index: -1;
-          right: -120px;
-          top: -20px;
-        }
+      .phone-2 {
+        z-index: -1;
+        right: -120px;
+        top: -20px;
+      }
     }
 
-    &&& {
-      ${$small &&
-      css`
+    ${theme.media_query.small`
         flex-direction: column;
         padding-bottom: 9.6rem;
         
-      `}
-    }
+      `}//query-small
   `}
 `;

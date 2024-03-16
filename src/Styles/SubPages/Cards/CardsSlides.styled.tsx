@@ -1,11 +1,10 @@
 import styled, { css } from 'styled-components';
 
 interface CardsSlidesProps {
-  $small: boolean;
 }
 
 export const StyledCardsSlides = styled.section<CardsSlidesProps>`
-  ${({ theme, $small }) => css`
+  ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_slides};
     ${theme.sub_pages.sub_pages_advantages};
     && {
@@ -31,12 +30,11 @@ export const StyledCardsSlides = styled.section<CardsSlidesProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         .slides-wrapper {
           grid-template-columns: 1fr;
         }
-      `}
+      `}//query-small
     }
   `}
 `;

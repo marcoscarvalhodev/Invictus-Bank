@@ -1,40 +1,34 @@
 import styled, { css } from 'styled-components';
 
-interface LoginFormProps {
-  $small: boolean;
-  $medium: boolean;
-  $xsmall: boolean;
-}
+interface LoginFormProps {}
 
 export const StyledLoginForm = styled.div<LoginFormProps>`
-  ${({ theme, $small, $medium, $xsmall }) => css`
+  ${({ theme }) => css`
     && {
       ${theme.form.login_signup};
-      gap: 48.8px;
+      gap: 4.88rem;
 
       .form {
-        gap: 48.8px;
+        gap: 4.88rem;
       }
 
-      ${($small || $medium) &&
-      css`
+      ${theme.media_query.max_large`
         gap: 31px;
         width: 400px;
         padding: 24px;
         .form {
           gap: 31px;
         }
-      `}
+      `} //query from 0 to 1140px
 
-      ${$xsmall &&
-      css`
-        width: 350px;
-        gap: 36.7px;
+      ${theme.media_query.xsmall`
+        width: 35rem;
+        gap: 3.67rem;
 
         .form {
-          gap: 36.7px;
+          gap: 3.67rem;
         }
-      `}
+      `}//query-extra-small
     }
   `}
 `;

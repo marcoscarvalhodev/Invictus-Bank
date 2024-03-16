@@ -12,7 +12,7 @@ interface RewardsGiftProps {
 
 const RewardsGift = ({ small }: RewardsGiftProps) => {
   return (
-    <StyledRewardsGift $small={small}>
+    <StyledRewardsGift>
       <div className='container-gift'>
         <div className='lid-wrapper'>
           <div className='lid-gift'>

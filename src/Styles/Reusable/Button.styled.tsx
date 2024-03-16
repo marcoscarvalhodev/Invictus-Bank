@@ -2,12 +2,11 @@ import styled, { css } from 'styled-components';
 import buttonSvg from '../../assets/svg/app-store.svg?url';
 
 interface ButtonProps {
-  $xsmall: boolean;
   $light: boolean;
 }
 
 export const StyledButton = styled.button<ButtonProps>`
-  ${({ theme, $xsmall, $light }) => css`
+  ${({ theme, $light }) => css`
     && {
       
       text-decoration: none;
@@ -87,11 +86,10 @@ export const StyledButton = styled.button<ButtonProps>`
         }
       `}
 
-      ${$xsmall &&
-      css`
+      ${theme.media_query.xsmall`
         font-size: 14px;
         padding: 1.2rem 2.4rem;
-      `}
+      `}//query-extra-small
     }
   `}
 `;

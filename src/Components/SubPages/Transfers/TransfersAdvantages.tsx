@@ -1,25 +1,15 @@
 import React from 'react';
 import { StyledTransfersAdvantages } from '../../../Styles/SubPages/Transfers/TransfersAdvantages.styled';
-
 import LaptopMockup from '../../../assets/svg/transfers/laptop-mockup.png?url';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentTransfers } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-
-
-
-interface TransfersAdvantagesProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-  xsmall: boolean;
-}
-
-const TransfersAdvantages = ({ smallState, small, xsmall }: TransfersAdvantagesProps) => {
+const TransfersAdvantages = () => {
   const [iconState, setIconState] = React.useState(0);
 
   return (
-    <StyledTransfersAdvantages className='container' $small={small} $xsmall={xsmall}>
+    <StyledTransfersAdvantages className='container'>
       <div className='advantages-flex'>
         <div className='wrapper'>
           <div className='laptop-mockup-wrapper'>
@@ -47,11 +37,7 @@ const TransfersAdvantages = ({ smallState, small, xsmall }: TransfersAdvantagesP
                           : 'icon-description-wrapper-disable'
                       }`}
                     >
-                      <StyledTexts
-                        $size='p1'
-                        className='icon-description'
-                        $device={smallState}
-                      >
+                      <StyledTexts $size='p1' className='icon-description'>
                         {' '}
                         {icon_description}
                       </StyledTexts>
@@ -66,21 +52,15 @@ const TransfersAdvantages = ({ smallState, small, xsmall }: TransfersAdvantagesP
         </div>
       </div>
       <div className='advantages-flex'>
-        <StyledHeadings as='h5' $device={smallState}>
+        <StyledHeadings as='h5'>
           {ContentTransfers.advantages.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings
-          as='h2'
-          $device={smallState}
-          className='title-advantages'
-        >
+        <StyledHeadings as='h2' className='title-advantages'>
           {ContentTransfers.advantages.h2_title}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState}>
+        <StyledTexts $size='p1'>
           {ContentTransfers.advantages.p_descripion}
         </StyledTexts>
-
-        
       </div>
     </StyledTransfersAdvantages>
   );

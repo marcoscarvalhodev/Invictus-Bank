@@ -1,16 +1,12 @@
 import styled, { css } from 'styled-components';
 
-interface SavingsAdvantagesProps {
-  $small: boolean;
-}
 
-export const StyledSavingsAdvantages = styled.section<SavingsAdvantagesProps>`
-  ${({ theme, $small }) => css`
+export const StyledSavingsAdvantages = styled.section`
+  ${({ theme }) => css`
     && {
       ${theme.sub_pages.sub_pages_advantages};
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         padding: 9.6rem 2.4rem;
 
         flex-direction: column;
@@ -26,7 +22,7 @@ export const StyledSavingsAdvantages = styled.section<SavingsAdvantagesProps>`
         .flex-2 {
           margin: 0px;
         }
-      `}
+      `}//query-small
     }
   `}
 `;

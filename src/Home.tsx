@@ -12,7 +12,6 @@ import { StyledHome } from './Styles/Home.styled.tsx';
 
 interface HomeProps {
   mobileBx: boolean;
-  smallState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   xsmall: boolean;
   small: boolean;
@@ -21,7 +20,6 @@ interface HomeProps {
 
 const Home = ({
   mobileBx,
-  smallState,
   setAccountState,
   xsmall,
   small,
@@ -30,30 +28,13 @@ const Home = ({
   return (
     <StyledHome className='home'>
       <HeroBackground />
-      <Hero
-        mobileBx={mobileBx}
-        smallState={smallState}
-        setAccountState={setAccountState}
-        xsmall={xsmall}
-        small={small}
-        xlarge={xlarge}
-      />
-      <People smallState={smallState} small={small} xsmall={xsmall} />
-      <Advantages smallState={smallState} small={small} xsmall={xsmall} />
-      <SupremeApp
-        smallState={smallState}
-        xsmall={xsmall}
-        small={small}
-        xlarge={xlarge}
-      />
-      <DoubleCard smallState={smallState} xsmall={xsmall} small={small} />
-      <Testimonials
-        smallState={smallState}
-        xsmall={xsmall}
-        small={small}
-        xlarge={xlarge}
-      />
-      <DownloadApp smallState={smallState} small={small} />
+      <Hero mobileBx={mobileBx} setAccountState={setAccountState} />
+      <People small={small} xsmall={xsmall} />
+      <Advantages />
+      <SupremeApp />
+      <DoubleCard />
+      <Testimonials xsmall={xsmall} small={small} xlarge={xlarge} />
+      <DownloadApp />
     </StyledHome>
   );
 };

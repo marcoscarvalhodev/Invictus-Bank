@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-
+import BackgroundLogin from '../../assets/svg/login/login-background.svg?url';
 function eachDot() {
   let dotValue = '';
 
@@ -18,11 +18,10 @@ function eachDot() {
 
 interface StyledAccountProps {
   $accountState: number;
-  $small: boolean;
 }
 
 export const StyledAccount = styled.section<StyledAccountProps>`
-  ${({ theme, $accountState, $small }) => css`
+  ${({ theme, $accountState }) => css`
     && {
       .background-wrapper {
         position: relative;
@@ -37,6 +36,8 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         display: flex;
         justify-content: center;
       }
+
+      ${theme.media_query.medium_large`
 
       .dots-login {
         width: 150px;
@@ -55,7 +56,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         }
       }
 
-      .dots-login-1 {
+    .dots-login-1 {
         right: -60px;
         top: -25px;
       }
@@ -65,9 +66,12 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         bottom: -25px;
       }
 
-      .background-login {
+    .background-login {
         filter: drop-shadow(-10px 10px 15px rgba(56, 58, 62, 0.35));
+        background: url(${BackgroundLogin}) no-repeat;
       }
+
+      `}
 
       ${($accountState === 1 &&
         css`
@@ -132,8 +136,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         padding: 9.6rem 2.4rem;
 
         .background-wrapper {

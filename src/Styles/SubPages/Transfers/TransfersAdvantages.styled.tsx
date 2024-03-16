@@ -1,12 +1,8 @@
 import styled, { css } from 'styled-components';
 
-interface StyledTransfersAdvantagesProps {
-  $small: boolean;
-  $xsmall: boolean;
-}
 
-export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantagesProps>`
-  ${({ theme, $small, $xsmall }) => css`
+export const StyledTransfersAdvantages = styled.section`
+  ${({ theme}) => css`
     ${theme.sub_pages.sub_pages_advantages};
 
     .icon {
@@ -126,8 +122,7 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         flex-direction: column-reverse;
 
         .icon {
@@ -146,10 +141,9 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
             color: ${theme.colors.white_auxiliary.white_light};
           }
         }
-      `}
+      `} //query-small
 
-      ${$xsmall &&
-      css`
+      ${theme.media_query.xsmall`
         .icon {
           width: 3rem;
           svg {
@@ -181,7 +175,7 @@ export const StyledTransfersAdvantages = styled.section<StyledTransfersAdvantage
           bottom: 50px;
           left: 70px;
         }
-      `}
+      `}//query-extra-small
     }
   `}
 `;

@@ -5,30 +5,18 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { ContentDoubleCard } from '../../../Contents';
 import DoubleCards from '../../../assets/svg/figsb3.svg?react';
 import Icons from '../../Reusable/Icons';
-import {NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
-interface DoubleCardProps {
-  smallState: 'mobile' | 'desktop';
-  small: boolean;
-  xsmall: boolean;
-}
-
-const DoubleCard = ({ smallState, small, xsmall }: DoubleCardProps) => {
-  
-
+const DoubleCard = () => {
   return (
-    <StyledDoubleCard className='container' $small={small} $xsmall={xsmall}>
+    <StyledDoubleCard className='container'>
       <div className='double-card-flex-item-1'>
-        <StyledHeadings as='h5' $device={smallState}>
-          {ContentDoubleCard.h5_subtitle}
-        </StyledHeadings>
-        <StyledHeadings as='h2' $device={smallState} className='title'>
+        <StyledHeadings as='h5'>{ContentDoubleCard.h5_subtitle}</StyledHeadings>
+        <StyledHeadings as='h2' className='title'>
           {ContentDoubleCard.h2_title}
         </StyledHeadings>
-        <StyledTexts $size='p1' $device={smallState}>
-          {ContentDoubleCard.p_description}
-        </StyledTexts>
+        <StyledTexts $size='p1'>{ContentDoubleCard.p_description}</StyledTexts>
 
         <ul className='list'>
           {ContentDoubleCard.icons_bullets.map(
@@ -37,16 +25,10 @@ const DoubleCard = ({ smallState, small, xsmall }: DoubleCardProps) => {
                 <li key={bullet_id} className='list-wrapper'>
                   <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
                   <div className='list-item'>
-                    <StyledHeadings
-                      $device={smallState}
-                      as='h5'
-                      className='bullet-title'
-                    >
+                    <StyledHeadings as='h5' className='bullet-title'>
                       {bullet_title}
                     </StyledHeadings>
-                    <StyledTexts $device={smallState} $size='p4'>
-                      {bullet_description}
-                    </StyledTexts>
+                    <StyledTexts $size='p4'>{bullet_description}</StyledTexts>
                   </div>
                 </li>
               );
@@ -56,9 +38,8 @@ const DoubleCard = ({ smallState, small, xsmall }: DoubleCardProps) => {
 
         <NavLink to='/cards'>
           <StyledTexts
-            as="p"
+            as='p'
             $size='p1'
-            $device={smallState}
             $link={true}
             className='link'
             $arrow={true}

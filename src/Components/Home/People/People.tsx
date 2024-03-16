@@ -15,28 +15,23 @@ import People6 from '../../../assets/img/woman-looking-laptop.jpg';
 import Icons from '../../Reusable/Icons';
 
 interface PeopleProps {
-  smallState: 'desktop' | 'mobile';
   small: boolean;
   xsmall: boolean;
 }
 
-const People = ({smallState, small, xsmall} : PeopleProps) => {
-  
+const People = ({ small, xsmall }: PeopleProps) => {
   return (
     <StyledPeople
-      
-      $small={small}
-      $xsmall={xsmall}
       className='container container-people'
     >
       <div className='flex-item-4-people'>
-        <StyledHeadings className='subtitle' as='h5' $device={smallState}>
+        <StyledHeadings className='subtitle' as='h5'>
           {ContentPeople.h5_subtitle}
         </StyledHeadings>
-        <StyledHeadings className='title' as='h2' $device={smallState}>
+        <StyledHeadings className='title' as='h2'>
           {ContentPeople.h2_title}
         </StyledHeadings>
-        <StyledTexts as='p' $size='p1' $device={smallState}>
+        <StyledTexts as='p' $size='p1'>
           {ContentPeople.p_description}
         </StyledTexts>
 
@@ -47,15 +42,11 @@ const People = ({smallState, small, xsmall} : PeopleProps) => {
                 <li key={bullet_id} className='list-wrapper'>
                   <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
                   <div className={`people-list-item bg-icon-check`}>
-                    <StyledHeadings
-                      className='bullet-title'
-                      as='h5'
-                      $device={smallState}
-                    >
+                    <StyledHeadings className='bullet-title' as='h5'>
                       {bullet_title}
                     </StyledHeadings>
 
-                    <StyledTexts as='p' $size='p4' $device={smallState} >
+                    <StyledTexts as='p' $size='p4'>
                       {bullet_description}
                     </StyledTexts>
                   </div>
@@ -64,44 +55,45 @@ const People = ({smallState, small, xsmall} : PeopleProps) => {
             }
           )}
         </ul>
-        <StyledTexts as='a' href='' $size='p1' $device={smallState} $link={true} $arrow={true}>
+        <StyledTexts as='a' href='' $size='p1' $link={true} $arrow={true}>
           {ContentPeople.link_advantages}
         </StyledTexts>
-        
-      </div>
-      
-      <div className='flex-pics'>
-      {!xsmall ? <div className='flex-item-3-people'>
-        <SVGPeople
-          class1='people-1'
-          class2='people-2'
-          width={`${small ? '276' : '345'}`}
-          height={`${small ? '400' : '500'}`}
-          svg1={People1}
-          svg2={People2}
-        />
-      </div> : <></>}
-      <div className='flex-item-1-people'>
-        <SVGPeople
-          class1='people-3'
-          class2='people-4'
-          width='235'
-          height='340'
-          svg1={People3}
-          svg2={People4}
-        />
-        <SVGPeople
-          class1='people-5'
-          class2='people-6'
-          width='235'
-          height='235'
-          svg1={People6}
-          svg2={People5}
-        />
       </div>
 
+      <div className='flex-pics'>
+        {!xsmall ? (
+          <div className='flex-item-3-people'>
+            <SVGPeople
+              class1='people-1'
+              class2='people-2'
+              width={`${small ? '276' : '345'}`}
+              height={`${small ? '400' : '500'}`}
+              svg1={People1}
+              svg2={People2}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
+        <div className='flex-item-1-people'>
+          <SVGPeople
+            class1='people-3'
+            class2='people-4'
+            width='235'
+            height='340'
+            svg1={People3}
+            svg2={People4}
+          />
+          <SVGPeople
+            class1='people-5'
+            class2='people-6'
+            width='235'
+            height='235'
+            svg1={People6}
+            svg2={People5}
+          />
+        </div>
       </div>
-      
     </StyledPeople>
   );
 };

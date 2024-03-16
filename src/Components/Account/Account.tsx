@@ -5,86 +5,48 @@ import BackgroundLogin from '../../assets/svg/login/login-background.svg?react';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 import AccountPositions from './AccountPositions';
-import ContainerSizes from '../../ContainerSizes';
 
 interface AccountProps {
-  smallState: 'desktop' | 'mobile';
-  smallMediumState: 'desktop' | 'mobile';
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountState: number;
-  xsmall: boolean;
-  small: boolean;
-  medium: boolean;
 }
 
-const Account = ({
-  smallState,
-  setAccountState,
-  accountState,
-  smallMediumState,
-  small,
-  xsmall,
-  medium,
-}: AccountProps) => {
+const Account = ({ setAccountState, accountState}: AccountProps) => {
   return (
-    <StyledAccount
-      className='container'
-      $accountState={accountState}
-      $small={small}
-    >
+    <StyledAccount className='container' $accountState={accountState}>
       <div className='login-wrapper'>
         <div className='background-wrapper'>
-          {!small && (
-            <>
-              <BackgroundLogin className='background-login' />
-              <DotsLogin className='dots-login dots-login-1' />
-              <DotsLogin className='dots-login dots-login-2' />
-            </>
-          )}
+          <svg
+            viewBox='0 0 1496 948'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            className='background-login'
+          ></svg>
+          <svg
+            viewBox='0 0 316 316'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            className='dots-login dots-login-1'
+          ></svg>
+          <svg
+            viewBox='0 0 316 316'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            className='dots-login dots-login-2'
+          ></svg>
+          
         </div>
 
         {(accountState === 2 && (
           <AccountPositions
-            position_1={
-              <SignupForm
-                smallMediumState={smallMediumState}
-                setAccountState={setAccountState}
-                xsmall={xsmall}
-                small={small}
-                medium={medium}
-              />
-            }
-            position_2={
-              <LoginForm
-                smallMediumState={smallMediumState}
-                setAccountState={setAccountState}
-                xsmall={xsmall}
-                small={small}
-                medium={medium}
-              />
-            }
+            position_1={<SignupForm setAccountState={setAccountState} />}
+            position_2={<LoginForm setAccountState={setAccountState} />}
           />
         )) ||
           (accountState === 1 && (
             <AccountPositions
-              position_1={
-                <LoginForm
-                  smallMediumState={smallMediumState}
-                  setAccountState={setAccountState}
-                  xsmall={xsmall}
-                  small={small}
-                  medium={medium}
-                />
-              }
-              position_2={
-                <SignupForm
-                  smallMediumState={smallMediumState}
-                  setAccountState={setAccountState}
-                  xsmall={xsmall}
-                  small={small}
-                  medium={medium}
-                />
-              }
+              position_1={<LoginForm setAccountState={setAccountState} />}
+              position_2={<SignupForm setAccountState={setAccountState} />}
             />
           ))}
       </div>

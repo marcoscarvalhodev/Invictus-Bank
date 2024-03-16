@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
 
 interface DoubleCardsProps {
-  $small: boolean;
-  $xsmall: boolean;
+
 }
 
 export const StyledDoubleCard = styled.section<DoubleCardsProps>`
-  ${({ theme, $small, $xsmall }) => css`
+  ${({ theme }) => css`
     && {
       display: flex;
       align-items: center;
@@ -107,20 +106,18 @@ export const StyledDoubleCard = styled.section<DoubleCardsProps>`
         }
       }
 
-      ${$small &&
-      css`
+      ${theme.media_query.small`
         gap: 40px;
         display: flex;
         flex-direction: column;
-      `}
+      `}//query-small
 
-      ${$xsmall &&
-      css`
+      ${theme.media_query.xsmall`
         .double-cards {
           width: 450px;
           height: 450px;
         }
-      `}
+      `}//query-extra-small
     }
   `}
 `;

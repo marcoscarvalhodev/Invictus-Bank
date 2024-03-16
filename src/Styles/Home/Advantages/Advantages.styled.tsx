@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components';
 
 interface AdvantagesProps {
-  $small: boolean;
-  $xsmall: boolean;
+
 }
 
 export const StyledAdvantages = styled.section<AdvantagesProps>`
-  ${({ theme, $small, $xsmall }) => css`
+  ${({ theme }) => css`
     ${theme.boxProps.flex.flex_column};
 
     .advantages {
@@ -27,15 +26,6 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       transform: translate(-50%, 0);
     }
 
-    ${$small &&
-    css`
-      .advantages {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    `}
-
     .advantages-item {
       display: flex;
       flex-direction: column;
@@ -43,15 +33,6 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
       padding: 0px 16px;
       align-items: start;
     }
-
-    ${$small &&
-    css`
-      .advantages-item {
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-      }
-    `}
 
     .auto-title {
       ${theme.boxProps.flex_items.flex_item_auto};
@@ -64,5 +45,19 @@ export const StyledAdvantages = styled.section<AdvantagesProps>`
     .advantages-title {
       padding: 1.6rem 0rem;
     }
+
+    ${theme.media_query.small`
+      .advantages {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .advantages-item {
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+      }
+    `}//query-small
   `}
 `;

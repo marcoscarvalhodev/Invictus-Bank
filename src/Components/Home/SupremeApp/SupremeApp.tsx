@@ -4,39 +4,27 @@ import { ContentSupremeApp } from '../../../Contents';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
-import ContainerSizes from '../../../ContainerSizes';
 import PhoneMockup from '../../../assets/svg/figsb2.svg?react';
 
-interface SupremeAppProps {
-  smallState: 'desktop' | 'mobile';
-  xsmall: boolean;
-  small: boolean;
-  xlarge: boolean;
-}
 
-const SupremeApp = ({ smallState, xsmall, small, xlarge }: SupremeAppProps) => {
-  
+const SupremeApp = () => {
   return (
-    <StyledSupremeApp $small={small} $xlarge={xlarge} $xsmall={xsmall} className='container'>
+    <StyledSupremeApp
+      className='container'
+    >
       <div className='supremeapp-item-1 item-1'>
-
         <PhoneMockup className='phone-mockup' />
-        
       </div>
       <div className='supremeapp-item-1'>
         {ContentSupremeApp.app_description.map(
           ({ h5_subtitle, h2_title, p_description, id }) => {
             return (
               <div key={id}>
-                <StyledHeadings as='h5' $device={smallState}>
-                  {h5_subtitle}
-                </StyledHeadings>
-                <StyledHeadings as='h2' $device={smallState} className='title'>
+                <StyledHeadings as='h5'>{h5_subtitle}</StyledHeadings>
+                <StyledHeadings as='h2' className='title'>
                   {h2_title}
                 </StyledHeadings>
-                <StyledTexts $device={smallState} $size='p1'>
-                  {p_description}
-                </StyledTexts>
+                <StyledTexts $size='p1'>{p_description}</StyledTexts>
               </div>
             );
           }
@@ -49,15 +37,11 @@ const SupremeApp = ({ smallState, xsmall, small, xlarge }: SupremeAppProps) => {
                 <li key={bullet_id} className='list-wrapper'>
                   <Icons inheritedClass='bullet-icons'>{bullet_icon}</Icons>
                   <div className='supremeapp-list-item'>
-                    <StyledHeadings
-                      className='bullet-title'
-                      as='h5'
-                      $device={smallState}
-                    >
+                    <StyledHeadings className='bullet-title' as='h5'>
                       {bullet_title}
                     </StyledHeadings>
 
-                    <StyledTexts as='p' $size='p4' $device={smallState}>
+                    <StyledTexts as='p' $size='p4'>
                       {bullet_description}
                     </StyledTexts>
                   </div>
@@ -67,14 +51,7 @@ const SupremeApp = ({ smallState, xsmall, small, xlarge }: SupremeAppProps) => {
           )}
         </ul>
 
-        <StyledTexts
-          as='a'
-          href=''
-          $size='p1'
-          $device={smallState}
-          $link={true}
-          $arrow={true}
-        >
+        <StyledTexts as='a' href='' $size='p1' $link={true} $arrow={true}>
           {ContentSupremeApp.link_supremeapp}
         </StyledTexts>
       </div>

@@ -4,32 +4,26 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentAdvantages } from '../../../Contents';
 import Icons from '../../Reusable/Icons';
-import ContainerSizes from '../../../ContainerSizes';
 import Entail from '../../../assets/svg/entail.svg?react';
 
-interface AdvantagesProps {
-  smallState: 'desktop' | 'mobile';
-  small: boolean;
-  xsmall: boolean;
-}
 
-const Advantages = ({ smallState, xsmall, small }: AdvantagesProps) => {
+const Advantages = () => {
   
   return (
-    <StyledAdvantages $xsmall={xsmall} $small={small} className='container'>
+    <StyledAdvantages className='container'>
       <div className='advantages'>
         <div className='auto-title'>
           <StyledHeadings
             className='advantages-subtitle'
             as='h5'
-            $device={smallState}
+            
           >
             Supreme
           </StyledHeadings>
           <StyledHeadings
             className='advantages-title'
             as='h2'
-            $device={smallState}
+            
           >
             Why Supreme Bank?
           </StyledHeadings>
@@ -41,7 +35,7 @@ const Advantages = ({ smallState, xsmall, small }: AdvantagesProps) => {
               <Icons inheritedClass='advantages-icons'>{icon}</Icons>
               <StyledTexts
                 className='advantages-icons-description'
-                $device={smallState}
+                
                 $size='p4'
                 
               >
