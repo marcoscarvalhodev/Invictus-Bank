@@ -582,7 +582,7 @@ const theme = {
       } //for extra small devices
     `,
 
-    xsmall_small: (literals: TemplateStringsArray, ...args: any[]) => css`
+    above_xsmall: (literals: TemplateStringsArray, ...args: any[]) => css`
       @media (min-width: ${themeAttrs.container.container_s}) {
         ${css(literals, ...args)}
       } //for above extra small devices
@@ -592,22 +592,28 @@ const theme = {
         ${css(literals, ...args)}
       } //for small devices
     `,
-    medium: (literals: TemplateStringsArray, ...args: any[]) => css`
+
+    above_small: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media (min-width: ${themeAttrs.container.container_m}) {
+        ${css(literals, ...args)}
+      } //for above small devices
+    `,
+    small_large: (literals: TemplateStringsArray, ...args: any[]) => css`
       @media ((max-width: ${themeAttrs.container.container_l}) and (min-width: ${themeAttrs.container.container_m})) {
         ${css(literals, ...args)}
       } //from small (960px) to large (1140px)
     `,
 
-    medium_large: (literals: TemplateStringsArray, ...args: any[]) => css`
-      @media (min-width: ${themeAttrs.container.container_m}) {
+    xsmall_xlarge: (literals: TemplateStringsArray, ...args: any[]) => css`
+      @media ((min-width: ${themeAttrs.container.container_s}) and (max-width: ${themeAttrs.container.container_xl})) {
         ${css(literals, ...args)}
-      } //for above small devices
+      } //for extra large devices
     `,
 
     xlarge: (literals: TemplateStringsArray, ...args: any[]) => css`
       @media (min-width: ${themeAttrs.container.container_xl}) {
         ${css(literals, ...args)}
-      } //for extra large devices
+      } //for above extra large devices
     `,
     max_large: (literals: TemplateStringsArray, ...args: any[]) => css`
       @media (max-width: ${themeAttrs.container.container_l}) {

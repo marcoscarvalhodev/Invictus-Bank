@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface SupremeAppProps {
-}
+interface SupremeAppProps {}
 
 export const StyledSupremeApp = styled.section<SupremeAppProps>`
   ${({ theme }) => css`
@@ -166,7 +165,7 @@ export const StyledSupremeApp = styled.section<SupremeAppProps>`
         }
       `} //query-small
 
-      ${theme.media_query.xsmall_small`
+      ${theme.media_query.above_xsmall`
           .phone-mockup {
             width: 500px;
           }

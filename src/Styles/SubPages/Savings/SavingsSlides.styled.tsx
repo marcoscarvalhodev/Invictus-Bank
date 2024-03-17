@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components';
 
-
 export const StyledSavingsSlides = styled.section`
-  ${({ theme}) => css`
+  ${({ theme }) => css`
     && {
       .container {
         flex-direction: column;
@@ -18,13 +17,13 @@ export const StyledSavingsSlides = styled.section`
         .container {
           padding: 9.6rem 2.4rem;
         }
-      `}//query-small
+      `} //query-small
 
-      ${theme.media_query.medium`
+      ${theme.media_query.small_large`
         .slides-wrapper {
           grid-template-columns: 1fr 1fr 1fr;
         }
-      `}//query-medium
+      `}//query-small_large
 
       ${theme.media_query.xsmall`
         .slides-wrapper {

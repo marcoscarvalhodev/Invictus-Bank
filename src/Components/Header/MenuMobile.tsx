@@ -18,7 +18,13 @@ interface MenuProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccountState }: MenuProps) => {
+const MenuMobile = ({
+  menuIcon,
+  setMobileBx,
+  setMenuIcon,
+  setActiveBx,
+  setAccountState,
+}: MenuProps) => {
   const [menuState, setMenuState] = React.useState(0);
   const itemsRef = React.useRef([]);
   const { refsByKey, setRef } = useRefs();
@@ -29,7 +35,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
     setMenuIcon(false);
     setActiveBx(false);
     setMenuState(0);
-  }
+  };
 
   const verifyMenuState = (menuRef: HTMLElement) => {
     if (menuRef) {
@@ -43,7 +49,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
 
   const handleClick: React.MouseEventHandler<HTMLAnchorElement> = (event) => {
     const linkId = Number(event.currentTarget.id);
-    
+
     event.preventDefault();
     setMenuState(linkId);
 
@@ -55,7 +61,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
   const handleJoinClick = () => {
     setAccountState(2);
     buttonDisable();
-  }
+  };
 
   React.useEffect(() => {
     itemsRef.current = itemsRef.current.slice(
@@ -83,9 +89,7 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
                     : ''
                 }`}
               >
-                <StyledHeadings as='h3' $device='desktop'>
-                  {title_link}
-                </StyledHeadings>
+                <StyledHeadings as='h3'>{title_link}</StyledHeadings>
               </a>
 
               <ul
@@ -95,8 +99,15 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
                     : ''
                 }`}
               >
-                <NavLink to={pages.page_1.url} onClick={pages.page_1.signup ? handleJoinClick : () => buttonDisable()}>
-                  <DropdownItem >{pages.page_1.link}</DropdownItem>
+                <NavLink
+                  to={pages.page_1.url}
+                  onClick={
+                    pages.page_1.signup
+                      ? handleJoinClick
+                      : () => buttonDisable()
+                  }
+                >
+                  <DropdownItem>{pages.page_1.link}</DropdownItem>
                 </NavLink>
 
                 <NavLink to={pages.page_2.url} onClick={buttonDisable}>
@@ -112,10 +123,12 @@ const MenuMobile = ({ menuIcon, setMobileBx, setMenuIcon, setActiveBx, setAccoun
         })}
 
         <li>
-          <NavLink to="/account" className='nav-link-mobile' onClick={handleJoinClick}>
-            <StyledHeadings as='h3' $device='desktop'>
-              Join Supreme Bank
-            </StyledHeadings>
+          <NavLink
+            to='/account'
+            className='nav-link-mobile'
+            onClick={handleJoinClick}
+          >
+            <StyledHeadings as='h3'>Join Supreme Bank</StyledHeadings>
           </NavLink>
         </li>
 

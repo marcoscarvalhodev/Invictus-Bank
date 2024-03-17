@@ -15,7 +15,7 @@ export const StyledCheckingSlides = styled.section`
         }
       `} //query-small
 
-      ${theme.media_query.medium`
+      ${theme.media_query.small_large`
         .slides-wrapper {
           grid-template-columns: 1fr 1fr 1fr;
         }

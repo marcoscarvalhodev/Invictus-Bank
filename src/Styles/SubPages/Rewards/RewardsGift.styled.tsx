@@ -57,17 +57,15 @@ function eachKnotFill({
   `;
 }
 
-
-
 export const StyledRewardsGift = styled.div`
-  ${({ theme}) => css`
+  ${({ theme }) => css`
     position: relative;
 
     ${theme.media_query.small`
           top: -100%;
         `}
 
-    ${theme.media_query.medium_large`
+    ${theme.media_query.above_small`
           top: 50%;
         `}//media-query
 
@@ -80,7 +78,7 @@ export const StyledRewardsGift = styled.div`
             left: calc(50% + -4rem);
           `}
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
             transform: translate(-50%, -50%);
             left: calc(50%);
             top: calc(-50% + 2rem);
@@ -129,13 +127,13 @@ export const StyledRewardsGift = styled.div`
       ${theme.media_query.small`
             left: 10.95rem;
           `};
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
             animation: lid-move 12s linear infinite alternate; 
        `}
 
       //shadow-lid
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
             .shadow-lid-wrapper {
               width: 25rem;
               height: 25rem;
@@ -154,7 +152,7 @@ export const StyledRewardsGift = styled.div`
     }
 
     .lid-wrapper {
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
             animation: lid-wrapper-move 12s linear infinite alternate;
           `};
       position: relative;

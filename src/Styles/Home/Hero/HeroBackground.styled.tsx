@@ -2,50 +2,72 @@ import styled, { css } from 'styled-components';
 
 import SVGHeroSmall from '../../../assets/svg/bg-home-mobile.svg?url';
 import SVGHeroLarge from '../../../assets/svg/bg-home.svg?url';
+import SVGHeroExtraLarge from '../../../assets/svg/bg-home-extra-large.svg?url';
 
 interface HeroBackgroundProps {}
 
 export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
   ${({ theme }) => css`
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
     .svg-background {
-      width: 100%;
-      z-index: -1;
-      position: absolute;
-      height: 100%;
-      overflow: hidden;
-
+      
       ${theme.media_query.xsmall`width: 180%;`};
       ${theme.media_query.small`width: 150%;`};
     }
 
     ${theme.media_query.xsmall`
-      .svg-background {
-        background: url(${SVGHeroSmall}) no-repeat;
+      .svg-background-mobile {
+        
+      }
+
+      .svg-background-desktop, .svg-background-extra-desktop {
+        display: none;
+      }
+    `} //query-extra-small
+
+    ${theme.media_query.xsmall_xlarge`
+      .svg-background-desktop {
+        
+        
+        max-width: 144rem;
+        
+      }
+
+      .svg-background-mobile, .svg-background-extra-desktop {
+        display: none;
+      }
+    `}//query-xsmall_xlarge
+
+${theme.media_query.xlarge`
+      .svg-background-extra-desktop {
         
         
       }
-    `}
 
-    ${theme.media_query.xsmall_small`
-      .svg-background {
-        background: url(${SVGHeroLarge}) no-repeat;
-        
+      .svg-background-mobile, .svg-background-desktop {
+        display: none;
       }
-    `}
+    `}//query- above extra-large
 
-    /*.rect-1 {
+
+
+   /* #rect-1 {
       animation: bg-home-rect 3s ease 0.5s infinite alternate;
     }
 
-    .rect-2 {
+    #rect-2 {
       animation: bg-home-rect 3s ease 1s infinite alternate;
     }
 
-    .rect-3 {
+    #rect-3 {
       animation: bg-home-rect 3s ease 1.5s infinite alternate;
     }
 
-    .rect-4 {
+    #rect-4 {
       animation: bg-home-rect 3s ease 1s infinite alternate;
     }*/
 

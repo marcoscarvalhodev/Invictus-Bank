@@ -37,7 +37,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
         justify-content: center;
       }
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
 
       .dots-login {
         width: 150px;
