@@ -49,7 +49,6 @@ export const StyledTexts = styled.p<TextsProps>`
         }
 
         &:hover {
-          
           ${$arrow
             ? css`
                 padding-left: 64px;
@@ -60,7 +59,6 @@ export const StyledTexts = styled.p<TextsProps>`
 
           background-position: 8px 50%;
           &:after {
-            
             left: 8%;
             position: absolute;
             width: 85%;
@@ -70,7 +68,7 @@ export const StyledTexts = styled.p<TextsProps>`
 
       ${$size === 'p1' &&
       css`
-        ${theme.media_query.medium_large`
+        ${theme.media_query.above_small`
           font-size: 2.4rem;
           line-height: 130%;
         `} //query-desktop
@@ -78,7 +76,7 @@ export const StyledTexts = styled.p<TextsProps>`
       ${theme.media_query.small`
           font-size: 1.8rem;
           line-height: 130%;
-        `}//query-mobile
+        `} //query-mobile
       `}
 
       //P2
@@ -86,7 +84,7 @@ export const StyledTexts = styled.p<TextsProps>`
 
 ${$size === 'p2' &&
       css`
-        ${theme.media_query.medium_large`
+        ${theme.media_query.above_small`
           font-size: 1.6rem;
           line-height: 140%;
         `} //query-desktop
@@ -94,14 +92,14 @@ ${$size === 'p2' &&
       ${theme.media_query.small`
           font-size: 1.4rem;
           line-height: 150%;
-        `}//query-mobile
+        `} //query-mobile
       `}
 
 //P3
 
 ${$size === 'p3' &&
       css`
-        ${theme.media_query.medium_large`
+        ${theme.media_query.above_small`
           font-size: 1.4rem;
           line-height: 150%;
         `} //query-desktop
@@ -109,12 +107,12 @@ ${$size === 'p3' &&
       ${theme.media_query.small`
           font-size: 1.4rem;
           line-height: 150%;
-        `}//query-mobile
+        `} //query-mobile
       `}
 
       ${$size === 'p4' &&
       css`
-        ${theme.media_query.medium_large`
+        ${theme.media_query.above_small`
           font-size: 1.8rem;
           line-height: 130%;
         `} //query-desktop
@@ -122,7 +120,7 @@ ${$size === 'p3' &&
       ${theme.media_query.small`
           font-size: 1.6rem;
           line-height: 140%;
-        `}//query-mobile
+        `} //query-mobile
       `}
 
       ${$fontSize &&

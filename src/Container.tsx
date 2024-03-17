@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyledContainer } from './Styles/Container.styled.ts';
 import Header from './Components/Header/Header.tsx';
-import ContainerSizes from './ContainerSizes.tsx';
 import ScrollToTop from './Hooks/scrollToTop.tsx';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from './AppRoutes.tsx';
 
 interface ContainerProps {
@@ -39,7 +38,6 @@ const Container = ({
           setMobileBx={setMobileBx}
           mobileBx={mobileBx}
           setAccountState={setAccountState}
-          small={small}
         />
 
         <AppRoutes

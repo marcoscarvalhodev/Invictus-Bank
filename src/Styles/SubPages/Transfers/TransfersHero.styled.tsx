@@ -32,10 +32,12 @@ export const StyledTransfersHero = styled.section`
       }
     }
 
-    ${theme.media_query.small`
+    &&& {
+      ${theme.media_query.small`
         flex-direction: column;
         padding-bottom: 9.6rem;
         
       `}//query-small
+    }
   `}
 `;

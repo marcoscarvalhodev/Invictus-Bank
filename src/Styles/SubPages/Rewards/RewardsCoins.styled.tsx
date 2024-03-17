@@ -120,11 +120,11 @@ export const StyledRewardsCoins = styled.div<StyledRewardsCoinsProps>`
         z-index: 9;
       }
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
         ${theme.coin.coin_parameters};
         ${eachFigure()};
         ${containerMoveEach()};
-      `}//media-query
+      `} //media-query
 
       @keyframes spinCoinGift {
         0% {

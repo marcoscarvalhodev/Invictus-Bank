@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 interface headingProps {
-  
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
 }
 
@@ -16,7 +15,7 @@ export const StyledHeadings = styled.h1<headingProps>`
     css`
       color: ${theme.colors.black_auxiliary.black_normal};
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
         font-size: 6.4rem;
         line-height: 100%;
       `} //query-desktop
@@ -32,7 +31,7 @@ export const StyledHeadings = styled.h1<headingProps>`
     ${as === 'h2' &&
     css`
       color: ${theme.colors.black_auxiliary.black_normal};
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
           font-size: 5.2rem;
           line-height: 110%;
         `} //query-desktop
@@ -40,7 +39,7 @@ export const StyledHeadings = styled.h1<headingProps>`
       ${theme.media_query.small`
           font-size: 3.6rem;
           line-height: 120%;
-        `}//query-mobile
+        `} //query-mobile
     `}
 
 
@@ -48,15 +47,15 @@ export const StyledHeadings = styled.h1<headingProps>`
 
 ${as === 'h3' &&
     css`
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
           font-size: 3.6rem;
           line-height: 120%;
-        `}//query-desktop
+        `} //query-desktop
 
       ${theme.media_query.small`
           font-size: 2.4rem;
           line-height: 120%;
-        `}//query-mobile
+        `} //query-mobile
     `}
 
 
@@ -64,15 +63,15 @@ ${as === 'h3' &&
 
 ${as === 'h4' &&
     css`
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
           font-size: 2.4rem;
           line-height: 130%;
-        `}//query-desktop
+        `} //query-desktop
 
       ${theme.media_query.small`
           font-size: 1.8rem;
           line-height: 130%;
-        `}//query-mobile
+        `} //query-mobile
     `}
 
 
@@ -91,15 +90,15 @@ ${as === 'h5' &&
       -webkit-text-fill-color: transparent;
       font-weight: bold;
 
-      ${theme.media_query.medium_large`
+      ${theme.media_query.above_small`
           font-size: 1.8rem;
           line-height: 140%;
-        `}//query-desktop
+        `} //query-desktop
 
       ${theme.media_query.small`
           font-size: 1.6rem;
           line-height: 150%;
-        `}//query-mobile
+        `} //query-mobile
     `}
   `}
 `;
