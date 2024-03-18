@@ -17,7 +17,7 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
       ${theme.media_query.xsmall`width: 180%;`};
       ${theme.media_query.small`width: 150%;`};
 
-      /*#rect-1 {
+      #rect-1 {
         animation: bg-home-rect 3s ease 0.5s infinite alternate;
       }
 
@@ -31,7 +31,7 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
 
       #rect-4 {
         animation: bg-home-rect 3s ease 1s infinite alternate;
-      }*/
+      }
     }
 
     ${theme.media_query.xsmall`
