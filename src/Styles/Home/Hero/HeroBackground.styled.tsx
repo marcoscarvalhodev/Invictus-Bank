@@ -14,15 +14,27 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
     position: absolute;
     overflow: hidden;
     .svg-background {
-      
       ${theme.media_query.xsmall`width: 180%;`};
       ${theme.media_query.small`width: 150%;`};
+
+      /*#rect-1 {
+        animation: bg-home-rect 3s ease 0.5s infinite alternate;
+      }
+
+      #rect-2 {
+        animation: bg-home-rect 3s ease 1s infinite alternate;
+      }
+
+      #rect-3 {
+        animation: bg-home-rect 3s ease 1.5s infinite alternate;
+      }
+
+      #rect-4 {
+        animation: bg-home-rect 3s ease 1s infinite alternate;
+      }*/
     }
 
     ${theme.media_query.xsmall`
-      .svg-background-mobile {
-        
-      }
 
       .svg-background-desktop, .svg-background-extra-desktop {
         display: none;
@@ -31,8 +43,6 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
 
     ${theme.media_query.xsmall_xlarge`
       .svg-background-desktop {
-        
-        
         max-width: 144rem;
         
       }
@@ -43,33 +53,11 @@ export const StyledHeroBackground = styled.div<HeroBackgroundProps>`
     `}//query-xsmall_xlarge
 
 ${theme.media_query.xlarge`
-      .svg-background-extra-desktop {
-        
-        
-      }
-
       .svg-background-mobile, .svg-background-desktop {
         display: none;
       }
     `}//query- above extra-large
 
-
-
-   /* #rect-1 {
-      animation: bg-home-rect 3s ease 0.5s infinite alternate;
-    }
-
-    #rect-2 {
-      animation: bg-home-rect 3s ease 1s infinite alternate;
-    }
-
-    #rect-3 {
-      animation: bg-home-rect 3s ease 1.5s infinite alternate;
-    }
-
-    #rect-4 {
-      animation: bg-home-rect 3s ease 1s infinite alternate;
-    }*/
 
     .bg-blur-1 {
       transform: translate3d(0, -100px, 0);

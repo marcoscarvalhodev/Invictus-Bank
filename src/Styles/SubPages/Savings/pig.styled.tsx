@@ -31,15 +31,15 @@ export const StyledPig = styled.div<PigProps>`
       z-index: 4;
 
       .container-coin {
-        width: 40px;
-        height: 40px;
+        width: 4rem;
+        height: 4rem;
         position: absolute;
         perspective: 100rem;
         animation: moveCoin 5s linear infinite;
         top: calc(
-          -9.6rem + -15px + ${$small ? `-40px` : `-70px`}
+          -9.6rem + -1.5rem + ${$small ? `-4rem` : `-7rem`}
         );
-        left: calc(50% + -20px);
+        left: calc(50% + -2rem);
         z-index: 0;
       }
 
@@ -59,7 +59,7 @@ export const StyledPig = styled.div<PigProps>`
           height: 4rem;
 
           position: absolute;
-          transform: translateY(-5px);
+          transform: translateY(-0.5rem);
           transform-origin: 50% 100%;
           top: -4rem;
           left: calc(50% + -0.2rem);
@@ -68,16 +68,16 @@ export const StyledPig = styled.div<PigProps>`
         }
 
         .firework:nth-child(1) {
-          transform: rotate(45deg) translateY(-5px);
+          transform: rotate(45deg) translateY(-0.5rem);
         }
         .firework:nth-child(2) {
-          transform: rotate(90deg) translateY(-5px);
+          transform: rotate(90deg) translateY(-0.5rem);
         }
         .firework:nth-child(3) {
-          transform: rotate(270deg) translateY(-5px);
+          transform: rotate(270deg) translateY(-0.5rem);
         }
         .firework:nth-child(4) {
-          transform: rotate(315deg) translateY(-5px);
+          transform: rotate(315deg) translateY(-0.5rem);
         }
 
         .firework::before {
@@ -94,16 +94,16 @@ export const StyledPig = styled.div<PigProps>`
       }
 
       .pig {
-        width: 200px;
+        width: 20rem;
       }
 
       .hole {
-        width: 13px;
-        height: 60px;
-        background-color: #e7a7ab;
+        width: 1.3rem;
+        height: 5.5rem;
+        background-color: #F4A7AA;
         position: absolute;
-        left: calc(50% + -7px);
-        top: ${$small ? `22px` : `21.5px`};
+        left: calc(50% + -0.7rem);
+        top: ${$small ? `2.2rem` : `2.15rem`};
         z-index: 998;
       }
 
@@ -130,13 +130,13 @@ export const StyledPig = styled.div<PigProps>`
       @keyframes moveCoin {
         0%,
         20% {
-          transform: translateY(${$small ? `-6px` : `-10px`});
+          transform: translateY(${$small ? `-0.6rem` : `-1rem`});
         }
 
         80%,
         100% {
           transform: translateY(
-            calc(9.6rem + 35px + ${$small ? `45px` : `75px`})
+            calc(9.6rem + 3.5rem + ${$small ? `4.5rem` : `7.5rem`})
           );
         }
       }
