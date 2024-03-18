@@ -1,15 +1,17 @@
 import React from 'react';
 
 import Home from './Home';
-import Savings from './Components/SubPages/Savings/Savings';
 import Checking from './Components/SubPages/Checking/Checking';
 import Cards from './Components/SubPages/Cards/Cards';
-
 import { Routes, Route } from 'react-router-dom';
 import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
 import Rewards from './Components/SubPages/Rewards/Rewards';
+
+const Savings = React.lazy(
+  () => import('./Components/SubPages/Savings/Savings')
+);
 
 interface AppRoutesProps {
   mobileBx: boolean;
@@ -59,7 +61,11 @@ const AppRoutes = ({
 
       <Route
         path='savings/*'
-        element={<Savings small={small} />} //needed to use media query custom hook
+        element={
+          <React.Suspense fallback={<></>}>
+            <Savings small={small} />
+          </React.Suspense>
+        } //needed to use media query custom hook
       />
 
       <Route path='checking/*' element={<Checking />} />

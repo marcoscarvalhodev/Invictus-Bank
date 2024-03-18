@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyledRewards } from '../../../Styles/SubPages/Rewards/Rewards.styled';
-import RewardsHero from './RewardsHero';
-import RewardsCoins from './RewardsCoins';
-import ContainerSizes from '../../../ContainerSizes';
+const RewardsHero = React.lazy(() => import('./RewardsHero'));
 
 interface RewardsProps {
   small: boolean;
@@ -11,7 +9,9 @@ interface RewardsProps {
 const Rewards = ({ small }: RewardsProps) => {
   return (
     <StyledRewards>
-      <RewardsHero small={small} />
+      <React.Suspense fallback={<></>}>
+        <RewardsHero small={small} />
+      </React.Suspense>
     </StyledRewards>
   );
 };

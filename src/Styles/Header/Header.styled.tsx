@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
     position: fixed;
     z-index: 999;
     transition: 0.5s ease;
-    background-color: transparent;
+    
 
     &.active-header {
       box-shadow: 0px 51px 80px rgba(27, 108, 231, 0.08),
@@ -23,6 +23,7 @@ export const StyledHeader = styled.header`
       height: 100vh;
       overflow-x: hidden;
       overflow-y: scroll;
+      
     }
 
     a {
