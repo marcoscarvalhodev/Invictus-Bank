@@ -32,7 +32,7 @@ export const StyledInput = styled.div<InputProps>`
 
     .input {
       outline: none;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       border-radius: 0.4rem;
       width: 100%;
       padding: 0.8rem;
