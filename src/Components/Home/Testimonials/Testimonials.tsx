@@ -49,10 +49,10 @@ const Testiominials = ({ xsmall, small, xlarge }: TestimonialsProps) => {
         pagination={{ clickable: true, type: 'progressbar' }}
       >
         {ContentTestimonials.list_testimonials.map(
-          ({ name, testimonial, photo, id }) => {
+          ({ name, testimonial, photo, id, alt }) => {
             return (
               <SwiperSlide key={id}>
-                <img src={photo} className='photo-profile'></img>
+                <img src={photo} className='photo-profile' alt={alt}></img>
                 <StyledHeadings className='testimonials-name' as='h4'>
                   {name}
                 </StyledHeadings>

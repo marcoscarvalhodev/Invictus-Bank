@@ -11,6 +11,8 @@ export const StyledTransfersAdvantages = styled.section`
       cursor: pointer;
     }
 
+    padding-bottom: 4.8rem;
+
     .icon-description-wrapper {
       position: absolute;
       min-width: 250px;
@@ -42,7 +44,7 @@ export const StyledTransfersAdvantages = styled.section`
     }
 
     &&& {
-      padding: 4.8rem 2.4rem 4.8rem 2.4rem;
+      
 
       .wrapper {
         padding: 30px;
@@ -124,7 +126,7 @@ export const StyledTransfersAdvantages = styled.section`
 
       ${theme.media_query.small`
         flex-direction: column-reverse;
-
+        padding: 4.8rem 2.4rem;
         .icon {
           width: 4rem;
           svg {

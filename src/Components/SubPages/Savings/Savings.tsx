@@ -4,16 +4,15 @@ import SavingsSlides from './SavingsSlides.tsx';
 import SavingsHero from './SavingsHero.tsx';
 import SavingsAdvantages from './SavingsAdvantages.tsx';
 
+
 interface SavingsProps {
   small: boolean;
-
 }
 
-const Savings = ({small }: SavingsProps) => {
+const Savings = ({ small }: SavingsProps) => {
   return (
     <StyledSavings>
       <SavingsHero small={small} />
-
       <SavingsSlides />
       <SavingsAdvantages />
     </StyledSavings>
