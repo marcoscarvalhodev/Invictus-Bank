@@ -120,7 +120,7 @@ export const StyledRewardsGift = styled.div`
       height: 15.5rem;
       top: -6rem;
       left: 10.85rem;
-      transform: rotateY(0deg) rotateX(80deg) rotateZ(-131.5deg) scale(1.04)
+      transform: rotateY(0deg) rotateX(80deg) rotateZ(-131.2deg) scale(1.04)
         translateZ(0rem);
       z-index: 10;
 
@@ -305,7 +305,7 @@ ${eachKnotFill({
     }
 
     .face-6 {
-      right: 7.95rem;
+      right: 7.93rem;
     }
 
     .lid-1,
@@ -378,7 +378,12 @@ ${eachKnotFill({
     }
 
     .face-9 {
-      top: 5.94rem;
+      top: 5.90rem;
+      transform: rotateX(-90deg) translateY(0.5px);
+    }
+
+    .face-4 {
+      top: 6rem;
       transform: rotateX(-90deg) translateY(0.5px);
     }
 
