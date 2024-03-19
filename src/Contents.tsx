@@ -134,7 +134,7 @@ export const ContentTestimonials = {
       name: 'Joanne Fuentes',
       testimonial:
         "I recently moved to a new city and was in search of a trustworthy bank. I'm so glad I found Supreme Bank. I appreciate the personalized attention they give to their customers.",
-      alt: 'A lady giving a testimonial.'  
+      alt: 'A lady giving a testimonial.',
     },
     {
       id: 2,
@@ -142,7 +142,7 @@ export const ContentTestimonials = {
       name: 'Kelly Davis',
       testimonial:
         "I've been their customer for years, and I couldn't be happier with their services. Their friendly staff is always there to assist me with any questions.",
-      alt: 'A lady giving a testimonial.' 
+      alt: 'A lady giving a testimonial.',
     },
     {
       id: 3,
@@ -150,7 +150,7 @@ export const ContentTestimonials = {
       name: 'Harry Portman',
       testimonial:
         'The security and peace of mind that they offer are unparalleled. I never have to worry about my accounts or personal information being compromised. Thank you Supreme Bank.',
-        alt: 'A gentleman giving a testimonial.' 
+      alt: 'A gentleman giving a testimonial.',
     },
     {
       id: 4,
@@ -158,7 +158,7 @@ export const ContentTestimonials = {
       name: 'Lucy Young',
       testimonial:
         "I appreciate Sup's commitment to community involvement. Their charitable initiatives and sponsorships show their dedication to making a positive impact in our local area. It's a bank that truly cares about the community it serves.",
-        alt: 'A lady giving a testimonial.' 
+      alt: 'A lady giving a testimonial.',
     },
     {
       id: 5,
@@ -166,7 +166,7 @@ export const ContentTestimonials = {
       name: 'Norman Smith',
       testimonial:
         "I've had accounts with several banks, but Supreme stands out from the rest. Their commitment to security and innovation is impressive. I feel confident knowing my money is in safe hands.",
-        alt: 'A gentleman giving a testimonial.' 
+      alt: 'A gentleman giving a testimonial.',
     },
   ],
 };
@@ -598,6 +598,9 @@ export const ContentDeposits = {
 
 export const ContentRewards = {
   hero: {
+    h5_subtitle: 'SUPREME REWARDS',
+    h2_title: 'Bountiful surprises await you with our exclusive rewards.',
+    p_description: "It's reward time! Your bank's got your back with exclusive treats – dive into the goodies!",
     box: [
       { strap: <GiftStrap className='strap' /> },
       { strap: <GiftStrap className='strap' /> },
@@ -610,5 +613,12 @@ export const ContentRewards = {
       {},
       {},
     ],
+  },
+  advantages: {
+    h5_subtitle: 'COMMUNITY REWARDS',
+    h2_title: "Connect, engage, and earn rewards with our bank's program.",
+    p_description:
+      'Our bank has a platform where clients can showcase their businesses, receive feedback, and support each other through networking events or online forums and so all of us grow together.',
+    access_link: 'Access our platform.'  
   },
 };

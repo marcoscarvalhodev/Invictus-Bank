@@ -11,7 +11,7 @@ const DepositsAdvantages = () => {
     <StyledDepositsAdvantages className='container'>
       <div className='advantages-flex'>
         <div className='deposits-hourglass-wrapper'>
-          <img src={DepositsHourglass} alt='' className='deposits-hourglass' />
+          <img src={DepositsHourglass} alt='Hourglass with coins around it to illustrate how time means money' className='deposits-hourglass' />
         </div>
       </div>
       <div className='advantages-flex'>

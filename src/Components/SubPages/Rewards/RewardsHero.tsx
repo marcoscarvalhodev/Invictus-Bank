@@ -3,30 +3,29 @@ import { StyledRewardsHero } from '../../../Styles/SubPages/Rewards/RewardsHero.
 import RewardsGift from './RewardsGift';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
+import { ContentRewards } from '../../../Contents';
 
 interface RewardsProps {
-  
   small: boolean;
 }
 
-const RewardsHero = ({small }: RewardsProps) => {
+const RewardsHero = ({ small }: RewardsProps) => {
   return (
     <StyledRewardsHero className='container'>
       <div className='flex-hero flex-hero-1'>
-        <StyledHeadings as='h5' >
-          Rewards
+        <StyledHeadings as='h5'>
+          {ContentRewards.hero.h5_subtitle}
         </StyledHeadings>
         <StyledHeadings as='h2' className='title-hero'>
-          Bountiful surprises await you with our exclusive rewards.
+          {ContentRewards.hero.h2_title}
         </StyledHeadings>
         <StyledTexts $size='p1'>
-          It's reward time! Your bank's got your back with exclusive treats –
-          dive into the goodies!
+          {ContentRewards.hero.p_description}
         </StyledTexts>
       </div>
 
       <div className='flex-hero flex-hero-2'>
-        <RewardsGift small={small}/>
+        <RewardsGift small={small} />
       </div>
     </StyledRewardsHero>
   );
