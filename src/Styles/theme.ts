@@ -48,7 +48,7 @@ const theme = {
       yellow_light: '#ffd76b',
     },
     drop_shadow: `
-      filter: drop-shadow(-6px 16px 20px rgba(27, 108, 231, 0.2));
+      filter: drop-shadow(-6px 10px 10px rgba(27, 108, 231, 0.2));
     `,
   },
 
