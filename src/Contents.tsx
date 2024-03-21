@@ -600,7 +600,8 @@ export const ContentRewards = {
   hero: {
     h5_subtitle: 'SUPREME REWARDS',
     h2_title: 'Bountiful surprises await you with our exclusive rewards.',
-    p_description: "It's reward time! Your bank's got your back with exclusive treats – dive into the goodies!",
+    p_description:
+      "It's reward time! Your bank's got your back with exclusive treats – dive into the goodies!",
     box: [
       { strap: <GiftStrap className='strap' /> },
       { strap: <GiftStrap className='strap' /> },
@@ -619,6 +620,35 @@ export const ContentRewards = {
     h2_title: "Connect, engage, and earn rewards with our bank's program.",
     p_description:
       'Our bank has a platform where clients can showcase their businesses, receive feedback, and support each other through networking events or online forums and so all of us grow together.',
-    access_link: 'Access our platform.'  
+    access_link: 'Access our platform.',
   },
+
+  bullet_advantages: [
+    {
+      bullet:
+        "Earn cashback on everyday purchases with our rewards program, turning spending into savings effortlessly.",
+      id: 1,
+    },
+    {
+      bullet:
+        "Enjoy exclusive discounts and deals at popular retailers with our rewards partnership network.",
+      id: 2,
+    },
+    {
+      bullet:
+        "Redeem points for travel rewards, from flights to hotel stays, making your dream vacations a reality.",
+      id: 3,
+    },
+    {
+      bullet:
+        "Maximize your savings potential with bonus rewards for using our financial products and services.",
+      id: 4,
+    },
+    {
+      bullet:
+        "Flexibility to choose how you redeem rewards, whether it's cash, gift cards, or merchandise.",
+      id: 5,
+    },
+    { bullet: "No hassle, no hidden fees – just straightforward rewards for your everyday banking activities.", id: 6 },
+  ],
 };
