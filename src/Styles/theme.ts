@@ -359,8 +359,6 @@ const theme = {
         }
 
         .flex-2 {
-          margin-top: 9.4rem;
-
           display: flex;
           align-self: center;
           justify-content: center;
@@ -620,6 +618,11 @@ const theme = {
         ${css(literals, ...args)}
       } //from 0 to large (1140px)
     `,
+  },
+
+  images_props: {
+    image: css``,
+    image_wrapper: css``,
   },
 };
 export default theme;

@@ -19,15 +19,11 @@ export const StyledLazyAnimation = styled.div`
     #s-letter,
     #b-letter {
       stroke-width: 1.5;
-      animation: figsb-letter-suspense 2s linear forwards;
+      animation: figsb-letter-suspense 1s linear forwards;
     }
 
     @keyframes figsb-letter-suspense {
       0% {
-        stroke-dasharray: 0 400;
-        stroke-opacity: 0;
-      }
-      30% {
         stroke-dasharray: 0 400;
         stroke-opacity: 1;
       }

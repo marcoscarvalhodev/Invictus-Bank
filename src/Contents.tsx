@@ -626,22 +626,22 @@ export const ContentRewards = {
   bullet_advantages: [
     {
       bullet:
-        "Earn cashback on everyday purchases with our rewards program, turning spending into savings effortlessly.",
+        'Earn cashback on everyday purchases with our rewards program, turning spending into savings effortlessly.',
       id: 1,
     },
     {
       bullet:
-        "Enjoy exclusive discounts and deals at popular retailers with our rewards partnership network.",
+        'Enjoy exclusive discounts and deals at popular retailers with our rewards partnership network.',
       id: 2,
     },
     {
       bullet:
-        "Redeem points for travel rewards, from flights to hotel stays, making your dream vacations a reality.",
+        'Redeem points for travel rewards, from flights to hotel stays, making your dream vacations a reality.',
       id: 3,
     },
     {
       bullet:
-        "Maximize your savings potential with bonus rewards for using our financial products and services.",
+        'Maximize your savings potential with bonus rewards for using our financial products and services.',
       id: 4,
     },
     {
@@ -649,6 +649,24 @@ export const ContentRewards = {
         "Flexibility to choose how you redeem rewards, whether it's cash, gift cards, or merchandise.",
       id: 5,
     },
-    { bullet: "No hassle, no hidden fees – just straightforward rewards for your everyday banking activities.", id: 6 },
+    {
+      bullet:
+        'No hassle, no hidden fees – just straightforward rewards for your everyday banking activities.',
+      id: 6,
+    },
+  ],
+};
+
+export const ContentCareers = {
+  careers_hero: {
+    h2_title: 'Want be part of our Supreme team?',
+    h5_subtitle: 'SUPREME CAREERS'
+  },
+  careers_data: [
+    { title: 'front-end engineer', id: 1, description: 'front end é foda' },
+    { title: 'back-end engineer', id: 2, description: 'back end é foda' },
+    { title: 'fullstack engineer', id: 3, description: 'fullstack é foda' },
+    { title: 'web developer', id: 4, description: 'web developing é foda' },
+    { title: 'front-end developer', id: 5, description: 'front end é foda' },
   ],
 };
