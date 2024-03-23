@@ -8,6 +8,7 @@ import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
 import Rewards from './Components/SubPages/Rewards/Rewards';
+import Careers from './Components/SubPages/Careers/Careers';
 
 interface AppRoutesProps {
   mobileBx: boolean;
@@ -31,52 +32,52 @@ const AppRoutes = ({
   xlarge,
 }: AppRoutesProps) => {
   return (
-    
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <Home
-              mobileBx={mobileBx}
-              setAccountState={setAccountState}
-              xsmall={xsmall}
-              small={small}
-              xlarge={xlarge}
-            /> //needed to use media query custom hook
-          }
-        />
+    <Routes>
+      <Route
+        path='/'
+        element={
+          <Home
+            mobileBx={mobileBx}
+            setAccountState={setAccountState}
+            xsmall={xsmall}
+            small={small}
+            xlarge={xlarge}
+          /> //needed to use media query custom hook
+        }
+      />
 
-        <Route
-          path='account/*'
-          element={
-            <Account
-              setAccountState={setAccountState}
-              accountState={accountState}
-            />
-          }
-        />
+      <Route
+        path='account/*'
+        element={
+          <Account
+            setAccountState={setAccountState}
+            accountState={accountState}
+          />
+        }
+      />
 
-        <Route
-          path='savings/*'
-          element={<Savings small={small} />} //needed to use media query custom hook
-        />
+      <Route
+        path='savings/*'
+        element={<Savings small={small} />} //needed to use media query custom hook
+      />
 
-        <Route path='checking/*' element={<Checking />} />
+      <Route path='checking/*' element={<Checking />} />
 
-        <Route path='cards/*' element={<Cards />} />
+      <Route path='cards/*' element={<Cards />} />
 
-        <Route path='transfers/*' element={<Transfers />} />
+      <Route path='transfers/*' element={<Transfers />} />
 
-        <Route path='deposits/*' element={<Deposits />} />
+      <Route path='deposits/*' element={<Deposits />} />
 
-        <Route
-          path='rewards/*'
-          element={
-            <Rewards small={small} /> //needed to use media query custom hook
-          }
-        />
-      </Routes>
-    
+      <Route
+        path='rewards/*'
+        element={
+          <Rewards small={small} /> //needed to use media query custom hook
+        }
+      />
+
+      <Route path='careers/*' element={<Careers />} />
+    </Routes>
   );
 };
 
