@@ -3,7 +3,7 @@ import { StyledLoginForm } from '../../Styles/Account/LoginForm.styled';
 import { StyledHeadings } from '../../Styles/Reusable/Headings.styled';
 
 import { ContentLoginSignupForm } from '../../Contents';
-import Input from './Input';
+import Input from '../Reusable/Input';
 import Button from '../Reusable/Button';
 import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';

@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledHeadings } from '../../Styles/Reusable/Headings.styled';
 import { StyledSignupForm } from '../../Styles/Account/SignupForm.styled';
 import { ContentLoginSignupForm } from '../../Contents';
-import Input from './Input';
+import Input from '../Reusable/Input';
 import Button from '../Reusable/Button';
 import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';
@@ -13,7 +13,6 @@ import { NavLink } from 'react-router-dom';
 
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
-import ContainerSizes from '../../ContainerSizes';
 
 interface SignupFormProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;

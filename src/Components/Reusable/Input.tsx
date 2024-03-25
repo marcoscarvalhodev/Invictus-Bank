@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledInput } from '../../Styles/Account/Input.styled';
+import { StyledInput } from '../../Styles/Reusable/Input.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
 interface InputProps {
@@ -10,9 +10,10 @@ interface InputProps {
   value?: string;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   icon?: React.JSX.Element;
-  error: string;
+  error?: string;
   children?: React.JSX.Element;
   inputPassword?: boolean;
+  placeholder?: string;
 }
 
 const Input = ({
@@ -26,9 +27,11 @@ const Input = ({
   icon,
   error,
   inputPassword,
+  placeholder,
+  
 }: InputProps) => {
   return (
-    <StyledInput $inputPassword={inputPassword}>
+    <StyledInput $inputPassword={inputPassword} className='input-wrapper'>
       <label htmlFor={name} className='label-wrapper'>
         {icon}
         <StyledTexts $size='p1'>{label}</StyledTexts>
@@ -42,6 +45,8 @@ const Input = ({
           onBlur={onBlur}
           className='input'
           autoComplete='on'
+          placeholder={placeholder}
+          
         />
         {children}
       </div>
