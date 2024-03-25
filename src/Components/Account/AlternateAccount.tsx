@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from '../Reusable/Button';
 import { StyledAlternateAccount } from '../../Styles/Account/AlternateAccount.styled';
-import { StyledHeadings } from '../../Styles/Reusable/Headings.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
 interface AlternateAccountProps {
