@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components';
 
 export const StyledCareers = styled.section`
-  ${({ theme }) => css``}
+  ${({ theme }) => css`
+  
+  position: relative;
+  `}
 `;

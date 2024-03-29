@@ -4,46 +4,58 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentCareers } from '../../../Contents';
 import PersonPromoted from '../../../assets/img/careers/person_promoted.jpg';
 import Input from '../../Reusable/Input';
-import useForm, { useFormProps } from '../../../Hooks/useForm';
+import useForm from '../../../Hooks/useForm';
 import CareersSearch from '../../../assets/svg/careers/search.svg?react';
 import { careersProps } from './Careers';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
+import { NavLink} from 'react-router-dom';
 
 interface CareersAdvantagesProps {
   careersState: careersProps;
-  setUpdatedCareersState: React.Dispatch<React.SetStateAction<string>>;
-  updatedCareersState: string;
+  setUpdatedCareersTitle: React.Dispatch<React.SetStateAction<string>>;
+  updatedCareersTitle: string;
+  setUpdatedCareersDescription: React.Dispatch<React.SetStateAction<string>>;
+  updatedCareersDescription: string;
   everyCareersState: boolean;
 }
 
 const CareersAdvantages = ({
   careersState,
-  setUpdatedCareersState,
-  updatedCareersState,
+  setUpdatedCareersTitle,
+  updatedCareersTitle,
+  setUpdatedCareersDescription,
+  updatedCareersDescription,
   everyCareersState,
 }: CareersAdvantagesProps) => {
   const name = useForm();
-  const [descriptionArray, setDescriptionArray] = React.useState<string[]>([''])
-  
+  const [descriptionArray, setDescriptionArray] = React.useState<string[]>([
+    '',
+  ]);
 
   React.useEffect(() => {
-    if (name.value)
-      setUpdatedCareersState(
-        name.value[0].toUpperCase() + name.value.slice(1).toLowerCase()
-      );
-  }, [setUpdatedCareersState, name]);
+    if (name.value) {
+      setUpdatedCareersTitle(name.value.toLowerCase());
+    }
 
+    if (name.value) {
+      setUpdatedCareersDescription(name.value.toLowerCase());
+    }
+  }, [setUpdatedCareersTitle, setUpdatedCareersDescription, name]);
 
   React.useEffect(() => {
-    careersState && careersState.map((item) => {
-      if (item) {
-        if(item.title.length > 0) {
-          setDescriptionArray(item.description.split(name.value.toLowerCase()))
+    careersState &&
+      careersState.map((item) => {
+        if (item) {
+          if (item.title.length > 0) {
+            setDescriptionArray(
+              item.description.split(name.value.toLowerCase())
+            );
+
+            
+          }
         }
-      }
-    })
-  }, [careersState, name.value])
-
+      });
+  }, [careersState, name.value]);
 
   return (
     <StyledCareersAdvantages className='container'>
@@ -67,34 +79,62 @@ const CareersAdvantages = ({
 
         <div
           className={`jobs-list-wrapper ${
-            name.value && updatedCareersState.length > 0 && !everyCareersState
+            name.value && updatedCareersTitle.length > 0 && !everyCareersState
               ? 'jobs-list-wrapper-active'
               : 'jobs-list-wrapper-disabled'
           }`}
         >
           {careersState &&
-            careersState.map((item) => {
+            careersState.map((item, index) => {
               if (item)
                 if (item.title.length > 0) {
                   return (
-                    <div key={item.id} className='jobs-list'>
-                      <StyledHeadings as='h3'>{item.title}</StyledHeadings>
-                      <StyledTexts $size='p1'>
-                      {descriptionArray.map((item, index) => (
-                            <React.Fragment key={index}>
-                              {item}
-                              {index !== descriptionArray.length - 1 && (
-                                <StyledTexts $size='p1' as="a" style={{ fontWeight: 'bold' }}>
-                                  {name.value.toLowerCase()}
-                                </StyledTexts>
-                              )}
-                            </React.Fragment>
-                          ))}
-                      </StyledTexts>
-                      <StyledTexts $size='p1'>{item.location}</StyledTexts>
+                    <div key={item.id}>
+                      <NavLink to={`job/${item.id}`}>
+                        <div className='jobs-list'>
+                          <StyledHeadings as='h3'>
+                            {item.title.split(' ').map((item) => {
+                              return (
+                                ' ' + item[0].toUpperCase() + item.substring(1)
+                              );
+                            })}
+                          </StyledHeadings>
+                          <StyledTexts
+                            $size='p1'
+                            style={{ letterSpacing: '0.2rem' }}
+                          >
+                            {descriptionArray.map((item, index) => (
+                              <React.Fragment key={index}>
+                                {item}
+                                {index !== descriptionArray.length - 1 && (
+                                  <StyledTexts
+                                    $size='p1'
+                                    as='span'
+                                    style={{ fontWeight: 'bold' }}
+                                  >
+                                    {name.value.toLowerCase()}
+                                  </StyledTexts>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </StyledTexts>
+                          <StyledTexts $size='p1'>
+                            {item.location.split(' ').map((item) => {
+                              return (
+                                ' ' + item[0].toUpperCase() + item.substring(1)
+                              );
+                            })}
+                          </StyledTexts>
+                        </div>
+                      </NavLink>
+                      
+                      
                     </div>
                   );
                 }
+
+                
+
             })}
         </div>
 

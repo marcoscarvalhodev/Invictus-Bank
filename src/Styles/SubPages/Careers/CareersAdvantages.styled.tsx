@@ -4,7 +4,7 @@ export const StyledCareersAdvantages = styled.section`
   ${({ theme }) => css`
     && {
       ${theme.sub_pages.sub_pages_advantages};
-      height: 100%;
+      height: max-content;
 
       .advantages-flex {
         padding: 4.8rem 0rem;
@@ -67,6 +67,7 @@ export const StyledCareersAdvantages = styled.section`
         width: 100%;
         max-height: 20rem;
         overflow-y: scroll;
+        
         position: absolute;
         margin-top: 2.4rem;
         border: 3px solid #aecbfa;
@@ -78,6 +79,7 @@ export const StyledCareersAdvantages = styled.section`
           background: ${theme.colors.white_auxiliary.white_dark};
           padding: 1.5rem 1rem;
           transition: ease 0.7s;
+          overflow: visible;
           &:hover {
             transition: ease 0.7s;
             background: #aecbfa;
