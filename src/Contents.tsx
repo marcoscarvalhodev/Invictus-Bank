@@ -663,10 +663,10 @@ export const ContentCareers = {
     h5_subtitle: 'SUPREME CAREERS'
   },
   careers_data: [
-    { title: 'Front-end engineer', id: 1, description: 'front end job', location: 'Madrid, Spain.' },
-    { title: 'Back-end engineer', id: 2, description: 'back end job', location: 'Tijuana, Mexico.' },
-    { title: 'Fullstack engineer', id: 3, description: 'fullstack job', location: 'São Paulo, Brazil.' },
-    { title: 'Web developer', id: 4, description: 'web developing job', location: 'New York, USA.' },
-    { title: 'Front-end developer', id: 5, description: 'front end job', location: 'Warsaw, Poland.' },
+    { title: 'front-end engineer', id: 1, description: 'front end job', location: 'madrid, spain.' },
+    { title: 'back-end engineer', id: 2, description: 'back end job', location: 'tijuana, mexico.' },
+    { title: 'fullstack engineer', id: 3, description: 'fullstack job', location: 'são paulo, brazil.' },
+    { title: 'web developer', id: 4, description: 'web developing job', location: 'new york, united states.' },
+    { title: 'front-end developer', id: 5, description: 'front end job', location: 'warsaw, poland.' },
   ],
 };
