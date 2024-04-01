@@ -657,16 +657,424 @@ export const ContentRewards = {
   ],
 };
 
+const careerDetails = {
+  company_details: {
+    title: 'Company description',
+    description_1:
+      'With a vision to transform banking for the digital age, Supreme Bank was founded in 2015 with a clear mission: to make banking simpler, smarter, and more accessible for everyone. From day one, we have been dedicated to providing innovative solutions that meets the diverse needs of our customers.',
+    description_2:
+      "Whether it's our intuitive mobile app, excelent online banking platform, or personalized financial advice, we are committed to delivering a superior banking experience. We understand that financial success means different things to different people, which is why we offer multiple solutions to help individuals achieve their unique goals.",
+  },
+
+  job_description: {
+    title: 'Job overview',
+    you_do: 'Your duties:',
+    you_get_back: 'We offer you:',
+  },
+};
+
 export const ContentCareers = {
   careers_hero: {
     h2_title: 'Want be part of our Supreme team?',
-    h5_subtitle: 'SUPREME CAREERS'
+    h5_subtitle: 'SUPREME CAREERS',
+  },
+  careersDetailAbout: {
+    about_company: {
+      title: 'More about the company',
+      description:
+        'Get to know more about the company, if our values meet expectations.',
+      button: 'Know us',
+    },
   },
   careers_data: [
-    { title: 'front-end engineer', id: 1, description: 'front end job', location: 'madrid, spain.' },
-    { title: 'back-end engineer', id: 2, description: 'back end job', location: 'tijuana, mexico.' },
-    { title: 'fullstack engineer', id: 3, description: 'fullstack job', location: 'são paulo, brazil.' },
-    { title: 'web developer', id: 4, description: 'web developing job', location: 'new york, united states.' },
-    { title: 'front-end developer', id: 5, description: 'front end job', location: 'warsaw, poland.' },
+    {
+      title: 'front-end engineer',
+      id: 1,
+      description: 'if you are passionate about pushing the boundaries of technology, apply as a front end engineer.',
+      location: 'madrid, spain.',
+      job_details: [
+        {
+          company: {
+            title: careerDetails.company_details.title,
+            description_1: careerDetails.company_details.description_1,
+            description_2: careerDetails.company_details.description_2,
+          },
+          job_description: {
+            title: careerDetails.job_description.title,
+            description: [
+              {
+                description_segment: (
+                  <>
+                    As a <b>senior front-end developer</b> at Supreme Bank, you
+                    will play a pivotal role in shaping the user interface and
+                    experience of our digital products. Working closely with our
+                    design and development teams, you will be responsible for
+                    translating design mock-ups and wireframes into responsive
+                    and interactive web applications.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    You should be proficient and comfortable with working with
+                    most varied types of languages that will be instrumental in
+                    creating visually stunning and user-friendly interfaces that
+                    engage our audience and elevate our brand.
+                  </>
+                ),
+              },
+            ],
+          },
+
+          job_bullets: {
+            bullet_your_duty: {
+              title: careerDetails.job_description.you_do,
+              bullets: [
+                {
+                  bullet:
+                    'Collaborate with cross-functional teams to understand project requirements and translate design concepts into code.',
+                },
+                {
+                  bullet:
+                    'Develop responsive and pixel-perfect web applications that function excelently across various devices and browsers.',
+                },
+                {
+                  bullet:
+                    'Implement interactive features and animations to enhance user engagement and create immersive digital experiences.',
+                },
+                {
+                  bullet:
+                    'Optimize web performance and loading speeds to ensure smooth navigation and great user interactions.',
+                },
+                {
+                  bullet:
+                    'Conduct thorough testing and debugging to identify and resolve any issues or inconsistencies in the front-end codebase.',
+                },
+                {
+                  bullet:
+                    'Assist in the maintenance and optimization of existing web applications, making necessary updates and enhancements as needed.',
+                },
+                {
+                  bullet:
+                    'Collaborate with back-end developers to integrate front-end components with server-side logic and databases.',
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    {
+      title: 'back-end engineer',
+      id: 2,
+      description: 'create scalable and robust backend systems that power our digital products.',
+      location: 'tijuana, mexico.',
+      job_details: [
+        {
+          company: {
+            title: careerDetails.company_details.title,
+            description_1: careerDetails.company_details.description_1,
+            description_2: careerDetails.company_details.description_2,
+          },
+
+          job_description: {
+            title: careerDetails.job_description.title,
+            description: [
+              {
+                description_segment: (
+                  <>
+                    While integrating our team as{' '}
+                    <b>senior backend developer</b>, you will play a crucial
+                    role in designing, developing, and maintaining the
+                    server-side logic and databases that support our digital
+                    platforms. Working closely with our front-end and
+                    infrastructure teams, you will be responsible for building
+                    scalable APIs, optimizing database performance, and ensuring
+                    the security and reliability of our backend systems.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    Your expertise in programming languages, database
+                    management, and cloud technologies will be instrumental in
+                    driving the success of our digital initiatives.
+                  </>
+                ),
+              },
+            ],
+          },
+
+          job_bullets: {
+            bullet_your_duty: {
+              title: careerDetails.job_description.you_do,
+              bullets: [
+                {
+                  bullet:
+                    'Deal with diverse types of teams to understand project requirements and translate business needs into scalable backend solutions.',
+                },
+                {
+                  bullet:
+                    'Design and develop RESTful APIs and microservices using programming languages such as Python, Node.js, or Java.',
+                },
+                {
+                  bullet:
+                    'Implement database schemas and optimize SQL queries to ensure efficient data storage and retrieval.',
+                },
+                {
+                  bullet:
+                    'Integrate third-party services and APIs to enhance the functionality and interoperability of our digital platforms.',
+                },
+                {
+                  bullet:
+                    'Implement authentication and authorization mechanisms to ensure the security and privacy of user data.',
+                },
+                {
+                  bullet:
+                    'Work closely with DevOps engineers to deploy and maintain backend infrastructure in cloud environments such as AWS, Azure, or Google Cloud Platform.',
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    {
+      title: 'data analyst',
+      id: 3,
+      description: 'looking for a professional passionate about leveraging data-driven insights to optimize processes.',
+      location: 'são paulo, brazil.',
+      job_details: [
+        {
+          company: {
+            title: careerDetails.company_details.title,
+            description_1: careerDetails.company_details.description_1,
+            description_2: careerDetails.company_details.description_2,
+          },
+          job_description: {
+            title: careerDetails.job_description.title,
+            description: [
+              {
+                description_segment: (
+                  <>
+                    Our <b>data analyst</b> employee should be able to analyze
+                    and interpret data to inform key business decisions and
+                    drive actionable insights. Working closely with stakeholders
+                    across various departments, you will be responsible for
+                    collecting, cleaning, and analyzing data from multiple
+                    sources to uncover trends, patterns, and opportunities.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    Your competence in data visualization, statistical analysis,
+                    and problem-solving will be crucial in driving the success
+                    of our data-driven initiatives.
+                  </>
+                ),
+              },
+            ],
+          },
+
+          job_bullets: {
+            bullet_your_duty: {
+              title: careerDetails.job_description.you_do,
+              bullets: [
+                {
+                  bullet:
+                    'Collect, clean, and preprocess data from internal and external sources to ensure accuracy, completeness, and consistency.',
+                },
+                {
+                  bullet:
+                    'Develop and maintain dashboards, reports, and data visualizations using tools such as Tableau, Power BI, or Google Data Studio.',
+                },
+                {
+                  bullet:
+                    'Collaborate with stakeholders to understand business requirements and define key performance indicators (KPIs) for data analysis.',
+                },
+                {
+                  bullet:
+                    'Conduct exploratory data analysis to identify trends, patterns, and correlations, and present findings in a clear and actionable manner.',
+                },
+                {
+                  bullet:
+                    'Perform statistical analysis and hypothesis testing to uncover insights and support decision-making processes.',
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    {
+      title: 'cybersecurity expert',
+      id: 4,
+      description: 'join our cybersecurity team for helping in safeguarding sensitive information.',
+      location: 'new york, united states.',
+      job_details: [
+        {
+          company: {
+            title: careerDetails.company_details.title,
+            description_1: careerDetails.company_details.description_1,
+            description_2: careerDetails.company_details.description_2,
+          },
+          job_description: {
+            title: careerDetails.job_description.title,
+            description: [
+              {
+                description_segment: (
+                  <>
+                    As a <b>cybersecurity expert</b>, you'll be our guardian
+                    against digital threats, ensuring the integrity and
+                    confidentiality of our data. Your role will be conducting
+                    security assessments to responding swiftly to potential
+                    breaches, you'll be at the forefront of our defense
+                    strategy.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    Collaborating across teams, you'll weave cybersecurity best
+                    practices into the fabric of our organization, safeguarding
+                    our digital infrastructure against emerging threats.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    If you're ready to tackle cybersecurity challenges head-on
+                    and protect our digital fortress, join us in our mission to
+                    uphold the highest standards of security and trust.
+                  </>
+                ),
+              },
+            ],
+          },
+
+          job_bullets: {
+            bullet_your_duty: {
+              title: careerDetails.job_description.you_do,
+              bullets: [
+                {
+                  bullet:
+                    'Monitor security alerts and logs to detect and respond to security incidents in a timely manner, and implement incident response procedures as needed.',
+                },
+                {
+                  bullet:
+                    'Analyze security logs and forensic data to investigate security breaches and unauthorized access attempts, and recommend remediation measures.',
+                },
+                {
+                  bullet:
+                    'Conduct security assessments and vulnerability scans to identify and prioritize security risks across our systems and networks.',
+                },
+                {
+                  bullet:
+                    'Implement and maintain security controls and technologies, such as firewalls, intrusion detection systems, and endpoint protection solutions.',
+                },
+                {
+                  bullet:
+                    'Perform security audits and assessments to ensure compliance with industry regulations and internal security policies.',
+                },
+                {
+                  bullet:
+                    'Provide security awareness training and guidance to employees on cybersecurity best practices and policies.',
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    {
+      title: 'finance engineer',
+      id: 5,
+      description: 'we are seeking a talented finance engineer to join our dynamic team.',
+      location: 'warsaw, poland.',
+      job_details: [
+        {
+          company: {
+            title: careerDetails.company_details.title,
+            description_1: careerDetails.company_details.description_1,
+            description_2: careerDetails.company_details.description_2,
+          },
+          job_description: {
+            title: careerDetails.job_description.title,
+            description: [
+              {
+                description_segment: (
+                  <>
+                    As a <b>finance engineer</b>, you'll be at the intersection of
+                    finance and technology, leveraging advanced algorithms and
+                    mathematical models to optimize our financial strategies and
+                    operations.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    Your role is multifaceted: from designing and implementing
+                    trading algorithms to developing risk management frameworks,
+                    you'll be instrumental in driving the success of our
+                    financial initiatives.
+                  </>
+                ),
+              },
+              {
+                description_segment: (
+                  <>
+                    Collaborating closely with our finance and technology teams,
+                    you'll transform complex financial concepts into actionable
+                    insights and innovative solutions, positioning us for
+                    sustainable growth and success in the ever-evolving
+                    financial landscape.
+                  </>
+                ),
+              },
+            ],
+          },
+
+          job_bullets: {
+            bullet_your_duty: {
+              title: careerDetails.job_description.you_do,
+
+              bullets: [
+                {
+                  bullet:
+                    'Design and implement quantitative models and algorithms to support trading strategies, portfolio optimization, and risk management.',
+                },
+                {
+                  bullet:
+                    'Conduct thorough research and analysis to identify market trends, opportunities, and risks, and provide actionable recommendations to key stakeholders.',
+                },
+                {
+                  bullet:
+                    'Monitor and analyze trading performance and market dynamics, and continuously refine strategies to adapt to changing market conditions.',
+                },
+                {
+                  bullet:
+                    'Develop and maintain automated trading systems and algorithms, leveraging real-time market data and advanced statistical techniques.',
+                },
+                {
+                  bullet:
+                    'Carry out risk management frameworks and controls to ensure compliance with regulatory requirements and internal policies.',
+                },
+                {
+                  bullet:
+                    'Communicate complex financial concepts and insights to non-technical stakeholders in a clear and concise manner, and provide training and support as needed.',
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
   ],
 };

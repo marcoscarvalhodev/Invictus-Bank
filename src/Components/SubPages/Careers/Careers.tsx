@@ -4,20 +4,13 @@ import CareersAdvantages from './CareersAdvantages';
 import { ContentCareers } from '../../../Contents';
 import { useParams, Outlet, useNavigate } from 'react-router-dom';
 import UserContext from '../../../UseContext';
-
-export interface careerProps {
-  title: string;
-  id: number;
-  description: string;
-  location: string;
-}
-
-export type careersProps = Array<careerProps>;
+import { careersProps } from '../../../Helper/CareersTypes';
 
 const Careers = () => {
   const [careersState, setCareersState] = React.useState<careersProps>([]);
   const [updatedCareersTitle, setUpdatedCareersTitle] = React.useState('');
-  const [updatedCareersDescription, setUpdatedCareersDescription] = React.useState('');
+  const [updatedCareersDescription, setUpdatedCareersDescription] =
+    React.useState('');
   const [everyCareersState, setEveryCareersState] = React.useState(false);
   const { idParams } = useParams();
   const [navigateState, setNavigateState] = React.useState<boolean>(true);

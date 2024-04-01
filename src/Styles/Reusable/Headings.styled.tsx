@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 interface headingProps {
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 export const StyledHeadings = styled.h1<headingProps>`
@@ -93,6 +93,20 @@ ${as === 'h5' &&
       ${theme.media_query.above_small`
           font-size: 1.8rem;
           line-height: 140%;
+        `} //query-desktop
+
+      ${theme.media_query.small`
+          font-size: 1.6rem;
+          line-height: 150%;
+        `} //query-mobile
+    `}
+
+
+    ${as === 'h6' &&
+    css`
+      ${theme.media_query.above_small`
+          font-size: 1.6rem;
+          line-height: 150%;
         `} //query-desktop
 
       ${theme.media_query.small`
