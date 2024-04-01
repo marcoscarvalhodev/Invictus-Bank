@@ -69,11 +69,17 @@ export const StyledTexts = styled.p<TextsProps>`
       ${$size === 'p1' &&
       css`
         ${theme.media_query.above_small`
+          b {
+            font-size: 2.4rem;
+          }
           font-size: 2.4rem;
           line-height: 130%;
         `} //query-desktop
 
       ${theme.media_query.small`
+      b {
+            font-size: 1.8rem;
+          }
           font-size: 1.8rem;
           line-height: 130%;
         `} //query-mobile
@@ -85,11 +91,17 @@ export const StyledTexts = styled.p<TextsProps>`
 ${$size === 'p2' &&
       css`
         ${theme.media_query.above_small`
+        b {
+          font-size: 1.6rem;
+        }
           font-size: 1.6rem;
           line-height: 140%;
         `} //query-desktop
 
       ${theme.media_query.small`
+      b {
+        font-size: 1.4rem;
+      }
           font-size: 1.4rem;
           line-height: 150%;
         `} //query-mobile
@@ -100,11 +112,17 @@ ${$size === 'p2' &&
 ${$size === 'p3' &&
       css`
         ${theme.media_query.above_small`
+        b {
+          font-size: 1.4rem;
+        }
           font-size: 1.4rem;
           line-height: 150%;
         `} //query-desktop
 
       ${theme.media_query.small`
+      b {
+          font-size: 1.4rem;
+        }
           font-size: 1.4rem;
           line-height: 150%;
         `} //query-mobile
@@ -113,11 +131,19 @@ ${$size === 'p3' &&
       ${$size === 'p4' &&
       css`
         ${theme.media_query.above_small`
+        b {
+          font-size: 1.8rem;
+          
+        }
           font-size: 1.8rem;
           line-height: 130%;
         `} //query-desktop
 
       ${theme.media_query.small`
+      b {
+          font-size: 1.6rem;
+          
+        }
           font-size: 1.6rem;
           line-height: 140%;
         `} //query-mobile

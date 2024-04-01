@@ -30,7 +30,7 @@ const Header = ({
     const handleScroll = () => {
       setScroll(window.scrollY);
 
-      scroll > 100 ? setScrolled(true) : setScrolled(false);
+      scroll > 50 ? setScrolled(true) : setScrolled(false);
     };
 
     window.addEventListener('scroll', handleScroll);
