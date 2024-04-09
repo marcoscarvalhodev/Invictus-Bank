@@ -671,6 +671,10 @@ const careerDetails = {
     you_do: 'Your duties:',
     you_get_back: 'We offer you:',
   },
+
+  job_qualifications: {
+    title: 'Qualifications',
+  },
 };
 
 export const ContentCareers = {
@@ -690,7 +694,9 @@ export const ContentCareers = {
     {
       title: 'front-end engineer',
       id: 1,
-      description: 'if you are passionate about pushing the boundaries of technology, apply as a front end engineer.',
+      salary: '$110K/year',
+      description:
+        'if you are passionate about pushing the boundaries of technology, apply as a front end engineer.',
       location: 'madrid, spain.',
       job_details: [
         {
@@ -725,39 +731,97 @@ export const ContentCareers = {
                 ),
               },
             ],
+
+            job_bullets: {
+              bullet_your_duty: {
+                title: careerDetails.job_description.you_do,
+                bullets: [
+                  {
+                    bullet:
+                      'Collaborate with cross-functional teams to understand project requirements and translate design concepts into code.',
+                  },
+                  {
+                    bullet:
+                      'Develop responsive and pixel-perfect web applications that function excelently across various devices and browsers.',
+                  },
+                  {
+                    bullet:
+                      'Implement interactive features and animations to enhance user engagement and create immersive digital experiences.',
+                  },
+                  {
+                    bullet:
+                      'Optimize web performance and loading speeds to ensure smooth navigation and great user interactions.',
+                  },
+                  {
+                    bullet:
+                      'Conduct thorough testing and debugging to identify and resolve any issues or inconsistencies in the front-end codebase.',
+                  },
+                  {
+                    bullet:
+                      'Assist in the maintenance and optimization of existing web applications, making necessary updates and enhancements as needed.',
+                  },
+                  {
+                    bullet:
+                      'Collaborate with back-end developers to integrate front-end components with server-side logic and databases.',
+                  },
+                ],
+              },
+
+              bullet_we_offer: {
+                title: careerDetails.job_description.you_get_back,
+                bullets: [
+                  {
+                    bullet:
+                      'Opportunity to work on cutting-edge projects and make a significant impact in a rapidly evolving industry.',
+                  },
+                  {
+                    bullet:
+                      'Collaborative and inclusive work culture that encourages creativity, innovation, and personal growth.',
+                  },
+                  {
+                    bullet:
+                      'Competitive salary and benefits package, including health insurance, retirement plans, and professional development opportunities.',
+                  },
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                ],
+              },
+            },
           },
 
-          job_bullets: {
-            bullet_your_duty: {
-              title: careerDetails.job_description.you_do,
+          job_qualifications: {
+            title: careerDetails.job_qualifications.title,
+            bullet_qualifications: {
               bullets: [
                 {
                   bullet:
-                    'Collaborate with cross-functional teams to understand project requirements and translate design concepts into code.',
+                    "Bachelor's degree in Computer Science, Web Development, or a related field.",
                 },
                 {
                   bullet:
-                    'Develop responsive and pixel-perfect web applications that function excelently across various devices and browsers.',
+                    'Proven experience as a Front-End Developer or similar role, with a strong portfolio showcasing your previous work.',
                 },
                 {
                   bullet:
-                    'Implement interactive features and animations to enhance user engagement and create immersive digital experiences.',
+                    'Proficiency in HTML, CSS, and JavaScript, with a deep understanding of modern frameworks and libraries such as React, Angular, or Vue.js.',
                 },
                 {
                   bullet:
-                    'Optimize web performance and loading speeds to ensure smooth navigation and great user interactions.',
+                    'Solid understanding of responsive design principles and cross-browser compatibility issues.',
                 },
                 {
                   bullet:
-                    'Conduct thorough testing and debugging to identify and resolve any issues or inconsistencies in the front-end codebase.',
+                    'Experience with version control systems such as Git and project management tools like Jira or Trello.',
                 },
                 {
                   bullet:
-                    'Assist in the maintenance and optimization of existing web applications, making necessary updates and enhancements as needed.',
+                    'Strong problem-solving skills and attention to detail, with the ability to troubleshoot and debug complex issues.',
                 },
                 {
                   bullet:
-                    'Collaborate with back-end developers to integrate front-end components with server-side logic and databases.',
+                    'Excellent communication and collaboration skills, with the ability to work effectively in a fast-paced team environment.',
                 },
               ],
             },
@@ -768,7 +832,9 @@ export const ContentCareers = {
     {
       title: 'back-end engineer',
       id: 2,
-      description: 'create scalable and robust backend systems that power our digital products.',
+      salary: '$120K/year',
+      description:
+        'create scalable and robust backend systems that power our digital products.',
       location: 'tijuana, mexico.',
       job_details: [
         {
@@ -805,35 +871,93 @@ export const ContentCareers = {
                 ),
               },
             ],
+
+            job_bullets: {
+              bullet_your_duty: {
+                title: careerDetails.job_description.you_do,
+                bullets: [
+                  {
+                    bullet:
+                      'Deal with diverse types of teams to understand project requirements and translate business needs into scalable backend solutions.',
+                  },
+                  {
+                    bullet:
+                      'Design and develop RESTful APIs and microservices using programming languages such as Python, Node.js, or Java.',
+                  },
+                  {
+                    bullet:
+                      'Implement database schemas and optimize SQL queries to ensure efficient data storage and retrieval.',
+                  },
+                  {
+                    bullet:
+                      'Integrate third-party services and APIs to enhance the functionality and interoperability of our digital platforms.',
+                  },
+                  {
+                    bullet:
+                      'Implement authentication and authorization mechanisms to ensure the security and privacy of user data.',
+                  },
+                  {
+                    bullet:
+                      'Work closely with DevOps engineers to deploy and maintain backend infrastructure in cloud environments such as AWS, Azure, or Google Cloud Platform.',
+                  },
+                ],
+              },
+
+              bullet_we_offer: {
+                title: careerDetails.job_description.you_get_back,
+                bullets: [
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                  {
+                    bullet:
+                      'Competitive salary and benefits package, including health insurance, retirement plans, and opportunities for skill development and advancement.',
+                  },
+                  {
+                    bullet:
+                      'Opportunity to work on amazing projects and make a significant impact in a rapidly evolving industry.',
+                  },
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                ],
+              },
+            },
           },
 
-          job_bullets: {
-            bullet_your_duty: {
-              title: careerDetails.job_description.you_do,
+          job_qualifications: {
+            title: careerDetails.job_qualifications.title,
+            bullet_qualifications: {
               bullets: [
                 {
                   bullet:
-                    'Deal with diverse types of teams to understand project requirements and translate business needs into scalable backend solutions.',
+                    "Bachelor's degree in Computer Science, Software Engineering, or a related field.",
                 },
                 {
                   bullet:
-                    'Design and develop RESTful APIs and microservices using programming languages such as Python, Node.js, or Java.',
+                    'Proven experience as a Backend Developer or similar role, with a strong portfolio showcasing your previous backend projects.',
                 },
                 {
                   bullet:
-                    'Implement database schemas and optimize SQL queries to ensure efficient data storage and retrieval.',
+                    'Proficiency in one or more programming languages commonly used for backend development, such as Python, Node.js, Java, or C#.',
                 },
                 {
                   bullet:
-                    'Integrate third-party services and APIs to enhance the functionality and interoperability of our digital platforms.',
+                    'Solid understanding of database management systems (e.g., MySQL, PostgreSQL, MongoDB) and experience with database design and optimization.',
                 },
                 {
                   bullet:
-                    'Implement authentication and authorization mechanisms to ensure the security and privacy of user data.',
+                    'Familiarity with cloud platforms and services (e.g., AWS, Azure, Google Cloud Platform) and containerization technologies (e.g., Docker, Kubernetes).',
                 },
                 {
                   bullet:
-                    'Work closely with DevOps engineers to deploy and maintain backend infrastructure in cloud environments such as AWS, Azure, or Google Cloud Platform.',
+                    'Strong problem-solving skills and attention to detail, with the ability to analyze complex technical challenges and propose effective solutions.',
+                },
+                {
+                  bullet:
+                    'Excellent communication and collaboration skills, with the ability to work effectively in a fast-paced team environment.',
                 },
               ],
             },
@@ -844,7 +968,9 @@ export const ContentCareers = {
     {
       title: 'data analyst',
       id: 3,
-      description: 'looking for a professional passionate about leveraging data-driven insights to optimize processes.',
+      salary: '$90K/year',
+      description:
+        'looking for a professional passionate about leveraging data-driven insights to optimize processes.',
       location: 'são paulo, brazil.',
       job_details: [
         {
@@ -878,31 +1004,89 @@ export const ContentCareers = {
                 ),
               },
             ],
+
+            job_bullets: {
+              bullet_your_duty: {
+                title: careerDetails.job_description.you_do,
+                bullets: [
+                  {
+                    bullet:
+                      'Collect, clean, and preprocess data from internal and external sources to ensure accuracy, completeness, and consistency.',
+                  },
+                  {
+                    bullet:
+                      'Develop and maintain dashboards, reports, and data visualizations using tools such as Tableau, Power BI, or Google Data Studio.',
+                  },
+                  {
+                    bullet:
+                      'Collaborate with stakeholders to understand business requirements and define key performance indicators (KPIs) for data analysis.',
+                  },
+                  {
+                    bullet:
+                      'Conduct exploratory data analysis to identify trends, patterns, and correlations, and present findings in a clear and actionable manner.',
+                  },
+                  {
+                    bullet:
+                      'Perform statistical analysis and hypothesis testing to uncover insights and support decision-making processes.',
+                  },
+                ],
+              },
+
+              bullet_we_offer: {
+                title: careerDetails.job_description.you_get_back,
+                bullets: [
+                  {
+                    bullet:
+                      'Opportunity to work on challenging and impactful projects that leverage the power of data to drive business success.',
+                  },
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                  {
+                    bullet:
+                      'Collaborative and inclusive work culture that values creativity, innovation, and continuous learning.',
+                  },
+                  {
+                    bullet:
+                      'Competitive salary and benefits package, including health insurance, retirement plans, and opportunities for professional development and career advancement.',
+                  },
+                ],
+              },
+            },
           },
 
-          job_bullets: {
-            bullet_your_duty: {
-              title: careerDetails.job_description.you_do,
+          job_qualifications: {
+            title: careerDetails.job_qualifications.title,
+            bullet_qualifications: {
               bullets: [
                 {
                   bullet:
-                    'Collect, clean, and preprocess data from internal and external sources to ensure accuracy, completeness, and consistency.',
+                    "Bachelor's degree in Computer Science, Statistics, Mathematics, Economics, or a related field.",
                 },
                 {
                   bullet:
-                    'Develop and maintain dashboards, reports, and data visualizations using tools such as Tableau, Power BI, or Google Data Studio.',
+                    'Proven experience as a Data Analyst or similar role, with a strong portfolio showcasing your data analysis projects and insights.',
                 },
                 {
                   bullet:
-                    'Collaborate with stakeholders to understand business requirements and define key performance indicators (KPIs) for data analysis.',
+                    'Proficiency in data manipulation and analysis using SQL, Python, R, or similar programming languages.',
                 },
                 {
                   bullet:
-                    'Conduct exploratory data analysis to identify trends, patterns, and correlations, and present findings in a clear and actionable manner.',
+                    'Experience with data visualization tools such as Tableau, Power BI, or Google Data Studio, and proficiency in creating dashboards and reports.',
                 },
                 {
                   bullet:
-                    'Perform statistical analysis and hypothesis testing to uncover insights and support decision-making processes.',
+                    'Solid understanding of statistical concepts and techniques, with the ability to apply them to real-world business problems.',
+                },
+                {
+                  bullet:
+                    'Excellent communication and presentation skills, with the ability to convey technical information to non-technical stakeholders in a clear and concise manner.',
+                },
+                {
+                  bullet:
+                    'Strong problem-solving skills and attention to detail, with the ability to analyze complex datasets and extract meaningful insights.',
                 },
               ],
             },
@@ -913,7 +1097,9 @@ export const ContentCareers = {
     {
       title: 'cybersecurity expert',
       id: 4,
-      description: 'join our cybersecurity team for helping in safeguarding sensitive information.',
+      salary: '$130K/year',
+      description:
+        'join our cybersecurity team for helping in safeguarding sensitive information.',
       location: 'new york, united states.',
       job_details: [
         {
@@ -956,35 +1142,93 @@ export const ContentCareers = {
                 ),
               },
             ],
+
+            job_bullets: {
+              bullet_your_duty: {
+                title: careerDetails.job_description.you_do,
+                bullets: [
+                  {
+                    bullet:
+                      'Monitor security alerts and logs to detect and respond to security incidents in a timely manner, and implement incident response procedures as needed.',
+                  },
+                  {
+                    bullet:
+                      'Analyze security logs and forensic data to investigate security breaches and unauthorized access attempts, and recommend remediation measures.',
+                  },
+                  {
+                    bullet:
+                      'Conduct security assessments and vulnerability scans to identify and prioritize security risks across our systems and networks.',
+                  },
+                  {
+                    bullet:
+                      'Implement and maintain security controls and technologies, such as firewalls, intrusion detection systems, and endpoint protection solutions.',
+                  },
+                  {
+                    bullet:
+                      'Perform security audits and assessments to ensure compliance with industry regulations and internal security policies.',
+                  },
+                  {
+                    bullet:
+                      'Provide security awareness training and guidance to employees on cybersecurity best practices and policies.',
+                  },
+                ],
+              },
+
+              bullet_we_offer: {
+                title: careerDetails.job_description.you_get_back,
+                bullets: [
+                  {
+                    bullet:
+                      'Opportunity to work on critical cybersecurity initiatives and make a meaningful impact in protecting our organization against cyber threats.',
+                  },
+                  {
+                    bullet:
+                      'Collaborative and supportive work culture that values innovation, continuous learning, and professional growth.',
+                  },
+                  {
+                    bullet:
+                      'Competitive salary and benefits package, including health insurance, retirement plans, and opportunities for training and certification.',
+                  },
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                ],
+              },
+            },
           },
 
-          job_bullets: {
-            bullet_your_duty: {
-              title: careerDetails.job_description.you_do,
+          job_qualifications: {
+            title: careerDetails.job_qualifications.title,
+            bullet_qualifications: {
               bullets: [
                 {
                   bullet:
-                    'Monitor security alerts and logs to detect and respond to security incidents in a timely manner, and implement incident response procedures as needed.',
+                    "Bachelor's degree in Computer Science, Information Security, or a related field.",
                 },
                 {
                   bullet:
-                    'Analyze security logs and forensic data to investigate security breaches and unauthorized access attempts, and recommend remediation measures.',
+                    'Proven experience as a Cybersecurity Analyst or similar role, with a strong understanding of cybersecurity principles and practices.',
                 },
                 {
                   bullet:
-                    'Conduct security assessments and vulnerability scans to identify and prioritize security risks across our systems and networks.',
+                    'Familiarity with cybersecurity frameworks such as NIST Cybersecurity Framework, CIS Controls, or ISO 27001.',
                 },
                 {
                   bullet:
-                    'Implement and maintain security controls and technologies, such as firewalls, intrusion detection systems, and endpoint protection solutions.',
+                    'Experience with security assessment tools and technologies, such as vulnerability scanners, SIEM solutions, and threat intelligence platforms.',
                 },
                 {
                   bullet:
-                    'Perform security audits and assessments to ensure compliance with industry regulations and internal security policies.',
+                    'Strong analytical and problem-solving skills, with the ability to analyze complex security incidents and recommend effective solutions.',
                 },
                 {
                   bullet:
-                    'Provide security awareness training and guidance to employees on cybersecurity best practices and policies.',
+                    'Relevant certifications such as CISSP, CISM, CEH, or CompTIA Security+ are a plus.',
+                },
+                {
+                  bullet:
+                    'Excellent communication and collaboration skills, with the ability to work effectively with cross-functional teams and communicate technical information to non-technical stakeholders.',
                 },
               ],
             },
@@ -995,7 +1239,9 @@ export const ContentCareers = {
     {
       title: 'finance engineer',
       id: 5,
-      description: 'we are seeking a talented finance engineer to join our dynamic team.',
+      salary: '$100K/year',
+      description:
+        'we are seeking a talented finance engineer to join our dynamic team.',
       location: 'warsaw, poland.',
       job_details: [
         {
@@ -1010,10 +1256,10 @@ export const ContentCareers = {
               {
                 description_segment: (
                   <>
-                    As a <b>finance engineer</b>, you'll be at the intersection of
-                    finance and technology, leveraging advanced algorithms and
-                    mathematical models to optimize our financial strategies and
-                    operations.
+                    As a <b>finance engineer</b>, you'll be at the intersection
+                    of finance and technology, leveraging advanced algorithms
+                    and mathematical models to optimize our financial strategies
+                    and operations.
                   </>
                 ),
               },
@@ -1039,36 +1285,94 @@ export const ContentCareers = {
                 ),
               },
             ],
+
+            job_bullets: {
+              bullet_your_duty: {
+                title: careerDetails.job_description.you_do,
+
+                bullets: [
+                  {
+                    bullet:
+                      'Design and implement quantitative models and algorithms to support trading strategies, portfolio optimization, and risk management.',
+                  },
+                  {
+                    bullet:
+                      'Conduct thorough research and analysis to identify market trends, opportunities, and risks, and provide actionable recommendations to key stakeholders.',
+                  },
+                  {
+                    bullet:
+                      'Monitor and analyze trading performance and market dynamics, and continuously refine strategies to adapt to changing market conditions.',
+                  },
+                  {
+                    bullet:
+                      'Develop and maintain automated trading systems and algorithms, leveraging real-time market data and advanced statistical techniques.',
+                  },
+                  {
+                    bullet:
+                      'Carry out risk management frameworks and controls to ensure compliance with regulatory requirements and internal policies.',
+                  },
+                  {
+                    bullet:
+                      'Communicate complex financial concepts and insights to non-technical stakeholders in a clear and concise manner, and provide training and support as needed.',
+                  },
+                ],
+              },
+
+              bullet_we_offer: {
+                title: careerDetails.job_description.you_get_back,
+                bullets: [
+                  {
+                    bullet:
+                      'Competitive salary and benefits package, including health insurance, retirement plans, and opportunities for professional development and career advancement.',
+                  },
+                  {
+                    bullet:
+                      'Flexible work hours and remote work options to promote work-life balance and flexibility.',
+                  },
+                  {
+                    bullet:
+                      'Opportunity to work on cutting-edge financial projects and make a significant impact in a rapidly evolving industry.',
+                  },
+                  {
+                    bullet:
+                      'Collaborative and inclusive work culture that fosters creativity, innovation, and continuous learning.',
+                  },
+                ],
+              },
+            },
           },
 
-          job_bullets: {
-            bullet_your_duty: {
-              title: careerDetails.job_description.you_do,
-
+          job_qualifications: {
+            title: careerDetails.job_qualifications.title,
+            bullet_qualifications: {
               bullets: [
                 {
                   bullet:
-                    'Design and implement quantitative models and algorithms to support trading strategies, portfolio optimization, and risk management.',
+                    "Bachelor's degree in Finance, Computer Science, Mathematics, or a related field.",
                 },
                 {
                   bullet:
-                    'Conduct thorough research and analysis to identify market trends, opportunities, and risks, and provide actionable recommendations to key stakeholders.',
+                    'Proven experience as a Finance Engineer, Quantitative Analyst, or similar role, with a strong understanding of financial markets and quantitative methods.',
                 },
                 {
                   bullet:
-                    'Monitor and analyze trading performance and market dynamics, and continuously refine strategies to adapt to changing market conditions.',
+                    'Proficiency in programming languages such as Python, R, or MATLAB, and experience with statistical analysis and data visualization tools.',
                 },
                 {
                   bullet:
-                    'Develop and maintain automated trading systems and algorithms, leveraging real-time market data and advanced statistical techniques.',
+                    'Solid understanding of financial concepts and instruments, including derivatives, options pricing, and risk management.',
                 },
                 {
                   bullet:
-                    'Carry out risk management frameworks and controls to ensure compliance with regulatory requirements and internal policies.',
+                    'Experience with algorithmic trading platforms and APIs, and familiarity with trading strategies and execution algorithms.',
                 },
                 {
                   bullet:
-                    'Communicate complex financial concepts and insights to non-technical stakeholders in a clear and concise manner, and provide training and support as needed.',
+                    'Strong analytical and problem-solving skills, with the ability to analyze complex financial data and develop innovative solutions.',
+                },
+                {
+                  bullet:
+                    'Excellent communication and collaboration skills, with the ability to work effectively in a fast-paced team environment.',
                 },
               ],
             },

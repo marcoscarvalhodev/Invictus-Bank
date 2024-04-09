@@ -2,8 +2,8 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import theme from './Styles/theme';
 import { GlobalStyle } from './globalStyles';
-import ContainerSizes from './ContainerSizes';
-import LazyAnimation from './LazyAnimation';
+import ContainerSizes from './Helper/ContainerSizes';
+import LazyAnimation from './Helper/LazyAnimation';
 
 const Container = React.lazy(() => import('./Container'));
 

@@ -80,6 +80,10 @@ export const StyledCareersAdvantages = styled.section`
           padding: 1.5rem 1rem;
           transition: ease 0.7s;
           overflow: visible;
+
+          .careers-description {
+            margin: 1.6rem 0rem;
+          }
           &:hover {
             transition: ease 0.7s;
             background: #aecbfa;
@@ -88,9 +92,12 @@ export const StyledCareersAdvantages = styled.section`
         }
 
         .jobs-list:last-child {
-          border: 0rem;
+          border-bottom: 0rem;
         }
+        
       }
+
+      
 
       .jobs-list-wrapper-active {
         transition: ease 1s;

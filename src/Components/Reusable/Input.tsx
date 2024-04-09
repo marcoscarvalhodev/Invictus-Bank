@@ -14,6 +14,7 @@ interface InputProps {
   children?: React.JSX.Element;
   inputPassword?: boolean;
   placeholder?: string;
+  
 }
 
 const Input = ({
@@ -28,6 +29,7 @@ const Input = ({
   error,
   inputPassword,
   placeholder,
+  
   
 }: InputProps) => {
   return (

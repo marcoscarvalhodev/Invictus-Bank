@@ -1,6 +1,6 @@
 import React from 'react';
-import useMedia from './Hooks/useMedia';
-import { themeAttrs } from './Styles/ThemeAttrs';
+import useMedia from '../Hooks/useMedia';
+import { themeAttrs } from '../Styles/ThemeAttrs';
 
 const ContainerSizes = () => {
   return {

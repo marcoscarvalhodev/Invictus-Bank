@@ -11,6 +11,7 @@ node_modules
 dist-ssr
 *.local
 dist
+Api.tsx
 
 
 # Editor directories and files

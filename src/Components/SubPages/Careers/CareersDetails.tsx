@@ -1,17 +1,17 @@
 import React from 'react';
 import { StyledCareersDetails } from '../../../Styles/SubPages/Careers/CareersDetails.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
-import UserContext from '../../../UseContext';
+import {UserContextCareers } from '../../../UserContext';
 import { useLocation } from 'react-router-dom';
-import NoMatch from '../../../NoMatch';
+import NoMatch from '../../../Helper/NoMatch';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import CareersAbout from './CareersAbout';
-
 import { careerProps } from '../../../Helper/CareersTypes';
+import CareersTitleApply from './CareersTitleApply';
 
 const CareersDetails = () => {
   const [itemState, setItemState] = React.useState<careerProps | null>(null);
-  const item = React.useContext(UserContext);
+  const item = React.useContext(UserContextCareers);
   const location = useLocation();
   const [locationState, setLocationState] = React.useState(false);
 
@@ -28,9 +28,7 @@ const CareersDetails = () => {
     return (
       <StyledCareersDetails className='container'>
         <div className='careers-grid careers-grid-1'>
-          <StyledHeadings as='h2' className='main-title'>
-            {itemState.title[0].toUpperCase() + itemState.title.substring(1)}
-          </StyledHeadings>
+          <CareersTitleApply itemState={itemState} />
 
           {itemState.job_details.map((item, index) => {
             return (
@@ -72,10 +70,47 @@ const CareersDetails = () => {
 
                 <div className='bullets-details'>
                   <StyledHeadings as='h6'>
-                    {item.job_bullets.bullet_your_duty.title}
+                    {item.job_description.job_bullets.bullet_your_duty.title}
                   </StyledHeadings>
                   <ul className='bullets-details-list'>
-                    {item.job_bullets.bullet_your_duty.bullets.map(
+                    {item.job_description.job_bullets.bullet_your_duty.bullets.map(
+                      (item, index) => {
+                        return (
+                          <li key={index} className='bullets-dots'>
+                            <StyledTexts $size='p4'>{item.bullet}</StyledTexts>
+                          </li>
+                        );
+                      }
+                    )}
+                  </ul>
+                </div>
+
+                <div className='bullets-details'>
+                  <StyledHeadings as='h6'>
+                    {item.job_description.job_bullets.bullet_we_offer.title}
+                  </StyledHeadings>
+                  <ul className='bullets-details-list'>
+                    {item.job_description.job_bullets.bullet_we_offer.bullets.map(
+                      (item, index) => {
+                        return (
+                          <li key={index} className='bullets-dots'>
+                            <StyledTexts $size='p4'>{item.bullet}</StyledTexts>
+                          </li>
+                        );
+                      }
+                    )}
+                  </ul>
+                </div>
+
+                <div className='bullets-details'>
+                  <StyledHeadings
+                    as='h3'
+                    className='qualifications-details-title'
+                  >
+                    {item.job_qualifications.title}
+                  </StyledHeadings>
+                  <ul className='bullets-details-list'>
+                    {item.job_qualifications.bullet_qualifications.bullets.map(
                       (item, index) => {
                         return (
                           <li key={index} className='bullets-dots'>

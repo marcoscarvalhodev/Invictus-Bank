@@ -1,7 +1,5 @@
-import { themeAttrs } from './ThemeAttrs';
-import { CSSProperties } from 'styled-components';
 import { css } from 'styled-components';
-import { StyledObject, Styles } from 'styled-components/dist/types';
+import { themeAttrs } from './ThemeAttrs';
 
 const theme = {
   colors: {

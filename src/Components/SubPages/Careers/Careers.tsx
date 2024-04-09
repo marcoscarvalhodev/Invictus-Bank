@@ -3,7 +3,7 @@ import { StyledCareers } from '../../../Styles/SubPages/Careers/Careers.styled';
 import CareersAdvantages from './CareersAdvantages';
 import { ContentCareers } from '../../../Contents';
 import { useParams, Outlet, useNavigate } from 'react-router-dom';
-import UserContext from '../../../UseContext';
+import { UserContextCareers } from '../../../UserContext';
 import { careersProps } from '../../../Helper/CareersTypes';
 
 const Careers = () => {
@@ -73,12 +73,12 @@ const Careers = () => {
         if (item)
           if (item.id === Number(idParams)) {
             return (
-              <UserContext.Provider
+              <UserContextCareers.Provider
                 key={item.id}
                 value={item.id === Number(idParams) ? item : null}
               >
                 <Outlet />
-              </UserContext.Provider>
+              </UserContextCareers.Provider>
             );
           }
       })}
