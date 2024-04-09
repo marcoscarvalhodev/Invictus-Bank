@@ -6,7 +6,7 @@ import PersonPromoted from '../../../assets/img/careers/person_promoted.jpg';
 import Input from '../../Reusable/Input';
 import useForm from '../../../Hooks/useForm';
 import CareersSearch from '../../../assets/svg/careers/search.svg?react';
-import { careersProps } from './Careers';
+import { careersProps } from '../../../Helper/CareersTypes';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { NavLink} from 'react-router-dom';
 
@@ -73,6 +73,7 @@ const CareersAdvantages = ({
           type='text'
           placeholder='Search for a job'
           {...name}
+          
         >
           <CareersSearch className='careers-search' />
         </Input>
@@ -89,10 +90,10 @@ const CareersAdvantages = ({
               if (item)
                 if (item.title.length > 0) {
                   return (
-                    <div key={item.id}>
+                    <div key={item.id} className='jobs-list'>
                       <NavLink to={`job/${item.id}`}>
-                        <div className='jobs-list'>
-                          <StyledHeadings as='h3'>
+                        <div >
+                          <StyledHeadings as='h3' className='careers-title'>
                             {item.title.split(' ').map((item) => {
                               return (
                                 ' ' + item[0].toUpperCase() + item.substring(1)
@@ -102,6 +103,7 @@ const CareersAdvantages = ({
                           <StyledTexts
                             $size='p1'
                             style={{ letterSpacing: '0.2rem' }}
+                            className='careers-description'
                           >
                             {descriptionArray.map((item, index) => (
                               <React.Fragment key={index}>
@@ -118,7 +120,7 @@ const CareersAdvantages = ({
                               </React.Fragment>
                             ))}
                           </StyledTexts>
-                          <StyledTexts $size='p1'>
+                          <StyledTexts $size='p1' className='careers-location'>
                             {item.location.split(' ').map((item) => {
                               return (
                                 ' ' + item[0].toUpperCase() + item.substring(1)

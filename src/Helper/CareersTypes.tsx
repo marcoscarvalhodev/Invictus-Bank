@@ -7,10 +7,17 @@ interface jobDetailsProps {
   job_description: {
     title: string;
     description: { description_segment: React.ReactElement }[];
+    job_bullets: {
+      bullet_your_duty: { title: string; bullets: { bullet: string }[] };
+      bullet_we_offer: { title: string; bullets: { bullet: string }[] };
+    };
   };
 
-  job_bullets: {
-    bullet_your_duty: { title: string; bullets: { bullet: string }[] };
+  job_qualifications: {
+    title: string;
+    bullet_qualifications: {
+      bullets: { bullet: string }[];
+    };
   };
 }
 
@@ -20,6 +27,7 @@ export interface careerProps {
   title: string;
   id: number;
   description: string;
+  salary: string;
   location: string;
   job_details: jobDetailsPropsExtended;
 }

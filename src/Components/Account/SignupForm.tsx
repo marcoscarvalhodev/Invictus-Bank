@@ -9,29 +9,44 @@ import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';
 import UserIcon from '../../assets/svg/login/user.svg?react';
 import AlternateAccount from './AlternateAccount';
-import { NavLink } from 'react-router-dom';
+
 
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
+import { USER_REGISTER } from '../../Api';
+import useFetch from '../../Hooks/useFetch';
+import { UserContext } from '../../UserContext';
 
 interface SignupFormProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const SignupForm = ({
-  setAccountState,
-  
-}: SignupFormProps) => {
+const SignupForm = ({ setAccountState }: SignupFormProps) => {
   const name = useForm();
   const email = useForm('email');
   const password = useForm('password');
-
   const [passwordShow, setPasswordShow] = React.useState(false);
+  const {userLogin} = React.useContext(UserContext);
+
+  const { loading, data, error, request } = useFetch();
+
+   const  handleSubmit : React.FormEventHandler<HTMLFormElement> = async (event ) => {
+    event.preventDefault();
+    
+
+    const { url, options } = USER_REGISTER({
+      name: name.value,
+      email: email.value,
+      password: password.value,
+    });
+
+    const {json, response} = await request({url, options});
+    
+    if (response.ok) userLogin({login: email.value, password: password.value, stay_logged_in: true});
+  }
 
   return (
-    <StyledSignupForm
-      className='signup-form'
-    >
+    <StyledSignupForm className='signup-form'>
       <div>
         <StyledHeadings as='h2' className='title'>
           {ContentLoginSignupForm.signup.h2}
@@ -41,7 +56,7 @@ const SignupForm = ({
         </StyledHeadings>
       </div>
 
-      <form className='form'>
+      <form className='form' onSubmit={handleSubmit}>
         <Input
           name='name-signup'
           label='Name'
@@ -69,9 +84,8 @@ const SignupForm = ({
             setPassowrdShow={setPasswordShow}
           />
         </Input>
-        <NavLink to='/'>
-          <Button classed='button'>Signup</Button>
-        </NavLink>
+
+        <Button classed='button'>Signup</Button>
       </form>
 
       <AlternateAccount

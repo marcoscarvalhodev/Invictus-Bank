@@ -3,7 +3,6 @@ import { StyledTransfers } from '../../../Styles/SubPages/Transfers/Transfers.st
 import TransfersHero from './TransfersHero';
 import TransfersAdvantages from './TransfersAdvantages';
 import TransfersBulletAdvantages from './TransfersBulletAdvantages';
-import ContainerSizes from '../../../ContainerSizes';
 
 
 const Transfers = () => {

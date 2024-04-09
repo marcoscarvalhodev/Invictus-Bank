@@ -12,10 +12,7 @@ export const StyledCareersDetails = styled.section`
       left: 0;
       background: ${theme.colors.white_auxiliary.white_light};
 
-      .main-title {
-        padding-bottom: 7.2rem;
-        margin-left: -0.4rem;
-      }
+      
 
       .job-details {
         display: flex;

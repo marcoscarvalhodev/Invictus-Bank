@@ -1,17 +1,15 @@
 import React from 'react';
 import { StyledLoginForm } from '../../Styles/Account/LoginForm.styled';
 import { StyledHeadings } from '../../Styles/Reusable/Headings.styled';
-
 import { ContentLoginSignupForm } from '../../Contents';
 import Input from '../Reusable/Input';
 import Button from '../Reusable/Button';
 import EmailIcon from '../../assets/svg/login/email.svg?react';
 import PasswordIcon from '../../assets/svg/login/password.svg?react';
 import AlternateAccount from './AlternateAccount';
-import { NavLink } from 'react-router-dom';
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
-
+import { UserContext } from '../../UserContext';
 
 interface LoginFormProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
@@ -20,8 +18,22 @@ interface LoginFormProps {
 const LoginForm = ({ setAccountState }: LoginFormProps) => {
   const email = useForm('email');
   const password = useForm('password');
-
+  const { userLogin, loginState, data } = React.useContext(UserContext);
   const [passwordShow, setPasswordShow] = React.useState(false);
+
+  React.useEffect(() => {
+    console.log(data)
+  }, [data])
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
+    event
+  ) => {
+    event.preventDefault();
+
+    if (email.validate() && password.validate()) {
+      userLogin({ login: email.value, password: password.value, stay_logged_in: true });
+    }
+  };
 
   return (
     <StyledLoginForm className='login-form'>
@@ -34,7 +46,7 @@ const LoginForm = ({ setAccountState }: LoginFormProps) => {
         </StyledHeadings>
       </div>
 
-      <form className='form'>
+      <form className='form' onSubmit={handleSubmit}>
         <Input
           name='email-login'
           label='Email'
@@ -55,11 +67,10 @@ const LoginForm = ({ setAccountState }: LoginFormProps) => {
             setPassowrdShow={setPasswordShow}
           />
         </Input>
-        <NavLink to='/'>
-          <Button classed='button' light={true}>
-            Login
-          </Button>
-        </NavLink>
+
+        <Button classed='button' light={true}>
+          Login
+        </Button>
       </form>
 
       <AlternateAccount

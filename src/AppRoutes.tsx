@@ -10,7 +10,7 @@ import Deposits from './Components/SubPages/Deposits/Deposits';
 import Rewards from './Components/SubPages/Rewards/Rewards';
 import Careers from './Components/SubPages/Careers/Careers';
 import CareersDetails from './Components/SubPages/Careers/CareersDetails';
-import NoMatch from './NoMatch';
+import NoMatch from './Helper/NoMatch';
 
 interface AppRoutesProps {
   mobileBx: boolean;

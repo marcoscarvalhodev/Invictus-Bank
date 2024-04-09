@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledSVGPeople } from '../../../Styles/Home/People/SVGPeople.styled';
-import ContainerSizes from '../../../ContainerSizes';
+import ContainerSizes from '../../../Helper/ContainerSizes';
 
 interface SVGPeopleProps {
   width: string;

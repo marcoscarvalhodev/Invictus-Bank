@@ -4,7 +4,6 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import Button from '../../Reusable/Button';
 import { ContentCards } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
-import ContainerSizes from '../../../ContainerSizes';
 import Card1 from '../../../assets/svg/cards/card-1.svg?react';
 import Card2 from '../../../assets/svg/cards/card-2.svg?react';
 

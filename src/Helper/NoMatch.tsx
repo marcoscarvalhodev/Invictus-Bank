@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHeadings } from './Styles/Reusable/Headings.styled';
+import { StyledHeadings } from '../Styles/Reusable/Headings.styled';
 
 const NoMatch = () => {
   return (
