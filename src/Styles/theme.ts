@@ -618,9 +618,34 @@ const theme = {
     `,
   },
 
-  images_props: {
-    image: css``,
-    image_wrapper: css``,
+  username_data: function () {
+    return css`
+      .username-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .icon-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.6rem;
+        }
+        gap: 2rem;
+        .user-icon {
+          width: 1.6rem;
+          path {
+            stroke: ${theme.colors.blue_main.secondary_dark};
+          }
+
+          margin-top: -2px;
+        }
+
+        .username {
+          color: ${theme.colors.blue_main.secondary_dark};
+        }
+      }
+    `;
   },
 };
 export default theme;

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import IconArrow from '../../assets/svg/icon-arrow.svg?url';
 
 interface TextsProps {
-  $size: 'p1' | 'p2' | 'p3' | 'p4';
+  $size: 'p1' | 'p2' | 'p3' | 'p4' | 'custom';
   $link?: boolean;
   $fontSize?: number;
   $arrow?: boolean;

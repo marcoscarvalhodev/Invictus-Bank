@@ -11,6 +11,7 @@ import Rewards from './Components/SubPages/Rewards/Rewards';
 import Careers from './Components/SubPages/Careers/Careers';
 import CareersDetails from './Components/SubPages/Careers/CareersDetails';
 import NoMatch from './Helper/NoMatch';
+import { UserContext } from './UserContext';
 
 interface AppRoutesProps {
   mobileBx: boolean;
@@ -33,6 +34,9 @@ const AppRoutes = ({
   large,
   xlarge,
 }: AppRoutesProps) => {
+  const {loginState} = React.useContext(UserContext);
+
+
   return (
     <Routes>
       <Route
@@ -44,11 +48,12 @@ const AppRoutes = ({
             xsmall={xsmall}
             small={small}
             xlarge={xlarge}
+            loginState={loginState}
           /> //needed to use media query custom hook
         }
       />
 
-      <Route
+      {loginState ? <></> : <Route
         path='account/*'
         element={
           <Account
@@ -56,7 +61,7 @@ const AppRoutes = ({
             accountState={accountState}
           />
         }
-      />
+      />}
 
       <Route
         path='savings/*'

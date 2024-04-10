@@ -16,6 +16,7 @@ interface HomeProps {
   xsmall: boolean;
   small: boolean;
   xlarge: boolean;
+  loginState: boolean;
 }
 
 const Home = ({
@@ -24,11 +25,12 @@ const Home = ({
   xsmall,
   small,
   xlarge,
+  loginState
 }: HomeProps) => {
   return (
     <StyledHome className='home'>
       <HeroBackground />
-      <Hero mobileBx={mobileBx} setAccountState={setAccountState} />
+      <Hero mobileBx={mobileBx} setAccountState={setAccountState} loginState={loginState}/>
       <People small={small} xsmall={xsmall} />
       <Advantages />
       <SupremeApp />

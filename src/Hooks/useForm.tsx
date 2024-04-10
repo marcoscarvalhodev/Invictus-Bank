@@ -24,9 +24,14 @@ const types = {
     regex: /^\d+$/,
     message: 'Only numbers are accepted',
   },
+
+  name: {
+    regex: /^[a-zA-Z]+$/,
+    message: 'Only first name is accepted.'
+  }
 };
 
-const useForm = (type?: string) : useFormProps => {
+const useForm = (type: string) : useFormProps => {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(null);
 

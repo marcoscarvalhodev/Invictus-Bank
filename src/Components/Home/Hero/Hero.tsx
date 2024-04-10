@@ -15,11 +15,13 @@ import { NavLink } from 'react-router-dom';
 interface HeroProps {
   mobileBx: boolean;
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  loginState: boolean;
 }
 
 const Hero = ({
   mobileBx,
   setAccountState,
+  loginState
 }: HeroProps) => {
   const accountHandleClick = () => {
     setAccountState(2);
@@ -38,9 +40,9 @@ const Hero = ({
         <div
           className={`flex-interact`}
         >
-          <NavLink to='/account' onClick={accountHandleClick}>
+          {loginState ? <></> : <NavLink to='/account' onClick={accountHandleClick}>
             <Button>Join Supreme Bank</Button>
-          </NavLink>
+          </NavLink>}
           <a
             href='https://www.apple.com/br/app-store'
             target='_blank'

@@ -10,6 +10,7 @@ import AlternateAccount from './AlternateAccount';
 import useForm from '../../Hooks/useForm';
 import PasswordShow from './PasswordShow';
 import { UserContext } from '../../UserContext';
+import ErrorHandle from '../../Helper/ErrorHandle';
 
 interface LoginFormProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
@@ -18,12 +19,8 @@ interface LoginFormProps {
 const LoginForm = ({ setAccountState }: LoginFormProps) => {
   const email = useForm('email');
   const password = useForm('password');
-  const { userLogin, loginState, data } = React.useContext(UserContext);
+  const { userLogin, loginState, data, error } = React.useContext(UserContext);
   const [passwordShow, setPasswordShow] = React.useState(false);
-
-  React.useEffect(() => {
-    console.log(data)
-  }, [data])
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
     event
@@ -31,7 +28,7 @@ const LoginForm = ({ setAccountState }: LoginFormProps) => {
     event.preventDefault();
 
     if (email.validate() && password.validate()) {
-      userLogin({ login: email.value, password: password.value, stay_logged_in: true });
+      userLogin({ login: email.value, password: password.value, stayLoggedIn: true });
     }
   };
 
@@ -67,6 +64,8 @@ const LoginForm = ({ setAccountState }: LoginFormProps) => {
             setPassowrdShow={setPasswordShow}
           />
         </Input>
+
+        {error && <ErrorHandle error={error}/> }
 
         <Button classed='button' light={true}>
           Login

@@ -1,7 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const StyledMenuMobile = styled.nav`
-  ${({ theme }) => css`
+interface StyledMenuMobileProps {
+  $loginState: boolean;
+}
+
+export const StyledMenuMobile = styled.nav<StyledMenuMobileProps>`
+  ${({ theme, $loginState }) => css`
     && {
       width: 100vw;
       height: 100vh;
@@ -13,7 +17,6 @@ export const StyledMenuMobile = styled.nav`
       justify-content: center;
       align-items: center;
       transition: 0.7s ease;
-      
 
       &.active-menu-mobile {
         opacity: 1;
@@ -32,7 +35,7 @@ export const StyledMenuMobile = styled.nav`
 
       .nav-link-mobile {
         color: ${theme.colors.gray_auxiliary.gray_2};
-        
+
         transition: 0.5s ease;
 
         width: 100%;
@@ -78,7 +81,12 @@ export const StyledMenuMobile = styled.nav`
       }
 
       .social-icons {
-        padding: ${theme.spacing.gap_3} 0rem;
+        ${$loginState
+          ? css`padding: 0;`
+          : css`
+              padding: ${theme.spacing.gap_3} 0rem;
+            `};
+
         ${theme.boxProps.flex.flex_center};
       }
 
@@ -134,11 +142,6 @@ export const StyledMenuMobile = styled.nav`
             background-color: ${theme.colors.blue_main.secondary_normal};
           }
         }
-      }
-
-      .dropdown-title {
-        
-        
       }
 
       .dropdown-wrapper-active {
