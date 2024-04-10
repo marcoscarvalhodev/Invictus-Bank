@@ -127,6 +127,13 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       }
     }
 
+    //username
+
+    ${theme.username_data};
+    .button-logout {
+      margin-left: 2rem;
+    }
+
 
   `}
 `;

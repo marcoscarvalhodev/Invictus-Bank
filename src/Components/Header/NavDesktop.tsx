@@ -3,12 +3,23 @@ import { StyledNavDesktop } from '../../Styles/Header/NavDesktop.styled';
 import Button from '../Reusable/Button';
 import Logo from '../Reusable/Logo';
 import { NavLink } from 'react-router-dom';
+import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
+
+import UserIcon from '../../assets/svg/login/user.svg?react';
 
 interface NavDesktopProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  loginState: boolean;
+  userName: string;
+  userLogout: () => Promise<void>;
 }
 
-const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
+const NavDesktop = ({
+  setAccountState,
+  loginState,
+  userName,
+  userLogout,
+}: NavDesktopProps) => {
   const [dropdownMenu, setDropdownMenu] = React.useState(false);
   const linkRef1 = React.useRef<HTMLLIElement>(null);
   const linkRef2 = React.useRef<HTMLLIElement>(null);
@@ -18,6 +29,10 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
   const handleClick: React.MouseEventHandler<HTMLLIElement> = (event) => {
     event.preventDefault();
     setDropdownState(Number(event.currentTarget.id));
+  };
+
+  const handleLogout = async () => {
+    await userLogout();
   };
 
   const mouseLeft: React.MouseEventHandler<HTMLLIElement> = (event) => {
@@ -131,10 +146,9 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <NavLink to="/careers" className='nav-link-dropdown'>
+                <NavLink to='/careers' className='nav-link-dropdown'>
                   Careers
                 </NavLink>
-                
               </li>
               <li className='dropdown-item'>
                 <a href='' className='nav-link-dropdown'>
@@ -146,14 +160,29 @@ const NavDesktop = ({ setAccountState }: NavDesktopProps) => {
         </ul>
       </div>
 
-      <div className='navbar-desktop-item-2'>
-        <NavLink to='/account' onClick={() => setAccountState(2)}>
-          <Button>Join Supreme Bank</Button>
-        </NavLink>
-        <NavLink to='/account' onClick={() => setAccountState(1)}>
-          <Button light={true}>Login</Button>
-        </NavLink>
-      </div>
+      {loginState ? (
+        <div className='username-wrapper'>
+          <div className='icon-wrapper'>
+            <UserIcon className='user-icon' />
+            <StyledTexts className='username' $size='custom' $fontSize={22}>
+              {userName}
+            </StyledTexts>
+          </div>
+
+          <Button className='button-logout' light={true} onClick={handleLogout}>
+            Logout
+          </Button>
+        </div>
+      ) : (
+        <div className='navbar-desktop-item-2'>
+          <NavLink to='/account' onClick={() => setAccountState(2)}>
+            <Button>Join Supreme Bank</Button>
+          </NavLink>
+          <NavLink to='/account' onClick={() => setAccountState(1)}>
+            <Button light={true}>Login</Button>
+          </NavLink>
+        </div>
+      )}
     </StyledNavDesktop>
   );
 };

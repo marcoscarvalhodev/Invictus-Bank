@@ -22,7 +22,7 @@ interface SignupFormProps {
 }
 
 const SignupForm = ({ setAccountState }: SignupFormProps) => {
-  const name = useForm();
+  const name = useForm('name');
   const email = useForm('email');
   const password = useForm('password');
   const [passwordShow, setPasswordShow] = React.useState(false);
@@ -42,7 +42,8 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
 
     const {json, response} = await request({url, options});
     
-    if (response.ok) userLogin({login: email.value, password: password.value, stay_logged_in: true});
+    
+    if (response.ok) userLogin({login: email.value, password: password.value, stayLoggedIn: true});
   }
 
   return (

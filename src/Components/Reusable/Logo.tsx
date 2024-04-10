@@ -4,7 +4,7 @@ import SupremeLogo from "../../assets/svg/logosb.svg?react";
 
 const Logo = () => {
   return (
-    <StyledLogo>
+    <StyledLogo className="logo-supreme">
       
         <SupremeLogo />
       

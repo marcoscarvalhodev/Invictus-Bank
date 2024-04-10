@@ -4,6 +4,7 @@ import { StyledHeader } from '../../Styles/Header/Header.styled';
 import NavMobile from './NavMobile';
 import MenuMobile from './MenuMobile';
 import NavDesktop from './NavDesktop';
+import { UserContext } from '../../UserContext';
 
 interface HeaderProps {
   setMobileBx: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,6 +20,8 @@ const Header = ({
   const [scroll, setScroll] = React.useState(0);
   const [scrolled, setScrolled] = React.useState(false);
   const [menuIcon, setMenuIcon] = React.useState(false);
+  const {loginState, data, userLogout} = React.useContext(UserContext);
+  
 
   const [activeBx, setActiveBx] = React.useState(false);
 
@@ -46,13 +49,15 @@ const Header = ({
         menuIcon ? 'click-header' : ''
       }`}
     >
-      <NavDesktop setAccountState={setAccountState} />
+      <NavDesktop setAccountState={setAccountState} loginState={loginState} userName={data && data.name} userLogout={userLogout}/>
 
       <NavMobile
         setMenuIcon={setMenuIcon}
         activeBx={activeBx}
         setActiveBx={setActiveBx}
         setAccountState={setAccountState}
+        loginState={loginState} userName={data && data.name}
+        userLogout={userLogout}
       />
       <MenuMobile
         menuIcon={menuIcon}
@@ -60,6 +65,7 @@ const Header = ({
         setMobileBx={setMobileBx}
         setMenuIcon={setMenuIcon}
         setAccountState={setAccountState}
+        loginState={loginState}
       />
     </StyledHeader>
   );

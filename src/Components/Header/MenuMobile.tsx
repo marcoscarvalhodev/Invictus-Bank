@@ -16,6 +16,7 @@ interface MenuProps {
   setMenuIcon: React.Dispatch<React.SetStateAction<boolean>>;
   setActiveBx: React.Dispatch<React.SetStateAction<boolean>>;
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  loginState: boolean;
 }
 
 const MenuMobile = ({
@@ -24,6 +25,7 @@ const MenuMobile = ({
   setMenuIcon,
   setActiveBx,
   setAccountState,
+  loginState,
 }: MenuProps) => {
   const [menuState, setMenuState] = React.useState(0);
   const itemsRef = React.useRef([]);
@@ -72,7 +74,7 @@ const MenuMobile = ({
 
   return (
     <StyledMenuMobile
-      className={`menu-mobile ${menuIcon ? 'active-menu-mobile' : ''}`}
+      className={`menu-mobile ${menuIcon ? 'active-menu-mobile' : ''}`} $loginState={loginState}
     >
       <ul className='nav-list-mobile'>
         {ContentNavMobile.nav_mobile.map(({ id, pages, title_link }) => {
@@ -122,15 +124,19 @@ const MenuMobile = ({
           );
         })}
 
-        <li>
-          <NavLink
-            to='/account'
-            className='nav-link-mobile'
-            onClick={handleJoinClick}
-          >
-            <StyledHeadings as='h3'>Join Supreme Bank</StyledHeadings>
-          </NavLink>
-        </li>
+        {loginState ? (
+          <></>
+        ) : (
+          <li>
+            <NavLink
+              to='/account'
+              className='nav-link-mobile'
+              onClick={handleJoinClick}
+            >
+              <StyledHeadings as='h3'>Join Supreme Bank</StyledHeadings>
+            </NavLink>
+          </li>
+        )}
 
         <li className='social-icons'>
           <a href='https://facebook.com' target='_blank'>

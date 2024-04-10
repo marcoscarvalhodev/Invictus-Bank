@@ -22,6 +22,16 @@ export const StyledHero = styled.section<HeroProps>`
 
         .playstore-icon {
           margin-top: 5px;
+
+          
+        }
+
+        .playstore-icon, .appstore-icon {
+          transition: ease 0.5s;
+          &:hover {
+            opacity: 0.8;
+            transition: ease 0.5s;
+          }
         }
       }
 
