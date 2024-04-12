@@ -23,7 +23,7 @@ export const StyledCheckingSlides = styled.section`
 
       ${theme.media_query.xsmall`
         .container {
-          padding: 9.6rem 2.4rem;
+          padding: ${theme.spacing.global_padding_sides};
         }
 
         .slides-wrapper {

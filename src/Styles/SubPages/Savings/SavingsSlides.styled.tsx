@@ -15,7 +15,7 @@ export const StyledSavingsSlides = styled.section`
         }
 
         .container {
-          padding: 9.6rem 2.4rem;
+          padding: ${theme.spacing.global_padding_sides};
         }
       `} //query-small
 

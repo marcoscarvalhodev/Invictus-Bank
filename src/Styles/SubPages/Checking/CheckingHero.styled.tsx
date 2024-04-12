@@ -10,7 +10,7 @@ export const StyledCheckingHero = styled.section`
       }
       ${theme.media_query.small`
         flex-direction: column;
-        padding: 9.6rem 2.4rem 9.6rem 2.4rem;
+        padding: ${theme.spacing.global_padding_sides};
       `}//query-small
     }
   `}

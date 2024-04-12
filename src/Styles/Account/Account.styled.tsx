@@ -137,7 +137,7 @@ export const StyledAccount = styled.section<StyledAccountProps>`
       }
 
       ${theme.media_query.small`
-        padding: 9.6rem 2.4rem;
+        padding: ${theme.spacing.global_padding_sides};
 
         .background-wrapper {
           width: 100%;

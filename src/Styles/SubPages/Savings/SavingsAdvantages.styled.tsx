@@ -7,7 +7,7 @@ export const StyledSavingsAdvantages = styled.section`
       ${theme.sub_pages.sub_pages_advantages};
 
       ${theme.media_query.small`
-        padding: 9.6rem 2.4rem;
+        padding: ${theme.spacing.global_padding_sides};
 
         flex-direction: column;
 

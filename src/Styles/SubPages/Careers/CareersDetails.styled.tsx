@@ -4,7 +4,7 @@ export const StyledCareersDetails = styled.section`
   ${({ theme }) => css`
     &&& {
       position: absolute;
-      padding: 9.6rem 2.4rem;
+      padding: ${theme.spacing.global_padding_sides};
       display: flex;
       min-height: 100%;
       gap: 3rem;

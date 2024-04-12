@@ -11,6 +11,8 @@ interface CareersTitleApplyProps {
 }
 
 const CareersTitleApply = ({ itemState }: CareersTitleApplyProps) => {
+
+
   return (
     <StyledCareersTitleApply>
       <StyledHeadings as='h2' className='main-title'>
@@ -23,7 +25,7 @@ const CareersTitleApply = ({ itemState }: CareersTitleApplyProps) => {
         <StyledTexts $size='p4'>{itemState.location}</StyledTexts>
       </div>
 
-      <NavLink to='/' className="title-button">
+      <NavLink to='form' className="title-button">
         <Button>Apply</Button>
       </NavLink>
     </StyledCareersTitleApply>

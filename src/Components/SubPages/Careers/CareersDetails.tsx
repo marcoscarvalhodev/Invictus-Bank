@@ -21,10 +21,12 @@ const CareersDetails = () => {
       setLocationState(
         location.pathname === `/careers/job/${item.id}` ? true : false
       );
+
+      console.log(location.pathname)
     }
   }, [item, location, locationState]);
 
-  if (itemState && locationState)
+  if (itemState)
     return (
       <StyledCareersDetails className='container'>
         <div className='careers-grid careers-grid-1'>
