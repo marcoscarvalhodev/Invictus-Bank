@@ -16,6 +16,12 @@ import PasswordShow from './PasswordShow';
 import { USER_REGISTER } from '../../Api';
 import useFetch from '../../Hooks/useFetch';
 import { UserContext } from '../../UserContext';
+import ErrorHandle from '../../Helper/ErrorHandle';
+
+interface ErrorStateProps {
+  code: number;
+  message: string;
+}
 
 interface SignupFormProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
@@ -27,6 +33,7 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
   const password = useForm('password');
   const [passwordShow, setPasswordShow] = React.useState(false);
   const {userLogin} = React.useContext(UserContext);
+  const [errorState, setErrorState] = React.useState<ErrorStateProps | null>(null);
 
   const { loading, data, error, request } = useFetch();
 
@@ -42,9 +49,16 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
 
     const {json, response} = await request({url, options});
     
+    if(!response.ok) {
+      setErrorState(json)
+    }
     
     if (response.ok) userLogin({login: email.value, password: password.value, stayLoggedIn: true});
   }
+
+  React.useEffect(() => {
+    console.log(errorState)
+  })
 
   return (
     <StyledSignupForm className='signup-form'>
@@ -72,6 +86,8 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
           icon={<EmailIcon className='icon email-icon' />}
           {...email}
         />
+
+        {errorState && errorState.code === 3033 && <ErrorHandle error={errorState.message}/>}
         <Input
           name='password-signup'
           label='Password'

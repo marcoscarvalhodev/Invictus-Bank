@@ -3,7 +3,14 @@ import Savings from './Components/SubPages/Savings/Savings';
 import Home from './Home';
 import Checking from './Components/SubPages/Checking/Checking';
 import Cards from './Components/SubPages/Cards/Cards';
-import { Routes, Route, HashRouter, Outlet, useParams, Navigate } from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  HashRouter,
+  Outlet,
+  useParams,
+  Navigate,
+} from 'react-router-dom';
 import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
@@ -12,6 +19,7 @@ import Careers from './Components/SubPages/Careers/Careers';
 import CareersDetails from './Components/SubPages/Careers/CareersDetails';
 import NoMatch from './Helper/NoMatch';
 import { UserContext } from './UserContext';
+import CareersForm from './Components/SubPages/Careers/CareersForm/CareersForm';
 
 interface AppRoutesProps {
   mobileBx: boolean;
@@ -34,8 +42,7 @@ const AppRoutes = ({
   large,
   xlarge,
 }: AppRoutesProps) => {
-  const {loginState} = React.useContext(UserContext);
-
+  const { loginState } = React.useContext(UserContext);
 
   return (
     <Routes>
@@ -53,15 +60,19 @@ const AppRoutes = ({
         }
       />
 
-      {loginState ? <></> : <Route
-        path='account/*'
-        element={
-          <Account
-            setAccountState={setAccountState}
-            accountState={accountState}
-          />
-        }
-      />}
+      {loginState ? (
+        <></>
+      ) : (
+        <Route
+          path='account/*'
+          element={
+            <Account
+              setAccountState={setAccountState}
+              accountState={accountState}
+            />
+          }
+        />
+      )}
 
       <Route
         path='savings/*'
@@ -83,11 +94,9 @@ const AppRoutes = ({
         }
       />
 
-      
       <Route path='careers' element={<Careers />}>
-        <Route path='job/:idParams' element={<CareersDetails />}>
-          <Route path='*' element={<Navigate to='/' />} />
-        </Route>
+        <Route path='job/:idParams' element={<CareersDetails />} />
+        <Route path='job/:idParams/form' element={<CareersForm />} />
       </Route>
 
       <Route path='*' element={<NoMatch />} />

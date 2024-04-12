@@ -1382,3 +1382,8 @@ export const ContentCareers = {
     },
   ],
 };
+
+export const ContentCareersForm = {
+  h2_title: 'Personal information',
+  p_required: 'Write down all fields marked with *'
+}
