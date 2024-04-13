@@ -74,6 +74,7 @@ export const StyledCareersAdvantages = styled.section`
         box-shadow: 0 0 0 5px $#88b1f1;
         transition: ease 1s;
         border-radius: 0.4rem;
+
         .jobs-list {
           border-bottom: solid 1px ${theme.colors.black_auxiliary.black_normal};
           background: ${theme.colors.white_auxiliary.white_dark};
@@ -134,6 +135,31 @@ export const StyledCareersAdvantages = styled.section`
         pointer-events: all;
         transition: ease 1s;
       }
+
+      ${theme.media_query.small`
+        
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+
+        .flex-1 {
+          max-width: 50rem;
+        }
+
+        .parent-input {
+          max-width: 50rem;
+        }
+
+        .advantages-flex {
+          padding-top: 0;
+        }
+
+        .advantages-image {
+          min-width: 100%;
+          max-width: 100%;
+        }
+
+      `}
     }
   `}
 `;

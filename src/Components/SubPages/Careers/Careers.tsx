@@ -49,7 +49,7 @@ const Careers = () => {
     if (idParams) {
       console.log(navigateState);
 
-      /*navigateState === true ? '' : navigate('job');*/
+      /*navigateState === false ? navigate('/careers') : '';*/
     }
   }, [navigateState, idParams, navigate, careersState]); //navigate to careers if id doesn't exist
 

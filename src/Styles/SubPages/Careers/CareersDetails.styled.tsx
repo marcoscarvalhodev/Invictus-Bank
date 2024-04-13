@@ -39,6 +39,17 @@ export const StyledCareersDetails = styled.section`
           
         }
       }
+
+      ${theme.media_query.small`
+        
+        display:flex;
+        flex-direction: column;
+
+        .careers-grid-2 {
+          margin-top: 4.2rem;
+        }
+
+      `}
     }
   `}
 `;
