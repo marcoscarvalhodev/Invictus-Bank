@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { LegacyRef } from 'react';
 import { StyledInput } from '../../Styles/Reusable/Input.styled';
 import { StyledTexts } from '../../Styles/Reusable/Texts.styled';
 
@@ -14,6 +14,7 @@ interface InputProps {
   children?: React.JSX.Element;
   inputPassword?: boolean;
   placeholder?: string;
+  reference?: React.MutableRefObject<HTMLInputElement>;
   
 }
 
@@ -29,7 +30,7 @@ const Input = ({
   error,
   inputPassword,
   placeholder,
-  
+  reference
   
 }: InputProps) => {
   return (
@@ -48,7 +49,7 @@ const Input = ({
           className='input'
           autoComplete='on'
           placeholder={placeholder}
-          
+          ref={reference}
         />
         {children}
       </div>

@@ -36,7 +36,7 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
   const [errorState, setErrorState] = React.useState<ErrorStateProps | null>(null);
 
   const { loading, data, error, request } = useFetch();
-
+  
    const  handleSubmit : React.FormEventHandler<HTMLFormElement> = async (event ) => {
     event.preventDefault();
     
@@ -55,10 +55,6 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
     
     if (response.ok) userLogin({login: email.value, password: password.value, stayLoggedIn: true});
   }
-
-  React.useEffect(() => {
-    console.log(errorState)
-  })
 
   return (
     <StyledSignupForm className='signup-form'>
@@ -102,7 +98,7 @@ const SignupForm = ({ setAccountState }: SignupFormProps) => {
           />
         </Input>
 
-        <Button classed='button'>Signup</Button>
+        <Button classed='button' loading={loading}>Signup</Button>
       </form>
 
       <AlternateAccount

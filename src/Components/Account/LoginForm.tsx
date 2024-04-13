@@ -19,7 +19,7 @@ interface LoginFormProps {
 const LoginForm = ({ setAccountState }: LoginFormProps) => {
   const email = useForm('email');
   const password = useForm('password');
-  const { userLogin, loginState, data, error } = React.useContext(UserContext);
+  const { userLogin, loginState, data, error, loading } = React.useContext(UserContext);
   const [passwordShow, setPasswordShow] = React.useState(false);
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (
@@ -67,7 +67,7 @@ const LoginForm = ({ setAccountState }: LoginFormProps) => {
 
         {error && <ErrorHandle error={error}/> }
 
-        <Button classed='button' light={true}>
+        <Button classed='button' light={true} loading={loading}>
           Login
         </Button>
       </form>

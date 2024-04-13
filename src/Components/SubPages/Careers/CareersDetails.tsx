@@ -12,19 +12,12 @@ import CareersTitleApply from './CareersTitleApply';
 const CareersDetails = () => {
   const [itemState, setItemState] = React.useState<careerProps | null>(null);
   const item = React.useContext(UserContextCareers);
-  const location = useLocation();
-  const [locationState, setLocationState] = React.useState(false);
 
   React.useEffect(() => {
     if (item) {
       setItemState(item);
-      setLocationState(
-        location.pathname === `/careers/job/${item.id}` ? true : false
-      );
-
-      console.log(location.pathname)
     }
-  }, [item, location, locationState]);
+  }, [item]);
 
   if (itemState)
     return (

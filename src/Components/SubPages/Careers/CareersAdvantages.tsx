@@ -8,7 +8,7 @@ import useForm from '../../../Hooks/useForm';
 import CareersSearch from '../../../assets/svg/careers/search.svg?react';
 import { careersProps } from '../../../Helper/CareersTypes';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
-import { NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 interface CareersAdvantagesProps {
   careersState: careersProps;
@@ -27,10 +27,15 @@ const CareersAdvantages = ({
   updatedCareersDescription,
   everyCareersState,
 }: CareersAdvantagesProps) => {
-  const name = useForm();
+  const name = useForm('');
   const [descriptionArray, setDescriptionArray] = React.useState<string[]>([
     '',
   ]);
+
+  const [clickOutsideState, setClickOutsideState] = React.useState(false);
+
+  const jobsSearchRef = React.useRef<null | HTMLInputElement>(null);
+  const jobsWrapperRef = React.useRef<null | HTMLDivElement>(null);
 
   React.useEffect(() => {
     if (name.value) {
@@ -50,15 +55,27 @@ const CareersAdvantages = ({
             setDescriptionArray(
               item.description.split(name.value.toLowerCase())
             );
-
-            
           }
         }
       });
   }, [careersState, name.value]);
 
+  const handleClick: React.MouseEventHandler<HTMLElement> = (event) => {
+    switch(event.target) {
+      case jobsSearchRef.current:
+      setClickOutsideState(false);
+      break;
+      case jobsWrapperRef.current:
+        setClickOutsideState(false);
+        break;
+      default: 
+      setClickOutsideState(true);
+    }
+    
+  };
+
   return (
-    <StyledCareersAdvantages className='container'>
+    <StyledCareersAdvantages className='container' onClick={handleClick}>
       <div className='advantages-flex flex-1'>
         <StyledHeadings as='h5'>
           {ContentCareers.careers_hero.h5_subtitle}
@@ -72,18 +89,19 @@ const CareersAdvantages = ({
           label=''
           type='text'
           placeholder='Search for a job'
+          reference={jobsSearchRef}
           {...name}
-          
         >
           <CareersSearch className='careers-search' />
         </Input>
 
         <div
+          ref={jobsWrapperRef}
           className={`jobs-list-wrapper ${
             name.value && updatedCareersTitle.length > 0 && !everyCareersState
               ? 'jobs-list-wrapper-active'
               : 'jobs-list-wrapper-disabled'
-          }`}
+          } ${!clickOutsideState ? 'jobs-list-wrapper-active' : 'jobs-list-wrapper-disabled'}`}
         >
           {careersState &&
             careersState.map((item, index) => {
@@ -92,7 +110,7 @@ const CareersAdvantages = ({
                   return (
                     <div key={item.id} className='jobs-list'>
                       <NavLink to={`job/${item.id}`}>
-                        <div >
+                        <div>
                           <StyledHeadings as='h3' className='careers-title'>
                             {item.title.split(' ').map((item) => {
                               return (
@@ -129,14 +147,9 @@ const CareersAdvantages = ({
                           </StyledTexts>
                         </div>
                       </NavLink>
-                      
-                      
                     </div>
                   );
                 }
-
-                
-
             })}
         </div>
 
