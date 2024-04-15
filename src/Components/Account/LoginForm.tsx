@@ -17,8 +17,8 @@ interface LoginFormProps {
 }
 
 const LoginForm = ({ setAccountState }: LoginFormProps) => {
-  const email = useForm('email');
-  const password = useForm('password');
+  const email = useForm({type: "email"});
+  const password = useForm({type: "password"});
   const { userLogin, loginState, data, error, loading } = React.useContext(UserContext);
   const [passwordShow, setPasswordShow] = React.useState(false);
 

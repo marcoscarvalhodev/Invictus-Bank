@@ -28,9 +28,9 @@ interface SignupFormProps {
 }
 
 const SignupForm = ({ setAccountState }: SignupFormProps) => {
-  const name = useForm('name');
-  const email = useForm('email');
-  const password = useForm('password');
+  const name = useForm({type: "name"});
+  const email = useForm({type: "email"});
+  const password = useForm({type: "password"});
   const [passwordShow, setPasswordShow] = React.useState(false);
   const {userLogin} = React.useContext(UserContext);
   const [errorState, setErrorState] = React.useState<ErrorStateProps | null>(null);
