@@ -15,7 +15,7 @@ interface InputProps {
   inputPassword?: boolean;
   placeholder?: string;
   reference?: React.MutableRefObject<HTMLInputElement>;
-  
+  requiredField?: boolean;
 }
 
 const Input = ({
@@ -30,7 +30,8 @@ const Input = ({
   error,
   inputPassword,
   placeholder,
-  reference
+  reference,
+  requiredField
   
 }: InputProps) => {
   return (
@@ -38,6 +39,7 @@ const Input = ({
       <label htmlFor={name} className='label-wrapper'>
         {icon}
         <StyledTexts $size='p1'>{label}</StyledTexts>
+        {requiredField && <StyledTexts $size='p1' className='required-field'>*</StyledTexts>}
       </label>
       <div className='parent-input'>
         <input

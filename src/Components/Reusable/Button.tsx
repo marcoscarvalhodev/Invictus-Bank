@@ -5,7 +5,7 @@ type ButtonProps = React.ComponentProps<'button'> & {
   loading?: boolean;
   light?: boolean;
   classed?: string;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 const Button = ({

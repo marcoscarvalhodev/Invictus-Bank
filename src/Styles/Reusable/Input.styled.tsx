@@ -49,6 +49,10 @@ export const StyledInput = styled.div<InputProps>`
       align-items: center;
       gap: 10px;
       padding-bottom: 4px;
+
+      .required-field {
+        color: ${theme.colors.red_auxiliary.red_light};
+      }
     }
 
     .error-input {

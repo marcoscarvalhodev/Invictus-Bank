@@ -27,7 +27,7 @@ const CareersAdvantages = ({
   updatedCareersDescription,
   everyCareersState,
 }: CareersAdvantagesProps) => {
-  const name = useForm('');
+  const name = useForm({type: ""});
   const [descriptionArray, setDescriptionArray] = React.useState<string[]>([
     '',
   ]);

@@ -3,14 +3,7 @@ import Savings from './Components/SubPages/Savings/Savings';
 import Home from './Home';
 import Checking from './Components/SubPages/Checking/Checking';
 import Cards from './Components/SubPages/Cards/Cards';
-import {
-  Routes,
-  Route,
-  HashRouter,
-  Outlet,
-  useParams,
-  Navigate,
-} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
