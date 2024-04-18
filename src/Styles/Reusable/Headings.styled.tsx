@@ -2,10 +2,11 @@ import styled, { css } from 'styled-components';
 
 interface headingProps {
   as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  $fontSize?: number;
 }
 
 export const StyledHeadings = styled.h1<headingProps>`
-  ${({ theme, as }) => css`
+  ${({ theme, as, $fontSize }) => css`
     font-family: 'Sora', sans-serif;
     color: ${theme.colors.black_auxiliary.black_normal};
 
@@ -114,5 +115,12 @@ ${as === 'h5' &&
           line-height: 150%;
         `} //query-mobile
     `}
+
+    &&& {
+      ${$fontSize &&
+      css`
+        font-size: ${$fontSize}px;
+      `}
+    }
   `}
 `;

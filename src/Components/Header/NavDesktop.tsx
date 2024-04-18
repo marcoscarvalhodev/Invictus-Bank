@@ -151,9 +151,9 @@ const NavDesktop = ({
                 </NavLink>
               </li>
               <li className='dropdown-item'>
-                <a href='' className='nav-link-dropdown'>
+                <NavLink to="/about" className='nav-link-dropdown'>
                   About us
-                </a>
+                </NavLink>
               </li>
             </ul>
           </li>

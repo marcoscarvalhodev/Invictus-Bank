@@ -80,7 +80,10 @@ const theme = {
     gap_4: '7.2rem',
     gap_5: '12.8rem',
     gap_6: '9.6rem',
-    global_padding_sides: '9.6rem 2.4rem;'
+    global_padding_sides: '9.6rem 2.4rem;',
+    padding_right_custom: css`
+      padding: calc(2.4rem + 1.6rem);
+    `,
   },
 
   boxProps: {
