@@ -3,6 +3,7 @@ import { StyledCareersAbout } from '../../../Styles/SubPages/Careers/CareersAbou
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentCareers } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
+import { NavLink } from 'react-router-dom';
 
 const CareersAbout = () => {
   return (
@@ -15,14 +16,16 @@ const CareersAbout = () => {
         {ContentCareers.careersDetailAbout.about_company.description}
       </StyledTexts>
 
-      <StyledTexts
-        $arrow={true}
-        $link={true}
-        $size='p1'
-        className='careers-about-button'
-      >
-        {ContentCareers.careersDetailAbout.about_company.button}
-      </StyledTexts>
+      <NavLink to="/about">
+        <StyledTexts
+          $arrow={true}
+          $link={true}
+          $size='p1'
+          className='careers-about-button'
+        >
+          {ContentCareers.careersDetailAbout.about_company.button}
+        </StyledTexts>
+      </NavLink>
     </StyledCareersAbout>
   );
 };

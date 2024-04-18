@@ -36,7 +36,12 @@ import Card2 from './assets/svg/cards/card-2.svg?react';
 
 import TransfersIcon from './assets/svg/transfers/transfer-icon.svg?react';
 import GiftStrap from './assets/svg/rewards/strap.svg?react';
-import KnotStrap from './assets/svg/rewards/knot.svg?react';
+
+import LeaderFounder from './assets/img/about/leaders/founder.webp';
+import LeaderPresident from './assets/img/about/leaders/president.webp';
+import LeaderVice from './assets/img/about/leaders/vice.webp';
+import LeaderCeo from './assets/img/about/leaders/ceo.webp';
+import LeaderCfo from './assets/img/about/leaders/cfo.webp';
 
 export const ContentNavMobile = {
   nav_mobile: [
@@ -1385,5 +1390,93 @@ export const ContentCareers = {
 
 export const ContentCareersForm = {
   h2_title: 'Personal information',
-  p_required: 'Write down all fields marked with *'
-}
+  p_required: 'Write down all fields marked with *',
+};
+
+export const ContentAbout = {
+  hero: {
+    h2_title: 'We were meant to be.',
+    h5_subtitle: 'Our History',
+    p_description:
+      'Know some more about us, our company, and who is responsible for making all possible for you:',
+  },
+
+  bullets: [
+    {
+      id: 1,
+      bullet_title: 'Our journey',
+      bullet_item:
+        "Our story begins in 2015 taking place in London, where Leonard Parsons founded Supreme Bank with a vision to provide more than just banking services. From our humble beginnings, we've grown into a cornerstone of the community, thanks to the trust and loyalty of clients like you.",
+    },
+    {
+      id: 2,
+      bullet_title: 'Looking ahead',
+      bullet_item:
+        'As we looked to the future, we remained committed to innovation, excellence, and service. And so we kept continuously evolving to meet the ever-changing needs of our clients and the dynamic landscape of the financial industry. Believing that together, we can navigate the road ahead and achieve even greater milestones.',
+    },
+    {
+      id: 3,
+      bullet_title: 'Navigating together',
+      bullet_item:
+        "Throughout our journey, we've faced challenges and celebrated milestones alongside our clients. Whether it was navigating economic downturns, embracing technological advancements, or adapting to regulatory changes, we've always been guided by one principle: putting our clients first",
+    },
+    {
+      id: 4,
+      bullet_title: 'Understanding your needs',
+      bullet_item:
+        "We recognize that every client is unique, with their own financial goals and aspirations. That's why we've made it our mission to not only offer a comprehensive range of financial products and services but also to truly understand your individual needs and solutions that help you achieve your goals.",
+    },
+    {
+      id: 5,
+      bullet_title: 'Your trust matters',
+      bullet_item:
+        "Thank you for entrusting us with your financial needs. We value the trust you've placed in us and are dedicated to exceeding your expectations every step of the way. Your success is our success, and we look forward to serving you for many years to come.",
+    },
+  ],
+
+  slides_photos: {
+    h3_title: 'Supreme Bank leaders',
+    photos: [
+      {
+        id: 1,
+        photo: LeaderFounder,
+        name: 'Leonard Parsons',
+        role: 'Founder',
+        description:
+          "In 2015, driven by a vision of financial inclusivity, Leonard Parsons founded Supreme Bank, blending expertise in finance and technology. With meticulous planning and unwavering determination, he navigated regulatory hurdles and market dynamics, sculpting Supreme Bank into a beacon of reliability and innovation. Today, Leonard's visionary leadership continues to guide Supreme Bank, offering the best financial solutions and fostering trust and transparency in the industry.",
+      },
+      {
+        id: 2,
+        photo: LeaderPresident,
+        name: 'Albert Lawrence',
+        role: 'President',
+        description:
+          "Albert Lawrence became Supreme Bank's President in 2016, with a mission to amplify its impact. Drawing on a background in finance and a passion for community empowerment, he infused fresh perspectives into the institution. With a knack for strategic thinking, Albert spearheaded initiatives to expand services and reach new demographics. Embracing the bank's ethos of accessibility, he championed efforts to simplify processes and enhance customer experience.",
+      },
+      {
+        id: 3,
+        photo: LeaderVice,
+        name: 'Eloise Sanders',
+        role: 'Vice-President',
+        description:
+          "In 2016, Eloise Sanders embarked on this journey as our Vice-President, joining forces to elevate Supreme Bank to new heights. Tasked with overseeing operations, she became the engine behind the bank's day-to-day functionality. Eloise brought a wealth of experience in streamlining processes and optimizing efficiency, ensuring that every aspect of the bank runs accordingly.",
+      },
+      {
+        id: 4,
+        photo: LeaderCeo,
+        name: 'Edward Cooper',
+        role: 'CEO',
+        description:
+          "In 2018, Edward Cooper assumed the mantle of leadership at Supreme Bank, marking a new chapter in the institution's journey. With a track record of strategic vision and operational prowess, he took charge of steering Supreme Bank towards greater heights of success. As CEO, Edward oversees the overall direction of the bank, charting strategies for growth and innovation.",
+      },
+      {
+        id: 5,
+        photo: LeaderCfo,
+        name: 'Kim Min-joon',
+        role: 'CFO',
+        description:
+          "Kim Min-joon took on the pivotal role of Chief Financial Officer in 2020, being in control then of the fiscal strategy and risk management, he became the guardian of the bank's financial health. Kim is responsible for orchestrating the financial planning, budgeting, and forecasting processes, ensuring that Supreme Bank maintains stability and sustains growth.",
+      },
+    ],
+  },
+};

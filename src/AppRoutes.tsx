@@ -13,6 +13,7 @@ import CareersDetails from './Components/SubPages/Careers/CareersDetails';
 import NoMatch from './Helper/NoMatch';
 import { UserContext } from './UserContext';
 import CareersForm from './Components/SubPages/Careers/CareersForm/CareersForm';
+import About from './Components/SubPages/About/About';
 
 interface AppRoutesProps {
   mobileBx: boolean;
@@ -91,6 +92,8 @@ const AppRoutes = ({
         <Route path='job/:idParams' element={<CareersDetails />} />
         <Route path='job/:idParams/form' element={<CareersForm />} />
       </Route>
+
+      <Route path='about' element={<About />}></Route>
 
       <Route path='*' element={<NoMatch />} />
     </Routes>
