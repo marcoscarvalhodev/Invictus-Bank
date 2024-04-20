@@ -3,7 +3,7 @@ import Savings from './Components/SubPages/Savings/Savings';
 import Home from './Home';
 import Checking from './Components/SubPages/Checking/Checking';
 import Cards from './Components/SubPages/Cards/Cards';
-import {Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Account from './Components/Account/Account';
 import Transfers from './Components/SubPages/Transfers/Transfers';
 import Deposits from './Components/SubPages/Deposits/Deposits';
@@ -18,12 +18,14 @@ import About from './Components/SubPages/About/About';
 interface AppRoutesProps {
   mobileBx: boolean;
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
+  setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
   accountState: number;
   xsmall: boolean;
   small: boolean;
   medium: boolean;
   large: boolean;
   xlarge: boolean;
+  
 }
 
 const AppRoutes = ({
@@ -35,6 +37,7 @@ const AppRoutes = ({
   medium,
   large,
   xlarge,
+  setFooterState
 }: AppRoutesProps) => {
   const { loginState } = React.useContext(UserContext);
 
@@ -63,6 +66,7 @@ const AppRoutes = ({
             <Account
               setAccountState={setAccountState}
               accountState={accountState}
+              setFooterState={setFooterState}
             />
           }
         />
@@ -89,8 +93,11 @@ const AppRoutes = ({
       />
 
       <Route path='careers' element={<Careers />}>
-        <Route path='job/:idParams' element={<CareersDetails />} />
-        <Route path='job/:idParams/form' element={<CareersForm />} />
+        <Route path='job/:idParams' element={<CareersDetails setFooterState={setFooterState}/>} />
+        <Route
+          path='job/:idParams/form'
+          element={<CareersForm setFooterState={setFooterState} />}
+        />
       </Route>
 
       <Route path='about' element={<About />}></Route>

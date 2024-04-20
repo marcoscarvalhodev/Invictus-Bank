@@ -4,6 +4,7 @@ import theme from './Styles/theme';
 import { GlobalStyle } from './globalStyles';
 import ContainerSizes from './Helper/ContainerSizes';
 import LazyAnimation from './Helper/LazyAnimation';
+import { UserStorage } from './UserContext';
 
 const Container = React.lazy(() => import('./Container'));
 
@@ -15,6 +16,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <React.Suspense fallback={<LazyAnimation />}>
         <GlobalStyle $xsmall={xsmall} $activeBx={activeBx} />
+
         <Container
           setActiveMenu={setActiveBx}
           xsmall={xsmall}

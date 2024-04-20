@@ -3,9 +3,16 @@ import { StyledCareersForm } from '../../../../Styles/SubPages/Careers/CareersFo
 import CareersFormHero from './CareersFormHero';
 import CareersFormFields from './CareersFormFields';
 
+interface CareersFormProps {
+  setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-const CareersForm = () => {
-  
+const CareersForm = ({ setFooterState }: CareersFormProps) => {
+  React.useEffect(() => {
+    setFooterState(false);
+    return () => setFooterState(true);
+  });
+
   return (
     <StyledCareersForm>
       <CareersFormHero />

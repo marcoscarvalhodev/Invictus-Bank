@@ -1480,3 +1480,41 @@ export const ContentAbout = {
     ],
   },
 };
+
+export const ContentFooter = {
+  footer_data: [
+    {
+      itemTitles: 'Help & Support',
+      items: [
+        'Bank Help Center',
+        'Security Information',
+        'Privacy Policy',
+        'Lost or Stolen Card',
+        'Financial Education',
+        'Accessibility Support',
+        'Contact Us',
+      ],
+    },
+    {
+      itemTitles: 'About Us',
+      items: [
+        'Community Involvement',
+        'Corporate Governance',
+        'Leadership Team',
+        'Company Overview',
+        'Investor Relations',
+      ],
+    },
+    {
+      itemTitles: 'Services',
+      items: [
+        'Personal Banking',
+        'Online Banking',
+        'Business Banking',
+        'International Banking',
+        'Credit Cards',
+        'Wealth Management',
+      ],
+    },
+  ],
+};

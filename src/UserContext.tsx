@@ -38,6 +38,7 @@ export const UserStorage = ({ children }: UserStorageProps) => {
   const [loginState, setLoginState] = React.useState(null); //check wheter user is logged in or not
   const [loading, setLoading] = React.useState(false);
   const [error, setError] = React.useState('');
+  
 
   const navigate = useNavigate();
 
@@ -114,7 +115,7 @@ export const UserStorage = ({ children }: UserStorageProps) => {
 
   return (
     <UserContext.Provider
-      value={{ userLogin, loading, loginState, error, data, userLogout }}
+      value={{ userLogin, loading, loginState, error, data, userLogout}}
     >
       {children}
     </UserContext.Provider>

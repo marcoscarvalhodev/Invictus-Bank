@@ -651,5 +651,19 @@ const theme = {
       }
     `;
   },
+
+  footer_data: function () {
+    return css`
+      .logo-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: ${theme.spacing.gap_4};
+        gap: 2rem;
+        padding-left: 2rem;
+        flex-basis: 100%;
+      }
+    `;
+  },
 };
 export default theme;
