@@ -1,17 +1,25 @@
 import React from 'react';
 import { StyledCareersDetails } from '../../../Styles/SubPages/Careers/CareersDetails.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
-import {UserContextCareers } from '../../../UserContext';
-import { useLocation } from 'react-router-dom';
+import { UserContextCareers } from '../../../UserContext';
 import NoMatch from '../../../Helper/NoMatch';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import CareersAbout from './CareersAbout';
 import { careerProps } from '../../../Helper/CareersTypes';
 import CareersTitleApply from './CareersTitleApply';
 
-const CareersDetails = () => {
+interface CareersDetailsProps {
+  setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const CareersDetails = ({setFooterState}: CareersDetailsProps) => {
   const [itemState, setItemState] = React.useState<careerProps | null>(null);
   const item = React.useContext(UserContextCareers);
+
+  React.useEffect(() => {
+    setFooterState(false);
+    return () => setFooterState(true)
+  }, [setFooterState])
 
   React.useEffect(() => {
     if (item) {

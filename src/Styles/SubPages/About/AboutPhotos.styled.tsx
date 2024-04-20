@@ -60,7 +60,7 @@ export const StyledAboutPhotos = styled.section<StyledAboutPhotosProps>`
         position: relative;
         height: 30rem;
         padding-top: 4.8rem;
-        
+
         .photos-description {
           position: absolute;
           transition: 0.5s ease;
@@ -121,6 +121,13 @@ export const StyledAboutPhotos = styled.section<StyledAboutPhotosProps>`
             display: none;
           }
         `}
+
+${$arrowState === 0 &&
+      css`
+        .photos-description-wrapper {
+          display: none;
+        }
+      `}
     }
   `}
 `;

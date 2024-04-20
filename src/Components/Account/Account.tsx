@@ -9,9 +9,16 @@ import AccountPositions from './AccountPositions';
 interface AccountProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
   accountState: number;
+  setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Account = ({ setAccountState, accountState}: AccountProps) => {
+const Account = ({ setAccountState, accountState, setFooterState}: AccountProps) => {
+
+  React.useEffect(() => {
+    setFooterState(false);
+
+    return () => setFooterState(true)
+  })
   return (
     <StyledAccount className='container' $accountState={accountState}>
       <div className='login-wrapper'>

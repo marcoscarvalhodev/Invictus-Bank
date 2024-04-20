@@ -11,7 +11,6 @@ export const StyledCareersDetails = styled.section`
       top: 0;
       left: 0;
       background: ${theme.colors.white_auxiliary.white_light};
-
       
 
       .job-details {

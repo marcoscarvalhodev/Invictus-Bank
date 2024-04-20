@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyledContainer } from './Styles/Container.styled.ts';
+import { StyledContainer } from './Styles/Container.styled.tsx';
 import Header from './Components/Header/Header.tsx';
 import ScrollToTop from './Hooks/scrollToTop.tsx';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from './AppRoutes.tsx';
-import { UserStorage } from './UserContext.tsx';
+import { UserContext, UserStorage } from './UserContext.tsx';
+import Footer from './Components/Footer/Footer.tsx';
 
 interface ContainerProps {
   setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>;
@@ -25,17 +26,22 @@ const Container = ({
 }: ContainerProps) => {
   const [mobileBx, setMobileBx] = React.useState(false);
   const [accountState, setAccountState] = React.useState(1);
+  const [footerState, setFooterState] = React.useState(true);
+  
 
   React.useEffect(() => {
     setActiveMenu(mobileBx);
   }, [mobileBx, setActiveMenu]);
 
   return (
-    <StyledContainer className={`${mobileBx ? 'container-active-bx' : ''}`}>
+    <StyledContainer
+     
+      className={`${mobileBx ? 'container-active-bx' : ''}`}
+    >
       <Router>
         <ScrollToTop />
         <UserStorage>
-          <React.Fragment>
+          <div className='container-wrapper'>
             <Header
               setMobileBx={setMobileBx}
               mobileBx={mobileBx}
@@ -51,8 +57,12 @@ const Container = ({
               medium={medium}
               large={large}
               xlarge={xlarge}
+              setFooterState={setFooterState}
+              
             />
-          </React.Fragment>
+
+            {footerState && <Footer />}
+          </div>
         </UserStorage>
       </Router>
     </StyledContainer>
