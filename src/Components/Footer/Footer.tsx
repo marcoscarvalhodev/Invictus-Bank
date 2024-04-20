@@ -10,35 +10,35 @@ interface FooterProps {
 }
 
 const Footer = () => {
-  
-
   return (
-    <StyledFooter className='container'>
-      <div className='logo-wrapper'>
-        <LogoWhite className='logo'/>
-        <StyledTexts
-          className='arrow-link'
-          $arrow={true}
-          $link={true}
-          $size='p4'
-        >
-          Login
-        </StyledTexts>
-        <StyledTexts
-          className='arrow-link'
-          $arrow={true}
-          $link={true}
-          $size='p4'
-        >
-          Locations & ATMs
-        </StyledTexts>
-      </div>
+    <StyledFooter >
+      <div className='container footer-wrapper'>
+        <div className='logo-wrapper'>
+          <LogoWhite className='logo' />
+          <StyledTexts
+            className='arrow-link'
+            $arrow={true}
+            $link={true}
+            $size='p4'
+          >
+            Login
+          </StyledTexts>
+          <StyledTexts
+            className='arrow-link'
+            $arrow={true}
+            $link={true}
+            $size='p4'
+          >
+            Locations & ATMs
+          </StyledTexts>
+        </div>
 
-      {ContentFooter.footer_data.map(({ itemTitles, items }, index) => {
-        return (
-          <FooterItems itemTitles={itemTitles} items={items} key={index} />
-        );
-      })}
+        {ContentFooter.footer_data.map(({ itemTitles, items }, index) => {
+          return (
+            <FooterItems itemTitles={itemTitles} items={items} key={index} />
+          );
+        })}
+      </div>
     </StyledFooter>
   );
 };

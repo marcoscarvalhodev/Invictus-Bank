@@ -47,7 +47,6 @@ const Careers = () => {
 
   React.useEffect(() => {
     if (idParams) {
-      console.log(navigateState);
 
       /*navigateState === false ? navigate('/careers') : '';*/
     }

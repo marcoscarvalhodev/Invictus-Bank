@@ -100,7 +100,6 @@ export const UserStorage = ({ children }: UserStorageProps) => {
           if (!response.ok) throw new Error('Invalid Token.'); //if it is invalid, it will go directly to catch and skip getUser.
           await userGet(ID);
         } catch (err) {
-          console.log('error happened');
           userLogout();
         } finally {
           setLoading(false);
