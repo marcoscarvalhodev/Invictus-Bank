@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 interface DesktopProps {
   $dropdown: boolean;
@@ -6,7 +6,6 @@ interface DesktopProps {
 
 export const StyledNavDesktop = styled.nav<DesktopProps>`
   ${({ theme, $dropdown }) => css`
-    
     padding: 1.6rem 2.4rem;
     display: flex;
     justify-content: space-between;
@@ -29,8 +28,6 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       margin-right: 1.6rem;
     }
 
-    
-
     .menu-desktop {
       display: flex;
       justify-content: flex-start;
@@ -39,7 +36,6 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       .menu-item {
         margin-left: ${theme.spacing.gap_1};
         position: relative;
-        
       }
     }
 
@@ -48,7 +44,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       padding: 1.2rem 1.6rem;
       position: relative;
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 42%;
         right: -0.3rem;
@@ -81,20 +77,19 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       position: absolute;
       top: 4.6rem;
       left: 2.4rem;
-      
+
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
       align-items: center;
-      transition: .5s ease;
-      
+      transition: 0.5s ease;
+
       opacity: 0;
       pointer-events: none;
 
       &.active-dropdown {
         pointer-events: all;
         opacity: 1;
-       
       }
 
       .dropdown-item {
@@ -110,7 +105,7 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 90%;
         left: 0;
@@ -133,7 +128,5 @@ export const StyledNavDesktop = styled.nav<DesktopProps>`
     .button-logout {
       margin-left: 2rem;
     }
-
-
   `}
 `;

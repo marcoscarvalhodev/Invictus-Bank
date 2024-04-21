@@ -7,9 +7,9 @@ import CheckingAdvantages from './CheckingAdvantages';
 const Checking = () => {
   return (
     <StyledChecking>
-      <CheckingHero/>
-      <CheckingSlides/>
-      <CheckingAdvantages/>
+      <CheckingHero />
+      <CheckingSlides />
+      <CheckingAdvantages />
     </StyledChecking>
   );
 };

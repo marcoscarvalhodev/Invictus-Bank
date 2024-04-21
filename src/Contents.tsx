@@ -9,12 +9,12 @@ import Transfers from './assets/svg/icon-transfer.svg?react';
 import Card from './assets/svg/icon-card.svg?react';
 import Support from './assets/svg/icon-support.svg?react';
 
-import Woman1 from './assets/img/testimonial-woman-1.jpg';
-import Woman2 from './assets/img/testimonial-woman-2.jpg';
-import Woman3 from './assets/img/testimonial-woman-3.jpg';
+import Woman1 from './assets/img/testimonial-woman-1.webp';
+import Woman2 from './assets/img/testimonial-woman-2.webp';
+import Woman3 from './assets/img/testimonial-woman-3.webp';
 
-import Man1 from './assets/img/testimonial-man-1.jpg';
-import Man2 from './assets/img/testimonial-man-2.jpg';
+import Man1 from './assets/img/testimonial-man-1.webp';
+import Man2 from './assets/img/testimonial-man-2.webp';
 
 import Contactless from './assets/svg/icon-contactless.svg?react';
 

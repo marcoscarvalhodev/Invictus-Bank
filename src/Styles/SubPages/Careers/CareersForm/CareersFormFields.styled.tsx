@@ -10,7 +10,6 @@ export const StyledCareersFormFields = styled.section`
 
         .submit-button {
           max-width: min-content;
-          
         }
       }
 

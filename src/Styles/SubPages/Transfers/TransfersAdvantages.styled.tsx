@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components';
 
-
 export const StyledTransfersAdvantages = styled.section`
-  ${({ theme}) => css`
+  ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_advantages};
 
     .icon {
@@ -44,8 +43,6 @@ export const StyledTransfersAdvantages = styled.section`
     }
 
     &&& {
-      
-
       .wrapper {
         padding: 30px;
       }

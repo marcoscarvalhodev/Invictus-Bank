@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledTransfersAdvantages } from '../../../Styles/SubPages/Transfers/TransfersAdvantages.styled';
-import LaptopMockup from '../../../assets/svg/transfers/laptop-mockup.png?url';
+import LaptopMockup from '../../../assets/img/transfers/laptop-mockup.webp';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentTransfers } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';

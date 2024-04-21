@@ -7,6 +7,6 @@ export default function ScrollToTop() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
-  
-  return false
+
+  return false;
 }

@@ -11,7 +11,6 @@ export const StyledDepositsBulletAdvantages = styled.section`
       .container {
         flex-direction: column;
         padding: 4.8rem 2.4rem;
-        
       }
     }
   `}

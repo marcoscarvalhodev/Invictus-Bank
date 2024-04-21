@@ -4,11 +4,10 @@ import TransfersHero from './TransfersHero';
 import TransfersAdvantages from './TransfersAdvantages';
 import TransfersBulletAdvantages from './TransfersBulletAdvantages';
 
-
 const Transfers = () => {
   return (
     <StyledTransfers>
-      <TransfersHero/>
+      <TransfersHero />
       <TransfersAdvantages />
       <TransfersBulletAdvantages />
     </StyledTransfers>

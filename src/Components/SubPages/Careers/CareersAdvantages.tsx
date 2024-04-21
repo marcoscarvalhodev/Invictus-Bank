@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledCareersAdvantages } from '../../../Styles/SubPages/Careers/CareersAdvantages.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentCareers } from '../../../Contents';
-import PersonPromoted from '../../../assets/img/careers/person_promoted.jpg';
+import PersonPromoted from '../../../assets/img/careers/person_promoted.webp';
 import Input from '../../Reusable/Input';
 import useForm from '../../../Hooks/useForm';
 import CareersSearch from '../../../assets/svg/careers/search.svg?react';
@@ -27,7 +27,7 @@ const CareersAdvantages = ({
   updatedCareersDescription,
   everyCareersState,
 }: CareersAdvantagesProps) => {
-  const name = useForm({type: ""});
+  const name = useForm({ type: '' });
   const [descriptionArray, setDescriptionArray] = React.useState<string[]>([
     '',
   ]);
@@ -61,17 +61,16 @@ const CareersAdvantages = ({
   }, [careersState, name.value]);
 
   const handleClick: React.MouseEventHandler<HTMLElement> = (event) => {
-    switch(event.target) {
+    switch (event.target) {
       case jobsSearchRef.current:
-      setClickOutsideState(false);
-      break;
+        setClickOutsideState(false);
+        break;
       case jobsWrapperRef.current:
         setClickOutsideState(false);
         break;
-      default: 
-      setClickOutsideState(true);
+      default:
+        setClickOutsideState(true);
     }
-    
   };
 
   return (
@@ -101,7 +100,11 @@ const CareersAdvantages = ({
             name.value && updatedCareersTitle.length > 0 && !everyCareersState
               ? 'jobs-list-wrapper-active'
               : 'jobs-list-wrapper-disabled'
-          } ${!clickOutsideState ? 'jobs-list-wrapper-active' : 'jobs-list-wrapper-disabled'}`}
+          } ${
+            !clickOutsideState
+              ? 'jobs-list-wrapper-active'
+              : 'jobs-list-wrapper-disabled'
+          }`}
         >
           {careersState &&
             careersState.map((item, index) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledRewardsCommunity } from '../../../Styles/SubPages/Rewards/RewardsCommunity.styled';
-import PeopleHands from '../../../assets/img/rewards/community-rewards.jpg';
+import PeopleHands from '../../../assets/img/rewards/community-rewards.webp';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentRewards } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';

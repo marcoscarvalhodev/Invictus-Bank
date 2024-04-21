@@ -4,15 +4,14 @@ import DepositsHero from './DepositsHero';
 import DepositsAdvantages from './DepositsAdvantages';
 import DepositsBulletAdvantages from './DepositsBulletAdvantages';
 
-
 const Deposits = () => {
-  
-
-  return <StyledDeposits>
-    <DepositsHero />
-    <DepositsAdvantages/>
-    <DepositsBulletAdvantages/>
-  </StyledDeposits>;
+  return (
+    <StyledDeposits>
+      <DepositsHero />
+      <DepositsAdvantages />
+      <DepositsBulletAdvantages />
+    </StyledDeposits>
+  );
 };
 
 export default Deposits;

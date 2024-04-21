@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const StyledAboutBullets = styled.section`
   ${({ theme }) => css`
-  ${theme.sub_pages.sub_pages_advantages};
+    ${theme.sub_pages.sub_pages_advantages};
 
-  &&& {
-    .company-image {
+    &&& {
+      .company-image {
         width: 60rem;
         border-radius: 0.4rem;
       }
@@ -36,9 +36,6 @@ export const StyledAboutBullets = styled.section`
         
         padding-top: 0rem;
       `}
-  }
-  
-
-  
+    }
   `}
 `;

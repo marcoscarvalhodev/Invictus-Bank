@@ -1,8 +1,8 @@
-import React from 'react'
-import { StyledAbout } from '../../../Styles/SubPages/About/About.styled'
-import AboutHero from './AboutHero'
-import AboutBullets from './AboutBullets'
-import AboutPhotos from './AboutPhotos'
+import React from 'react';
+import { StyledAbout } from '../../../Styles/SubPages/About/About.styled';
+import AboutHero from './AboutHero';
+import AboutBullets from './AboutBullets';
+import AboutPhotos from './AboutPhotos';
 const About = () => {
   return (
     <StyledAbout>
@@ -10,7 +10,7 @@ const About = () => {
       <AboutBullets />
       <AboutPhotos />
     </StyledAbout>
-  )
-}
+  );
+};
 
-export default About
+export default About;

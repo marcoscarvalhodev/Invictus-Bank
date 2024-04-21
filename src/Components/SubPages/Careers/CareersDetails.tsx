@@ -12,14 +12,14 @@ interface CareersDetailsProps {
   setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CareersDetails = ({setFooterState}: CareersDetailsProps) => {
+const CareersDetails = ({ setFooterState }: CareersDetailsProps) => {
   const [itemState, setItemState] = React.useState<careerProps | null>(null);
   const item = React.useContext(UserContextCareers);
 
   React.useEffect(() => {
     setFooterState(false);
-    return () => setFooterState(true)
-  }, [setFooterState])
+    return () => setFooterState(true);
+  }, [setFooterState]);
 
   React.useEffect(() => {
     if (item) {

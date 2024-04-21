@@ -25,7 +25,6 @@ interface AppRoutesProps {
   medium: boolean;
   large: boolean;
   xlarge: boolean;
-  
 }
 
 const AppRoutes = ({
@@ -37,7 +36,7 @@ const AppRoutes = ({
   medium,
   large,
   xlarge,
-  setFooterState
+  setFooterState,
 }: AppRoutesProps) => {
   const { loginState } = React.useContext(UserContext);
 
@@ -93,7 +92,10 @@ const AppRoutes = ({
       />
 
       <Route path='careers' element={<Careers />}>
-        <Route path='job/:idParams' element={<CareersDetails setFooterState={setFooterState}/>} />
+        <Route
+          path='job/:idParams'
+          element={<CareersDetails setFooterState={setFooterState} />}
+        />
         <Route
           path='job/:idParams/form'
           element={<CareersForm setFooterState={setFooterState} />}
@@ -102,7 +104,7 @@ const AppRoutes = ({
 
       <Route path='about' element={<About />}></Route>
 
-      <Route path='*' element={<NoMatch />} />
+      <Route path='*' element={<NoMatch setFooterState={setFooterState} />} />
     </Routes>
   );
 };

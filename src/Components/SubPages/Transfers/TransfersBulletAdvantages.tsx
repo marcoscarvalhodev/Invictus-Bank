@@ -5,8 +5,7 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
 import { StyledTransfersBulletAdvantages } from '../../../Styles/SubPages/Transfers/TransfersBulletAdvantages.styled';
 
-interface TransfersBulletAdvantagesProps {
-}
+interface TransfersBulletAdvantagesProps {}
 
 const TransfersBulletAdvantages = () => {
   return (

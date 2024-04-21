@@ -6,7 +6,6 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Button from '../../Reusable/Button';
 import Bank from './Bank';
 
-
 const CheckingHero = () => {
   return (
     <StyledCheckingHero className='container'>
@@ -31,7 +30,7 @@ const CheckingHero = () => {
         </div>
       </div>
       <div className='flex-hero flex-hero-2'>
-        <Bank/>
+        <Bank />
       </div>
     </StyledCheckingHero>
   );

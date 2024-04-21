@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 
-
 export const StyledSavingsHero = styled.section`
   ${({ theme }) => css`
     && {
@@ -42,8 +41,7 @@ export const StyledSavingsHero = styled.section`
         z-index: 2;
       }
 
-      
-        ${theme.media_query.small`
+      ${theme.media_query.small`
           flex-direction: column;
           padding: 9.6rem 2.4rem 0rem 2.4rem;
 
@@ -72,8 +70,6 @@ export const StyledSavingsHero = styled.section`
             }
           }
         `}//query-small
-      
-      
     }
   `}
 `;

@@ -4,7 +4,6 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-
 const CheckingSlides = () => {
   return (
     <StyledCheckingSlides>

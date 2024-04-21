@@ -11,7 +11,6 @@ export const StyledCareersDetails = styled.section`
       top: 0;
       left: 0;
       background: ${theme.colors.white_auxiliary.white_light};
-      
 
       .job-details {
         display: flex;
@@ -29,13 +28,11 @@ export const StyledCareersDetails = styled.section`
 
         .bullets-details {
           .bullets-dots {
-             margin-left: 2rem;
-              list-style-type: disc;
+            margin-left: 2rem;
+            list-style-type: disc;
             font-size: 2rem;
             color: ${theme.colors.gray_auxiliary.gray_2};
-            
           }
-          
         }
       }
 

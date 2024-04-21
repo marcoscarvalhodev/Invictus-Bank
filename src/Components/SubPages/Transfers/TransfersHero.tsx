@@ -5,8 +5,8 @@ import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 import { ContentTransfers } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 
-import Phone1 from '../../../assets/svg/transfers/phone-1.png?url';
-import Phone2 from '../../../assets/svg/transfers/phone-2.png?url';
+import Phone1 from '../../../assets/img/transfers/phone-1.webp';
+import Phone2 from '../../../assets/img/transfers/phone-2.webp';
 
 const TransfersHero = () => {
   return (

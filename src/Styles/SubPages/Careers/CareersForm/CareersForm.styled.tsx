@@ -1,8 +1,8 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const StyledCareersForm = styled.section`
-  ${({theme}) => css`
-  position: absolute;
+  ${({ theme }) => css`
+    position: absolute;
     padding: ${theme.spacing.global_padding_sides};
     min-height: 100%;
     top: 0;
@@ -13,5 +13,4 @@ export const StyledCareersForm = styled.section`
     flex-direction: column;
     gap: 3rem;
   `}
-
-`
+`;

@@ -56,8 +56,8 @@ const types = {
   },
   residence: {
     regex: /\w([\w\s]*\w)?/,
-    message: "Write down your place of residence."
-  }
+    message: 'Write down your place of residence.',
+  },
 };
 
 const useForm = ({
@@ -75,19 +75,18 @@ const useForm = ({
       confirmEmailRef &&
       confirmEmailRef.current
     ) {
-      
-      if (emailRef.current.value !== confirmEmailRef.current.value && confirmEmailRef.current.value.length > 0) {
+      if (
+        emailRef.current.value !== confirmEmailRef.current.value &&
+        confirmEmailRef.current.value.length > 0
+      ) {
         setError("Email doesn't match, please write same email");
         return false;
       } else {
         setError('');
-        return true
+        return true;
       }
     }
-    
   }, [emailRef, confirmEmailRef]);
-
-  
 
   const onChange: React.ChangeEventHandler<HTMLInputElement> = ({ target }) => {
     if (error) {

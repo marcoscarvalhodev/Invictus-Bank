@@ -4,7 +4,7 @@ import IconArrow from '../../assets/svg/icon-arrow-white.svg?url';
 export const StyledFooter = styled.section`
   ${({ theme }) => css`
     &&& {
-      height: 100%;
+      height: max-content;
       width: 100vw;
       max-width: 100vw;
       background: linear-gradient(

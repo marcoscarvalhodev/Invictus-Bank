@@ -50,14 +50,11 @@ const CareersFormFields = () => {
     }
   };
 
-
   React.useEffect(() => {
     if (appliedState) {
-      
-     setTimeout(() => {
-      navigate('/')
-     }, 1500) 
-    
+      setTimeout(() => {
+        navigate('/');
+      }, 1500);
     }
   });
 

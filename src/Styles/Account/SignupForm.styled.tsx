@@ -1,11 +1,9 @@
 import styled, { css } from 'styled-components';
 
-interface SignupFormProps {
-
-}
+interface SignupFormProps {}
 
 export const StyledSignupForm = styled.div<SignupFormProps>`
-  ${({ theme}) => css`
+  ${({ theme }) => css`
     && {
       ${theme.form.login_signup};
 

@@ -4,7 +4,6 @@ import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import { StyledHeadings } from '../../../Styles/Reusable/Headings.styled';
 
-
 const SavingsSlides = () => {
   return (
     <StyledSavingsSlides>

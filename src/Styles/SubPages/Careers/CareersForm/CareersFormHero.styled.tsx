@@ -7,7 +7,6 @@ export const StyledCareersFormHero = styled.section`
     gap: 9.6rem;
 
     .careers-form-heading {
-
       display: flex;
       justify-content: space-between;
 
@@ -48,7 +47,7 @@ export const StyledCareersFormHero = styled.section`
         }
       `}
 
-      ${theme.media_query.small`
+    ${theme.media_query.small`
         .careers-form-heading {
           display: flex;
           flex-direction: column;

@@ -16,7 +16,7 @@ const CareersAbout = () => {
         {ContentCareers.careersDetailAbout.about_company.description}
       </StyledTexts>
 
-      <NavLink to="/about">
+      <NavLink to='/about'>
         <StyledTexts
           $arrow={true}
           $link={true}

@@ -1,12 +1,10 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const StyledLogo = styled.div`
   ${({ theme }) => css`
-    
-  svg {
+    svg {
       width: ${theme.spacing.gap_3};
       height: ${theme.spacing.gap_3};
-      
     }
 
     display: flex;

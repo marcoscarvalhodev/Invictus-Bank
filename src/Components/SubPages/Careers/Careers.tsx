@@ -47,7 +47,6 @@ const Careers = () => {
 
   React.useEffect(() => {
     if (idParams) {
-
       /*navigateState === false ? navigate('/careers') : '';*/
     }
   }, [navigateState, idParams, navigate, careersState]); //navigate to careers if id doesn't exist

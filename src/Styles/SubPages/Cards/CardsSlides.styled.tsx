@@ -1,9 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface CardsSlidesProps {
-}
-
-export const StyledCardsSlides = styled.section<CardsSlidesProps>`
+export const StyledCardsSlides = styled.section`
   ${({ theme }) => css`
     ${theme.sub_pages.sub_pages_slides};
     ${theme.sub_pages.sub_pages_advantages};

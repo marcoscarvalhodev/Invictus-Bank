@@ -27,17 +27,13 @@ const Container = ({
   const [mobileBx, setMobileBx] = React.useState(false);
   const [accountState, setAccountState] = React.useState(1);
   const [footerState, setFooterState] = React.useState(true);
-  
 
   React.useEffect(() => {
     setActiveMenu(mobileBx);
   }, [mobileBx, setActiveMenu]);
 
   return (
-    <StyledContainer
-     
-      className={`${mobileBx ? 'container-active-bx' : ''}`}
-    >
+    <StyledContainer className={`${mobileBx ? 'container-active-bx' : ''}`}>
       <Router>
         <ScrollToTop />
         <UserStorage>
@@ -58,7 +54,6 @@ const Container = ({
               large={large}
               xlarge={xlarge}
               setFooterState={setFooterState}
-              
             />
 
             {footerState && <Footer />}

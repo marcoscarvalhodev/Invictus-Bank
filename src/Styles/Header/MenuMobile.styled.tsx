@@ -82,7 +82,9 @@ export const StyledMenuMobile = styled.nav<StyledMenuMobileProps>`
 
       .social-icons {
         ${$loginState
-          ? css`padding: 0;`
+          ? css`
+              padding: 0;
+            `
           : css`
               padding: ${theme.spacing.gap_3} 0rem;
             `};

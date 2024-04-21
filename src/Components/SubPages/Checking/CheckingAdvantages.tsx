@@ -5,8 +5,7 @@ import { ContentAccountTypes } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import Icons from '../../Reusable/Icons';
 import IconCheck from '../../../assets/svg/icon-check.svg?react';
-import AdantagesImage from '../../../assets/img/advantages/man-looking-bank.jpg';
-
+import HoldingCard from '../../../assets/img/checking/man-holding-card-happy.webp';
 
 const CheckingAdvantages = () => {
   return (
@@ -44,7 +43,7 @@ const CheckingAdvantages = () => {
       </div>
 
       <div className='advantages-flex flex-2'>
-        <img src={AdantagesImage} alt='' className='advantages-image' />
+        <img src={HoldingCard} alt='' className='advantages-image' />
       </div>
     </StyledCheckingAdvantages>
   );

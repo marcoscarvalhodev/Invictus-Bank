@@ -5,12 +5,12 @@ import { ContentPeople } from '../../../Contents';
 import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import SVGPeople from './SVGPeople';
 
-import People1 from '../../../assets/img/elderly-holding-phone.jpg';
-import People2 from '../../../assets/img/woman-looking-phone-drinking-coffe.jpg';
-import People3 from '../../../assets/img/man-holding-bank-pig.jpg';
-import People4 from '../../../assets/img/woman-holding-card.jpg';
-import People5 from '../../../assets/img/woman-looking-phone-surprised.jpg';
-import People6 from '../../../assets/img/woman-looking-laptop.jpg';
+import People1 from '../../../assets/img/elderly-holding-phone.webp';
+import People2 from '../../../assets/img/woman-looking-phone-drinking-coffee.webp';
+import People3 from '../../../assets/img/man-holding-bank-pig.webp';
+import People4 from '../../../assets/img/woman-holding-card.webp';
+import People5 from '../../../assets/img/woman-looking-phone-surprised.webp';
+import People6 from '../../../assets/img/woman-looking-laptop.webp';
 
 import Icons from '../../Reusable/Icons';
 

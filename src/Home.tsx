@@ -25,12 +25,16 @@ const Home = ({
   xsmall,
   small,
   xlarge,
-  loginState
+  loginState,
 }: HomeProps) => {
   return (
     <StyledHome className='home'>
       <HeroBackground />
-      <Hero mobileBx={mobileBx} setAccountState={setAccountState} loginState={loginState}/>
+      <Hero
+        mobileBx={mobileBx}
+        setAccountState={setAccountState}
+        loginState={loginState}
+      />
       <People small={small} xsmall={xsmall} />
       <Advantages />
       <SupremeApp />

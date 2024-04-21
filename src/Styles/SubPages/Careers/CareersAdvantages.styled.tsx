@@ -67,7 +67,7 @@ export const StyledCareersAdvantages = styled.section`
         width: 100%;
         max-height: 20rem;
         overflow-y: scroll;
-        
+
         position: absolute;
         margin-top: 2.4rem;
         border: 3px solid #aecbfa;
@@ -95,10 +95,7 @@ export const StyledCareersAdvantages = styled.section`
         .jobs-list:last-child {
           border-bottom: 0rem;
         }
-        
       }
-
-      
 
       .jobs-list-wrapper-active {
         transition: ease 1s;

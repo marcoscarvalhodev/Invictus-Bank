@@ -36,9 +36,7 @@ export const StyledPig = styled.div<PigProps>`
         position: absolute;
         perspective: 100rem;
         animation: moveCoin 5s linear infinite;
-        top: calc(
-          -9.6rem + -1.5rem + ${$small ? `-4rem` : `-7rem`}
-        );
+        top: calc(-9.6rem + -1.5rem + ${$small ? `-4rem` : `-7rem`});
         left: calc(50% + -2rem);
         z-index: 0;
       }
@@ -100,7 +98,7 @@ export const StyledPig = styled.div<PigProps>`
       .hole {
         width: 1.3rem;
         height: 5.5rem;
-        background-color: #F4A7AA;
+        background-color: #f4a7aa;
         position: absolute;
         left: calc(50% + -0.7rem);
         top: ${$small ? `2.2rem` : `2.15rem`};

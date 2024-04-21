@@ -43,7 +43,6 @@ export function USER_GET(ID: string) {
     url: API_URL + `/api/users/${ID}`,
     options: {
       method: 'GET',
-      
     },
   };
 } //for retrieving data of existing users
@@ -53,7 +52,6 @@ export function TOKEN_VALIDATE_USER(token: string) {
     url: API_URL + `/api/users/isvalidusertoken/${token}`,
     options: {
       method: 'GET',
-      
     },
   };
 }

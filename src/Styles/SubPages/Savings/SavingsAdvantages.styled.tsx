@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 
-
 export const StyledSavingsAdvantages = styled.section`
   ${({ theme }) => css`
     && {

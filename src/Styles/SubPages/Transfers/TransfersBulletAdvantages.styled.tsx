@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-interface StyledTransfersBulletProps {}
-
-export const StyledTransfersBulletAdvantages = styled.section<StyledTransfersBulletProps>`
+export const StyledTransfersBulletAdvantages = styled.section`
   ${({ theme }) => css`
     && {
       min-width: 100vw;

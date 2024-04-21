@@ -10,10 +10,10 @@ export const StyledIcons = styled.div<IconsProps>`
       transition: 0.5s ease;
       cursor: pointer;
       ${theme.colors.drop_shadow};
-      
+
       &:hover {
-          transform: scale(1.05);
-        }
+        transform: scale(1.05);
+      }
     }
   `}
 `;

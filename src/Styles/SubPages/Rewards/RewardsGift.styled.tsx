@@ -378,7 +378,7 @@ ${eachKnotFill({
     }
 
     .face-9 {
-      top: 5.90rem;
+      top: 5.9rem;
       transform: rotateX(-90deg) translateY(0.5px);
     }
 
