@@ -11,9 +11,10 @@ interface NoMatchProps {
 
 const NoMatch = ({ setFooterState }: NoMatchProps) => {
   React.useEffect(() => {
+    if(setFooterState){
     setFooterState(false);
 
-    return () => setFooterState(true);
+    return () => setFooterState(true);}
   });
 
   return (

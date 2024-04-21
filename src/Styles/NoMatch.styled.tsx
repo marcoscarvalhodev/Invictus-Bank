@@ -10,7 +10,7 @@ export const StyledNoMatch = styled.div`
       align-items: center;
       justify-content: start;
       gap: 3rem;
-
+      padding: ${theme.spacing.global_padding_sides};
       .error-404 {
         width: 30rem;
 
@@ -23,6 +23,9 @@ export const StyledNoMatch = styled.div`
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        .error-link {
+          margin-left: -0.6rem;
+        }
       }
 
       .error-title {
