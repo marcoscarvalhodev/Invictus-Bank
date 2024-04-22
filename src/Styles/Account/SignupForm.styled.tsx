@@ -17,7 +17,7 @@ export const StyledSignupForm = styled.div<SignupFormProps>`
       `} //query-max width from 0 to 1140px
 
       ${theme.media_query.xsmall`
-        width: 350px;
+        width: 32rem;
       `}//query-extra-small
     }
   `}

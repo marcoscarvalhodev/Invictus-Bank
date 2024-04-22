@@ -22,7 +22,7 @@ interface StyledAccountProps {
 
 export const StyledAccount = styled.section<StyledAccountProps>`
   ${({ theme, $accountState }) => css`
-    && {
+    &&& {
       .background-wrapper {
         position: relative;
         padding: 2.5rem 0rem;
@@ -148,6 +148,8 @@ export const StyledAccount = styled.section<StyledAccountProps>`
 
         .signup-form,
         .login-form {
+          top: 0;
+          margin-top: 28rem;
           position: absolute;
           left: 0;
           right: 0;

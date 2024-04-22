@@ -22,7 +22,7 @@ export const StyledLoginForm = styled.div<LoginFormProps>`
       `} //query from 0 to 1140px
 
       ${theme.media_query.xsmall`
-        width: 35rem;
+        width: 32rem;
         gap: 3.67rem;
 
         .form {
