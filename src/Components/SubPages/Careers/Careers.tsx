@@ -5,6 +5,7 @@ import { ContentCareers } from '../../../Contents';
 import { useParams, Outlet, useNavigate } from 'react-router-dom';
 import { UserContextCareers } from '../../../UserContext';
 import { careersProps } from '../../../Helper/CareersTypes';
+import Head from '../../../Helper/Head';
 
 const Careers = () => {
   const [careersState, setCareersState] = React.useState<careersProps>([]);
@@ -58,6 +59,7 @@ const Careers = () => {
 
   return (
     <StyledCareers>
+      <Head title='Careers' description='Careers section of Supreme Bank application'/>
       <CareersAdvantages
         everyCareersState={everyCareersState}
         updatedCareersTitle={updatedCareersTitle}

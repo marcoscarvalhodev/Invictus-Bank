@@ -1396,7 +1396,7 @@ export const ContentCareersForm = {
 export const ContentAbout = {
   hero: {
     h2_title: 'We were meant to be.',
-    h5_subtitle: 'Our History',
+    h5_subtitle: 'Our Story',
     p_description:
       'Know some more about us, our company, and who is responsible for making all possible for you:',
   },

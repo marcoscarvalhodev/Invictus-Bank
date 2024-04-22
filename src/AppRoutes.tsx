@@ -60,7 +60,7 @@ const AppRoutes = ({
         <></>
       ) : (
         <Route
-          path='account/*'
+          path='account'
           element={
             <Account
               setAccountState={setAccountState}
@@ -72,20 +72,20 @@ const AppRoutes = ({
       )}
 
       <Route
-        path='savings/*'
+        path='savings'
         element={<Savings small={small} />} //needed to use media query custom hook
       />
 
-      <Route path='checking/*' element={<Checking />} />
+      <Route path='checking' element={<Checking />} />
 
-      <Route path='cards/*' element={<Cards />} />
+      <Route path='cards' element={<Cards />} />
 
-      <Route path='transfers/*' element={<Transfers />} />
+      <Route path='transfers' element={<Transfers />} />
 
-      <Route path='deposits/*' element={<Deposits />} />
+      <Route path='deposits' element={<Deposits />} />
 
       <Route
-        path='rewards/*'
+        path='rewards'
         element={
           <Rewards small={small} /> //needed to use media query custom hook
         }
@@ -102,7 +102,9 @@ const AppRoutes = ({
         />
       </Route>
 
-      <Route path='about' element={<About />}></Route>
+      <Route path='about' element={<About />}>
+        
+      </Route>
 
       <Route path='*' element={<NoMatch setFooterState={setFooterState} />} />
     </Routes>

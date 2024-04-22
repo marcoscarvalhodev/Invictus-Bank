@@ -4,13 +4,25 @@ export const StyledNoMatch = styled.div`
   ${({ theme }) => css`
     &&& {
       width: 100vw;
-      height: 100vh;
+
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: start;
       gap: 3rem;
       padding: ${theme.spacing.global_padding_sides};
+
+      .flex-1 {
+        flex: 1;
+      }
+
+      .flex-2 {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      }
+
       .error-404 {
         width: 30rem;
 
@@ -56,6 +68,20 @@ export const StyledNoMatch = styled.div`
           opacity: 0;
         }
       }
+
+      ${theme.media_query.above_small`
+          height: 100%;
+          ${theme.spacing.padding_right_custom}
+      `}
+
+      ${theme.media_query.small`
+      height: 100vh;
+      justify-content:center;
+      .flex-1 {
+        display: none;
+      }
+      
+      `}
     }
   `}
 `;

@@ -82,7 +82,7 @@ const theme = {
     gap_6: '9.6rem',
     global_padding_sides: '9.6rem 2.4rem;',
     padding_right_custom: css`
-      padding: calc(2.4rem + 1.6rem);
+      padding-right: calc(2.4rem + 1.6rem);
     `,
   },
 
@@ -381,6 +381,7 @@ const theme = {
       background: #f1f7ff;
       width: 500px;
       top: 50%;
+      
       right: 0;
       border-radius: 40px;
       transform: translate(0, -50%);

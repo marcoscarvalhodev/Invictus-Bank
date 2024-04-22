@@ -9,6 +9,7 @@ import People from './Components/Home/People/People.tsx';
 import Advantages from './Components/Home/Advantages/Advantages.tsx';
 import Testimonials from './Components/Home/Testimonials/Testimonials.tsx';
 import { StyledHome } from './Styles/Home.styled.tsx';
+import Head from './Helper/Head.tsx';
 
 interface HomeProps {
   mobileBx: boolean;
@@ -27,8 +28,12 @@ const Home = ({
   xlarge,
   loginState,
 }: HomeProps) => {
+
+
+
   return (
     <StyledHome className='home'>
+      <Head title='Home' description='Home section of Supreme Bank application'/>
       <HeroBackground />
       <Hero
         mobileBx={mobileBx}

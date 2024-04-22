@@ -5,6 +5,7 @@ import BackgroundLogin from '../../assets/svg/login/login-background.svg?react';
 import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 import AccountPositions from './AccountPositions';
+import Head from '../../Helper/Head';
 
 interface AccountProps {
   setAccountState: React.Dispatch<React.SetStateAction<number>>;
@@ -21,6 +22,8 @@ const Account = ({ setAccountState, accountState, setFooterState}: AccountProps)
   })
   return (
     <StyledAccount className='container' $accountState={accountState}>
+
+      {accountState === 1 ? <Head title='Login' description='Login section of Supreme Bank application'/> : <Head title='Signup' description='Signup section of Supreme Bank application'/>}
       <div className='login-wrapper'>
         <div className='background-wrapper'>
           <svg

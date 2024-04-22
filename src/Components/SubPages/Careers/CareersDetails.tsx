@@ -7,6 +7,7 @@ import { StyledTexts } from '../../../Styles/Reusable/Texts.styled';
 import CareersAbout from './CareersAbout';
 import { careerProps } from '../../../Helper/CareersTypes';
 import CareersTitleApply from './CareersTitleApply';
+import Head from '../../../Helper/Head';
 
 interface CareersDetailsProps {
   setFooterState: React.Dispatch<React.SetStateAction<boolean>>;
@@ -30,6 +31,7 @@ const CareersDetails = ({ setFooterState }: CareersDetailsProps) => {
   if (itemState)
     return (
       <StyledCareersDetails className='container'>
+        <Head title='Careers Details' description='Careers Details section of Supreme Bank application'/>
         <div className='careers-grid careers-grid-1'>
           <CareersTitleApply itemState={itemState} />
 
