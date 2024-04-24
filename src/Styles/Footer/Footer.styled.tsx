@@ -40,6 +40,26 @@ export const StyledFooter = styled.section`
             }
           }
         }
+
+        .footer-rights {
+          flex-basis: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          border-top: solid 1px ${theme.colors.white_auxiliary.white_normal};
+          margin: 4.8rem 2rem 0rem 2rem;
+          gap: 2rem;
+          padding-top: 4.8rem;
+          .social-icons-wrapper {
+            display: flex;
+            gap: 2rem;
+          }
+
+          .footer-rights-text {
+            color: ${theme.colors.white_auxiliary.white_normal};
+            
+          }
+        }
       }
 
       ${theme.media_query.small`
@@ -58,6 +78,13 @@ export const StyledFooter = styled.section`
 
     ${theme.media_query.small`
     .footer-wrapper {
+
+      .footer-rights {
+        flex-basis: 0;
+        margin: 0;
+        width: 100%;
+      }
+
       flex-direction: column;
       align-items: center;
       
