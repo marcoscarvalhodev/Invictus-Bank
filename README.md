@@ -1,27 +1,32 @@
-# React + TypeScript + Vite
+# Supreme Bank
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Supreme Bank is a digital bank website that is composed by many funtionalities and features that are focused in user experience some of them are: Identity creation for a digital bank, security mitigation against threats, clean UI, application performance enhancement, motion design.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+1. Clone the repository:
+```bash
+ git clone https://github.com/marcoscarvalhodev/Supreme-Bank.git
+```
+2. Install dependencies:
+```bash
+ npm install
+ ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+ ## Usage
+To run the project in development:
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+or for the production version:
+```bash
+npm run build
+npm run preview
+```
+
+
+![Alt Text - supreme bank screenshot](https://postimg.cc/9rhmZRSt/64d6d54f)
