@@ -29,4 +29,4 @@ npm run preview
 ```
 
 
-![Alt Text - supreme bank screenshot](https://postimg.cc/9rhmZRSt/64d6d54f)
+![Alt Text](https://github.com/marcoscarvalhodev/Supreme-Bank/blob/master/src/assets/screenshots/supreme_bank.png)
